@@ -1,0 +1,82 @@
+---
+title: Loops using R
+author: 'Gabriel Cabrera '
+date: '2018-06-24'
+slug: loops-using-r
+categories:
+  - Econometrics
+tags:
+  - OLS
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+# Introduction
+
+this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
+
+
+```{r}
+if(!require("pacman")) install.packages("pacman")
+p_load("tidyverse","gridExtra")
+
+set.seed(123)
+reps <-  10000
+
+betas <-  matrix(NA, nrow = reps, ncol = 2)
+
+beta0 <-  2
+beta1 <-  2.5
+beta2 <-  1
+
+su = 2
+n = c(100,1000) #tamaño muestral
+```
+
+
+```{r}
+for (j in 1:length(n)) {
+        
+    X1=rnorm(n[j],20,1)
+    X2=runif(n[j],0,1)
+
+     for (i in 1:reps) {
+       
+       u <- rnorm(n[j],0,su)
+       Y <- beta0 + beta1*X1 + beta2*X2 + u
+
+       model = lm(Y~X1) #Estima OLS - omite variable X2
+      betas[i,j] = model$coef[2]
+     }
+  }
+```
+
+```{r}
+mean(betas[,1])
+mean(betas[,2]) 
+```
+
+```{r}
+S1 <- seq(min(betas[,1]), max(betas[,1]), length = reps)
+      densidad_normal1 <- data.frame(S1=S1, f1=dnorm(S1, mean(betas[,1]), sd(betas[,1])))
+
+S2 <- seq(min(betas[,2]), max(betas[,2]), length = reps)
+      densidad_normal2 <- data.frame(S2=S2, f2=dnorm(S2, mean(betas[,2]), sd(betas[,2])))
+      
+g1 <- data.frame(B1=betas[,1]) %>% ggplot(aes(betas[,1], ..density..)) +
+      geom_histogram(color ="black", bins = 30) +
+      geom_line(data = densidad_normal1, mapping = aes(S1,f1), color = "red") +
+      ggtitle("n=100") + xlab(expression(hat(beta)[1])) + ylim(0,7) +
+      theme_bw()
+
+g2 <- data.frame(B2=betas[,2]) %>% ggplot(aes(betas[,2], ..density..)) +
+      geom_histogram(color ="black", bins =30) +
+      geom_line(data = densidad_normal2, mapping = aes(S2,f2), color = "red") +
+      ggtitle("n=1000") + xlab(expression(hat(beta)[1])) + ylim(0,7) +
+      theme_bw()
+```
+
+```{r, fig.align="center"}
+grid.arrange(g1, g2, ncol=2)
+```

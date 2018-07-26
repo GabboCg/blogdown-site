@@ -1,0 +1,21 @@
+---
+title: "About Me...(Always actualized!)"
+output: word_document
+date: "`r Sys.Date()`"
+---
+
+Can you hear me now?...learning a 
+programming language is interesting and fun at the same time, even more if you like to work with data. It tends to fall into the (erroneous) idea that programming is only for those  with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the limits are you own ideas.
+
+Hi, my name is Gabriel Cabrera and this is my little corner of the world, I am an enthusiasm of programming and even more how the data can tells story and prepares us to understand the real world, but I'm aware that without new technologies that allow us to work with tons of information (it`s expected that for the year 2025 the World's Data Hits 163 Zettabytes, cooool!!!) none of this would be possible.  I work mostly in R due to its huge number of libraries and lately with Python because of scikit-learn library. 
+
+> Any sufficiently advanced technology is indistinguishable from magic
+>--- Arthur C. Clarke
+
+When I'm not in front of my desktop/laptop computer, I'll probably be reading science fiction/comics, watching movies (of all kinds) and/or YouTube and, lately, stand up.
+
+<center>
+<iframe src="https://giphy.com/embed/nmQTemUrporWo" width="480" height="277" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/doctor-who-matt-smith-surprise-nmQTemUrporWo"> </a></p>
+</center>
+
+Finally I got a B.A in Economics at the University of Chile and Msc in Finance (c) in the same university. If you want to know more, you can download my complete CV.

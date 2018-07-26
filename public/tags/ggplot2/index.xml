@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ggplot2 on </title>
+    <link>/tags/ggplot2/</link>
+    <description>Recent content in Ggplot2 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>One of the New Feature of ggplot2 3.0</title>
+      <link>/posts/one-of-the-new-feature-of-ggplot2-3-0/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
+      <description>Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
+The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
+&amp;mdash; Dina D. Pomeranz (@DinaPomeranz) July 4, 2018  After reading the post1, I decided to replicate the entire article using the new features of ggplot2 3.</description>
+    </item>
+    
+  </channel>
+</rss>

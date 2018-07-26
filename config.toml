@@ -1,0 +1,53 @@
+## Basic Configuration
+baseurl = "/"
+languageCode = "en"
+
+theme = "hyde-hyde"
+
+## Hugo Built-in Features
+# disqusShortname = ""
+# googleAnalytics = ""
+# enableRobotsTXT = true
+
+ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
+
+## Site Settings
+[params]
+    author = "Gabriel Cabrera"
+    title = "Gabo's World"
+    description = "Welcome to my little corner of the world"
+    authorimage = "/img/linux.png"
+    dateformat = "Jan 1, 2006"
+    
+    highlightjs = true
+    # highlightjsstyle = github
+    
+    themeColor = "theme-base-0f" 
+
+## Social Accounts
+[params.social]
+    github = "GaboCg"
+  #  instagram = "GaboCg"
+  #  xing = "<username>"
+  #  linkedin = "<username>"
+    twitter = "GaboC_g"
+    facebook = "<username>"
+  #  stackoverflow = "<username>"
+    email = "gcabrerag@fen.uchile.cl"
+
+## Main Menu
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 100
+    url = "/about/"
+[[menu.main]]
+    name = "Posts"
+    weight = 200
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "Teaching"
+    identifier = "teaching"
+    weight = 300
+    url = "/teaching/"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How Install Julia in Bionic Beaver (Ubuntu 18.04)</title>
+      <link>/posts/how-install-julia-in-bionic-beaver-ubuntu-18-04/</link>
+      <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/how-install-julia-in-bionic-beaver-ubuntu-18-04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>One of the New Feature of ggplot2 3.0</title>
+      <link>/posts/one-of-the-new-feature-of-ggplot2-3-0/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
+      <description>Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
+The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
+&amp;mdash; Dina D. Pomeranz (@DinaPomeranz) July 4, 2018  After reading the post1, I decided to replicate the entire article using the new features of ggplot2 3.</description>
+    </item>
+    
+    <item>
+      <title>Loops using R</title>
+      <link>/posts/loops-using-r/</link>
+      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/loops-using-r/</guid>
+      <description>Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
+if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.5 beta2 &amp;lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &amp;lt;- rnorm(n[j],0,su) Y &amp;lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.</description>
+    </item>
+    
+  </channel>
+</rss>

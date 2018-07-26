@@ -1,0 +1,12 @@
+---
+title: Tópicos en Economía & Negocios Utilizando R
+author: 'Gabriel Cabrera '
+date: '2018-07-16'
+slug: tópicos-en-economía-negocios-utilizando-r
+categories:
+  - Rstat
+tags: []
+---
+
+* <a href="https://gabocg.github.io/personal_site/"> Autumn 2018 </a>
+* <a href="https://gabocg.github.io/personal_site/"> Spring 2018 </a>

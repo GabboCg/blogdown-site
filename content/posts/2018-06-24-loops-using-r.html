@@ -1,0 +1,77 @@
+---
+title: Loops using R
+author: 'Gabriel Cabrera '
+date: '2018-06-24'
+slug: loops-using-r
+categories:
+  - Econometrics
+tags:
+  - OLS
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.</p>
+<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
+<pre><code>## Loading required package: pacman</code></pre>
+<pre class="r"><code>p_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;)
+
+set.seed(123)
+reps &lt;-  10000
+
+betas &lt;-  matrix(NA, nrow = reps, ncol = 2)
+
+beta0 &lt;-  2
+beta1 &lt;-  2.5
+beta2 &lt;-  1
+
+su = 2
+n = c(100,1000) #tamaño muestral</code></pre>
+<pre class="r"><code>for (j in 1:length(n)) {
+        
+    X1=rnorm(n[j],20,1)
+    X2=runif(n[j],0,1)
+
+     for (i in 1:reps) {
+       
+       u &lt;- rnorm(n[j],0,su)
+       Y &lt;- beta0 + beta1*X1 + beta2*X2 + u
+
+       model = lm(Y~X1) #Estima OLS - omite variable X2
+      betas[i,j] = model$coef[2]
+     }
+  }</code></pre>
+<pre class="r"><code>mean(betas[,1])</code></pre>
+<pre><code>## [1] 2.521046</code></pre>
+<pre class="r"><code>mean(betas[,2]) </code></pre>
+<pre><code>## [1] 2.515428</code></pre>
+<pre class="r"><code>S1 &lt;- seq(min(betas[,1]), max(betas[,1]), length = reps)
+      densidad_normal1 &lt;- data.frame(S1=S1, f1=dnorm(S1, mean(betas[,1]), sd(betas[,1])))
+
+S2 &lt;- seq(min(betas[,2]), max(betas[,2]), length = reps)
+      densidad_normal2 &lt;- data.frame(S2=S2, f2=dnorm(S2, mean(betas[,2]), sd(betas[,2])))
+      
+g1 &lt;- data.frame(B1=betas[,1]) %&gt;% ggplot(aes(betas[,1], ..density..)) +
+      geom_histogram(color =&quot;black&quot;, bins = 30) +
+      geom_line(data = densidad_normal1, mapping = aes(S1,f1), color = &quot;red&quot;) +
+      ggtitle(&quot;n=100&quot;) + xlab(expression(hat(beta)[1])) + ylim(0,7) +
+      theme_bw()
+
+g2 &lt;- data.frame(B2=betas[,2]) %&gt;% ggplot(aes(betas[,2], ..density..)) +
+      geom_histogram(color =&quot;black&quot;, bins =30) +
+      geom_line(data = densidad_normal2, mapping = aes(S2,f2), color = &quot;red&quot;) +
+      ggtitle(&quot;n=1000&quot;) + xlab(expression(hat(beta)[1])) + ylim(0,7) +
+      theme_bw()</code></pre>
+<pre class="r"><code>grid.arrange(g1, g2, ncol=2)</code></pre>
+<p><img src="/posts/2018-06-24-loops-using-r_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
