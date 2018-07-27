@@ -8,3 +8,5 @@ categories:
 tags:
   - R
 ---
+
+* Apunte de R para Finanazas I : [finance-r.netlify.com](finance-r.netlify.com)
