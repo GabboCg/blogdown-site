@@ -18,4 +18,4 @@ When I’m not in front of my desktop or laptop, I’ll probably be reading scie
 <iframe src="https://giphy.com/embed/nmQTemUrporWo" width="480" height="277" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/doctor-who-matt-smith-surprise-nmQTemUrporWo"> </a></p>
 </center>
 
-To wrap this up, I got a B.A in Economics at University of Chile and Msc in Finance (c) at the same university. If you want to get to know me a little bit more, you can download my complete C.V.
+To wrap this up, I got a B.A in Economics at University of Chile and Msc in Finance (c) at the same university. If you want to get to know me a little bit more, you can download my complete [C.V](/pdf/rmarkdown-cv.pdf).

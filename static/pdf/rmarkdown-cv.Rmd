@@ -1,0 +1,165 @@
+---
+output: 
+  pdf_document:
+    latex_engine: pdflatex
+    template: latex-cv.tex
+geometry: margin=0.7in
+
+title: "CV"
+author: Gabriel Cabrera G.
+
+jobtitle: "11 de Noviembre de 1992"
+address: "Sargento Aldea 1448, Santiago de Chile"
+fontawesome: yes
+email: gcabrerag@fen.uchile.cl
+github: GaboCg
+phone: "+56 9 4281 5467"
+web: " "
+updated: 18 de Julio
+
+keywords: R Markdown, academic CV, template
+
+fontfamily: mathpazo
+fontfamilyoptions: sc, osf
+fontsize: 11pt
+linkcolor: blue
+urlcolor: blue
+---
+
+\vspace{8pt}
+
+# Educación
+\vspace{-15pt}
+\noindent\rule{\textwidth}{1pt}
+
+- Licenciado en Ciencias Económícas, Universidad de Chile   \hfill 2012 - 2017
+- Ingeniero Comercial, Universidad de Chile     \hfill 2012 - 2018
+- Magister en Finanzas\footnote{Modalidad del programa \textit{Full Time}.} (c), Universidad de Chile  \hfill 2017 - actualidad
+
+
+# Experiencia Laboral
+\vspace{-15pt}
+\noindent\rule{\textwidth}{1pt}
+
+- **Universidad de Chile**
+
+1. Asistente del Área de Aprendizaje Vinculado al Entorno en Universidad de Chile, Santiago     Facultad de Economía & Negocios Nexo RSU, Responsabilidad Social Universitaria.        
+   
+\hfill Mar-Dic 2014 
+
+2. Asistente en la elaboración y coordinación del MOOC [*How change (us) technology?*](http://mooc.es/course/como-nos-cambia-la-tecnologia/) en la plataforma Coursera, en conjunto con el Centro de Enseñanza y Aprendizaje ([CEA](http://conocetuescuela.fen.uchile.cl/?page_id=236)). 
+
+\hfill Jul - Dic 2016 
+
+3. *Ayudantía de Investigación*
+    
+    - Profesor [Erwin Hansen Silva](http://negocios.uchile.cl/academico_detalle.php?id=90): Revisión de literatura contigente a la construcción y estimación de una medida de aversión al riesgo para un conjunto de países. Depurar datos y códigos para realizar estimaciónes econométricas.
+  
+    \hfill Nov 2017 - actualidad
+
+
+# Habilidades Computacionales
+\vspace{-15pt}
+\noindent\rule{\textwidth}{1pt}
+
+- *Sistema Operativo*
+
+    1. **Nivel Avanzado:** \faWindows \enskip  Windows 10, GNU/Linux con Distro Ubuntu \faLinux \enskip (Unix command line y shell scripting).
+    
+- *Software/Aplicaciones*
+
+    2. **Nivel Intermedio:** Eviews, Libre office,  Microsoft Access y \faGitSquare \enskip git.
+    3. **Nivel Avanzado:** Microsoft Office y Stata.
+
+- *Lenguaje & Scripts*
+    
+    1. **Nivel Básico:** \faHtml5 Html, \faCss3 CSS, JavaScript y Matlab.
+    2. **Nivel Intermedio:** Python & Julia.
+    3. **Nivel Avanzado:** R (modelamiento, análisis y visualización de datos), R Markdown (R + Pandoc), Sweave (R + La\TeX), Markdown y \TeX.    
+    
+
+# Idiomas
+\vspace{-15pt}
+\noindent\rule{\textwidth}{1pt}
+
+- **Español**: Lengua nativa 
+- **Inglés Avanzado**: Escritura y habla fluida
+
+# Ayudantía Catedras
+\vspace{-15pt}
+\noindent\rule{\textwidth}{1pt}
+
+- **Universidad de Chile**
+
+    - *Facultad de Economía & Negocios*
+    
+    1. Tópicos en Economía & Negocios Usando R, *Curso electivo.* \newline
+       Profesor: Victor Macias Essedin PhD (c). \hfill 2018
+        
+    2. Finanzas I, *Curso obligatorio*. \newline
+       Profesor: [Erwin Hansen Silva](http://negocios.uchile.cl/academico_detalle.php?id=90), PhD. \hfill Otoño 2018
+       
+    3. Econometría Aplicada, *Curso obligatorio*. \newline
+       Profesor: [Victor Medina Olivares](https://vhmedina.github.io/), Mg. \hfill 2017
+       
+    4. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
+       Profesor: [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. \hfill Otoño 2016
+       
+    4. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
+       Profesor: [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. \hfill 2015
+    
+    \vspace{10 pt}
+    
+    - *Facultad de Arquitectura & Urbanismo*
+    
+    1. ¿Cómo Nos Cambia la Tecnología?, *Curso de formación general*. \newline
+       Profesor: [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. \hfill Primavera 2015
+       
+    \vspace{10 pt}
+    
+    - *Facultad de de Ciencias Físicas & Matemáticas*
+  
+    1. ¿Cómo Nos Cambia la Tecnología? (Versión especial Pokemon 20 años). *Curso de formación general*.
+       Profesor(es): [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. & Pablo Paredes Mg. 
+       \hfill 2016
+
+# Actividades extra programáticas de caracter social
+\vspace{-15pt}
+\noindent\rule{\textwidth}{1pt}
+
+1. Coordinador del Área Logistica en Universidad de Chile, Santiago. \newline 
+   Facultad de Economía & Negocios, Curso Emprende Empresa, CreeMe. \newline
+   \small{Programa de apoyo y capacitación enfocado a los microempresarios, desarrollado por
+   estudiantes y académicos de la facultad de Economía y Negocios con la colaboracion de
+   la Facultad de Derecho de la Universidad de Chile.}
+   
+   \hfill 2014
+
+
+\newpage
+# Referencias 
+\vspace{-15pt}
+\noindent\rule{\textwidth}{1pt}
+
+\begin{multicols}{2}
+
+    \textbf{Erwin Hansen Silva} \\
+    Departamento de Administración \\
+    Facultad de Economía \& Negocios\\
+    Universidad de Chile\\
+    Santiago, Diagonal Paraguay 257 \\
+    \Telefon\ +56 (2) 2977 2125\\
+    \Letter\ \href{mailto:ehansen@unegocios.cl}{ehansen@unegocios.cl}
+
+\vfill\columnbreak
+
+    \textbf{Victor Macias Essedin} \\
+    Departamento de Economía \\
+    Facultad de Economía \& Negocios\\
+    Universidad de Diego Portales\\
+    Huechuraba, Sta Clara 797  \\
+    \Telefon\ +56 9 1111 1111 \\
+    \Letter\ \href{mailto:vmaciase@fen.uchile.cl}{vmaciase@fen.uchile.cl}
+
+\end{multicols}
+
