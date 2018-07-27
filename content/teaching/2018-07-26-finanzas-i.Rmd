@@ -9,9 +9,9 @@ tags:
   - R
 ---
 
-* Apunte de R para Finanazas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
+1. Apunte de R para Finanazas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
 
-* Ayudantías
+2. Ayudantías
 
     * Ayudantía 1 
     
