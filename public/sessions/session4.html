@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rmarkdown:</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriel Cabrera G.       Universidad de Chile" />
+    <meta name="date" content="2018-07-26" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Rmarkdown:
+## Un enfoque a la Investigación reproducible
+### Gabriel Cabrera G. <br /> <br /> <br /> Universidad de Chile
+### 2018-07-26
+
+---
+
+
+
+
+class: inverse, center, middle
+
+# Keep in touch
+
+&lt;a href="mailto:apresstats@gmail.com"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;&amp;nbsp; apresstats@gmail.com&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://apreshill.rbind.io"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; apreshill.rbind.io&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://twitter.com/apreshill"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @apreshill&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/apreshill"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @apreshill&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://cslu.ohsu.edu"&gt;&lt;i class="fa fa-map-marker fa-fw"&gt;&lt;/i&gt;&amp;nbsp; OHSU Center for Spoken Language Understanding&lt;/a&gt;
+
+---
+class: inverse, center, middle
+
+&lt;iframe src="https://giphy.com/embed/MCZ39lz83o5lC" width="480" height="257" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/MCZ39lz83o5lC"&gt; Recuerda... &lt;/a&gt;&lt;/p&gt;
+
+---
+class: inverse, center, middle
+
+# Comencemos....
+
+
+---
+# Outline
+
+Parte I: R Markdown
+
+* El boton `knit`
+* **Pandoc's Markdown** 
+* Outputs de R Mardown
+
+---
+class: inverse, center, middle
+
+# R Markdown
+
+---
+# R Markdown: `knit`
+
+El botón `knit` (barra superior en Rstudio) es aquel que permite operar directamente con la librería `knitr`. Esta última fue diseñada basandose en la idea de "Literate Programming" usada por Donald Knuth (creador del sistema de tipografía TeX&lt;sup&gt;1&lt;/sup&gt;). Cuando `knitr` compila un documento, extrae un `chunk` y lo ejecuta, de manera que el proceso completo es: 
+
+
+![processRStudio.png](http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-r-publication/img/processRStudio.png)
+
+
+.footnote[
+[1] Larga vida a knuth!!!!
+]
+
+---
+
+# R Markdown: un poco de información
+
+Acá lo más importante son Markdown y Pandoc:
+
+* Markdown: Es un lenguaje de marcado pero ligero (como si fuese sencillo, plain text), creado por [John Gruber](https://en.wikipedia.org/wiki/John_Gruber) y  con participación de [Aaron Swartz](https://www.youtube.com/watch?v=9vz06QO3UkQ).
+
+* HTML: Es un lenguaje de marcado pero con enfocque en páginas web y viene a formar parte de la estandarización de W3C (** World Wide Web Consortium **). Cuando se trabaje con HTML deben tener presente la existencia de CSS (lenguaje de estilo, veanlo como el preambulo de latex) y Javascript, que sí es un lenguaje de programación para páginas web. Una librería útil de `JavaScript` es P5.js que usa el **Processing** (SketchBook) para gente que se dedica al desarrollo artístico.
+
+
+&lt;center&gt;
+&lt;iframe src="https://giphy.com/embed/8q2GWxgJxZVBu" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/80s-the-goonies-8q2GWxgJxZVBu"&gt; No tengan miedo es solo el principio...&lt;/a&gt;&lt;/p&gt;
+&lt;/center&gt;
+
+---
+# R Markdown: Inline Formating 
+
+Los siguientes son syntaxis de markdown, que son validas algunas con asterisco o guión bajo:
+
+* Para **negrita** es `**texto**` o `__texto__`.
+* Para *itálica* es  `*texto *` o `_texto_ `.
+* Texto con ~ realiza un subíndice, `H~2~O~2~` y ^ un supraíndice. 
+* Para agregar un link `[text](link)`.
+* Para insertar imagen, `![imagen con extensión](/directorio/imagen con extensión)`
+
+## R Markdown: Block level Element
+
+* Sección, Subsección y subsubsección:
+
+```r
+# First-level header
+## Second-level header
+### Third-level header
+```
+* Con {-} se esconde el número.
+* Listas no enumeradas comienzan con `*`, `-` o `+`, si se quiere crear una sublista se debe seguir **la regla de los cuatro espacios** (tener mucho ojo con esta regla, es muy util y nos puede ahorrar varios dolores de cabeza.). Enumerada es con 1. por e.g y sigue la misma regla.
+---
+
+# R Markdown: Blockquotes:
+
+A mi me gustan las citas, ¿a quien no?..
+
+```r
+&gt; "I thoroughly disapprove of duels. If a man should challenge me,
+   I would take him kindly and forgivingly by the hand and lead him
+   to a quiet place and kill him."
+&gt;
+&gt; --- Mark Twain
+``` 
+
+lo anterior genera:
+
+&gt; "I thoroughly disapprove of duels. If a man should challenge me,
+I would take him kindly and forgivingly by the hand and lead him
+to a quiet place and kill him."
+&gt;
+&gt; --- Mark Twain
+
+Destaca más en HTML que en pdf usando `\(La\TeX\)`.
+
+---
+
+# R Markdown: Expresiones Mathematicas 
+
+Para realizarlas *inline* , se realiza con `$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$`, dando resultado `\(f(k) = {n \choose k} p^{k} (1-p)^{n-k}\)`. SI queremos que tenga un `display` usamos doble  `$$` 
+
+$$ 
+f(k) = {n \choose
+k} p^{k} (1-p)^{n-k}
+$$
+
+Lo genial es que desde Rstudio podremos ver el **outcome**. FInalmente se puede usar "ambiente" matemático.
+
+```r
+$$
+\Theta = \begin{pmatrix}\alpha &amp; \beta\\
+\gamma &amp; \delta
+\end{pmatrix}
+$$
+```
+```r
+$$
+\begin{vmatrix}a &amp; b\\
+c &amp; d
+\end{vmatrix}=ad-bc
+$$
+```
+---
+# R Markdown: R code 
+
+Existen dos tipos de código en R Markdown/Knitr: **Chunks** y **inline** R code por ejemplo:
+
+
+```r
+1 + 1
+rnorm(10) # 10 random numbers
+plot(dist ~ speed, cars) # a scatterplot
+```
+
+Para ver todas las opciones de `knitr` una buena opción es visitar la pagina de [yihui xie](https://yihui.name/knitr/options/#code-chunk).
+---
+# R Markdown: Usando Plantillas para replicar papers
+
+Una manera sencilla es usar `rticles` se puede instalar directo de CRAN, tiene plantillas como:
+
+* ACM articles
+
+* ACS articles
+
+* AEA journal submissions
+
+* AMS articles
+
+* Bulletin de l'AMQ journal submissions
+
+* CTeX documents
+
+* Elsevier journal submissions
+
+Veamos el ejemplo de Dehejia and Wahba (1999).
+
+---
+
+# R Markdown: Sweave `-&gt;` R + `\(La\TeX\)`
+
+Antes que se hiciera popular el uso de `R Markdown`, se usaba Sweave (.Rnw), que es la unión de R + `\(La\TeX\)`. R Sweave es una opción para aquellas personas que quieran reportar sus códigos en R y comunicarlos, no obstante, no tendrá el opoyo de otros lenguajes. Para llamar un ambiente (chunk) a diferencia de **R Markdown** se usa `&lt;&lt;&gt;&gt;=` y se cierra con `@`. Por ejemplo: 
+
+```r
+&lt;&lt;echo=false&gt;&gt;=
+7*8
+@
+``` 
+y las opciones de `knitr` se usan de la misma manera. Como opiniÓn personal es bastante util usarlo con Lyx (WYSIWYM). 
+
+---
+class: inverse, center, middle
+
+
+&lt;iframe src="https://giphy.com/embed/xT9IgEx8SbQ0teblUQ" width="319" height="480" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/the-x-files-alien-aliens-xT9IgEx8SbQ0teblUQ"&gt; Life is Short, code for eternity&lt;/a&gt;&lt;/p&gt;
+
+---
+
+class: center, middle
+
+# Domo Arigato!
+
+Slides creadas usando el paquete R [**xaringan**](https://github.com/yihui/xaringan).
+
+los chakras vienen de [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), y [R Markdown](https://rmarkdown.rstudio.com).
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

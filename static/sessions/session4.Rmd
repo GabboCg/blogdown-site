@@ -1,0 +1,220 @@
+---
+title: "Rmarkdown:"
+subtitle: "Un enfoque a la Investigación reproducible"
+author: "Gabriel Cabrera G. <br /> <br /> <br /> Universidad de Chile"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: '16:9'
+      countIncrementalSlides: false
+    includes:
+      in_header: header.html
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(tidy = FALSE, eval = FALSE)
+```
+
+class: inverse, center, middle
+
+# Keep in touch
+
+<a href="mailto:apresstats@gmail.com"><i class="fa fa-paper-plane fa-fw"></i>&nbsp; apresstats@gmail.com</a><br>
+<a href="https://apreshill.rbind.io"><i class="fa fa-link fa-fw"></i>&nbsp; apreshill.rbind.io</a><br>
+<a href="http://twitter.com/apreshill"><i class="fa fa-twitter fa-fw"></i>&nbsp; @apreshill</a><br>
+<a href="http://github.com/apreshill"><i class="fa fa-github fa-fw"></i>&nbsp; @apreshill</a><br>
+<a href="http://cslu.ohsu.edu"><i class="fa fa-map-marker fa-fw"></i>&nbsp; OHSU Center for Spoken Language Understanding</a>
+
+---
+class: inverse, center, middle
+
+<iframe src="https://giphy.com/embed/MCZ39lz83o5lC" width="480" height="257" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/MCZ39lz83o5lC"> Recuerda... </a></p>
+
+---
+class: inverse, center, middle
+
+# Comencemos....
+
+
+---
+# Outline
+
+Parte I: R Markdown
+
+* El boton `knit`
+* **Pandoc's Markdown** 
+* Outputs de R Mardown
+
+---
+class: inverse, center, middle
+
+# R Markdown
+
+---
+# R Markdown: `knit`
+
+El botón `knit` (barra superior en Rstudio) es aquel que permite operar directamente con la librería `knitr`. Esta última fue diseñada basandose en la idea de "Literate Programming" usada por Donald Knuth (creador del sistema de tipografía TeX<sup>1</sup>). Cuando `knitr` compila un documento, extrae un `chunk` y lo ejecuta, de manera que el proceso completo es: 
+
+
+![processRStudio.png](http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-r-publication/img/processRStudio.png)
+
+
+.footnote[
+[1] Larga vida a knuth!!!!
+]
+
+---
+
+# R Markdown: un poco de información
+
+Acá lo más importante son Markdown y Pandoc:
+
+* Markdown: Es un lenguaje de marcado pero ligero (como si fuese sencillo, plain text), creado por [John Gruber](https://en.wikipedia.org/wiki/John_Gruber) y  con participación de [Aaron Swartz](https://www.youtube.com/watch?v=9vz06QO3UkQ).
+
+* HTML: Es un lenguaje de marcado pero con enfocque en páginas web y viene a formar parte de la estandarización de W3C (** World Wide Web Consortium **). Cuando se trabaje con HTML deben tener presente la existencia de CSS (lenguaje de estilo, veanlo como el preambulo de latex) y Javascript, que sí es un lenguaje de programación para páginas web. Una librería útil de `JavaScript` es P5.js que usa el **Processing** (SketchBook) para gente que se dedica al desarrollo artístico.
+
+
+<center>
+<iframe src="https://giphy.com/embed/8q2GWxgJxZVBu" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/80s-the-goonies-8q2GWxgJxZVBu"> No tengan miedo es solo el principio...</a></p>
+</center>
+
+---
+# R Markdown: Inline Formating 
+
+Los siguientes son syntaxis de markdown, que son validas algunas con asterisco o guión bajo:
+
+* Para **negrita** es `**texto**` o `__texto__`.
+* Para *itálica* es  `*texto *` o `_texto_ `.
+* Texto con ~ realiza un subíndice, `H~2~O~2~` y ^ un supraíndice. 
+* Para agregar un link `[text](link)`.
+* Para insertar imagen, `![imagen con extensión](/directorio/imagen con extensión)`
+
+## R Markdown: Block level Element
+
+* Sección, Subsección y subsubsección:
+
+```r
+# First-level header
+## Second-level header
+### Third-level header
+```
+* Con {-} se esconde el número.
+* Listas no enumeradas comienzan con `*`, `-` o `+`, si se quiere crear una sublista se debe seguir **la regla de los cuatro espacios** (tener mucho ojo con esta regla, es muy util y nos puede ahorrar varios dolores de cabeza.). Enumerada es con 1. por e.g y sigue la misma regla.
+---
+
+# R Markdown: Blockquotes:
+
+A mi me gustan las citas, ¿a quien no?..
+
+```r
+> "I thoroughly disapprove of duels. If a man should challenge me,
+   I would take him kindly and forgivingly by the hand and lead him
+   to a quiet place and kill him."
+>
+> --- Mark Twain
+``` 
+
+lo anterior genera:
+
+> "I thoroughly disapprove of duels. If a man should challenge me,
+I would take him kindly and forgivingly by the hand and lead him
+to a quiet place and kill him."
+>
+> --- Mark Twain
+
+Destaca más en HTML que en pdf usando $La\TeX$.
+
+---
+
+# R Markdown: Expresiones Mathematicas 
+
+Para realizarlas *inline* , se realiza con `$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$`, dando resultado $f(k) = {n \choose k} p^{k} (1-p)^{n-k}$. SI queremos que tenga un `display` usamos doble  `$$` 
+
+$$ 
+f(k) = {n \choose
+k} p^{k} (1-p)^{n-k}
+$$
+
+Lo genial es que desde Rstudio podremos ver el **outcome**. FInalmente se puede usar "ambiente" matemático.
+
+```r
+$$
+\Theta = \begin{pmatrix}\alpha & \beta\\
+\gamma & \delta
+\end{pmatrix}
+$$
+```
+```r
+$$
+\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}=ad-bc
+$$
+```
+---
+# R Markdown: R code 
+
+Existen dos tipos de código en R Markdown/Knitr: **Chunks** y **inline** R code por ejemplo:
+
+```{r chunk-label, echo = TRUE, fig.cap = 'A figure caption.'}
+1 + 1
+rnorm(10) # 10 random numbers
+plot(dist ~ speed, cars) # a scatterplot
+```
+
+Para ver todas las opciones de `knitr` una buena opción es visitar la pagina de [yihui xie](https://yihui.name/knitr/options/#code-chunk).
+---
+# R Markdown: Usando Plantillas para replicar papers
+
+Una manera sencilla es usar `rticles` se puede instalar directo de CRAN, tiene plantillas como:
+
+* ACM articles
+
+* ACS articles
+
+* AEA journal submissions
+
+* AMS articles
+
+* Bulletin de l'AMQ journal submissions
+
+* CTeX documents
+
+* Elsevier journal submissions
+
+Veamos el ejemplo de Dehejia and Wahba (1999).
+
+---
+
+# R Markdown: Sweave `->` R + $La\TeX$
+
+Antes que se hiciera popular el uso de `R Markdown`, se usaba Sweave (.Rnw), que es la unión de R + $La\TeX$. R Sweave es una opción para aquellas personas que quieran reportar sus códigos en R y comunicarlos, no obstante, no tendrá el opoyo de otros lenguajes. Para llamar un ambiente (chunk) a diferencia de **R Markdown** se usa `<<>>=` y se cierra con `@`. Por ejemplo: 
+
+```r
+<<echo=false>>=
+7*8
+@
+``` 
+y las opciones de `knitr` se usan de la misma manera. Como opiniÓn personal es bastante util usarlo con Lyx (WYSIWYM). 
+
+---
+class: inverse, center, middle
+
+
+<iframe src="https://giphy.com/embed/xT9IgEx8SbQ0teblUQ" width="319" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-x-files-alien-aliens-xT9IgEx8SbQ0teblUQ"> Life is Short, code for eternity</a></p>
+
+---
+
+class: center, middle
+
+# Domo Arigato!
+
+Slides creadas usando el paquete R [**xaringan**](https://github.com/yihui/xaringan).
+
+los chakras vienen de [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), y [R Markdown](https://rmarkdown.rstudio.com).

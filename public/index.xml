@@ -31,6 +31,15 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
     </item>
     
     <item>
+      <title>Introduction to R</title>
+      <link>/teaching/introduction-to-r/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/introduction-to-r/</guid>
+      <description> session 1: session 2: session 3: session 4: Session 4  </description>
+    </item>
+    
+    <item>
       <title>How Install Julia in Bionic Beaver (Ubuntu 18.04)</title>
       <link>/posts/how-install-julia-in-bionic-beaver-ubuntu-18-04/</link>
       <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>

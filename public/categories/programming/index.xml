@@ -6,10 +6,19 @@
     <description>Recent content in Programming on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to R</title>
+      <link>/teaching/introduction-to-r/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/introduction-to-r/</guid>
+      <description> session 1: session 2: session 3: session 4: Session 4  </description>
+    </item>
     
     <item>
       <title>One of the New Feature of ggplot2 3.0</title>

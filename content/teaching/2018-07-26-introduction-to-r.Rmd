@@ -1,0 +1,14 @@
+---
+title: Introduction to R
+author: 'Gabriel Cabrera '
+date: '2018-07-26'
+slug: introduction-to-r
+categories:
+  - Programming
+tags: []
+---
+
+* session 1:
+* session 2:
+* session 3:
+* session 4: [Session 4](/sessions/session4.html)
