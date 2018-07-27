@@ -10,3 +10,10 @@ tags:
 ---
 
 * Apunte de R para Finanazas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
+
+* Ayudantías
+
+    * Ayudantía 1 
+    
+        * [Presentación 1](/pdf/presentacion.pdf)
+        * Script

@@ -1,0 +1,111 @@
+---
+title: "Introducción a R"
+subtitle: "Entorno y lenguaje de programación"
+author: "Gabriel Cabrera"
+date: "26 de julio de 2018"
+output:
+  beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+classoption: "aspectratio=169"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## ¿Por qué aprender R?
+
+1. Tiene un conjunto de paquetes/librerias para modelos estadísticos, machine learning, visualización e importar y manipular datos.
+2. R no es solo un lenguaje de programación, es también un ambiente interactivo para el análisis de datos (programación funcional).
+3. Presenta poderosas herramientas para comunicar los resultados.
+4. Presenta un IDE sofisticada que nos facilitará la programación. 
+5. Diseñado para programación de alto rendimiento al poder fusionarse con códigos de compilación como C, Fortran y C++.
+6. Es gratis, de código abierto y disponible para todos los sistemas operativos.
+
+## ¿Que abordará el curso?
+
+Durante el semestre se abordará:
+
+1. Introducción a Rstudio y R
+2. Descargar datos financieros usando la librería quantmod
+3. Estadística descriptiva y test de estacionaridad
+4. Teoría de portafolio
+5. Medidas de *performance*
+5. Calcular precio de bonos como su convexidad y duración.
+6. Valorizar opciones call y put.
+
+## R y Rstudio
+
+Durante el semestre utilizaremos R a través del IDE RStudio. ¿Qué es un IDE? IDE es el acrónimo de Integrated Development Environment (Entorno de Desarrollo Integrado). Esto quiere decir que RStudio es una aplicación que nos entrega herramientas para hacer más fácil el desarrollo de proyectos usando R.
+
+Para poder instalar R y RStudio, deben seguir los siguientes pasos:
+
+1. Descargar R desde [https://cran.r-project.org/](https://cran.r-project.org/). Deben elegir la opción que corresponda, según su sistema operativo.
+2. Instalar R en su computador/laptop, tal como lo hacemons con cualquier programa.
+3. Una vez que R ha quedado correctamente instalado, descargamos RStudio desde [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/). Eligen la primera opción, es decir, "RStudio Desktop Open Source License" (gratuita).
+4. Instalar RStudio en tu computador, tal como lo hacemos con cualquier programa.
+
+## Creación de un proyecto
+
+1. Puedes hacerlo desde el menú `File` > `New Proyect`.
+2. Lo primero que nos pregunta es si queremos crearlo en una carpeta nueva o en una ya existente. Elegiremos esta vez una carpeta nueva, así que 
+ seleccionaremos `New Directory`. 
+3. La siguiente pregunta es qué tipo de proyecto queremos crear. En esta ocasión, elegiremos la primera: New Project.
+4. Finalmente, le damos un nombre al proyecto y decidimos en qué parte de nuestro computador queremos que "viva" la carpeta que lo contiene.
+5. Luego de apretar *Create Project*, RStudio se reinicia y se producen algunos cambios. El panel Files (abajo a la derecha) ahora nos muestra la carpeta de nuestro proyecto y el único archivo que hay en ella por ahora. Ese es el archivo mágico que mantiene unido todo lo que hay dentro de la carpeta. Cuando queramos volver a trabajar en nuestro proyecto, solo tenemos que abrir ese archivo.
+
+## Scripts
+
+El Script es donde escribimos los códigos que queremos que ejecute R, para crear un script debemos:
+
+1. ir a `file > New File > R Script`
+2. Otra forma es un atajo de teclado, `control + shift + n` (Linux/Windows) y `comando + shift + n` (Mac OS).
+3. O bien ir a la barra superior de la ventana y seleccionar el tipo de archivo a trabajar.
+
+## instalación de librerías/packages
+
+Para usar las librerias (“packages”) debemos usar el siguiente código:
+
+```r
+# instala el package
+install.packages("acá va el package")
+
+# "lo llama"
+library("acá va el package")
+
+``` 
+
+## tidyverse
+
+tidyverse es un “megapaquete” que incluye otros paquetes en su interior. Todos los paquetes que conforman “el Tidyverse” comparten la misma visión sobre el trabajo con datos y la escritura de código. Viene a formar parte de la nueva forma de programar en R, cuyo enfoque es netamente en realizar Data Science.
+
+Para instalarlo basta escribir:
+
+```r
+# instala el package
+install.packages("tidyverse")
+
+# lo "llama""
+library("tidyverse")
+``` 
+
+## Ejemplo 
+
+A continuación se trabajaremos un poco en R.
+
+1. Descargaremos la librería `gapminder`  una base de datos que incluye información mundial sobre población, expectativa de vida, PIB per cápita y otros.
+2. Cargamos el `tidyverse` y `gapminder`
+3. Mostrar el promedio de expectativa de vida para los continentes en el 2007.
+4. Graficar la expectativa de vida para los países de America del sur desde 1952 a 2007.
+
+## Apunte del curso
+
+Este semestre para complementar su camino en aprender R es que podran acceder a un apunte en construcción:
+
+- Apunte curso Finanzas I: [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
+
+
+
+
