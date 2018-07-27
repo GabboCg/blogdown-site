@@ -9,4 +9,4 @@ tags:
   - R
 ---
 
-* Apunte de R para Finanazas I : [finance-r.netlify.com](finance-r.netlify.com)
+* Apunte de R para Finanazas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
