@@ -9,7 +9,7 @@ tags:
   - R
 ---
 
-1. Apunte de R para Finanazas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
+1. Apunte de R para Finanzas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
 
 2. Ayudantías
 
@@ -17,3 +17,18 @@ tags:
     
         * [Presentación 1](/pdf/presentacion.pdf)
         * Script
+        
+    * Ayudantía 2 
+    
+        * [Presentación 2](/pdf/presentacion.pdf)
+        * Script
+        
+3. Tareas 
+
+    * Tarea 1 
+        
+        * Enunciado
+    
+    * Tarea 2
+    
+        * Enunciado
