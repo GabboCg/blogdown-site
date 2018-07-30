@@ -23,6 +23,21 @@ tags:
         * [Presentación 2](/pdf/presentacion.pdf)
         * Script
         
+    * Ayudantía 3 
+    
+        * [Presentación 3](/pdf/presentacion.pdf)
+        * Script
+    
+    * Ayudantía 4 
+    
+        * [Presentación 4](/pdf/presentacion.pdf)
+        * Script
+    
+    * Ayudantía 5 
+    
+        * [Presentación 5](/pdf/presentacion.pdf)
+        * Script    
+        
 3. Tareas 
 
     * Tarea 1 
