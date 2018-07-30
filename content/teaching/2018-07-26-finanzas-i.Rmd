@@ -20,17 +20,17 @@ tags:
         
     * Ayudantía 2 
     
-        * [Presentación 2](/pdf/presentacion.pdf)
+        * [Presentación 2](/pdf/presentation1.pdf)
         * Script
         
     * Ayudantía 3 
     
-        * [Presentación 3](/pdf/presentacion.pdf)
+        * [Presentación 3]()
         * Script
     
     * Ayudantía 4 
     
-        * [Presentación 4](/pdf/presentacion.pdf)
+        * [Presentación 4]()
         * Script
     
     * Ayudantía 5 
