@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Primeros Pasos en R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriel Cabrera G." />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Primeros Pasos en R
+## con R studio
+### Gabriel Cabrera G.
+### 18/05/2018
+
+---
+
+
+
+
+class: inverse, center, middle
+
+&lt;iframe src="https://giphy.com/embed/VUOMN3AJbxSeY" width="441" height="480" align="middle" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/welcome-VUOMN3AJbxSeY"&gt;&lt;/a&gt;&lt;/p&gt;
+
+---
+class: inverse, center, middle
+
+# Mantenerse en Contacto
+
+&lt;a href="mailto:gcabrerag@gmail.com"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gcabrerag@gmail.com&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://gcabrerag.netlify.com/"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gcabrerag.netlify.com&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://twitter.com/GaboC_g"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/GaboC_g"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://pregrado.fen.uchile.cl/"&gt;&lt;i class="fa fa-map-marker fa-fw"&gt;&lt;/i&gt;&amp;nbsp; Facultad de Economía &amp; Negocios, Universidad de Chile &lt;/a&gt;
+
+---
+
+class: inverse, center, middle
+
+# Comencemos
+
+---
+
+# Creación de un proyecto 
+
+&lt;p align="justify"&gt; Una de las ventajas de RStudio es que permite crear "proyectos". Un projecto es un espacio o contexto de trabajo asociado a una carpeta en particular, en la que se guardan nuestro(s) script(s), archivos de datos, etc. Cuando creamos un proyecto en RStudio, se crea un tipo especial de archivo (.Rproj) que lo que hace es vincular todo lo que se encuentra dentro de esa carpeta. ¿Por qué esto es útil? Si parte de nuestro script, por ejemplo, implica abrir un archivo que está en la carpeta de nuestro proyecto, no necesito indicar en mi código toda la ruta del archivo: lo que hará RStudio será buscarlo en el entorno/carpeta del proyecto. Si movemos la carpeta a otro lugar de nuestro computador o la compartimos con otra persona, nuestro código seguirá funcionando, ya que el archivo .Rproj mantendrá todo unido. Si no creara un proyecto, tendría que indicar al inicio de mi script cuál es la ruta de la carpeta que ocuparé como espacio de trabajo. El problema de esa opción es que si muevo la carpeta o le cambio el nombre, tendría que volver a escribir la ruta para que todo funcione. Al crear un proyecto eso deja de ser una preocupación. &lt;/p&gt;
+
+---
+
+# ¿Cómo crear un projecto? 
+
+1. Puedes hacerlo desde el menú `File &gt; New Proyect`. 
+
+--
+- Lo primero que nos pregunta es si queremos crearlo en una carpeta nueva o en una ya existente. Elegiremos esta vez una carpeta nueva, así que   seleccionaremos `New Directory`.
+
+
+--
+- La siguiente pregunta es qué tipo de proyecto queremos crear. En esta ocasión, elegiremos la primera: `New Project`.
+
+
+--
+- Finalmente, le damos un nombre al proyecto y decidimos en qué parte de nuestro computador queremos que viva la carpeta que lo contiene. 
+
+
+--
+- Luego de apretar `Create Project`, RStudio se reinicia y se producen algunos cambios. El panel `Files`(abajo a la derecha) ahora nos muestra   la carpeta de nuestro proyecto y el único archivo que hay en ella por ahora. Ese es el archivo mágico que mantiene unido todo lo que hay  dentro  de la carpeta. Cuando queramos volver a trabajar en nuestro proyecto, solo tenemos que abrir ese archivo.
+
+---
+# Cargar los paquetes necesarios
+
+--
+- Ya tenemos instalados los tres paquetes que ocuparemos en esta ocasión. Cada vez que instalamos un paquete, este queda en nuestro computador. Podemos chequear eso revisando el panel "Packages" abajo a la izquierda. Sin embargo, que los hayamos instalado no quiere decir que estén listos para ser usados. Tenemos que decirle explícitamente a R qué paquetes queremos ocupar en cada sesión (no tiene sentido tener activos paquetes que no estamos utilizando).
+
+
+--
+- La función para llamar o activar un paquete es `library(nombre_del_paquete)`, así que escribiremos eso al inicio de nuestro script. Si no    tienes un script abierto, simplemente sigue los pasos comentados más arriba (File &gt; New File &gt; R Script). 
+
+
+--
+- RStudio trata de hacernos la vida más simple, así que cuando empezamos a escribir se despliega un menú con posibles opciones que indican el nombre de la función y el paquete al que está asociada (en este caso, es una función de R `{base}`). Lo que aparece en amarillo es la estructura de la función, algo sobre lo que hablaremos más adelante.
+
+---
+# Tidyverse
+
+--
+- Cuando ejecutamos el código de nuestro script, este pasa a la consola. En el caso del primer paquete (`tidyverse`), la consola nos da dos avisos. El primero, cuáles son todos los paquetes que estamos cargando al cargar el `tidyverse`. Al llamarlos a través de `library(tidyverse)` se activan estos 8 paquetes que aparecen consignados (pese a que el Tidyverse incluye más). Eso es lo que nos está avisando R en la consola.
+
+
+--
+- El **Tidyverse** es una megalibrería, que nos presenta las herramientas esenciales para el manejo de datos. Es una manera "nueva"" de trabajar en R, es intuitiva y muy utilizada. Esto no quiere decir que se la única y más correcta, todo depende de la experiencia y gusto de quien esté programando.
+
+
+```r
+install.packages("tidyverse")
+library("tidyverse")
+```
+
+--
+- En estas primeras sesiones, utilizaremos `dplyr`, `ggplot2`, `magrittr` y `tidyr`. El objetivo del **Tidyverse** es el siguiente:
+
+.center[
+
+![](https://camo.githubusercontent.com/4782751a54025e99f6f32adeed2ddf6e8f8db724/687474703a2f2f723464732e6861642e636f2e6e7a2f6469616772616d732f646174612d736369656e63652e706e67)
+.caption[
+**Fig.1:** El espíritu del tidyverse
+  ]
+]
+
+---
+
+# Packages Management (Pacman)
+
+--
+La librería `pacman` realiza las siguientes actividades:
+
+| Función Pacman   | Paquete equivalente          | Descripción                           |
+| ---------------- |:----------------------------:| -------------------------------------:|
+| p_load           | install.packages + library   | Carga e instala los paquetes          |
+| p_install        | install.packages             | Instala paquetes desde CRAN           |
+| p_load_gh        | ninguno                      | Carga e instala del github            |
+
+--
+Existen más opciones, pero no serán necesarias para la sesión.
+
+
+```r
+# Cargamos pacman y si no está, lo instala
+if(!require("pacman")) install.packages("pacman") 
+p_load("tidyverse","babynames")
+```
+
+En `p_load` agregan todos las librerías que deseen.
+
+---
+
+# Una mirada inicial a los datos
+
+--
+- `babynames` es un paquete que contiene datos sobre nombres registrados en Estados Unidos entre los años 1880 y 2015. El "objeto" que contiene los datos dentro del paquete se llama también `babynames`. En R, podemos ver un objeto simplemente ejecutándolo. Es decir, escribimos el nombre del objeto y ejecutamos el código. 
+
+
+```r
+babynames
+```
+
+
+--
+- En este caso, el objeto `babynames` es una `tibble`, que es un tipo particular de conjunto de datos. No nos detendremos aún en los tipos de objetos que existen en R; lo importante por ahora es saber que R nos muestra en la consola las primeras diez filas de una "tibble" para que nos hagamos una idea de lo que contiene (y no las casi dos millones de filas que tiene este objeto en particular). 
+
+
+--
+- Existen otras funciones útiles para darle una primera mirada a nuestros datos: `head()` y `tail()`. Como su nombre lo indica, lo que hacen es mostrarnos las primeras y las últimas líneas de nuestros datos, respectivamente. 
+
+
+--
+- Si queremos conocer la estructura de nuestro conjunto de datos, es decir, conocer la cantidad de observaciones, de variables y de qué tipo son, podemos utilizar  `str()`.
+
+---
+
+# Exploración y manipulación de los datos
+
+--
+- Ahora que ya dimos una mirada inicial al conjunto de datos con el que estamos trabajando, podemos empezar a explorarlo y responder preguntas. Por ejemplo, mientras esperamos el estreno de la última temporada de Juego de Tronos, podríamos querer saber a cuántas personas le han puesto el nombre de una de sus protagonistas: "Daenerys" . Para eso podemos utilizar el siguiente código:
+
+
+```r
+babynames %&gt;% 
+    filter(name == "Daenerys")
+```
+
+¿Qué hace este código? Con él le estamos diciendo a R que :
+
+* tome el objeto `babynames` 
+* luego (` %&gt;% `) 
+* que filtre (`filter`) los nombres (`name`) que sean iguales `==` a `Daenerys`. 
+
+Por convención, después de ` %&gt;% ` nos saltamos una línea (sin ella el código igual funciona). Se hace así para que sea más fácil de leer (por ahora no se nota mucho la diferencia, porque el bloque de código es pequeño).
+
+¡Las primeras Daenerys aparecen en 2012! 
+¿Por qué utilizamos `==` y no `=`? Utilizamos `==` porque lo que le estamos pidiendo a R es que busque los casos en los que el valor de la variable `name` sea igual a "Daenerys". En R (y en otros lenguajes de programación) el signo `=` se utiliza para asignar valores (¡lo haremos más adelante!). 
+
+---
+
+--
+Una de las ventajas de algunos paquetes de R (como los del Tidyverse) es que tratan de que los mensajes de error sean informativos. Prueba ejecutar el código anterior cometiendo el error de usar `=` en vez de `==`:
+
+```r
+babynames %&gt;% 
+    filter(name = "Daenerys")
+```
+--
+¿Qué dice el mensaje de error? 
+No solo nos indica cuál es el problema, sino que también nos da una sugerencia para resolverlo :)
+
+
+--
+Podemos seguir utilizando ese mismo código de filtrado para buscar otros nombres. Solo tenemos que cambiar el valor que queremos que tenga la variable `name`. Busquemos otros personajes de Juego de Tronos:
+
+```r
+babynames %&gt;% 
+    filter(name == "Sansa")
+```
+--
+Al parecer Sansa no ha sido un nombre tan popular. Al menos no hasta 2015. ¿Y Arya?
+
+```r
+babynames %&gt;% 
+    filter(name == "Arya")
+```
+
+--
+¡Hay muchas más Aryas! Y aparecen antes (o sea, por influencia del libro y no de la serie, como en los otros dos casos). Hay tantas Aryas que no alcanzan a imprimirse en la consola. ¿Cómo podríamos saber cuántas hay en total? En la siguiente sección lo veremos.
+
+---
+
+# Cómo resumir datos y un poco más acerca del operador ` %&gt;% `
+
+--
+Antes de responder la pregunta que planteamos en la sección anterior, hablemos un poco del símbolo ` %&gt;% `. ¿Qué es ` %&gt;% `? Este símbolo se llama _pipe_ (_tubo_ en inglés) y en el código lo podemos leer como "luego" o "a continuación". El atajo del teclado para realizarlo es `control` + `shift` + `m` (Linux / Windows) o `comando` + `shift` + `m` (Mac.)
+
+
+--
+`%&gt;%` es un operador que nos permite encadenar las acciones que queremos aplicar en un objeto (en este caso, `babynames`). Por ejemplo, si quisiéramos saber a cuántas personas se llaman Arya, podríamos agregar otra función al código que estábamos usando que sume todos los valores de la columna `n` (la que tiene la cantidad de nombres por año). La función que nos sirve para eso es `summarize`.
+
+```r
+babynames %&gt;% 
+    filter(name == "Arya") %&gt;% 
+    summarize(sum(n))
+```
+--
+Con este código le estamos diciendo a R que :
+
+* tome el objeto `babynames` 
+* luego (` %&gt;% `) 
+* que filtre los nombres que sean iguales a Arya (`filter == "Arya"`)
+* luego (` %&gt;% `)
+* que resuma (`summarize`) la siguiente información:
+* la suma (`sum`) de los valores de la columna `n`. 
+
+---
+# Ejercicios 1: ¿Qué quiere decir este código?
+
+```r
+babynames %&gt;% 
+    filter(name == "Arya") %&gt;% 
+    summarize(sum(n), mean(n), first(year))
+```
+
+---
+# Distintos tipos de sintaxis
+
+--
+Más arriba comentamos que el Tidyverse era un conjunto de paquetes que compartía un mismo enfoque de trabajo con los datos. Una de las características de este enfoque se relaciona con la forma de escribir el código, es decir, con su _sintaxis_. La sintaxis de los paquetes del Tidiverse utilizan el operador ` %&gt;% ` que vimos más arriba, que permite organizar el código de modo que lo leamos de arriba hacia abajo y de izquierda a derecha (la orientación que suele tener nuestra lectura). 
+
+
+--
+Hagamos una comparación. Si quisiéramos contar la cantidad de Aryas usando la sintaxis propia del Tidyverse, lo haríamos así:
+```r
+babynames %&gt;% 
+    filter(name == "Arya") %&gt;% 
+    summarize(sum(n))
+```
+
+
+--
+Si hiciéramos lo mismo utilizando la sintaxis "tradicional" (la de R base) nuestro código se vería así:
+
+```r
+sum(babynames$n[babynames$name == "Arya"])
+```
+
+
+--
+Ambos códigos hacen exactamente lo mismo y llegan al mismo resultado: 8866 (puedes probar ejecutándolo). La diferencia es que el primero que escribimos (usando ` %&gt;% `) "desempaqueta" las acciones, lo que lo hace más intuitivo de leer. En el caso del segundo, tenemos que leer de adentro hacia afuera para comprender la secuencia de acciones realizadas sobre los datos. 
+
+---
+
+class: inverse, center, middle
+
+# Vectores, array, listas, matrices y operadores lógicos.
+
+---
+
+# Vectores
+
+Un vector es un conjunto uni-dimensional de valores ordenados. Esta es la estructura
+básica de R y, de hecho, casi cualquier interacción puede pensarse como una manipu lación de vectores. La forma canónica de crearlos es usando la función de combinación `c()` , uniendo varios objetos del mismo tipo (números, textos, valores lógicos, etc.) en
+un sólo objeto. Por ejemplo:
+
+
+```r
+alfa &lt;- c(1,1,2,3,5,8)
+bravo &lt;- c("lazy", "stairway", "riders")
+charlie &lt;- c(TRUE, FALSE, FALSE, TRUE)
+```
+
+Todos los valores de un vector, o elementos, tienen que ser del mismo tipo. En el ejemplo, alfa es un vector numérico, bravo es un vector de texto y charlie es un vector de valores lógicos, o simplemente un vector lógico.
+
+---
+
+# Operadores Lógicos 
+
+## Casos particulares: NA, NULL y NaN
+Estos valores especiales no se pueden usar con estos comparadores. Para identificarlos en cambio se usan las funciones is.xxx. Por ejemplo:
+
+```r
+is.na(NA)     
+is.na(5)      
+5 == NA       
+```
+```r
+is.null(NULL) 
+is.nan(NaN)   
+```
+
+Tener presente
+- NA   : "Not Available", no disponible.
+- NULL : objeto "vacío"
+- NaN  : "Not a Number", no es un número (ej.: log(-1), sqrt(-1))
+
+---
+
+# Matrices
+
+
+```r
+valores &lt;- 1:6
+nomfilas &lt;- c("fil1", "fil2")
+nomcols &lt;- c("col1", "col2", "col3")
+mi.matriz &lt;- matrix(valores, ncol = 3, dimnames = list(nomfilas, nomcols))
+mi.matriz
+```
+
+---
+# Array o arreglos
+
+```r
+# Definir etiquetas de nombres
+dim1 &lt;- c("A1", "A2")
+dim2 &lt;- c("B1", "B2", "B3", "B4")
+dim3 &lt;- c("C1", "C2", "C3")
+```
+
+```r
+# Definir arreglo
+Z &lt;- array(1:24, c(2,4,3), dimnames = list(dim1, dim2, dim3))
+```
+
+Vemos que el arreglo de 2×4×3 que hemos creado puede conceptualizarse como una estructura que contiene 3 matrices de 2×4. Podemos pensar
+en cada matriz C1 , C2 y C3 como “capas” que agregan profundidad en la figura. Vemos
+entonces que los arreglos son extensiones naturales de las matrices a n dimensiones,
+lo que es útil en algunos modelos estadísticos o manipulaciones de datos complejas.
+
+---
+# Data Frame
+
+```r
+# Definir columnas de datos
+idalumno &lt;- c(1:4)
+edad &lt;- c(15, 17, 15, 16)
+fecha_ingreso &lt;- c("05/03/2017", "02/03/2017", "13/03/2017", "12/04/2017")
+tipo_beca &lt;- c("BPR", "BPTP", "BI", "BI")
+rendimiento &lt;- c("Sobresaliente", "Bueno", "Insuficiente", "Bueno")
+aprobado &lt;- c(TRUE, TRUE, FALSE, TRUE)
+```
+
+```r
+# Crear y mostrar el data frame
+alumnos &lt;- data.frame(idalumno, edad, fecha_ingreso, tipo_beca, rendimiento,
+aprobado, row.names = idalumno)
+```
+---
+class: inverse, center, middle
+
+&lt;iframe src="https://giphy.com/embed/i3MXz2NWXzrVK" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/might-academia-boku-i3MXz2NWXzrVK"&gt;&lt;/a&gt;&lt;/p&gt;
+
+# Gracias!!
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

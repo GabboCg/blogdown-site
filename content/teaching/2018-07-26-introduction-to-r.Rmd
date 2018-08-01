@@ -8,7 +8,7 @@ categories:
 tags: []
 ---
 
-* session 1:
+* session 1: [Session 1](/sessions/session1.html)
 * session 2:
 * session 3:
 * session 4: [Session 4](/sessions/session4.html)
