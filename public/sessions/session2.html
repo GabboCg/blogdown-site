@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Importación, Manipulación y Visualización de Datos</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriel Cabrera G." />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Importación, Manipulación y Visualización de Datos
+## <code>👽</code> <br><br> Sesión 2
+### Gabriel Cabrera G.
+### 25/05/2018
+
+---
+
+
+
+
+class: inverse, center, middle
+
+&lt;iframe src="https://giphy.com/embed/J2xkAW1E8kvyE" width="480" height="244" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/J2xkAW1E8kvyE"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&gt;"ctrl + shift + m ... ctrl + enter, ctrl + shift + m ... ctrl + enter "
+
+---
+class: inverse, center, middle
+
+
+# Mantenerse en Contacto
+
+&lt;a href="mailto:gcabrerag@gmail.com"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gcabrerag@gmail.com&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://gabocg.github.io/personal_site/"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gabocg.github.io&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://twitter.com/GaboC_g"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/GaboC_g"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://pregrado.fen.uchile.cl/"&gt;&lt;i class="fa fa-map-marker fa-fw"&gt;&lt;/i&gt;&amp;nbsp; Facultad de Economía &amp; Negocios, Universidad de Chile &lt;/a&gt;
+
+
+---
+class: inverse, center, middle
+
+# Importación: readr, readxl &amp; heaven
+
+---
+
+# readr: un planeta perteneciente al tidyverse 
+
+La librería `readr` nos permite cargar plain-text en R, pero en `data frames`.
+
+
+```r
+library(tidyverse)
+```
+
+    - read_csv(): comma-delimited files.
+    - read_csv2(): semicolon-separated files (donde , es usado para decimales).
+    - read_tsv(): reads tab-delimited files.
+    - read_delim(): archivos con cualquier delimitador.
+
+Para efecto de esta sesión usaremos la data perteneciente a 5000 películas:
+
+
+```r
+movies &lt;- read_csv("tmdb_5000_movies.csv")
+```
+  
+Construimos un objeto con el nombre `movies`&lt;sup&gt;1&lt;/sup&gt;, cuya clase es un `tibble`, este último es una extensión del `tidyverse` para el `data.frame`. Cuando usamos `read_csv()` en la consola se "imprime" la especificación de cada columna, nombre y tipo.  
+
+
+.footnote[
+[1] Fijarse en la variable `keywords`. 
+
+]
+
+---
+
+# readr: función `parse_*()`
+
+Antes de continuar con nuestra base, veamos la función `parse_*()`, la que permite seleccionar un character vector y retornar un vector más especializado:
+
+
+```r
+str(parse_logical(c("TRUE", "FALSE", "NA")))
+str(parse_integer(c("1", "2", "3")))
+str(parse_date(c("2010-01-01", "1979-10-14")))
+```
+
+```r
+parse_factor(c("apple", "banana", "banana"), levels = fruit)
+```
+
+## Otros tipos de datos
+
+Para otro tipo de datos, se recomienda comenzar con los otros listados en el `tidyverse` para datos rectangulares:
+
+- **haven**: SPSS, Stata y archivos SAS, ojo con la codificación de caracteres.
+- **readxl**:  Archivos excel (*xls*  y  *xlsx*)
+
+Para datos jerarquizados usar: **jsonlite** para JSON (*JavaScript Object Notation*) y **xml2** para XML (*Extensible Markup Language*).
+
+---
+class: inverse, center, middle
+
+# Manipulación: dplyr &amp; tidyr 
+
+---
+# Operador `%&gt;%`
+
+Si bien no es obligatorio, `tidyr` y `dplyr` pueden usar el operador `%&gt;%` desarrollado por [Stefan Milton Bache](https://twitter.com/stefanbache), que es muy útil para entender el código.
+
+1. Mútiples Objetos
+
+```r
+     a &lt;- filter(data, variable == numeric_value)
+     b &lt;- summarise(a, Total = sum(variable))
+     c &lt;- arrange(b, desc(Total))
+```
+
+2. Opción `%&gt;%`:
+
+```r
+     data %&gt;%
+          filter(variable == “value”) %&gt;%
+            summarise(Total = sum(variable)) %&gt;%
+            arrange(desc(Total))
+```
+
+---
+# Librería `tidyr`
+
+* `gather()`: Considera multiples columnas y las une, "wide" to longer
+* `spread()`: Considera dos columnas (key &amp; value) y las separa en multiple columnas, "long" to wide.
+* `separate()`: Separa una columna en múltiples.
+* `unite()`: Combina multiples columnas en una sola.
+
+&lt;center&gt;&lt;iframe src="https://giphy.com/embed/C6JQPEUsZUyVq" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/james-franco-same-but-different-C6JQPEUsZUyVq"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+---
+## gather()
+
+**ejemplo 1**
+
+
+```r
+table4a  %&gt;%
+gather(`1999`, `2000`, key = "year", value = "cases")
+```
+
+
+**ejemplo 2**
+
+
+```r
+table4a  %&gt;%
+gather(`1999`, `2000`, key = "year", value = "cases")
+```
+
+
+**ejemplo 3**
+
+
+```r
+tidy4a &lt;- table4a %&gt;%
+gather(`1999`, `2000`, key = "year", value = "cases")
+
+tidy4b &lt;- table4b %&gt;%
+gather(`1999`, `2000`, key = "year", value = "population")
+
+left_join(tidy4a, tidy4b)
+```
+
+---
+
+## spread()
+
+
+```r
+spread(table2, key = type, value = count)
+```
+
+
+## separate()
+
+**ejemplo 1**
+
+
+```r
+table3 %&gt;%
+separate(rate, into = c("cases", "population"))
+```
+
+
+**ejemplo 2**
+
+
+```r
+table3 %&gt;%
+separate(rate, into = c("cases", "population"), sep = "/")
+```
+
+---
+## unite()
+
+**ejemplo 1**
+
+
+```r
+table5 %&gt;%
+  unite(new, century, year)
+```
+
+**ejemplo 2**
+
+```r
+table5 %&gt;%
+  unite(new, century, year, sep = "")
+```
+
+---
+# Librería `dplyr` ❤️
+
+* `select()`: Selecciona.
+* `filter()`: Filtra.
+* `group_by()`: Agrupa los datos bajo alguna categoría.
+* `summarise()`: resume los datos bajo alguna función.
+* `arrange()`: Ordena los datos
+* `mutate()`: genera nuevas variables
+
+&lt;center&gt;
+&lt;iframe src="https://giphy.com/embed/2hfq6SWKHsjSg" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/ignorance-2hfq6SWKHsjSg"&gt; Are you ready !!!&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+---
+# dplyr &amp; Stata
+
+
+Seleccionar dentro de grupos
+
+|                      Stata                                                |                        dplyr                                            |
+|:-------------------------------------------------------------------------:|:-----------------------------------------------------------------------:|
+| &lt;p align="left"&gt; egen temp = max(v1), by(id) &lt;br&gt; keep if v1 == temp &lt;/p&gt; |&lt;p align="left"&gt;  df %&gt;% group_by(id) %&gt;% filter(v1 == max(v1)) &lt;/p&gt;     |
+| &lt;p align="left"&gt; bys id: keep if _n == 1 &lt;/p&gt;                             |&lt;p align="left"&gt;  df %&gt;% group_by(id) %&gt;% slice(1) &lt;/p&gt;                  |
+| &lt;p align="left"&gt; bys id (v1): keep if _n &lt;= 2  &lt;/p&gt;                       |&lt;p align="left"&gt; df %&gt;% group_by(id) %&gt;% filter(row_number(v2) &lt;= 2) &lt;/p&gt;|
+
+
+---
+# dplyr &amp; Stata
+
+Aplicar funciones dentro de grupos
+
+|                      Stata                                                |                        dplyr                                             |
+|:-------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
+| &lt;p align="left"&gt; egen v1mean = mean(v1), by(id) &lt;/p&gt;                      |&lt;p align="left"&gt;  df %&gt;% group_by(id) %&gt;% mutate(v1mean = mean(v1)) &lt;/p&gt;  |
+| &lt;p align="left"&gt; bys id : replace v1 = v1[1] &lt;/p&gt;                         |&lt;p align="left"&gt;  df %&gt;% group_by(id) %&gt;% mutate(v1 = v1[1]) &lt;/p&gt;         |
+| &lt;p align="left"&gt; collapse (mean) v1 (sd) v2, by(id) &lt;/p&gt;                  |&lt;p align="left"&gt; df %&gt;% group_by(id) %&gt;% summarize(mean(v1), sd(v2)) &lt;/p&gt; |
+
+---
+# Continuando con nuestra base...
+
+
+```r
+if(!require("pacman")) install.packages("pacman")
+p_load("tidyverse","maps","ggthemes","jsonlite")
+
+movies &lt;- read_csv("tmdb_5000_movies.csv")
+
+keywords &lt;- movies %&gt;%    
+            filter(nchar(keywords)&gt;2) %&gt;% # ve los numeros de caracteres y selecciona a los que poseen mayot de 2
+            mutate(                           # creamos nuevos variable 
+              js = lapply(keywords, fromJSON) # contiene una lista con nuestros valores
+            ) %&gt;%                             # vamos a obtener la id y los name 
+            unnest(js) %&gt;%                    # cada elemento de una lista la pasa a una fila
+            select(id, title, keyword=name)   # seleccionamos las variables y las renombramos otra forma es con rename
+```
+
+
+```r
+slice(keywords, sample(1:36184, 5))
+```
+---
+
+
+```r
+# mapeamos la información sobre los estados de Estados Unidos
+mapa_estados &lt;- map_data("state")   
+
+# Solo valores únicos del la variable region del objeto states_map
+lista_estados &lt;- (distinct(mapa_estados, region))$region  
+```
+
+
+```r
+peliculas_estado &lt;- keywords %&gt;%                            # seleccionamos objeto keywords               
+                    filter(keyword %in% lista_estados) %&gt;%  # Filtramos las que si son estados
+                    group_by(keyword) %&gt;%                   # Agrupamos por estado
+                    summarise(count=n()) %&gt;%                # contamos
+                    mutate(nombre_estado=keyword) %&gt;%       # creamos una nueva variable (otra forma se puede?)
+                    right_join(                             # unimos por la derecha y vemos los estados que no tenemos
+                      tibble(nombre_estado=lista_estados),  # transformamos a tibble
+                      by="nombre_estado"                    # unimos por estado (merge)
+                    ) %&gt;%                                 
+                    select(nombre_estado, count) %&gt;%        # seleccionamos los estados
+                    mutate(
+                      count=ifelse(is.na(count),0,count)    # transformamos los NA a 0
+                    ) %&gt;%
+                    arrange(desc(count))                    # Ordenamos de mayor a menor
+```
+
+
+The top 5 states are:
+
+
+```r
+head(peliculas_estado, 5)
+```
+
+---
+
+# ggplot2 🤘
+
+Todo `ggplot2` plot tiene tres componentes:
+
+- Datos
+- Un conjunto de aesthetic mappings entre variables y propiedades de visualización.
+- Al menos una layer que describe la observación, son usualmente creadas con la función `geom_*`
+
+
+```r
+library(ggplot2)
+
+ggplot(mpg, aes(x = displ, y = hwy)) + geom_point()
+```
+
+Esto produce el scatterplot definido como:
+
+- Datos: `mpg` 
+- Aesthetic mapping: tamaño del motor en la posición x, gasolina en la posición y.
+- Layer: puntos.
+
+---
+# Color, tamaño, forma y otros atributos del *aesthetic*
+
+Se debe usar otro aesthetics como `colour`, `shape` y `size` (ggplot acepta los nombres americanos como británicos)
+
+
+```r
+ggplot(mpg, aes(displ, cty, colour = class)) +
+  geom_point() 
+```
+
+- Como se puede ver, se creo una guía con los valores, leyenda, así podemos "leer" el gráfico.
+- Si se quiere aesthetic para valores fijos, sin scaling: 
+
+
+```r
+ggplot(mpg, aes(displ, hwy)) + geom_point(aes(colour = "blue"))
+ggplot(mpg, aes(displ, hwy)) + geom_point(colour = "blue")
+```
+
+Ejercicios:
+
+
+```r
+aes(displ, hwy, colour = class)
+aes(displ, hwy, shape = drv)
+aes(displ, hwy, size = cyl)
+```
+
+- Se recomienda usar `colour` y `shape` con variables categóricas.  
+- Mientras que size funciona bien con variables continuas.
+
+---
+# Facetting  
+
+Existen dos tipos de `facetting`: grid y wrapped. 
+
+
+```r
+ggplot(mpg, aes(displ, hwy)) +
+geom_point() +
+facet_wrap(~class)
+```
+
+
+```r
+ggplot(mpg, aes(displ, hwy)) +
+geom_point() +
+facet_grid(~class) 
+```
+---
+
+# Plot geoms
+
+## Agregar smoother al plot
+
+
+```r
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() +
+  geom_smooth()
+```
+
+
+```r
+ggplot(mpg, aes(displ, hwy)) +
+geom_point() +
+geom_smooth(method = "lm")
+```
+
+## Boxplot 
+
+
+```r
+ggplot(mpg, aes(drv, hwy)) + geom_jitter()
+ggplot(mpg, aes(drv, hwy)) + geom_boxplot()
+ggplot(mpg, aes(drv, hwy)) + geom_violin()
+```
+
+---
+## Histograma y polígonos de frecuencia
+
+
+```r
+ggplot(mpg, aes(hwy)) + geom_histogram(binwidth = 2.5)
+ggplot(mpg, aes(hwy)) + geom_freqpoly(binwidth = 2.5)
+```
+
+## Bar charts
+
+
+```r
+ggplot(mpg, aes(manufacturer)) +
+geom_bar()
+```
+
+---
+
+# Ejercicio con ggplot2 y dplyr usando retornos
+
+1. Cargue la base de datos `Finance.Rdata`.
+2. Seleccione las cuatro primeras variables.
+3. Grafique usando ggplot2.
+4. Repita desde lo mismo pero con 10 variables.
+
+&lt;center&gt;&lt;iframe src="https://giphy.com/embed/6uMqzcbWRhoT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/cat-animal-kitten-6uMqzcbWRhoT6"&gt;Que lata!!!!&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+---
+
+# La solución (?)
+
+
+```r
+load("Finance.RData")
+
+subset.2 &lt;- Finance %&gt;% 
+            select("WMK","UIS","ORB","MAT") %&gt;% 
+            as_tibble() %&gt;% 
+            mutate(date = as.Date(rownames(Finance)), 
+                                  wmk_acum = cumsum(WMK),
+                                  uis_acum = cumsum(UIS), 
+                                  orb_acum = cumsum(ORB), 
+                                  mat_acum = cumsum(MAT)) %&gt;% 
+            ggplot() + geom_line(mapping=aes(date,wmk_acum),colour = "red") + 
+                       geom_line(mapping=aes(date,uis_acum),colour = "blue")+ 
+                       geom_line(mapping=aes(date,orb_acum),colour = "green") + 
+                       geom_line(mapping=aes(date,mat_acum),colour = "cyan") +
+            labs(title = "Retornos Acumulados", subtitle = "Para muchos periodos", caption = "Nota: acá va la nota sexy") +
+            xlab("Periodos") + ylab("Acciones") + scale_colour_manual("Leyenda", values = c("red","blue","green","cyan"), labels = c("wmk","uis","orb","mat")) +
+            theme_bw() + theme(legend.position = "bottom")
+subset.2            
+```
+
+---
+
+# Ahora más eficiente 
+
+
+```r
+load("Finance.RData")
+
+# Forma Eficiente
+subset.1 &lt;-  apply(Finance[,1:4], 2, function(x) cumsum(x)) %&gt;% 
+             as_tibble() %&gt;% 
+             mutate(date = as.Date(rownames(Finance))) %&gt;% 
+             melt(id.vars = c("date"), variable.name = "ret_acum", value.name = "stocks") %&gt;% 
+             ggplot(mapping=aes(date,stocks,colour = ret_acum)) + geom_line() +
+             labs(title = "Retornos Acumulados", subtitle = "Para muchos periodos", caption = "Nota: acá va la nota sexy") +
+             xlab("Periodos") + ylab("Acciones") + scale_colour_manual("Leyenda", values = c("red","blue","green","cyan"), labels = c("wmk","uis","orb","mat")) +
+             theme_bw() + theme(legend.position = "bottom")
+subset.1
+```
+
+---
+
+# Recuerdan las peliculas..
+
+
+```r
+g1 &lt;- ggplot(peliculas_estado) + 
+      geom_map(aes(map_id = nombre_estado,fill = count), map = mapa_estados) + 
+      expand_limits(x = mapa_estados$long, y = mapa_estados$lat) +
+      labs(title ="Cantidad de Peliculas por Estados", subtitle = "Estados Unidos") + xlab("Longitud") + ylab("Latitud") +
+      theme_bw()
+
+g1
+```
+
+&lt;center&gt;&lt;iframe src="https://giphy.com/embed/3ohzdIuqJoo8QdKlnW" width="480" height="222" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/reactionseditor-yes-awesome-3ohzdIuqJoo8QdKlnW"&gt;Awesome!!!&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+---
+class: inverse, center, middle
+
+&lt;iframe src="https://giphy.com/embed/18ANhgTABn04M" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/the-simpsons-lisa-simpson-18ANhgTABn04M"&gt; **Gracias !!!**&lt;/a&gt;&lt;/p&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

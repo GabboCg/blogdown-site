@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>La gran familia R Apply</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriel Cabrera G." />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# La gran familia R Apply
+## <code>👽</code> <br><br> Sesión 3
+### Gabriel Cabrera G.
+### 25/05/2018
+
+---
+
+
+
+
+class: inverse, center, middle
+
+&lt;iframe src="https://giphy.com/embed/ToMjGpRhf96j23aTc5i" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/jack-black-knowledge-heatvision-and-ToMjGpRhf96j23aTc5i"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&gt;&lt;div align="center"&gt;
+  "Por la falta de un clavo fue que la herradura se perdió. &lt;br&gt;
+  Por la falta de una herradura fue que el caballo se perdió. &lt;br&gt;
+  Por la falta de un caballo fue que el caballero se perdió. &lt;br&gt;
+  Por la falta de un caballero fue que la batalla se perdió. &lt;br&gt;
+  Y así como la batalla, fue que un(a) reino se perdió. &lt;br&gt;
+  Y todo porque fue un clavo el que faltó. &lt;br&gt;
+ &lt;div align="right"&gt; -  George Herbert" &lt;/div&gt;
+ &lt;/div&gt;
+
+---
+class: inverse, center, middle
+
+
+# Mantenerse en Contacto
+
+&lt;a href="mailto:gcabrerag@fen.uchile.cl"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gcabrerag@fen.uchile.cl&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://gabocg.github.io/personal_site/"&gt;&lt;i class="fa fa-link fa-fw"&gt;&lt;/i&gt;&amp;nbsp; gabocg.github.io&lt;/a&gt;&lt;br&gt;
+&lt;a href="https://twitter.com/GaboC_g"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/GaboC_g"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @GaboC_g&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://pregrado.fen.uchile.cl/"&gt;&lt;i class="fa fa-map-marker fa-fw"&gt;&lt;/i&gt;&amp;nbsp; Facultad de Economía &amp; Negocios, Universidad de Chile &lt;/a&gt;
+
+
+---
+class: inverse, center, middle
+
+# Una familia que nunca olvidaras....
+
+---
+# La Familia
+
+La familia `apply` son una **alternativa a los loops**, que facilitan la programación funcional (PF). Recordemos que un lenguaje FP significa que provee tantas herramientas para la creación y manipulación de funciones (por eso existen en parte tantas librerías!!!)  
+
+&lt;center&gt;&lt;iframe src="https://giphy.com/embed/YeLsS65XBEk7e" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/cant-the-godfather-YeLsS65XBEk7e"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+---
+# La Familia: con sus parientes...
+
+* apply : Es genérico aplica una función a una matriz por fila como columnas.
+
+* lapply: aplica una función a cada elemento de una lista y la devuelve en forma de lista.
+
+* sapply: Se diferencia con apply en que opera con listas. Recibe una lista y devuelve un vector
+
+* vapply: Devuelve un vector con la longitud que tiene cada una de las listas introducidas como parámetro.
+
+* mapply: Realiza operaciones entre matrices y devuelve una lista o vector.
+
+* tapply: Realiza una operación (parámetro 3) respecto a un vector (parámetro 1) agrupada por los factores                    que se indiquen como argumento (parámetro 2).
+
+---
+
+# `apply`: El padrino
+
+Para no complicar la situación vamos a trabajar en dos dimensiones, o matrices.
+
+* `X`, la matriz 
+* `MARGIN`, un vector que tiene las dimensiones para aplicar.
+* `FUN`, un función. 
+
+
+```r
+a &lt;- matrix(rnorm(20, 0, 10), nrow = 4)
+
+# Por fila
+apply(a, 1, mean)
+```
+
+```
+## [1]  2.446437 -4.238405 -9.493486 -2.138572
+```
+
+```r
+# Por columna
+apply(a, 2, mean)
+```
+
+```
+## [1]  10.972268 -11.437111   3.717087  -9.045868 -10.986408
+```
+
+---
+# `apply`: El padrino con sus propias funciones
+
+Digamos que vemos números negativos y queremos solo aquellos con valores positivos. ¿cuantos números negativos tiene cada columna, usando `apply`?
+
+
+```r
+# Creamos una matriz con los datos
+m &lt;- matrix(data=cbind(rnorm(30, 0), rnorm(30, 2), rnorm(30, 5)), nrow=30, ncol=3)
+
+# vemos m
+head(m,5)
+```
+
+```
+##              [,1]     [,2]     [,3]
+## [1,] -0.007606517 1.225602 5.923570
+## [2,]  0.526950092 2.614483 4.304618
+## [3,] -0.139511169 2.294560 5.225006
+## [4,] -0.183401914 1.894866 4.681281
+## [5,]  1.108364891 1.699935 5.152776
+```
+
+```r
+# aplicamos apply por columna
+apply(m, 2, function(x) length(x[x&lt;0]))
+```
+
+```
+## [1] 15  1  0
+```
+
+---
+# Usando Lapply &amp; Sapply
+
+Ambas funciones actuan de forma similar, sobre un conjunto de datos o listas. `sapply` actuara sobre una lista o vector y retorna un vector.
+
+
+```r
+sapply(1:3, function(x) x^2)
+```
+
+```
+## [1] 1 4 9
+```
+
+En cambio, `lappy` genera una lista.
+
+
+```r
+lapply(1:3, function(x) x^2)
+```
+
+```
+## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 4
+## 
+## [[3]]
+## [1] 9
+```
+
+---
+# `unlist()` + `lapply()` = `sapply()`  
+
+No obstante pueden usar `unlist()` con `lapply()` para devolver un vector.
+
+
+```r
+unlist(lapply(1:3, function(x) x^2))
+```
+
+```
+## [1] 1 4 9
+```
+
+# `vapply()`
+
+
+```r
+x &lt;- list(A = 1, B = 1:3, C = 1:7)
+x
+```
+
+```
+## $A
+## [1] 1
+## 
+## $B
+## [1] 1 2 3
+## 
+## $C
+## [1] 1 2 3 4 5 6 7
+```
+---
+
+# `Mapply()`
+
+Suma el primer elemento de cada vector, después el segundo y así sucesivamente:
+
+
+```r
+mapply(sum, 1:5, 1:5, 1:5) 
+```
+
+```
+## [1]  3  6  9 12 15
+```
+
+
+Repite cada elemento del primer vector el número de veces que indique el segundo vector:
+
+
+```r
+mapply(rep, 1:4, 4:1)
+```
+
+```
+## [[1]]
+## [1] 1 1 1 1
+## 
+## [[2]]
+## [1] 2 2 2
+## 
+## [[3]]
+## [1] 3 3
+## 
+## [[4]]
+## [1] 4
+```
+
+---
+# `tapply()`
+
+
+```r
+x &lt;- 1:20
+x
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+
+```r
+y &lt;- factor(rep(letters[1:5], each = 4))
+y
+```
+
+```
+##  [1] a a a a b b b b c c c c d d d d e e e e
+## Levels: a b c d e
+```
+
+```r
+tapply(x, y, sum)
+```
+
+```
+##  a  b  c  d  e 
+## 10 26 42 58 74
+```
+
+---
+class: inverse, center, middle
+
+# Funciones
+
+---
+
+# Comencemos con lo básico:
+
+Las funciones en R son objetos de primer orden, esto significa que podemos trabajar con ellos como cualquier otro objeto en R.
+
+
+```r
+f &lt;- function(x){
+  x*x
+}
+```
+
+
+```r
+typeof(f)
+```
+
+```
+## [1] "closure"
+```
+
+En una lista
+
+```r
+list(f)
+```
+
+```
+## [[1]]
+## function (x) 
+## {
+##     x * x
+## }
+```
+---
+
+# Comencemos con lo básico: todos los caminos...
+
+pasar a otra "variable"
+
+```r
+g &lt;- f
+g(3)
+```
+
+```
+## [1] 9
+```
+
+o inclusive nunca cargarla a un nombre en específico:
+
+
+```r
+{function(x) x*x*x}(3)
+```
+
+```
+## [1] 27
+```
+
+Lo último es lo que se suele usar en la programación funcional.
+
+---
+# Parte de una función
+
+Las dos partes de una función son los argumentos (`formals`) y el código (`body`). A continuación programaremos la distancia entre dos puntos/coordenadas:
+
+
+```r
+gcd &lt;- function(loc1, loc2)
+{
+  deg2rad &lt;- function(deg) return(deg*pi/180)
+
+  lat1 &lt;-  deg2rad( loc1[1] )
+  lat2 &lt;-  deg2rad( loc2[1] )
+  long1 &lt;- deg2rad( loc1[2] )
+  long2 &lt;- deg2rad( loc2[2] )
+
+  R &lt;- 6371 # el promedio del radio de la tierra en kilómetros.
+  d &lt;- acos(sin(lat1)*sin(lat2) + cos(lat1)*cos(lat2) * cos(long2-long1)) * R
+
+  return(paste0("la distancia en km es: ",d)) # distancia en kilometros.
+}
+```
+
+---
+# Parte de una función: alguien dijo `formals` y `body` 
+
+
+```r
+formals(gcd)
+```
+
+```
+## $loc1
+## 
+## 
+## $loc2
+```
+
+
+```r
+body(gcd)
+```
+
+```
+## {
+##     deg2rad &lt;- function(deg) return(deg * pi/180)
+##     lat1 &lt;- deg2rad(loc1[1])
+##     lat2 &lt;- deg2rad(loc2[1])
+##     long1 &lt;- deg2rad(loc1[2])
+##     long2 &lt;- deg2rad(loc2[2])
+##     R &lt;- 6371
+##     d &lt;- acos(sin(lat1) * sin(lat2) + cos(lat1) * cos(lat2) * 
+##         cos(long2 - long1)) * R
+##     return(paste0("la distancia en km es: ", d))
+## }
+```
+
+---
+# Parte de una función: [I walk 500 miles](https://www.youtube.com/watch?v=tbNlMtqrYS0)
+¿Cuál es la distancia entre mi casa y la FEN?
+
+
+```r
+data.1 &lt;- data.frame(latitud = -33.4682697, longitud = -70.64409920000003)
+data.2 &lt;- data.frame(latitud = -33.442075 , longitud = -70.63584200000003)
+gcd(data.1,data.2)
+```
+
+```
+## [1] "la distancia en km es: 3.01176617982926"
+```
+---
+
+class: inverse, center, middle
+
+# purrr
+
+---
+
+# purrr: mucho más que simples ronroneos..... miau!!!
+
+Es una librería del `tidyverse` con mejoras en la programación funcional en R con enfoque en funciones puras y estables. 
+
+&lt;center&gt;&lt;iframe src="https://giphy.com/embed/snSZoVOmBN8Aw" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/kitty-miau-mur-snSZoVOmBN8Aw"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+
+
+```r
+library("tidyverse")
+library("repurrrsive")
+```
+
+---
+# purrr: con Star Wars... 
+
+Corramos esto:
+```r 
+View(sw_people)
+``` 
+
+Luego respondamos 
+
+* Quien es la primera persona en `sw_people`? 
+* En cuantas naves espaciales ha estado cada personaje?
+
+&lt;center&gt;&lt;iframe src="https://giphy.com/embed/UsmcxQeK7BRBK" width="480" height="288" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/star-wars-yoda-the-force-UsmcxQeK7BRBK"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+---
+# La listas:
+
+## Quien es la primera persona en `sw_people`
+
+```r
+sw_people[[1]]
+
+```
+## Una lista dentro de una lista
+
+```r
+sw_people[1]
+
+```
+
+---
+
+# La función `map()` de la librería purrr:
+
+```r
+map( .x, .f, ...)
+```
+
+- Para cada elemento de `.x` hacer `.f`:
+- `.x` puede ser un vector, lista o data frame.
+
+
+volviendo a nuestra pregunta ¿En cuantas naves espaciales ha estado cada personaje?
+
+comencemos con Luke:
+
+```r
+luke &lt;- sw_people[[1]]
+length(luke$starships)
+```
+
+y Chewbacca:
+
+```r
+chewie &lt;- sw_people[[13]]
+length(chewie$starships)
+```
+
+---
+
+# Transformemos esto en una deliciosa receta...
+
+```r
+~ length(.x$starships)
+```
+
+* `~`: Una formula 
+* `.x`: El "pronombre" de purrr para un elemento de nuestro vector  
+* Esta receta transforma el segundo argumento a `map()`.
+
+```r
+map(sw_people, ~lenght(.x$starships))
+```
+
+---
+
+# `map()` &amp; amigos
+
+Recuerdan a los señores  `lapply`/`sapply`/`vapply`, bueno a hora vuelven en forma de funciones en `purrr`:
+
+* `map()` : Retorna una lista.
+* `map_lgl()`: Retorna un vector lógico.
+* `map_int()`: Retorna un *integer vector*
+* `map_dbl()`: Retorna un *double vector*
+* `map_chr()`: Retorna un *character vector*
+* `map_df()`/`map_dfr()` : Retorna un data frame por fila.
+* `map_dfc()`:: Retorna un data frame por columna. 
+
+Ahora se podría responder:
+
+- ¿Cuál es color del cabello de cada personaje?
+- ¿Es el personaje hombre?
+- ¿cuanto pesa cada personaje?
+
+---
+# Otra mirada a `map()` 
+
+```r
+map(.x,.f = ~ HACE ALGO CON .x)
+```
+
+`.f` puede ser:
+
+- Una formula.
+- un *string* o *integer* (extraer un nombre por e.g) 
+- una función.
+
+## `.f` puede ser formula.
+
+```r
+map_int(sw_people, ~ length(.x[["starships"]]))
+map_chr(sw_people, ~ .x[["hair_color"]])
+map_chr(sw_people, ~ .x[["mass"]])
+```
+ 
+---
+## `.f` puede ser *string*  o *integer* 
+
+```r
+map_chr(sw_people, ~ .x[["hair_color"]])
+map_chr(sw_people, "hair_color")
+```
+
+## `.f` puede ser una función
+
+```r
+char_starships &lt;- map(sw_people, "starships")
+map_int(char_starships, length)
+```
+o
+
+```r
+map(sw_people, "starships") %&gt;% map_int(length)
+map_int(sw_people, ~ length(.x[["starships"]]))
+```
+
+---
+
+# Ejercicios:
+
+1. Qué pelicula tiene más personajes?
+
+```r
+map(sw_films, "characters") %&gt;%
+  map_int(length) %&gt;%
+  set_names(map_chr(sw_films, "title")) %&gt;%
+  sort()
+
+```
+
+2. Números de colores de ojo por especie?
+
+```r
+sw_species[[1]]$eye_colors
+
+map_chr(sw_species, "eye_colors") %&gt;%
+  strsplit(", ") %&gt;%
+  map_int(length) %&gt;%
+  set_names(map_chr(sw_species, "name"))
+```
+
+---
+class: inverse, center, middle
+
+&lt;iframe src="https://giphy.com/embed/jUwpNzg9IcyrK" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/the-simpsons-scared-homer-simpson-jUwpNzg9IcyrK"&gt; **Gracias !!!**&lt;/a&gt;&lt;/p&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
