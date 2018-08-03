@@ -23,6 +23,12 @@ tags:
         * [Presentación 2](/pdf/presentation1.pdf)
         * Script
         
+        * Videos:
+            
+            * [Introducción a quantmod](https://youtu.be/TwBKLTq3mfY)
+            * [Retorno y Retorno Acumulado](https://youtu.be/-3RvuhtfNGU)
+            * [Graficar y Estadística Descriptiva](https://youtu.be/qlLFjBMSUlQ)
+            
     * Ayudantía 3 
     
         * [Presentación 3]()
