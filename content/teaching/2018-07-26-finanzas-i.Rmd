@@ -31,7 +31,7 @@ tags:
             
     * Ayudantía 3 
     
-        * [Presentación 3]()
+        * [Presentación 3](/pdf/presentation2.pdf)
         * Script
     
     * Ayudantía 4 
@@ -41,7 +41,7 @@ tags:
     
     * Ayudantía 5 
     
-        * [Presentación 5](/pdf/presentacion.pdf)
+        * [Presentación 5](/)
         * Script    
         
 3. Tareas 
