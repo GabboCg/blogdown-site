@@ -13,12 +13,12 @@ tags:
 
 2. Ayudantías
 
-    * Ayudantía 1 
+    a. Ayudantía 1 
     
         * [Presentación 1](/pdf/presentacion.pdf)
         * Script
         
-    * Ayudantía 2 
+    b. Ayudantía 2 
     
         * [Presentación 2](/pdf/presentation1.pdf)
         * Script
@@ -29,27 +29,27 @@ tags:
             * [Retorno y Retorno Acumulado](https://youtu.be/-3RvuhtfNGU)
             * [Graficar y Estadística Descriptiva](https://youtu.be/qlLFjBMSUlQ)
             
-    * Ayudantía 3 
+    c. Ayudantía 3 
     
         * [Presentación 3](/pdf/presentation2.pdf)
         * Script
     
-    * Ayudantía 4 
+    d. Ayudantía 4 
     
         * [Presentación 4]()
         * Script
     
-    * Ayudantía 5 
+    e. Ayudantía 5 
     
         * [Presentación 5](/)
         * Script    
         
 3. Tareas 
 
-    * Tarea 1 
+    a. Tarea 1 
         
         * Enunciado
     
-    * Tarea 2
+    b. Tarea 2
     
         * Enunciado
