@@ -8,5 +8,16 @@ categories:
 tags: []
 ---
 
-* <a href="https://gabocg.github.io/personal_site/"> Autumn 2018 </a>
-* <a href="https://gabocg.github.io/personal_site/"> Spring 2018 </a>
+1. Introducción a R Markdown
+
+    a. Presentación Ninja
+    b. Script 
+    c. Source Code
+
+2. Introducción a quantmod
+
+    a. Presentación Ninja
+    b. Script 
+    c. Source Code
+
+  
