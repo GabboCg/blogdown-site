@@ -1,0 +1,125 @@
+---
+header-includes:
+- \usepackage{hyperref}
+- \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=cyan,      
+     urlcolor=magenta,
+ }
+- \addtolength{\skip\footins}{4pc plus 10pt}
+- \usepackage{ragged2e}
+
+- \usepackage{xcolor}
+
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+
+- \fancyhead[LO,LE]{Universidad de Chile}
+- \fancyhead[RO,RE]{Finanzas I}
+- \fancyfoot[C,C]{\thepage}
+- \fancypagestyle{plain}{\pagestyle{fancy}}
+- \renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+- \renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+# hace que el output del código se pequeño, en este caso small
+# - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\small,commandchars=\\\{\}}
+
+# hace que el output de la consola se pequeño, en este caso small
+# - \makeatletter
+# - \def\verbatim{\small\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+# - \makeatother
+
+# \setlength{\parskip}{5pt}
+
+# - \usepackage{framed}
+# - \definecolor{shadecolor}{RGB}{248,248,248}
+# - \renewenvironment{Shaded}{\vspace{1em}\begin{snugshade}}{\end{snugshade}\vspace{0.25em}}
+# - \renewenvironment{Shaded}{\vspace{1em}}{\vspace{1em}}
+
+fontsize: 11pt
+geometry: margin=0.9in
+output: 
+    pdf_document:
+      number_sections: true
+---
+
+\begin{center}
+			%\vspace{1cm}
+			\includegraphics[width=1cm]{logo.jpg}\\
+			\large{\textbf{ENFIN415}}\\
+			\LARGE{\textbf{Finanzas I}}\\
+			\textsc{Tarea 1}\\
+			\smallskip
+\end{center}
+
+\small{ \noindent \textsc{\textbf{Profesor}: \textit{Erwin Hansen S.}}}
+
+\small{ \noindent \textsc{\textbf{Ayudantes}: \textit{Ignacio Benavides, Gabriel Cabrera, Boris Pasten, Sebastián Piña y Ewald Stark}}} 
+
+\textsc{\textit{\textbf{Fecha}: `r format(Sys.time(), '%d %B %Y')`}}	
+
+\vspace{0.1cm}
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\vspace{-10pt}
+
+\begin{center}
+\textbf{Instrucciones}
+\end{center}
+
+1.	Esta tarea debe ser entregada en grupos de mínimo 2 alumnos y máximo 3 alumnos. 
+2.	Se debe enviar una carpeta comprimida (.zip) la que debe contener: script y un breve informe con sus resultados, incluyendo tablas, gráficos, etc., según corresponda.  El formato del infome puede ser word o pdf.
+3.  El asunto del email con su tarea debe ser "Tarea 1-Finanzas 1-Apellido 1-Apellido 2-Apellido 3"
+4.	La fecha de entrega es el Martes 28 de Agosto del 2018 hasta las 23:59 hrs al correo del curso: \href{mailto:finance.hansen@gmail.com}{finance.hansen@gmail.com}. 
+
+\vspace{-10pt}
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\vspace{5pt}
+
+Usted es un analista de inversiones al cual se le ha encomendado la misión de construir un portafolio que buscará diversificación invirtiendo en distintas empresas. El monto a invertir es de US$1 millón.
+
+# Selección de los datos
+
+Desde [*Yahoo Finance*](https://finance.yahoo.com/) obtenga los precios  de las siguientes empresas con periodicidad mensual desde Enero del 2005 hasta Julio del 2018: Amazon (AMZN), Alphabet (GOOG), Netflix (NFLX), McDonald`s (MCD) y Coca Cola (KO)
+
+# Cálculo retorno y estadística descriptiva
+
+Para cada acción calcule el retorno^[El retorno logarítmico se define como $r = ln(p_t) - ln(p_{t-1})$] y retorno acumulado, luego:
+    
+a. Grafique el retorno acumulado de los índice en un solo gráfico, comente lo que observa.
+b. Construya un grafico tipo *scatter* que muestre el *trade-off* retorno-riesgo de los seis activos. 
+c. Compute una estadística descriptiva (media, varianza, desviación estandar, skewness y kurtosis) para el retorno de cada acción y comente.
+d. Usando una tasa libre de riesgo mensual igual a 0.1250% (0.00125), calcule el ratio de Sharpe para cada activo. ¿Qué activo posee el mayor ratio de Sharpe?
+e. Realice el test de normalidad Jarque Bera sobre el retorno de cada activo.
+
+# Teoría de portafolio
+
+a. Construya el portafolio de minima varianza global. Reporte los ponderadores de este portfolio, su retorno esperado y su desviación estandar.
+b. Construya:
+
+    1. Un portafolio cuyo retorno esperado sea igual al de Amazon (permitida venta corta).
+    2. Un portafolio cuyo retorno esperado sea igual al de Alphabet (permitida venta corta).
+    3. Un portafolio cuyo retorno esperado sea igual al de Netflix (permitida venta corta).
+    4. Un portafolio cuyo retorno esperado sea igual al de McDonald`s (permitida venta corta).
+    5. Un portafolio cuyo retorno esperado sea igual al de Coca Cola (permitida venta corta).
+
+    Reporte los ponderadores de cada portfolio, su retorno esperado y su desviación estandar.
+
+c. De los portafolio encontrados en (3.b) ¿cuáles son portafolio eficientes?¿por qué?.
+d. Construya el portafolio optimo de mínima varianza (está permitido venta corta) usando una tasa libre riesgo mensual igual a 0.1250% (0.00125). Reporte los ponderadores del portfolio, su retorno esperado y su desviación estandar.
+e. Contruya la frontera eficiente (recuerde que está permitido venta corta), utilice los mismo paràmetros utilizados en ayudantía^[Para mayor detalle de la función `efficient.frontier` ver desde la slide 31 de la ayudantía 2].
+f. Grafique la frontera eficiente identificando el portafolio de mínima varianza, portafolio tangente y la tasa libre de riesgo.
+g. Repita (3.d) pero ahora la venta corta no está permitida, comente.
+
+
+
