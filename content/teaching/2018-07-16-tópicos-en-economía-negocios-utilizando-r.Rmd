@@ -10,14 +10,20 @@ tags: []
 
 1. Introducción a R Markdown
 
-    a. Presentación Ninja
+    a. [Presentación Ninja](/xaringan/xaringan_rmarkdown.html)
     b. Script 
-    c. Source Code
+    c. [Source Code](https://github.com/GaboCg/rmarkdown_introduction)
 
 2. Introducción a quantmod
 
+    a. [Presentación Beamer](/pdf/introduction_quantmod.pdf)
+    b. Script 
+    c. Source Code
+    
+2. Introducción a gganimate 
+
     a. Presentación Ninja
     b. Script 
     c. Source Code
-
+    
   
