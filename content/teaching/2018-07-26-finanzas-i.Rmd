@@ -48,7 +48,7 @@ tags:
 
     a. Tarea 1 
         
-        * Enunciado
+        * [Enunciado](/pdf/Enunciado_v1.pdf)
     
     b. Tarea 2
     
