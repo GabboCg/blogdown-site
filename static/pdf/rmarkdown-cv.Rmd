@@ -1,7 +1,7 @@
 ---
 output: 
   pdf_document:
-    latex_engine: pdflatex
+    latex_engine: xelatex
     template: latex-cv.tex
 geometry: margin=0.7in
 
@@ -14,8 +14,8 @@ fontawesome: yes
 email: gcabrerag@fen.uchile.cl
 github: GaboCg
 phone: "+56 9 4281 5467"
-web: " "
-updated: 18 de Julio
+web: "gcabrerag.rbind.io"
+# updated: 18 de Julio
 
 keywords: R Markdown, academic CV, template
 
@@ -32,7 +32,7 @@ urlcolor: blue
 \vspace{-15pt}
 \noindent\rule{\textwidth}{1pt}
 
-- Licenciado en Ciencias Económícas, Universidad de Chile   \hfill 2012 - 2017
+- Licenciado en Ciencias Económicas, Universidad de Chile   \hfill 2012 - 2017
 - Ingeniero Comercial, Universidad de Chile     \hfill 2012 - 2018
 - Magister en Finanzas\footnote{Modalidad del programa \textit{Full Time}.} (c), Universidad de Chile  \hfill 2017 - actualidad
 
@@ -93,19 +93,22 @@ urlcolor: blue
 
     - *Facultad de Economía & Negocios*
     
-    1. Tópicos en Economía & Negocios Usando R, *Curso electivo.* \newline
+    1. Entorno económico para los negocios *Curso electivo.* \newline
+       Profesor: Victor Macias Essedin PhD (c). \hfill Primavera 2018
+    
+    2. Tópicos en Economía & Negocios Usando R, *Curso electivo.* \newline
        Profesor: Victor Macias Essedin PhD (c). \hfill 2018
         
-    2. Finanzas I, *Curso obligatorio*. \newline
-       Profesor: [Erwin Hansen Silva](http://negocios.uchile.cl/academico_detalle.php?id=90), PhD. \hfill Otoño 2018
+    3. Finanzas I, *Curso obligatorio*. \newline
+       Profesor: [Erwin Hansen Silva](http://negocios.uchile.cl/academico_detalle.php?id=90), PhD. \hfill 2018
        
-    3. Econometría Aplicada, *Curso obligatorio*. \newline
+    4. Econometría Aplicada, *Curso obligatorio*. \newline
        Profesor: [Victor Medina Olivares](https://vhmedina.github.io/), Mg. \hfill 2017
        
-    4. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
+    5. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
        Profesor: [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. \hfill Otoño 2016
-       
-    4. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
+      
+    6. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
        Profesor: [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. \hfill 2015
     
     \vspace{10 pt}
@@ -158,7 +161,7 @@ urlcolor: blue
     Facultad de Economía \& Negocios\\
     Universidad de Diego Portales\\
     Huechuraba, Sta Clara 797  \\
-    \Telefon\ +56 9 1111 1111 \\
+    \Telefon\ +56 9 7878 4900\\
     \Letter\ \href{mailto:vmaciase@fen.uchile.cl}{vmaciase@fen.uchile.cl}
 
 \end{multicols}
