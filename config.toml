@@ -21,7 +21,7 @@ ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
     
     highlightjs = true
     # highlightjsTheme = "github"
-    # highlightjsstyle = github
+    highlightjsstyle = "github" 
     highlightjsLang = ["r", "yaml"]
     
     themeColor = "theme-base-0f" 
