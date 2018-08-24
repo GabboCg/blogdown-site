@@ -67,8 +67,8 @@ code
 
 code {
 /*	padding:.15em .3em; */
-	color: rgba(255,255,255,.5);
-  background: #202020;
+	color: #bf616a;
+  background-color: #f9f9f9;
 	box-sizing: border-box;
 	margin: 0 .25em;
 }
