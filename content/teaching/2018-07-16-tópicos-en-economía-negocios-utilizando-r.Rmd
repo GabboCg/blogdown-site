@@ -32,7 +32,7 @@ tags: []
 
 1. Tarea 1 
 
-    a. Enunciado
+    a. [Enunciado](/pdf/Enunciado_Tarea1_R_Primavera_2018.pdf)
     b. Pauta
 
 2. Tarea 2 

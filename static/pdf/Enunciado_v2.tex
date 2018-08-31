@@ -1,0 +1,240 @@
+\documentclass[11pt,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=0.95in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{}
+    \pretitle{\vspace{\droptitle}}
+  \posttitle{}
+    \author{}
+    \preauthor{}\postauthor{}
+    \date{}
+    \predate{}\postdate{}
+  
+\usepackage{hyperref}
+\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=cyan, urlcolor=magenta, }
+\addtolength{\skip\footins}{4pc plus 10pt}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\pagestyle{fancy}
+\fancyhead[LO,LE]{Universidad de Chile}
+\fancyhead[RO,RE]{Tópicos en Economía y Negocios Utilizando R}
+\fancyfoot[C,C]{\thepage}
+\fancypagestyle{plain}{\pagestyle{fancy}}
+\renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+\setlength{\skip\footins}{1.2pc plus 5pt minus 2pt}
+
+\begin{document}
+
+\begin{center}
+            %\vspace{1cm}
+            \includegraphics[width=1cm]{logo.jpg}\\
+            \large{\textbf{ENMEC357}}\\
+            \LARGE{\textbf{Tópicos en Economía y Negocios Utilizando R}}\\
+            \textsc{Tarea 1}\\
+            \smallskip
+            \small{ \noindent \textsc{\textbf{Profesor}: \textit{Victor Macías E.}}}
+            \\
+            \small{ \noindent \textsc{\textbf{Ayudante}: \textit{Gabriel Cabrera G.\footnote{ \faSend: \href{mailto:gcabrerag@fen.uchile.cl}{gcabrerag@fen.uchile.cl}}}}} 
+            \\
+            \textsc{\textit{31 agosto 2018}}    
+\end{center}
+
+\vspace{-0.25cm}
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\vspace{-5pt}
+
+\begin{center}
+\textbf{Instrucciones}
+\end{center}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Esta tarea debe ser entregada en grupos de máximo 3 personas.
+\item
+  Se debe enviar una carpeta comprimida que contenga: un archivo .Rproj
+  (proyecto en R), un script y un breve informe en R Markdown con sus
+  resultados, incluyendo tablas, gráficos, etc., según corresponda. El
+  formato del informe puede ser word o pdf.
+\item
+  El asunto del email con su tarea debe ser ``Tarea 1-R 1-Apellido
+  1-Apellido 2-Apellido 3''
+\item
+  La fecha de entrega es el Sabado 1 de Septiembre del 2018 hasta las
+  23:59 hrs al correo del curso:
+  \href{mailto:r2018uchile@gmail.com}{r2018uchile@gmail.com}.
+\end{enumerate}
+
+\vspace{-8pt}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\begin{quote}
+``Data is a precious thing and will last longer than the systems
+themselves''.
+
+\flushright{\textit{Tim Berners-Lee}, inventor del the World Wide Web}
+\end{quote}
+
+\vspace{-10pt}
+
+\noindent\rule{\textwidth}{0.5pt}
+
+Una importante consultora de marketing está en la búsqueda de
+estudiantes con conocimiento del lenguaje R para realizar un estudio
+respecto a la industria del cine. Usted piensa que es una muy buena
+oportunidad postular, considerando que está cursando un curso en el que
+está aprendiendo R. Después de haber pasado varias pruebas y
+entrevistas, usted es contratado y como primera tarea le entregan la
+carpeta \emph{Datasets} que contiene:
+
+\begin{longtable}[]{@{}ll@{}}
+\caption{Breve descripción de las bases de datos.}\tabularnewline
+\toprule
+Base de datos & Descripción\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Base de datos & Descripción\tabularnewline
+\midrule
+\endhead
+\emph{genres.csv} & Géneros de cada película.\tabularnewline
+\emph{keywords.csv} & Palabras claves de cada película.\tabularnewline
+\emph{production\_companies.csv} & Compañía a cargo de la
+producción.\tabularnewline
+\emph{production\_countries.csv} & Países donde se realizá la
+producción.\tabularnewline
+\emph{movie\_dataset.csv} & Base de datos principal.\tabularnewline
+\bottomrule
+\end{longtable}
+
+A continuación le piden los siguientes \textbf{data frames} (sin
+considerar los \emph{missing values}) pensando que en un futuro no tan
+distante la información que contendrán será presentada gráficamente:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Identificar las 10 palabras claves (\emph{keywords}) que más se
+  repiten. (\emph{10 puntos})
+\item
+  Identificar:
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    Las 10 películas con las ingresos (\emph{revenue}) más altos.
+    (\emph{10 puntos})
+  \item
+    Las 10 películas con las ingresos (\emph{revenue}) más bajos.
+    (\emph{10 puntos})
+  \item
+    El número de películas con ingresos igual a cero. (\emph{10 puntos})
+  \end{enumerate}
+\item
+  Identificar la cantidad de películas por país, luego calcular la
+  utilidad\footnote{Asuma que el presupuesto fue el gasto total.}
+  (\emph{revenue} - \emph{budget}) y encontrar las 5 paises con mayor y
+  menor utilidad promedio. (\emph{10 puntos})
+\item
+  Dado que últimamente las salas IMAX han tenido una muy buena recepción
+  por parte del público, la consultora le pide calcular el ingreso
+  (\emph{revenue}) promedio por género, pero sólo de aquellas películas
+  que fueron estrenadas en formato IMAX. (\emph{15 puntos})
+\item
+  La industria del cine ha cambiado mucho desde sus inicios y miles de
+  películas son estrenadas cada año. Considerando sólo las películas que
+  se encuentran en las bases de datos, identifique el porcentaje de
+  películas estrenadas por década\footnote{Una librería útil para
+    trabajar con fechas es \texttt{lubridate}. La década se puede
+    construir con la ayuda del operador \texttt{\%\%}.}. (\emph{15
+  puntos})
+\item
+  Identifique la cantidad de películas por estado de Estados Unidos (vea
+  el archivo \emph{estados.csv}) y el presupuesto promedio
+  (\emph{budget}) por estado. ¿Qué estados nunca fueron usados como
+  lugar de filmación?, ¿Existe algún estado con presupuesto cero?.
+  (\emph{15 puntos})
+\end{enumerate}
+
+
+\end{document}

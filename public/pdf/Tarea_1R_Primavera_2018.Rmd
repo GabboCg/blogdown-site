@@ -1,0 +1,127 @@
+---
+header-includes:
+- \usepackage{hyperref}
+- \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=cyan,      
+     urlcolor=magenta,
+ }
+- \addtolength{\skip\footins}{4pc plus 10pt}
+- \usepackage{ragged2e}
+
+- \usepackage{xcolor}
+
+- \usepackage{fontawesome}
+
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+
+- \fancyhead[LO,LE]{Universidad Diego Portales}
+- \fancyhead[RO,RE]{R para Economía y Negocios}
+- \fancyfoot[C,C]{\thepage}
+- \fancypagestyle{plain}{\pagestyle{fancy}}
+- \renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+- \renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+# Hace que el output del código sea pequeño, en este caso small
+# - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\small,commandchars=\\\{\}}
+
+# hace que el output de la consola se pequeño, en este caso small
+# - \makeatletter
+# - \def\verbatim{\small\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+# - \makeatother
+
+# \setlength{\parskip}{5pt}
+
+# - \usepackage{framed}
+# - \definecolor{shadecolor}{RGB}{248,248,248}
+# - \renewenvironment{Shaded}{\vspace{1em}\begin{snugshade}}{\end{snugshade}\vspace{0.25em}}
+# - \renewenvironment{Shaded}{\vspace{1em}}{\vspace{1em}}
+
+# espacio entre footnote y el texto.
+- \setlength{\skip\footins}{1.2pc plus 5pt minus 2pt}
+
+fontsize: 11pt
+geometry: margin=0.95in
+output: 
+    pdf_document:
+      number_sections: true
+---
+
+\begin{center}
+			%\vspace{1cm}
+			\includegraphics[width=5cm]{logo.png}\\
+			\LARGE{\textbf{R para Economía y Negocios}}\\
+			\textsc{Tarea 1}\\
+			\smallskip
+			\small{ \noindent \textsc{\textbf{Profesor}: \textit{Victor Macías E.}}}
+			\\
+			\small{ \noindent \textsc{\textbf{Ayudante}: \textit{Gabriel Cabrera G.\footnote{ \faSend: \href{mailto:gcabrerag@fen.uchile.cl}{gcabrerag@fen.uchile.cl}}}}} 
+			\\
+			\textsc{\textit{`r format(Sys.time(), '%d %B %Y')`}}	
+\end{center}
+
+\vspace{-0.25cm}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\vspace{-5pt}
+
+\begin{center}
+\textbf{Instrucciones}
+\end{center}
+
+1.	Esta tarea debe ser entregada en grupos de máximo 3 personas. 
+2.	Se debe enviar una carpeta comprimida que contenga: un archivo .Rproj (proyecto en R), un script y un breve informe en R Markdown con sus resultados, incluyendo tablas, gráficos, etc., según corresponda. El formato del informe puede ser word o pdf.
+3.  El asunto del email con su tarea debe ser "Tarea 1-R 1-Apellido 1-Apellido 2-Apellido 3"
+4.	La fecha de entrega es el Jueves 13 de Septiembre del 2018 hasta las 23:59 hrs al correo del curso: \href{mailto:r2018uchile@gmail.com}{r2018uchile@gmail.com}. 
+
+\vspace{-8pt}
+
+---
+
+> "Data is a precious thing and will last longer than the systems themselves". 
+>
+> \flushright{\textit{Tim Berners-Lee}, inventor del the World Wide Web}
+
+\vspace{-10pt}
+
+\noindent\rule{\textwidth}{0.5pt}
+
+Una importante consultora de marketing está en la búsqueda de estudiantes con conocimiento del lenguaje R para realizar un estudio respecto a la industria del cine. Usted piensa que es una muy buena oportunidad postular, considerando que está cursando un curso en el que está aprendiendo R. Después de haber pasado varias pruebas y entrevistas, usted es contratado y como primera tarea le entregan la carpeta *Datasets* que contiene:
+
+
+| Base de datos              | Descripción                                 |
+|----------------------------|---------------------------------------------|
+| *genres.csv*               | Géneros de cada película.                   |
+| *keywords.csv*             | Palabras claves de cada película.           |
+| *production_companies.csv* | Compañía a cargo de la producción.          |
+| *production_countries.csv* | Países donde se realizá la producción.      |
+| *movie_dataset.csv*        | Base de datos principal.                    |
+
+Table: Breve descripción de las bases de datos.
+
+A continuación le piden los siguientes **data frames** (sin considerar los *missing values*) pensando que en un futuro no tan distante la información que contendrán será presentada gráficamente:
+
+1. Identificar las 10 palabras claves (*keywords*) que más se repiten. (*10 puntos*)
+2. Identificar:
+    
+    a. Las 10 películas con las ingresos (*revenue*) más altos. (*10 puntos*)
+    b. Las 10 películas con las ingresos (*revenue*) más bajos. (*10 puntos*) 
+    c. El número de películas con ingresos igual a cero. (*10 puntos*) 
+
+3. Identificar la cantidad de películas por país, luego calcular la utilidad^[Asuma que el presupuesto fue el gasto total.] (*revenue* - *budget*) y encontrar las 5 paises con mayor y menor utilidad promedio. (*10 puntos*)
+
+4. Dado que últimamente las salas IMAX han tenido una muy buena recepción por parte del público, la consultora le pide calcular el ingreso (*revenue*) promedio por género, pero sólo de aquellas películas que fueron estrenadas en formato IMAX. (*15 puntos*)
+
+5. La industria del cine ha cambiado mucho desde sus inicios y miles de películas son estrenadas cada año. Considerando sólo las películas que se encuentran en las bases de datos, identifique el porcentaje de películas estrenadas por década^[Una librería útil para trabajar con fechas es `lubridate`. La década se puede construir con la ayuda del operador `%%`.]. (*15 puntos*) 
+
+6. Identifique la cantidad de películas por estado de Estados Unidos (vea el archivo *estados.csv*) y el presupuesto promedio (*budget*) por estado. ¿Qué estados nunca fueron usados como lugar de filmación?, ¿Existe algún estado con presupuesto cero?. (*15 puntos*)
+
+
