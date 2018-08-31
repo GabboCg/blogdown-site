@@ -8,6 +8,8 @@ categories:
 tags: []
 ---
 
+# Presentaciones
+
 1. Introducción a R Markdown
 
     a. [Presentación Ninja](/xaringan/xaringan_rmarkdown.html)
@@ -25,5 +27,26 @@ tags: []
     a. Presentación Ninja
     b. Script 
     c. Source Code
-    
+
+# Tareas   
+
+1. Tarea 1 
+
+    a. Enunciado
+    b. Pauta
+
+2. Tarea 2 
+
+    a. Enunciado
+    b. Pauta
+
+3. Tarea 3 
+
+    a. Enunciado
+    b. Pauta
+
+4. Tarea 4 
+
+    a. Enunciado
+    b. Pauta
   
