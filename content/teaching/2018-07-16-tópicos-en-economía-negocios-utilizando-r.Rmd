@@ -16,9 +16,9 @@ tags: []
     b. Script 
     c. [Source Code](https://github.com/GaboCg/rmarkdown_introduction)
 
-2. Introducción a quantmod
+2. Introducción a tidyquant
 
-    a. [Presentación Beamer](/pdf/introduction_quantmod.pdf)
+    a. [Presentación Beamer](/pdf/introduction_to_tidyquant.pdf)
     b. Script 
     c. Source Code
     
