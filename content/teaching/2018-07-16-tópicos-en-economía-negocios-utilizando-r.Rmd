@@ -37,7 +37,7 @@ tags: []
 
 2. Tarea 2 
 
-    a. Enunciado
+    a. [Enunciado](/pdf/Enunciado_Tarea2_R_Primavera_2018.pdf)
     b. Pauta
 
 3. Tarea 3 

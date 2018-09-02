@@ -1,0 +1,194 @@
+---
+header-includes:
+- \usepackage{hyperref}
+- \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=cyan,      
+     urlcolor=magenta,
+ }
+- \addtolength{\skip\footins}{0pc plus 2pt}
+- \usepackage{ragged2e}
+
+- \usepackage{xcolor}
+
+- \usepackage{fontawesome}
+
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+
+- \fancyhead[LO,LE]{Universidad de Chile}
+- \fancyhead[RO,RE]{Tópicos en Economía y Negocios Utilizando R}
+- \fancyfoot[C,C]{\thepage}
+- \fancypagestyle{plain}{\pagestyle{fancy}}
+- \renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+- \renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+# hace que el output del c?digo sea peque?o, en este caso small
+# - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\small,commandchars=\\\{\}}
+
+# hace que el output de la consola se peque?o, en este caso small
+# - \makeatletter
+# - \def\verbatim{\small\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+# - \makeatother
+
+# \setlength{\parskip}{5pt}
+
+# - \usepackage{framed}
+# - \definecolor{shadecolor}{RGB}{248,248,248}
+# - \renewenvironment{Shaded}{\vspace{1em}\begin{snugshade}}{\end{snugshade}\vspace{0.25em}}
+# - \renewenvironment{Shaded}{\vspace{1em}}{\vspace{1em}}
+
+fontsize: 11pt
+geometry: margin=0.95in
+output: 
+    pdf_document:
+      number_sections: true
+---
+
+\begin{center}
+			%\vspace{1cm}
+			\includegraphics[width=1cm]{logo_uchile.jpg}\\
+			\large{\textbf{ENMEC357}}\\
+			\LARGE{\textbf{Tópicos en Economía y Negocios Utilizando R}}\\
+			\textsc{Tarea 2}\\
+			\smallskip
+			\small{ \noindent \textsc{\textbf{Profesor}: \textit{Victor Macias E.}}}
+			\\
+			\small{ \noindent \textsc{\textbf{Ayudante}: \textit{Gabriel Cabrera G.\footnote{ \faSend: \href{mailto:gcabrerag@fen.uchile.cl}{gcabrerag@fen.uchile.cl}}}}} 
+			\\
+			\textsc{\textit{`r format(Sys.time(), '%d %B %Y')`}}	
+\end{center}
+
+\vspace{0.1cm}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\vspace{-4pt}
+
+\begin{center}
+\textbf{Instrucciones}
+\end{center}
+
+1.	Esta tarea debe ser entregada en grupos de máximo 3 personas. 
+2.	Se debe enviar una carpeta comprimida que contenga: un script y un breve informe en R Markdown con sus resultados, incluyendo tablas, gráficos, etc., según corresponda. El formato del infome puede ser word o pdf.
+3.  El asunto del email con su tarea debe ser "Tarea 2-R Apellido 1 -Apellido 2 -Apellido 3"
+4.	La fecha de entrega es el Viernes 14 de Septiembre del 2018 hasta las 23:59 hrs al correo del curso: \href{mailto:r2018uchile@gmail.com}{r2018uchile@gmail.com}. 
+
+\vspace{-8pt}
+
+---
+
+> "PowerPoint is like being trapped in the style of early Egyptian flatland cartoons rather than using the more effective tools of Renaissance visual representation". 
+>
+> \flushright{\textit{Edward R. Tufte}, Beautiful Evidence}
+
+\vspace{-10pt}
+
+\noindent\rule{\textwidth}{0.5pt}
+
+
+# Pregunta 1
+
+1. Seleccione dos variables de su interés del *World Development Indicators* para el año 1990 y 2015. Incluya todos los países presentes en la base de datos, excluyendo los agregados regionales. Explique brevemente por qué son relevantes, argumentando a partir de conocimientos de cursos previos y/o trabajos empíricos.
+
+2. Construya un *data frame* y presente los valores máximos, mínimos, media aritmética, mediana y desviación estándar que permita comparar los valores de cada variable en los años 1990 y 2015.
+
+3. Grafique un boxplot para cada una de las variables que permita la comparación de 1990 y 2015. Interprete.
+
+
+\newpage
+# Pregunta 2
+
+1. Desde *Yahoo Finance* obtenga los precios mensuales de los índices accionarios de los siguientes
+países desde Enero del 2005 hasta Diciembre del 2017: (a) DAX Alemania (^GDAXI) y (b) FTSE 100 Reino Unido (^FTSE).
+
+    a. Genere un gráfico de densidad para el retorno^[La fórmula para calcular (log) retornos es: $r_t = log(1 + R_t) = log(\frac{P_t}{P_{t-1}}) = log(p_t) - log(p_{t-1})$] 
+       de cada índice accionario.
+    b. Use un *Q-Q plot* para comparar la distribución de los retornos de cada índice accionario con la distribución normal. Comente.
+
+2. El análisis técnico consiste en detectar determinados patrones de comportamiento de los precios en el pasado, con la esperanza de que dicho patrones vuelvan a repetirse. A partir de lo anterior, se le pide:
+
+    a. Construir un *Candlestick* para cada índice accionario y determine patrones. Comente.
+    b. Construir las *Bandas de Bollinger* para cada índice accionario. Comente.
+    
+3. Descargue desde *Yahoo Finance* el índice de volatilidad VIX^[Chicago Board Options Exchange Market Volatility Index.] desde 1990 hasta la fecha con periodicidad mensual. Grafique, identificando los periodos de recesiones^[Los periodos de recesiones se pueden descargar desde FRED (Federal Reserve Economic Data).]. ¿Qué se observa?, ¿es útil este índice?.
+
+```{r, eval = TRUE, echo = FALSE, warning=FALSE, message=FALSE}
+# cargamos la librería 
+if(!require("pacman")) install.packages("pacman")
+p_load("tidyverse","tidyquant", "readxl", "extrafont")
+```
+
+```{r, eval = FALSE, echo = FALSE, warning=FALSE, message=FALSE}
+font_import(pattern="[H/h]umor", prompt = FALSE)
+# loadfonts(device="win")
+
+theme_xkcd <- theme(
+  panel.background = element_rect(fill="white"),
+  #axis.ticks = element_line(colour=NA),
+  panel.grid = element_line(colour="white"),
+  #axis.text.y = element_text(colour=NA),
+  axis.text.x = element_text(colour="black"),
+  text = element_text(size=16, family="Humor Sans"),
+  axis.line = element_line(colour = "black")
+)
+```
+
+```{r, eval = TRUE, echo = FALSE}
+cac <- read_xlsx("data.xlsx") %>% 
+       select("date","implied_vol") %>% 
+       mutate(date = as.Date(date))
+```
+
+```{r, eval = TRUE, echo = FALSE}
+recessions_df <- read.table(textConnection("Peak, Trough
+                                           2001-01-01, 2003-06-01
+                                           2008-02-01, 2009-06-01
+                                           2011-07-01, 2013-01-01
+                                           2014-10-01, 2016-08-01"), 
+                            sep=',',colClasses=c('Date', 'Date'), header=TRUE)
+
+recessions_trim <-  subset(recessions_df, Peak >= min(index(cac$date)))
+```
+
+\vspace{8pt}
+
+```{r, eval = TRUE, echo = FALSE, out.height= "45%", fig.cap ="Ejemplo con VCAC Index  de Francia", warning = FALSE, fig.align='center', fig.pos = "h"}
+
+knitr::knit_hooks$set(plot = function(x, options){
+  paste("\n \\begin{figure}[", options$fig.pos,"]\n",
+        "\\caption{", options$fig.cap,"}\n",
+        " \\begin{center}",
+        "\\includegraphics[width=35cm,height=8cm]{",
+        knitr::opts_knit$get("base.url"), paste(x, collapse = "."),
+        "}\n \n",
+        "\\end{center}",
+        "\\textsc{Nota} -- \\scriptsize La figura 1 muestra el índice VCAC de Francia desde el 2000 hasta 2017. El color cyan representa las recesiones: 2001, 2008, 2011 y 2014. Se espera un gráfico parecido para el VIX.",
+        "\n\\end{figure}\n",
+        sep = '')
+})
+
+g1 <- ggplot(cac) + geom_line(mapping = aes(x = date, y = implied_vol), size = 0.75, color = "black") + 
+      geom_rect(data=recessions_trim, aes(xmin = Peak, xmax = Trough, ymin=-Inf, ymax=+Inf), fill='cyan', alpha=0.2) + 
+      xlab("Fecha") + ylab("VCAC") + labs(title = "VCAC Index", subtitle = "Francia: Desde 2000 hasta 2017") + theme_classic()
+g1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
