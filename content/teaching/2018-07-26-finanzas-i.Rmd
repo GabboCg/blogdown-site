@@ -36,7 +36,7 @@ tags:
     
     d. Ayudantía 4 
     
-        * [Presentación 4]()
+        * [Presentación 4](/pdf/bond_presentation)
         * Script
     
     e. Ayudantía 5 
