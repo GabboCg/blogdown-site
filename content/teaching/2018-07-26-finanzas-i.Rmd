@@ -49,9 +49,9 @@ e. Ayudantía 5
 
 ## Tutoriales
 
-    * [Introducción a quantmod](https://youtu.be/TwBKLTq3mfY)
-    * [Retorno y Retorno Acumulado](https://youtu.be/-3RvuhtfNGU)
-    * [Graficar y Estadística Descriptiva](https://youtu.be/qlLFjBMSUlQ)
+* [Introducción a quantmod](https://youtu.be/TwBKLTq3mfY)
+* [Retorno y Retorno Acumulado](https://youtu.be/-3RvuhtfNGU)
+* [Graficar y Estadística Descriptiva](https://youtu.be/qlLFjBMSUlQ)
         
         
 ## Tareas 
