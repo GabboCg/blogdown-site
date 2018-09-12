@@ -9,47 +9,57 @@ tags:
   - R
 ---
 
-1. Apunte de R para Finanzas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
+# Material de clases
 
-2. Ayudantías
+## Apunte: Introducción a las finanzas quantitativas
 
-    a. Ayudantía 1 
-    
-        * [Presentación 1](/pdf/presentacion.pdf)
-        * Script
-        
-    b. Ayudantía 2 
-    
-        * [Presentación 2](/pdf/presentation1.pdf)
-        * Script
-        
-        * Videos:
-            
-            * [Introducción a quantmod](https://youtu.be/TwBKLTq3mfY)
-            * [Retorno y Retorno Acumulado](https://youtu.be/-3RvuhtfNGU)
-            * [Graficar y Estadística Descriptiva](https://youtu.be/qlLFjBMSUlQ)
-            
-    c. Ayudantía 3 
-    
-        * [Presentación 3](/pdf/presentation2.pdf)
-        * Script
-    
-    d. Ayudantía 4 
-    
-        * [Presentación 4](/pdf/Bond_presentation.pdf)
-        * Script
-    
-    e. Ayudantía 5 
-    
-        * [Presentación 5](/)
-        * Script    
-        
-3. Tareas 
+* Apunte de R para Finanzas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
 
-    a. Tarea 1 
+## Ayudantías 
+
+a. Ayudantía 1 
+
+    * [Presentación 1](/pdf/presentacion.pdf)
+    * Script
+    * *Code Source*
+    
+b. Ayudantía 2 
+
+    * [Presentación 2](/pdf/presentation1.pdf)
+    * Script
+    * *Code Source*
+    
+c. Ayudantía 3 
+
+    * [Presentación 3](/pdf/presentation2.pdf)
+    * Script
+    * *Code Source*
+
+d. Ayudantía 4 
+
+    * [Presentación 4](/pdf/Bond_presentation.pdf)
+    * Script
+    * *Code Source*
+
+e. Ayudantía 5 
+
+    * [Presentación 5](/)
+    * Script    
+    * *Code Source*
+
+## Tutoriales
+
+    * [Introducción a quantmod](https://youtu.be/TwBKLTq3mfY)
+    * [Retorno y Retorno Acumulado](https://youtu.be/-3RvuhtfNGU)
+    * [Graficar y Estadística Descriptiva](https://youtu.be/qlLFjBMSUlQ)
         
-        * [Enunciado](/pdf/Enunciado_v1.pdf)
+        
+## Tareas 
+
+a. Tarea 1 
     
-    b. Tarea 2
-    
-        * Enunciado
+    * [Enunciado](/pdf/Enunciado_v1.pdf)
+
+b. Tarea 2
+
+    * Enunciado
