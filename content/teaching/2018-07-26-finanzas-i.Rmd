@@ -7,6 +7,11 @@ categories:
   - FInance
 tags:
   - R
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/bootstrap.css"
 ---
 
 # Material de clases
@@ -19,11 +24,15 @@ tags:
 
 a. Ayudantía 1 
 
-    <button type="button" class="btn btn-outline-warning">Warning</button>
-
     * [Presentación 1](/pdf/presentacion.pdf)
     * Script
     * *Code Source*
+    
+    <br>
+    <button type="button" class="btn btn-outline-warning"> 
+    [Presentación 1](/pdf/presentacion.pdf)
+    </button>
+    <br>
     
 b. Ayudantía 2 
 
