@@ -19,6 +19,8 @@ tags:
 
 a. Ayudantía 1 
 
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+
     * [Presentación 1](/pdf/presentacion.pdf)
     * Script
     * *Code Source*
