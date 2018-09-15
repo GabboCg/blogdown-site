@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: false
     fig_width: 8
-    css: "/css/bootstrap.css"
+    css: ["/css/bootstrap.css"]
 ---
 
 # Material de clases
