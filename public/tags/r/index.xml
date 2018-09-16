@@ -19,10 +19,8 @@
       <guid>/teaching/finanzas-i/</guid>
       <description>Material de clases Apunte: Introducción a las finanzas quantitativas  Apunte de R para Finanzas I : https://finance-r.netlify.com/   Ayudantías Ayudantía 1: Introducción a R
  R y Rstudio Creación de un proyecto Scripts Instalación de librerías/packages Tidyverse  Presentación  Script  Code Source  
- Ayudantía 2
-Presentación  Script  Code Source  
- Ayudantía 3
-Presentación  Script  Code Source</description>
+ Ayudantía 2: Introducción a Quantmod
+ Obtención de Datos Gráficos usando Quantmod Trabajando con múltiples datos Estadística Descriptiva  Presentación  Script  Code Source</description>
     </item>
     
   </channel>
