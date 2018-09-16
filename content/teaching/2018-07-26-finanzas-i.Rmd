@@ -151,15 +151,23 @@ e. Ayudantía 5
 
 ## Tutoriales
 
-<iframe width="420" height="315"
-src="https://youtu.be/TwBKLTq3mfY">
-</iframe>
+* Introducción a quantmod
 
-* [Introducción a quantmod](https://youtu.be/TwBKLTq3mfY)
-* [Retorno y Retorno Acumulado](https://youtu.be/-3RvuhtfNGU)
-* [Graficar y Estadística Descriptiva](https://youtu.be/qlLFjBMSUlQ)
-        
-        
+<iframe width="550" height="400" src="https://www.youtube.com/embed/TwBKLTq3mfY";" allowfullscreen="" ></iframe>
+
+<p>
+
+* Retorno y Retorno Acumulado
+
+<iframe width="550" height="400"  src="https://www.youtube.com/embed/-3RvuhtfNGU";" allowfullscreen="" ></iframe>
+
+<p>
+
+* Graficar y Estadística Descriptiva
+
+<iframe width="550" height="400"  src="https://www.youtube.com/embed/qlLFjBMSUlQ";" allowfullscreen="" ></iframe>
+
+
 ## Tareas 
 
 a. Tarea 1 
