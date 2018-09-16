@@ -22,41 +22,119 @@ output:
 
 ## Ayudantías 
 
-a. Ayudantía 1 
+a. Ayudantía 1: Introducción a R
 
-    * [Presentación 1](/pdf/presentacion.pdf)
-    * Script
-    * *Code Source*
-    
+    * R y Rstudio
+    * Creación de un proyecto
+    * Scripts
+    * Instalación de librerías/packages
+    * Tidyverse
+
+    <div class="btn-group">
+
     <br>
     <button type="button" class="btn btn-outline-warning"> 
-    [Presentación 1](/pdf/presentacion.pdf)
+    [Presentación](/pdf/presentacion.pdf)
+    </button>
+    
+    <button type="button" class="btn btn-outline-warning"> 
+     Script
+    </button>
+
+    <button type="button" class="btn btn-outline-warning"> 
+    *Code Source*
     </button>
     <br>
     
+    </div>
+    
 b. Ayudantía 2 
+    
+    <div class="btn-group">
 
-    * [Presentación 2](/pdf/presentation1.pdf)
-    * Script
-    * *Code Source*
+    <br>
+    <button type="button" class="btn btn-outline-warning"> 
+    [Presentación](/pdf/presentation1.pdf)
+    </button>
+    
+    <button type="button" class="btn btn-outline-warning"> 
+     Script
+    </button>
+
+    <button type="button" class="btn btn-outline-warning"> 
+    *Code Source*
+    </button>
+    <br>
+    
+    </div>
     
 c. Ayudantía 3 
+    
+    <div class="btn-group">
 
-    * [Presentación 3](/pdf/presentation2.pdf)
-    * Script
-    * *Code Source*
+    <br>
+    <button type="button" class="btn btn-outline-warning"> 
+    [Presentación](/pdf/presentation2.pdf)
+    </button>
+    
+    <button type="button" class="btn btn-outline-warning"> 
+     Script
+    </button>
+
+    <button type="button" class="btn btn-outline-warning"> 
+    *Code Source*
+    </button>
+    <br>
+    
+    </div>
 
 d. Ayudantía 4 
 
     * [Presentación 4](/pdf/Bond_presentation.pdf)
     * Script
     * *Code Source*
+    
+    <div class="btn-group">
+
+    <br>
+    <button type="button" class="btn btn-outline-warning"> 
+    [Presentación](/pdf/Bond_presentacion.pdf)
+    </button>
+    
+    <button type="button" class="btn btn-outline-warning"> 
+     Script
+    </button>
+
+    <button type="button" class="btn btn-outline-warning"> 
+    *Code Source*
+    </button>
+    <br>
+    
+    </div>
 
 e. Ayudantía 5 
 
     * [Presentación 5](/)
     * Script    
     * *Code Source*
+    
+    <div class="btn-group">
+
+    <br>
+    <button type="button" class="btn btn-outline-warning"> 
+    [Presentación](/pdf/presentacion.pdf)
+    </button>
+    
+    <button type="button" class="btn btn-outline-warning"> 
+     Script
+    </button>
+
+    <button type="button" class="btn btn-outline-warning"> 
+    *Code Source*
+    </button>
+    <br>
+    
+    </div>
 
 ## Tutoriales
 
