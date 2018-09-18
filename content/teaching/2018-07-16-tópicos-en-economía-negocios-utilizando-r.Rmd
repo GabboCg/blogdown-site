@@ -42,27 +42,37 @@ output:
     
 2. tidyquant: llevando el análisis financiero al *tidyverse*
 
-    a. [Presentación Beamer](/pdf/introduction_to_tidyquant.pdf)
-    b. Script 
-    c. Source Code
+    * Introducción a tidyquant
+    * Descargando Multiples Datos
+    * Retornos y retornos acumulados
+    * Análisis Técnico 
+    * Librería plotly en finanzas
+
+    <div class="btn-group">
+    
+    <br>
+    <button type="button" class="btn btn-outline-warning"> 
+    [Presentación](/pdf/introduction_to_tidyquant.pdf)
+    </button>
+    
+    <button type="button" class="btn btn-outline-warning"> 
+     Script
+    </button>
+
+    <button type="button" class="btn btn-outline-warning"> 
+    [*Source Code*](https://github.com/GaboCg/introduction_to_tidyquant)
+    </button>
+    <br>
+    
+    </div>
     
 3. gganimate: la historia en movimiento
 
-    a. Presentación Ninja
-    b. Script 
-    c. Source Code
 
 4. text mining con R: un enfoque *tidy* 
 
-    a. Presentación Ninja
-    b. Script 
-    c. Source Code
 
 5. github: donde las ideas se comparten 
-
-    a. Presentación Ninja
-    b. Script 
-    c. Source Code
 
 
 # Tareas   
