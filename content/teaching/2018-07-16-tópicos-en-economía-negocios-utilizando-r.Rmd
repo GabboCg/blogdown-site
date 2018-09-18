@@ -10,23 +10,36 @@ tags: []
 
 # Presentaciones
 
-1. Introducción a R Markdown
+1. R Markdown: Analizan, comporte y reproduce 
 
     a. [Presentación Ninja](/xaringan/xaringan_rmarkdown.html)
     b. Script 
     c. [Source Code](https://github.com/GaboCg/rmarkdown_introduction)
 
-2. Introducción a tidyquant
+2. tidyquant: llevando el análisis financiero al *tidyverse*
 
     a. [Presentación Beamer](/pdf/introduction_to_tidyquant.pdf)
     b. Script 
     c. Source Code
     
-2. Introducción a gganimate 
+3. gganimate: la historia en movimiento
 
     a. Presentación Ninja
     b. Script 
     c. Source Code
+
+4. text mining con R: un enfoque *tidy* 
+
+    a. Presentación Ninja
+    b. Script 
+    c. Source Code
+
+5. github: donde las ideas se comparten 
+
+    a. Presentación Ninja
+    b. Script 
+    c. Source Code
+
 
 # Tareas   
 
@@ -49,4 +62,8 @@ tags: []
 
     a. Enunciado
     b. Pauta
-  
+
+5. Tarea 5
+
+    a. Enunciado
+    b. Pauta

@@ -37,14 +37,13 @@ Apunte  Code Source
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Presentaciones Introducción a R Markdown
-Presentación Ninja Script Source Code  Introducción a tidyquant
-Presentación Beamer Script Source Code  Introducción a gganimate
+      <description>Presentaciones R Markdown: Analizan, comporte y reproduce
+Presentación Ninja Script Source Code  tidyquant: llevando el análisis financiero al tidyverse
+Presentación Beamer Script Source Code  gganimate: la historia en movimiento
+Presentación Ninja Script Source Code  text mining con R: un enfoque tidy
+Presentación Ninja Script Source Code  github: donde las ideas se comparten
 Presentación Ninja Script Source Code    Tareas Tarea 1
-Enunciado Pauta  Tarea 2
-Enunciado Pauta  Tarea 3
-Enunciado Pauta  Tarea 4
-Enunciado Pauta    </description>
+Enunciado Pauta  Tarea 2</description>
     </item>
     
   </channel>
