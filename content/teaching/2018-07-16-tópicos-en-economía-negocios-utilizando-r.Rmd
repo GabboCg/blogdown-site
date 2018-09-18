@@ -6,16 +6,40 @@ slug: tópicos-en-economía-negocios-utilizando-r
 categories:
   - Rstat
 tags: []
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: ["/css/bootstrap.css"]
 ---
 
 # Presentaciones
 
-1. R Markdown: Analiza, comparte y reproduce 
+1. R Markdown: un enfoque a la Investigación Reproducible
 
-    a. [Presentación Ninja](/xaringan/xaringan_rmarkdown.html)
-    b. Script 
-    c. [Source Code](https://github.com/GaboCg/rmarkdown_introduction)
+    * Shorcut, YAML, Inline Formating
+    * Block level Element & Blockquotes
+    * R code chunks & inline R code
+    * Características de un Documento PDF
+    
+    <div class="btn-group">
+    
+    <br>
+    <button type="button" class="btn btn-outline-warning"> 
+    [Presentación](/xaringan/xaringan_rmarkdown.html)
+    </button>
+    
+    <button type="button" class="btn btn-outline-warning"> 
+     Script
+    </button>
 
+    <button type="button" class="btn btn-outline-warning"> 
+    [*Source Code*](https://github.com/GaboCg/rmarkdown_introduction)
+    </button>
+    <br>
+    
+    </div>
+    
 2. tidyquant: llevando el análisis financiero al *tidyverse*
 
     a. [Presentación Beamer](/pdf/introduction_to_tidyquant.pdf)
@@ -47,23 +71,79 @@ tags: []
 
     a. [Enunciado](/pdf/Enunciado_Tarea1_R_Primavera_2018.pdf)
     b. Pauta
+    
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    R Markdown
+    </button>
+    
+    </div>
+
+    <br>
 
 2. Tarea 2 
 
     a. [Enunciado](/pdf/Enunciado_Tarea2_R_Primavera_2018.pdf)
     b. Pauta
+    
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    R Markdown
+    </button>
+    
+    </div>
+
+    <br>
 
 3. Tarea 3 
 
     a. Enunciado
     b. Pauta
+    
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    R Markdown
+    </button>
+    
+    </div>
+
+    <br>
 
 4. Tarea 4 
 
     a. Enunciado
     b. Pauta
+    
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    R Markdown
+    </button>
+    
+    </div>
+
+    <br>
 
 5. Tarea 5
 
     a. Enunciado
     b. Pauta
+    
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    R Markdown
+    </button>
+    
+    </div>
+
+    <br>
+    
+---
+
+> *Disclaimer*: La información contenida en esta página está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a> y fue construida bajo mi rol como ayudante (*Teacher Assistant*) de la Catedra Topicos en economía y negocios utilizando R (*R for economy and business*).   
+<br>
+<img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/> 

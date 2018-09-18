@@ -4,7 +4,7 @@ author: 'Gabriel Cabrera '
 date: '2018-07-26'
 slug: finanzas-i
 categories:
-  - FInance
+  - Finance
 tags:
   - R
 output:
@@ -57,7 +57,7 @@ a. Ayudantía 1: Introducción a R
     </button>
 
     <button type="button" class="btn btn-outline-warning"> 
-    *Code Source*
+    *Source Code*
     </button>
     <br>
     
@@ -82,7 +82,7 @@ b. Ayudantía 2: Introducción a Quantmod
     </button>
 
     <button type="button" class="btn btn-outline-warning"> 
-    *Code Source*
+    *Source Code*
     </button>
     <br>
     
@@ -108,7 +108,7 @@ c. Ayudantía 3: Teoría de Portafolio
     </button>
 
     <button type="button" class="btn btn-outline-warning"> 
-    *Code Source*
+    *Source Code*
     </button>
     <br>
     
@@ -128,7 +128,7 @@ d. Ayudantía 4: Valuación de Bonos
     </button>
 
     <button type="button" class="btn btn-outline-warning"> 
-    *Code Source*
+    *Source Code*
     </button>
     <br>
     
@@ -148,7 +148,7 @@ e. Ayudantía 5: Derivados, opciones & futuros
     </button>
 
     <button type="button" class="btn btn-outline-warning"> 
-    *Code Source*
+    *Source Code*
     </button>
     <br>
     
