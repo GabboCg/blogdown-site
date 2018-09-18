@@ -89,7 +89,7 @@ b. Ayudantía 2: Introducción a Quantmod
     
     </div>
     
-c. Ayudantía 3 
+c. Ayudantía 3: Teoría de Portafolio
     
     <div class="btn-group">
 
@@ -109,7 +109,7 @@ c. Ayudantía 3
     
     </div>
 
-d. Ayudantía 4 
+d. Ayudantía 4: Valuación de Bonos 
     
     <div class="btn-group">
 
@@ -129,7 +129,7 @@ d. Ayudantía 4
     
     </div>
 
-e. Ayudantía 5 
+e. Ayudantía 5: Derivados, opciones & futuros 
     
     <div class="btn-group">
 
@@ -170,10 +170,21 @@ e. Ayudantía 5
 
 ## Tareas 
 
-a. Tarea 1 
+a. Tarea 1: Construcción de Portafolio 
     
     * [Enunciado](/pdf/Enunciado_v1.pdf)
+    * Pauta
+    
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    R Markdown
+    </button>
+    
+    </div>
 
-b. Tarea 2
+
+b. Tarea 2: Bonos & Derivados
 
     * Enunciado
+    * Pauta 
