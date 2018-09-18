@@ -18,7 +18,7 @@ output:
 
 ## Apunte: Introducción a las finanzas quantitativas
 
-Este apunte es una introducción a las finanzas computacionales (*data science applied to finance*) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos. 
+Este apunte es una introducción a las finanzas quantitativas (*data science applied to finance*) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos. 
 
 
 <div class="btn-group">
