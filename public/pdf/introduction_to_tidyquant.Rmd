@@ -2,12 +2,13 @@
 title: "Introducción a tidyquant"
 subtitle: "Llevando el análisis financiero al tidyverse"
 author: "Gabriel Cabrera"
-date: "16 de agosto de 2018"
+date: "16 de agosto de 2018 (`r Sys.Date()`)"
 output: 
   beamer_presentation:
+    toc: true
     latex_engine: xelatex
-    theme: "Madrid"
-    colortheme: "whale"
+    theme: "AnnArbor"
+    colortheme: "dolphin"
     fonttheme: "structurebold"
     includes:
        in_header: "topmatter.tex" 
@@ -35,7 +36,6 @@ library(knitcitations)
 \end{center}
 
 # Introducción a tidyquant 
-
 
 ## ¿Qué es tidyquant?
 
@@ -247,7 +247,7 @@ retornos_activos %>%
 
 ## 
 
-```{r,fig.width = 6, fig.height = 3.25, fig.align='center'}
+```{r,fig.width = 6, fig.height = 3, fig.align='center'}
 retornos_activos %>% 
   ggplot(mapping = aes(x = retornos.diarios, fill = symbol))+
   geom_density(alpha = 0.5) +
@@ -279,7 +279,7 @@ retornos_acum_activos %>%
 
 ## 
 
-```{r,fig.width = 6, fig.height = 3.25, fig.align='center'}
+```{r,fig.width = 6, fig.height = 3, fig.align='center'}
 retornos_acum_activos %>% 
      ggplot(mapping = aes(x = date, y = ret.cum/100, color = symbol)) +
      geom_line() + 
@@ -328,7 +328,7 @@ sp500_precio %>%
 
 ## 
 
-```{r, fig.width = 6, fig.height = 3.25, fig.align='center'}
+```{r, fig.width = 6, fig.height = 3, fig.align='center'}
 sp500_precio %>%
     ggplot(aes(x = date, y = close)) +
     geom_barchart(aes(open = open, high = high, low = low, close = close),
@@ -362,7 +362,7 @@ sp500_precio %>%
 
 ## 
 
-```{r,fig.width = 6, fig.height = 3.25, fig.align='center'}
+```{r,fig.width = 6, fig.height = 3, fig.align='center'}
 sp500_precio %>%
      ggplot(aes(x = date, y = close)) +
      geom_candlestick(aes(open = open, high = high, low = low, close = close),
@@ -487,7 +487,7 @@ sp500_precio %>%
 
 ## 
 
-```{r,fig.width = 6, fig.height = 3.25, fig.align='center'}
+```{r,fig.width = 6, fig.height = 3, fig.align='center'}
 sp500_precio %>% 
   ggplot(aes(x=date, y=close, open = open,
              high = high, low = low, close = close)) +

@@ -115,6 +115,12 @@ c. Ayudantía 3: Teoría de Portafolio
     </div>
 
 d. Ayudantía 4: Valuación de Bonos 
+
+    * Precio de un bono
+    * Funciones y loops 
+    * Trabajando con yields reales 
+    * Duración y Convexidad 
+    * Efector dolar
     
     <div class="btn-group">
 
