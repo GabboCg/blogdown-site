@@ -125,6 +125,16 @@ urlcolor: blue
     1. ¿Cómo Nos Cambia la Tecnología? (Versión especial Pokemon 20 años). *Curso de formación general*.
        Profesor(es): [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. & Pablo Paredes Mg. 
        \hfill 2016
+       
+- **Universidad Diego Portales**
+
+    - *Facultad de Economía & Empresa*
+    
+    1. Econometría I *Curso Obligatorio.* \newline
+       Profesor: Victor Macias Essedin PhD (c). \hfill Primavera 2018
+    
+    2. R para economía y negocios, *Curso electivo.* \newline
+       Profesor: Victor Macias Essedin PhD (c). \hfill Primavera 2018
 
 # Actividades extra programáticas de caracter social
 \vspace{-15pt}
@@ -138,8 +148,6 @@ urlcolor: blue
    
    \hfill 2014
 
-
-\newpage
 # Referencias 
 \vspace{-15pt}
 \noindent\rule{\textwidth}{1pt}
