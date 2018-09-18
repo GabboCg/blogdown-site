@@ -10,7 +10,7 @@ tags: []
 
 # Presentaciones
 
-1. R Markdown: Analizan, comporte y reproduce 
+1. R Markdown: Analiza, comparte y reproduce 
 
     a. [Presentación Ninja](/xaringan/xaringan_rmarkdown.html)
     b. Script 
