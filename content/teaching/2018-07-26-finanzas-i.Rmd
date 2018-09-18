@@ -18,22 +18,21 @@ output:
 
 ## Apunte: Introducción a las finanzas quantitativas
 
-* Apunte de R para Finanzas I : [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
+Este apunte es una introducción a las finanzas computacionales (*data science applied to finance*) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos. 
 
 
-    <div class="btn-group">
+<div class="btn-group">
+<br>
+<button type="button" class="btn btn-outline-warning"> 
+[Apunte](https://finance-r.netlify.com/)
+</button>
 
-    <br>
-    <button type="button" class="btn btn-outline-warning"> 
-    [Apunte](https://finance-r.netlify.com/)
-    </button>
-  
-    <button type="button" class="btn btn-outline-warning"> 
-    [*Code Source*](https://github.com/GaboCg/bookdown_finance)
-    </button>
-    <br>
-    
-    </div>
+<button type="button" class="btn btn-outline-warning"> 
+[*Code Source*](https://github.com/GaboCg/bookdown_finance)
+</button>
+<br>
+
+</div>
 
 
 ## Ayudantías 
@@ -189,8 +188,18 @@ a. Tarea 1: Construcción de Portafolio
     
     </div>
 
+    <br>
 
 b. Tarea 2: Bonos & Derivados
 
     * Enunciado
     * Pauta 
+    
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    R Markdown
+    </button>
+    
+    </div>
+
