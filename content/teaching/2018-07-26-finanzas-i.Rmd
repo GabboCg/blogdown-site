@@ -172,6 +172,7 @@ e. Ayudantía 5: Derivados, opciones & futuros
 
 <iframe width="550" height="400"  src="https://www.youtube.com/embed/qlLFjBMSUlQ";" allowfullscreen="" ></iframe>
 
+<br>
 
 ## Tareas 
 
@@ -202,4 +203,12 @@ b. Tarea 2: Bonos & Derivados
     </button>
     
     </div>
+    
+    <br>
+
+---
+
+> *Disclaimer*: La información contenida en esta página está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a> y fue construida bajo mi rol como ayudante (*Teacher Assistant*) de la Catedra FInanzas I.   
+<br>
+<img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/> 
 
