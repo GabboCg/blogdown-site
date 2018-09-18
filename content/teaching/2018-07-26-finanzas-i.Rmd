@@ -90,6 +90,12 @@ b. Ayudantía 2: Introducción a Quantmod
     </div>
     
 c. Ayudantía 3: Teoría de Portafolio
+
+    * Librería IntroCompFinR
+    * Portafolio de Mínima Varianza
+    * Portafolio de Mínima Varianza sujeto a un retorno objetivo
+    * Portafolio tangente
+    * Frontera eficiente
     
     <div class="btn-group">
 
