@@ -28,7 +28,7 @@ Este apunte es una introducción a las finanzas quantitativas (*data science app
 </button>
 
 <button type="button" class="btn btn-outline-warning"> 
-[*Code Source*](https://github.com/GaboCg/bookdown_finance)
+[*Source Code*](https://github.com/GaboCg/bookdown_finance)
 </button>
 <br>
 
