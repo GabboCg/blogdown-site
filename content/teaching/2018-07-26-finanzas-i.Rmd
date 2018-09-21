@@ -141,12 +141,18 @@ d. Ayudantía 4: Valuación de Bonos
     </div>
 
 e. Ayudantía 5: Derivados, opciones & futuros 
+
+    * Call y Put
+    * Estrategias 
+    * Black y Scholes 
+    * Black y Scholes con datos reales 
+    * Árbol binomial
     
     <div class="btn-group">
 
     <br>
     <button type="button" class="btn btn-outline-warning"> 
-    [Presentación](/pdf/presentacion.pdf)
+    [Presentación](/pdf/Options_Derivatives_and_Futures.pdf)
     </button>
     
     <button type="button" class="btn btn-outline-warning"> 
