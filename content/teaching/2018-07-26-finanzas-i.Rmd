@@ -55,7 +55,8 @@ a. Ayudantía 1: Introducción a R
     <button type="button" class="btn btn-outline-warning"> 
      Script
     </button>
-
+    <br>
+    
     </div>
     
 b. Ayudantía 2: Introducción a Quantmod 
@@ -75,6 +76,7 @@ b. Ayudantía 2: Introducción a Quantmod
     <button type="button" class="btn btn-outline-warning"> 
      [Script](https://drive.google.com/uc?export=download&id=1wdAqNVHxUp4-a3TwsOVSG6TUmhGJ3GX9)
     </button>
+    <br>
     
     </div>
     
@@ -122,7 +124,8 @@ d. Ayudantía 4: Valuación de Bonos
     <button type="button" class="btn btn-outline-warning"> 
      [Script](https://drive.google.com/file/d/1Kk8ffU-ai24sXOTu9PSrjnUNvy6Wf3Zm/view?usp=sharing)
     </button>
-    
+    <br>
+        
     </div>
 
 e. Ayudantía 5: Derivados, opciones & futuros 
@@ -143,6 +146,7 @@ e. Ayudantía 5: Derivados, opciones & futuros
     <button type="button" class="btn btn-outline-warning"> 
      Script
     </button>
+    <br>
     
     </div>
 
