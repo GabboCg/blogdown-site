@@ -78,7 +78,7 @@ b. Ayudantía 2: Introducción a Quantmod
     </button>
     
     <button type="button" class="btn btn-outline-warning"> 
-     Script
+     [Script](https://drive.google.com/uc?export=download&id=1wdAqNVHxUp4-a3TwsOVSG6TUmhGJ3GX9)
     </button>
 
     <button type="button" class="btn btn-outline-warning"> 
@@ -104,8 +104,13 @@ c. Ayudantía 3: Teoría de Portafolio
     </button>
     
     <button type="button" class="btn btn-outline-warning"> 
-     Script
+     [Script](https://drive.google.com/uc?export=download&id=1zVlEw9DgU3w_uW7FYxCd-2rINM4ugr7k)
     </button>
+
+    <button type="button" class="btn btn-outline-warning"> 
+    [Datos](https://drive.google.com/file/d/1BWlBhfTugK7q-ZhGgnRPeXe6gg64lXur/view?usp=sharing)
+    </button>
+    <br>
 
     <button type="button" class="btn btn-outline-warning"> 
     *Source Code*
@@ -130,7 +135,7 @@ d. Ayudantía 4: Valuación de Bonos
     </button>
     
     <button type="button" class="btn btn-outline-warning"> 
-     Script
+     [Script](https://drive.google.com/file/d/1Kk8ffU-ai24sXOTu9PSrjnUNvy6Wf3Zm/view?usp=sharing)
     </button>
 
     <button type="button" class="btn btn-outline-warning"> 
