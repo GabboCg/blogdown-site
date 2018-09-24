@@ -5,8 +5,8 @@ languageCode = "en"
 theme = "hyde-hyde"
 
 ## Hugo Built-in Features
-# disqusShortname = ""
-# googleAnalytics = ""
+# disqusShortname = "your-disqus-shortname"
+# googleAnalytics = "your-google-analytics-id"
 # enableRobotsTXT = true
 
 ## Site Settings
@@ -15,9 +15,10 @@ theme = "hyde-hyde"
     title = "Title"
     # description = "..."
     authorimage = "/img/hugo.png"
-    dateformat = "Jan 1, 2006"
+    dateformat = "Jan 2, 2006"
     highlightjs = true
-    # highlightjsstyle = "github"
+    highlightjsstyle = "github"
+    # please choose either GraphComment or Disqus
 
 ## Social Accounts
 [params.social]
@@ -28,6 +29,7 @@ theme = "hyde-hyde"
     twitter = "<username>"
     facebook = "<username>"
     stackoverflow = "<username>"
+    telegram = "<username>"
     email = "your-email@example.com"
 
 ## Main Menu
@@ -37,7 +39,12 @@ theme = "hyde-hyde"
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
+    name = "Portfolio"
+    identifier = "portfolio"
+    weight = 200
+    url = "/portfolio/"
+[[menu.main]]
     name = "About"
     identifier = "about"
-    weight = 200
+    weight = 300
     url = "/about/"
