@@ -8,7 +8,30 @@ categories:
 tags: []
 ---
 
-* session 1: [Session 1](/sessions/session1.html)
-* session 2: [Session 2](/sessions/session2.html)
-* session 3: [Session 3](/sessions/session3.html)
-* session 4: [Session 4](/sessions/session4.html)
+# session 1 
+
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    [Session](/sessions/session1.html)
+    </button>
+    
+    </div>
+
+    <br>
+
+# session 2
+
+    <div class="btn-group">
+    
+    <button type="button" class="btn btn-outline-warning"> 
+    [Session 2](/sessions/session2.html)
+    </button>
+    
+    </div>
+
+    <br>
+
+# session 3: [Session 3](/sessions/session3.html)
+
+# session 4: [Session 4](/sessions/session4.html)
