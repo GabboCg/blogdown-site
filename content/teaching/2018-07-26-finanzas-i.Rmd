@@ -179,6 +179,7 @@ a. Tarea 1: Construcción de Portafolio
     
     <div class="btn-group">
     
+    <br>
     <button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
@@ -194,6 +195,7 @@ b. Tarea 2: Bonos & Derivados
     
     <div class="btn-group">
     
+    <br>
     <button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
