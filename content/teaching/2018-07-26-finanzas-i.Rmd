@@ -170,6 +170,8 @@ e. Ayudantía 5: Derivados, opciones & futuros
 
 <br>
 
+* RStudio Cloud
+
 ## Tareas 
 
 a. Tarea 1: Construcción de Portafolio 
