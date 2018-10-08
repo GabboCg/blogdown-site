@@ -93,22 +93,25 @@ urlcolor: blue
 
     - *Facultad de Economía & Negocios*
     
-    1. Entorno económico para los negocios *Curso electivo.* \newline
+    1. Econometría Avanzada *Curso electivo MBA/ MF Weekend* \newline
+       Profesor: [Erwin Hansen Silva](http://negocios.uchile.cl/academico_detalle.php?id=90), PhD. \hfill Primavera 2018
+    
+    2. Entorno económico para los negocios *Curso electivo.* \newline
        Profesor: Victor Macias Essedin PhD (c). \hfill Primavera 2018
     
-    2. Tópicos en Economía & Negocios Usando R, *Curso electivo.* \newline
+    3. Tópicos en Economía & Negocios Usando R, *Curso electivo.* \newline
        Profesor: Victor Macias Essedin PhD (c). \hfill 2018
         
-    3. Finanzas I, *Curso obligatorio*. \newline
+    4. Finanzas I, *Curso obligatorio*. \newline
        Profesor: [Erwin Hansen Silva](http://negocios.uchile.cl/academico_detalle.php?id=90), PhD. \hfill 2018
        
-    4. Econometría Aplicada, *Curso obligatorio*. \newline
+    5. Econometría Aplicada, *Curso obligatorio*. \newline
        Profesor: [Victor Medina Olivares](https://vhmedina.github.io/), Mg. \hfill 2017
        
-    5. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
+    6. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
        Profesor: [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. \hfill Otoño 2016
       
-    6. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
+    7. Introducción a la Tecnología, *Curso electivo de entorno social*. \newline
        Profesor: [Martin Perez Comisso](https://isearch.asu.edu/profile/3108937), Mg. \hfill 2015
     
     \vspace{10 pt}
@@ -136,6 +139,7 @@ urlcolor: blue
     2. R para economía y negocios, *Curso electivo.* \newline
        Profesor: Victor Macias Essedin PhD (c). \hfill Primavera 2018
 
+\newpage
 # Actividades extra programáticas de caracter social
 \vspace{-15pt}
 \noindent\rule{\textwidth}{1pt}

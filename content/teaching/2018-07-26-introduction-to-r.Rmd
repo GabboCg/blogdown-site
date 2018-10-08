@@ -6,6 +6,11 @@ slug: introduction-to-r
 categories:
   - Programming
 tags: []
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: ["/css/bootstrap.css"]
 ---
 
 # session 1 
