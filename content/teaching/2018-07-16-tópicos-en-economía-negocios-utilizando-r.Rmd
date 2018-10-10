@@ -84,6 +84,7 @@ output:
     
     <div class="btn-group">
     
+    <br>
     <button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
@@ -99,6 +100,7 @@ output:
     
     <div class="btn-group">
     
+    <br>
     <button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
@@ -114,6 +116,7 @@ output:
     
     <div class="btn-group">
     
+    <br>
     <button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
@@ -129,6 +132,7 @@ output:
     
     <div class="btn-group">
     
+    <br>
     <button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
@@ -144,6 +148,7 @@ output:
     
     <div class="btn-group">
     
+    <br>
     <button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
