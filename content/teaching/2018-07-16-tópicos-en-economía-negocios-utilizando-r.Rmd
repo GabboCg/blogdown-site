@@ -111,7 +111,7 @@ output:
 
 3. Tarea 3 
 
-    a. Enunciado
+    a. [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf)
     b. Pauta
     
     <div class="btn-group">
