@@ -51,11 +51,11 @@ a. Ayudantía 1: Introducción a R
     <div class="btn-group">
 
     <br>
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
     [Presentación](/pdf/presentacion.pdf)
     </button>
     
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
      Script
     </button>
     <br>
@@ -72,11 +72,11 @@ b. Ayudantía 2: Introducción a Quantmod
     <div class="btn-group">
 
     <br>
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
     [Presentación](/pdf/presentation1.pdf)
     </button>
     
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
      [Script](https://drive.google.com/uc?export=download&id=1wdAqNVHxUp4-a3TwsOVSG6TUmhGJ3GX9)
     </button>
     <br>
@@ -94,15 +94,15 @@ c. Ayudantía 3: Teoría de Portafolio
     <div class="btn-group">
 
     <br>
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
     [Presentación](/pdf/presentation2.pdf)
     </button>
     
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
      [Script](https://drive.google.com/uc?export=download&id=1zVlEw9DgU3w_uW7FYxCd-2rINM4ugr7k)
     </button>
 
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
     [Datos](https://drive.google.com/file/d/1BWlBhfTugK7q-ZhGgnRPeXe6gg64lXur/view?usp=sharing)
     </button>
     <br>
@@ -120,11 +120,11 @@ d. Ayudantía 4: Valuación de Bonos
     <div class="btn-group">
 
     <br>
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()"> 
     [Presentación](/pdf/Bond_presentation.pdf)
     </button>
     
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()"> 
      [Script](https://drive.google.com/file/d/1Kk8ffU-ai24sXOTu9PSrjnUNvy6Wf3Zm/view?usp=sharing)
     </button>
     <br>
@@ -142,11 +142,11 @@ e. Ayudantía 5: Derivados, opciones & futuros
     <div class="btn-group">
 
     <br>
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
     [Presentación](/pdf/Options_Derivatives_and_Futures.pdf)
     </button>
     
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()">
      Script
     </button>
     <br>
@@ -181,13 +181,16 @@ a. Tarea 1: Construcción de Portafolio
     
     * [Enunciado](/pdf/Enunciado_v1.pdf)
     * Pauta
-
-    <br>    
-    <div class="btn-group"><button type="button" class="btn btn-outline-warning"> 
+    
+    <div class="btn-group">
+    
+    <br>
+    <button class="button" onclick="myFunction()"> 
     R Markdown
     </button>
     
     </div>
+    
 
 b. Tarea 2: Bonos & Derivados
 
@@ -197,7 +200,7 @@ b. Tarea 2: Bonos & Derivados
     <div class="btn-group">
     
     <br>
-    <button type="button" class="btn btn-outline-warning"> 
+    <button class="button" onclick="myFunction()"> 
     R Markdown
     </button>
     
