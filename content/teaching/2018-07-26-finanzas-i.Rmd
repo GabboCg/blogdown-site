@@ -23,16 +23,19 @@ Este apunte es una introducción a las finanzas quantitativas (*data science app
 
 <div class="btn-group">
 <br>
-<button type="button" class="btn btn-outline-warning"> 
+<button class="button" onclick="myFunction()">
 [Apunte](https://finance-r.netlify.com/)
 </button>
 
-<button type="button" class="btn btn-outline-warning"> 
+<button class="button" onclick="myFunction()">
 [*Source Code*](https://github.com/GaboCg/bookdown_finance)
 </button>
 <br>
 
 </div>
+
+
+
 
 
 ## Ayudantías 
@@ -178,17 +181,13 @@ a. Tarea 1: Construcción de Portafolio
     
     * [Enunciado](/pdf/Enunciado_v1.pdf)
     * Pauta
-    
-    <div class="btn-group">
-    
-    <br>
-    <button type="button" class="btn btn-outline-warning"> 
+
+    <br>    
+    <div class="btn-group"><button type="button" class="btn btn-outline-warning"> 
     R Markdown
     </button>
     
     </div>
-
-    <br>
 
 b. Tarea 2: Bonos & Derivados
 
