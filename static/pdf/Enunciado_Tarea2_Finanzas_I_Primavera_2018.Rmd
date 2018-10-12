@@ -1,0 +1,215 @@
+---
+header-includes:
+- \usepackage{hyperref}
+- \hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=cyan,      
+     urlcolor=magenta,
+ }
+- \addtolength{\skip\footins}{2pc plus 0pt}
+- \usepackage{ragged2e}
+
+- \usepackage{xcolor}
+
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+
+- \fancyhead[LO,LE]{Universidad de Chile}
+- \fancyhead[RO,RE]{Finanzas I}
+- \fancyfoot[C,C]{\thepage}
+- \fancypagestyle{plain}{\pagestyle{fancy}}
+- \renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+- \renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+
+# hace que el output del código se pequeño, en este caso small
+# - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\small,commandchars=\\\{\}}
+
+# hace que el output de la consola se pequeño, en este caso small
+# - \makeatletter
+# - \def\verbatim{\small\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+# - \makeatother
+
+- \setlength{\parskip}{5pt}
+
+# - \usepackage{framed}
+# - \definecolor{shadecolor}{RGB}{248,248,248}
+# - \renewenvironment{Shaded}{\vspace{1em}\begin{snugshade}}{\end{snugshade}\vspace{0.25em}}
+# - \renewenvironment{Shaded}{\vspace{1em}}{\vspace{1em}}
+
+fontsize: 11pt
+geometry: margin=1in
+output: 
+    pdf_document:
+      number_sections: true
+---
+
+\begin{center}
+			%\vspace{1cm}
+			\includegraphics[width=1cm]{logo.jpg}\\
+			\large{\textbf{ENFIN415}}\\
+			\LARGE{\textbf{Finanzas I}}\\
+			\textsc{Tarea 2}\\
+			\smallskip
+\end{center}
+
+\small{ \noindent \textsc{\textbf{Profesor}: \textit{Erwin Hansen S.}}}
+
+\small{ \noindent \textsc{\textbf{Ayudantes}: \textit{Ignacio Benavides, Gabriel Cabrera, Boris Pasten, Sebastián Piña y Ewald Stark}}} 
+
+\textsc{\textsc{\textbf{Fecha}: \textit{`r format(Sys.time(), '%d %B %Y')`}}}
+
+\vspace{0.1cm}
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE)
+```
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\vspace{-2pt}
+
+\begin{center}
+\textbf{Instrucciones}
+\end{center}
+
+1.	Esta tarea debe ser entregada en grupos de mínimo 2 alumnos y máximo 3 alumnos. 
+2.	Se debe enviar una carpeta comprimida (.zip) la que debe contener: script y un breve informe con sus resultados, incluyendo tablas, gráficos, etc., según corresponda.  El formato del infome puede ser word o pdf.
+3.  El asunto del email con su tarea debe ser "Tarea 2-Finanzas 1-Apellido 1-Apellido 2-Apellido 3"
+4.	La fecha de entrega es el Viernes 2 de Noviembre del 2018 hasta las 23:59 hrs al correo del curso: \href{mailto:finance.hansen@gmail.com}{finance.hansen@gmail.com}. 
+
+\vspace{-10pt}
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\vspace{-2pt}
+
+# Pregunta 1: Bonos, Convexidad y Duración {-}
+
+1. Suponga 2 bonos que poseen clasificación Aaa por Moody ("DAAA") que fue emitido el 25 de Agosto del 2017, ambos tienen un principal de 100 y pagan una tasa cupón de 10\%. El plazo de vencimiento de ambos bonos es 4 años y los pagos de los cupones son 1 vez al año vencido. Uno de los bonos es tipo francés y el otro tipo americano o Bullet. Se determinó que la yield del bono es comparable con la yield de un bono con clasificación Aaa. Para cada bono: \vspace{5pt}
+
+
+    a. Calcule el precio del Bono.
+    
+```{r}
+    yield <- getSymbols(Symbols = "DAAA", src = "FRED", auto.assign = FALSE)
+    yield <- as.numeric(subset(yield["2017-08-25"]))*0.01
+    
+    # Construimos las funciones 
+    # p: valor nominal; tc: tasa cupón; t: madurez; y: yield to maturity
+    precio_bullet <- function(p,tc,t,y){
+      pago <- c(rep(tc*p, t - 1),p*(1 + tc))
+      pago <- as.data.frame(pago)
+      pago$t <- as.numeric(rownames(pago))
+      pago$factor_desc <- 1 / (1 + y)^(pago$t)
+      pago$valor_prese <- pago$factor_desc*pago$pago
+      sum(pago$valor_prese)
+    }
+    
+    precio_bullet <- precio_bullet(100,0.1,4,0.08)  # yield = 8%
+    precio_bullet 
+    
+    precio_frances <- function(p,tc,t,y){
+      
+      cuota <- p*(tc*(1+tc)^(t))/((1+tc)^(t) - 1)
+      
+      pago <- c(rep(cuota, t))
+      pago <- as.data.frame(pago)
+      pago$t <- as.numeric(rownames(pago))
+      pago$factor_desc <- 1 / (1 + y)^(pago$t)
+      pago$valor_prese <- pago$factor_desc*pago$pago
+      sum(pago$valor_prese)
+    }
+    
+    precio_frances <- precio_frances(100,0.1,4,0.08) # yield = 8% 
+    precio_frances
+```
+    
+    
+    b. Calcule ambas duraciones y convexidad. ¿Cuál es mayor?¿Por qué?
+
+```{r}
+    # duracion de Macaulay función
+    macaulay <- function(y,n,c){
+      mac <- (1 + y)/y - (1+y+(n*(c-y)))/(c*((1+y)^n -1) + y)
+      print(mac)
+    }
+
+
+    duracion_frances <- function(p,tc,t,y){
+      
+      cuota <- p*(tc*(1+tc)^(t))/((1+tc)^(t) - 1)
+      
+      pago <- c(rep(cuota, t))
+      pago <- as.data.frame(pago)
+      pago$t <- as.numeric(rownames(pago))
+      pago$arriba <- pago$pago*pago$t*(1+y)^{-pago$t}
+      pago$abajo <- pago$pago*(1+y)^{-pago$t}
+      duracion <- sum(pago$arriba)/sum(pago$abajo)
+      
+      print(duracion)
+    }
+
+    
+    # duracion bullet
+    duration(precio_bullet, 10, 4, 100, 1, modified = FALSE)
+    
+    # duracion modificada bullet
+    duration(precio_bullet, 10, 4, 100, 1, modified = FALSE)
+    
+    # duracion frances
+    duracion_frances(100,0.1,4,0.08)
+    
+```
+    
+    c. Usando las duraciones y la convexidad, calcule el efecto de un aumento en la tasa de rendimiento de mercado en             un 4%.
+
+    
+# Pregunta 2: Derivados, Opciones y Futuros {-}
+
+
+1. Considere una opción put con vencimiento en 2 años sobre una acción que no paga dividendos, activo subyacente que tiene un precio hoy de \$50, el precio de ejercicio es de $52 y la tasa libre de riesgo de 5\%. Teniendo en cuenta que cada 1 año, el movimiento ascendente en el precio del subyacente es 20\% y descendente de -20\%, responda: \vspace{5pt}
+
+    a. Contruya el árbol de valoración binomial de la opción call Europea
+    
+    ```{r, message = FALSE}
+if(!require("pacman")) install.packages("pacman")
+p_load("fOptions")
+```
+
+```{r,fig.width = 6, fig.height = 4, fig.align = "center"}
+CRRTree.1 = BinomialTreeOption(TypeFlag="pe",S=50, X=52, Time=2,r=0.05,b=0.05,sigma=0.2,n=2)
+CRRTree.1
+
+BinomialTreePlot(CRRTree.1, dy = 1, cex = 0.8, ylim = c(-6, 7), xlab = "n", ylab = "valores Opción") 
+title(main = "Arbol Binomial Put Europea")
+```
+    
+    b. Contruya el árbol de valoración binomial de la opción call Americana.
+    
+    ```{r,fig.width = 6, fig.height = 4, fig.align = "center"}
+CRRTree.1 = BinomialTreeOption(TypeFlag="pa",S=50, X=52, Time=2,r=0.05,b=0.05,sigma=0.2,n=2)
+CRRTree.1
+
+BinomialTreePlot(CRRTree.1, dy = 1, cex = 0.8, ylim = c(-6, 7), xlab = "n", ylab = "valores Opción") 
+title(main = "Arbol Binomial Put Europea")
+```
+
+    c. ¿Cuál de las dos opciones put tiene mayor valor en $t = 0$ y por qué se genera dicha diferencia?
+
+
+
+2. A continuación deberá valorizar las opciones  más cercanas a estar *at the Money* de Coca-Cola Company ("KO") con fecha de expiración 2018-11-16 por medio del modelo Black-Scholes, para esto asuma: \vspace{5pt}
+
+    - Usted se encuentra en la fecha 2018-10-05.
+    - El *time to maturity* es una fracción del año.
+    - La volatilidad se obtiene del retorno diario de los últimos 3 años\footnote{Multiplique por $\sqrt{252}$ para anualizar.}. 
+    - La tasa libre de riesgo se obtiene del *3-Month Constant Maturity Treasury* (DGS3MO).
+    - No se paga dividendos. 
+    
+    \vspace{10pt}
+    
+    ¿Qué puede concluir?
+    
