@@ -13,6 +13,12 @@ output:
       in_header: topmatter.tex
 classoption: "aspectratio=169"
 ---
+
+```{r, eval = TRUE, include=FALSE}
+if(!require("pacman")) install.packages("pacman")
+p_load("tidyverse", "tidyquant")
+```
+
 ## Información de Conctacto
 
 \begin{center}
@@ -30,9 +36,9 @@ classoption: "aspectratio=169"
 
 Como se vio en clases el precio de un bono se calcula como:
 
-\begin{center}
-$P_{B} = \sum_{t=1}^{T} \frac{C}{(1+r)^t} + \frac{Valor Nominal}{(1+r)^t}$
-\end{center}
+$$
+P_{B} = \sum_{t=1}^{T} \frac{C}{(1+r)^t} + \frac{Valor Nominal}{(1+r)^t}
+$$
 
 Donde:
 
@@ -44,9 +50,8 @@ Donde:
 
 ## Precio de un Bono: Utilizando R
 
-Considere el siguiente ejercicio: Calcular el precio de un bono con pago de cupón semestral, Madurez 25 años, Tasa cupón 6.5%, Yield semi-anual de 6.9% y Valor nominal de 100.
 
-Para desarrollar el ejercicio, vamos a construir por parte los componentes de nuestro bono.
+Considere el siguiente ejercicio: Calcular el precio de un bono con pago de cupón semestral, Madurez 25 años, Tasa cupón 6.5%, Yield semi-anual de 6.9% y Valor nominal de 100. Para desarrollar el ejercicio, vamos a construir por parte los componentes de nuestro bono.
 
 1. Construimos tanto la tasa cupón como la *Yield semi-anual*.
 
@@ -63,10 +68,10 @@ pago <- c(rep(tc*100/2,49),(100 + tc*100/2))
 ```
 
 
-tanto ``tc``, ``r`` y ``pago`` se encontraran en Values del global environment, en tipo ``numeric``.
+tanto ``tc``, ``r`` y ``pago`` se encontraran en *Values* del *global environment*, en tipo ``numeric``.
 
-## Precio de un Bono: Utilizando R
 
+## 
 
 3. Para poder trabajar con nuestra base de datos, transformamos nuestro vector ``pago`` que está en forma ``numeric`` a ``data frame``. 
 
@@ -77,49 +82,38 @@ pago <- as.data.frame(pago)
 
 Ahora existe un objeto con estructuración de datos ``data frame`` en nuestro global environment. Se podría haber llamado de cualquier forma a nuestro nuevo objeto ``pago``.
 
+
 ## Precio de un Bono: Dos formas de hacer lo mismo
 
 Ya construido nuestro objeto ``pago`` veremos que en **R** existen muchas formas de hacer lo mismo:
 
+1. \justifying
+Al principio de la sesión cargamos la libreria ``tidyverse``, está nos permitirá trabajar con un "megapaquete" que incluye otros paquetes en su interior (ggplot2, dplyr, magittr, entre otros). Todos los paquetes que conforman "el Tidyverse" comparten la misma visión sobre el trabajo con datos y la escritura de código. Si va a la pestaña packages y escribe ``dplyr`` verá que está activa, pero nunca la "llamamos", esto se debe a ``tidyverse`` lo hizo por nosotros.
 
-1. Al principio de la sesión cargamos la libreria ``tidyverse``, está nos permitirá trabajar con un "megapaquete" que incluye otros paquetes en su interior (ggplot2, dplyr, magittr, entre otros). Todos los paquetes que conforman "el Tidyverse" comparten la misma visión sobre el trabajo con datos y la escritura de código. Si va a la pestaña packages y escribe ``dplyr`` verá que está activa, pero nunca la "llamamos", esto se debe a ``tidyverse`` lo hizo por nosotros.
 
-
-```r
+```{r}
 pago1 <- pago %>% 
          mutate(t1 = as.numeric(index(pago)),factor_desc = 1/(1+y/2)^(t1),
                 val_present = pago*factor_desc) %>% 
          summarise(sum(val_present))
+pago1
 ```
 
-## Precio de un Bono: Dos formas de hacer lo mismo
 
-Antes de continuar hablemos un poco del símbolo %>%. ¿Qué es %>%? Este símbolo se llama pipe (tubo en inglés) y en el código lo podemos leer como "luego" o "a continuación". El atajo del teclado para realizarlo es ``control`` + ``shift`` + ``m`` (Linux / Windows) o ``comando`` + ``shift`` + ``m`` (Mac.).
-
-%>% es un operador que nos permite encadenar las acciones que queremos aplicar en un objeto (en este caso, ``pago``). Con este código le estamos diciendo a R que :
-
-* tome el objeto ``pago``
-* luego(%>%)
-* genere tres variables(``mutate`` de la librería dplyr)
-* luego(%>%)
-* que resuma(``summarize``) la siguiente información;
-* la suma (``sum``) de los valores de la columna ``val_present``
-* construyendo un nuevo objeto ``pago1``
-
-## Precio de un Bono: Dos formas de hacer lo mismo
+##
 
 2. La otra forma es: 
 
-```r
+```{r}
 # replicamos el objeto
 pago2 <- pago
 
 pago2$t2 <- as.numeric(rownames(pago2))
 
 # Calculamos el factor de descuento
-pago2$factor_desc <- 1 / (1 + r)^(pago2$t2)
+pago2$factor_desc <- 1 / (1 + y/2)^(pago2$t2)
 # Calculamos el valor presente
-pago2$val_present <-  pago$pv_factor*pago2$pago
+pago2$val_present <-  pago2$factor_desc*pago2$pago
 # Calculamos el precio
 sum(pago2$val_present)
 
@@ -128,10 +122,9 @@ sum(pago2$val_present)
 
 ## Otra cosa es con funciones
 
-Ahora se contruirá una función para valorizar cualquiee bono que pague cupones iguales:
+Ahora se contruirá una función para valorizar cualquier bono que pague cupones iguales:
 
-```r
-
+```{r}
 # p: valor nominal; tc: tasa cupón; t: madurez; y: yield to maturity
 precio.bono <- function(p,tc,t,y){
   # rep returns a vector with value = p * r and times = ttm -1 
@@ -144,7 +137,7 @@ precio.bono <- function(p,tc,t,y){
 }
 ```
 
-```r
+```{r}
 precio.bono(100,0.065/2,50,0.069/2)
 ```
 
@@ -158,7 +151,7 @@ Ahora utilizando la función ``precio.bono`` valorizaremos un bono con las sigui
 * Madurez: 10 años
 * Yield: 4.29%
 
-```r
+```{r}
 # Valoramos el siguiente Bono
 precio.bono(p = 100, tc =0.05, t =10, y = 0.0429)
 ```
@@ -167,14 +160,14 @@ precio.bono(p = 100, tc =0.05, t =10, y = 0.0429)
 
 Se contruirá una secuencia de yields:
 
-```r
+```{r}
 # Cosntruimos yields 
 yields <- seq(0.02, 0.4, 0.01)
 ```
 
 La función ``seq`` generá una secuencia. En este caso parte del 0.02 hasta el 0.4 pero con intervalos de 0.01.
-\vspace{5pt}
-```r
+
+```{r}
 # Convertimos yields a data frame como antes 
 yields <- as.data.frame(yields)
 ```
@@ -183,7 +176,7 @@ yields <- as.data.frame(yields)
 
 Explicación en clases.
 
-```r
+```{r}
 # Calaculamos el precio del bono para distintas yields
 for (i in 1:nrow(yields)) {
   yields$precio[i] <- precio.bono(100, 0.10, 20, yields$yields[i])  
@@ -194,8 +187,6 @@ for (i in 1:nrow(yields)) {
 ## Graficar nuestros datos: Con ggplot2
 
 Una manera de visualizar datos es usar ggplot2, se recomienda que añadan por parte lo que desean en su gráfico.
-\vspace{5pt}
-\tiny
 
 ```r
 # Graficamos con ggplot2
@@ -215,13 +206,36 @@ g1
 ggsave("retorno-yield.png",width = 8.5, height = 4.5, dpi = 300)
 ```
 
+## 
+
+```{r, eval = TRUE, echo = FALSE, fig.align= "center", fig.width= 6, fig.height=3}
+# Graficamos con ggplot2
+g1 <- ggplot(data = yields,aes(x = yields*100, y = precio)) + geom_line(size = 1.5, color = "red") 
+g1 <- g1 + geom_point(size = 3, color = "red")
+g1 <- g1 + ggtitle("Relación inversa:", subtitle = "Precio del Bono vs Yield")
+g1 <- g1 + xlab("Yield (%)") + ylab("Precio del bono") 
+g1 <- g1 + geom_ribbon(aes(ymin = 0, ymax = pmax(precio,0)), fill="pink", col="red", alpha=0.5) 
+g1 <- g1 + theme_bw() 
+g1 <- g1 + theme(panel.border = element_rect(colour = "black", fill = NA, size = .5),
+                 panel.grid.major = element_line(colour = "#d3d3d3"))    
+g1
+```
+
 ## Graficar nuestros datos: Con plot 
 
 otra manera de visualizar datos es usar plot, esta opción es valida pero es más "arcaica" y más limitada que ggplot2.
-\vspace{5pt}
-\tiny
+
 
 ```r
+# Con plot 
+g2 <- plot(yields$yields*100,yields$precio,type = "l",col = "red", 
+           main = "Relación inversa: Precio del Bono vs Yield",
+      xlab="Yield (%)", ylab="Precio del bono")
+```
+
+## 
+
+```{r, eval = TRUE, echo = FALSE, fig.align='center', fig.width= 6, fig.height=3}
 # Con plot 
 g2 <- plot(yields$yields*100,yields$precio,type = "l",col = "red", 
            main = "Relación inversa: Precio del Bono vs Yield",
@@ -233,7 +247,7 @@ g2 <- plot(yields$yields*100,yields$precio,type = "l",col = "red",
 
 quantmod es uno de las librerías más ocupadas en R para extraer datos financieros, te permite graficar, realizar análisis técnico, calcular retornos (``Delt(x)``), etc. Aunque las series son descargadas con estructura xts, la podemos transformar a data frame. A continuación descargaremos la yield de los bonos del tesoro de Estados Unidos a 10 años:
 
-```r
+```{r, eval=TRUE, echo = TRUE, message=FALSE, warning=FALSE}
 t10yr <- getSymbols(Symbols = "DGS10", src = "FRED", auto.assign = FALSE)
 
 t10yr <- subset(t10yr["2000-01-01/2018-04-17"])
@@ -242,6 +256,13 @@ t10yr <- subset(t10yr["2000-01-01/2018-04-17"])
 ```r
 # Grafico con chartSeries de quantmod solo funciona con xts
 chartSeries(t10yr)
+```
+
+## 
+
+```{r, eval = TRUE, echo = FALSE, fig.align='center', fig.width= 6, fig.height=3}
+# Grafico con chartSeries de quantmod solo funciona con xts
+chartSeries(t10yr, theme = "white")
 ```
 
 ##
@@ -266,14 +287,29 @@ g3
 ggsave("treasury-yields.png",width = 8.5, height = 4.5, dpi = 300)
 ```
 
+##
+
+```{r, eval = TRUE, echo = FALSE, fig.align='center', fig.width= 6, fig.height=3}
+t10yr.df <- as.data.frame(t10yr)
+
+t10yr.df <- t10yr.df %>% 
+            mutate(fecha = as.Date(rownames(t10yr.df))) %>% 
+            na.omit()
+
+g3 <- ggplot(data = t10yr.df,aes(x = fecha , y = DGS10)) + geom_line(size = 1, color = "green")
+g3 <- g3 + ggtitle("10-Year US Treasury Yields", subtitle = "Desde 2000-01-01 hasta 2018-04-17")
+g3 <- g3 + ylab("Fecha") +xlab("Yield(%)") 
+g3 <- g3 + theme_bw() + theme(panel.border = element_rect(colour = "black", fill = NA, size = .5),
+                              panel.grid.major = element_line(colour = "#d3d3d3"))
+g3
+```
+
 # Duración y Convexidad de un Bono
 ## Duración y Convexidad de un Bono: Extración de la yield
 
 La función subset se explica sola, permite extraer una parte de tu base según un criterio.
-\vspace{5pt}
-\scriptsize
 
-```r
+```{r}
 # Extraemos un valor en específico
 t10yr_yield <- t10yr.df %>% 
                subset(fecha == "2017-03-03") 
@@ -285,39 +321,29 @@ t10yr_yield <- as.numeric(t10yr_yield$DGS10)*0.01
 
 Existen dos Duraciones, la de Macaulay y modificada (o de Hicks), las que miden sensibilidad del precio ante cambios de la yield. 
 
-Macaulay:
+\vspace{10pt}
 
-\begin{center}
+**Macaulay**:
+$$
+\text{Duración de Macaulay} =\bigg[ \frac{1 + y}{y} - \frac{1+y + [n \cdot (c - y)]}{[ c\cdot((1+y)^n - 1)]+y} \bigg]
+$$
 
-$\text{Duración de Macaulay} =\bigg[ \frac{1 + y}{y} - \frac{1+y + [n \cdot (c - y)]}{[ c\cdot((1+y)^n - 1)]+y} \bigg]$
+**Modificada**:
+$$
+\text{Duración Modificada} = \text{Duración de Macaulay}/(1+y)
+$$
 
-\end{center}
-\vspace{3pt}
+**Aprox. Duración Modificada**:
+$$
+Aprox.Dur.Mod.= \frac{MV_{-}-MV_{+}}{2 \cdot \Delta y \cdot MV_{0}}
+$$
 
-Modificada:
-
-\begin{center}
-
-$\text{Duración Modificada} = \text{Duración de Macaulay}/(1+y)$
-
-\end{center}
-\vspace{5pt}
-
-Aprox. Duración Modificada:
-
-\begin{center}
-
-$Aprox.Dur.Mod.= \frac{MV_{-}-MV_{+}}{2 \cdot \Delta y \cdot MV_{0}}$
-
-\end{center}
 
 ## Duración y Convexidad de un Bono: Duración Macaulay 
 
 Duración Macaulay:
 
-\vspace{5pt}
-
-```r
+```{r}
 # duracion de Macaulay
 macaulay <- function(y,n,c,t,T){
          mac <- (1 + y)/y - (1+y+(n*(c-y)))/(c*((1+y)^n -1) + y)
@@ -325,18 +351,15 @@ macaulay <- function(y,n,c,t,T){
 } 
 ```
 
-```r
+```{r}
 macaulay <- macaulay(t10yr_yield,10,0.03)
-macaulay
 ```
 
 ## Duración y Convexidad de un Bono: Duración Modificada
 
 Duración Modificada:
 
-\vspace{5pt}
-
-```r
+```{r}
 # duración modificada
 modificada <- macaulay/(1+t10yr_yield)
 modificada 
@@ -346,9 +369,7 @@ modificada
 
 Aproximación Duración Modificada:
 
-\vspace{5pt}
-
-```r
+```{r}
 # Para la aproximación de la duración modificada
 precio.arriba <- precio.bono(p = 100, tc = 0.03, t = 10, y = t10yr_yield + 0.01)
 precio        <- precio.bono(p = 100, tc = 0.03, t = 10, y = t10yr_yield)
@@ -356,7 +377,7 @@ precio.abajo  <- precio.bono(p = 100, tc = 0.03, t = 10, y = t10yr_yield - 0.01)
 
 ``` 
 
-```r
+```{r}
 # Calculo de aproximación duración modificada
 aprox.dur.mod <- (precio.abajo - precio.arriba)/(2 * precio * 0.01)
 aprox.dur.mod
@@ -365,10 +386,21 @@ aprox.dur.mod
 ## Duración y Convexidad de un Bono: Duración con librería 
 
 
+Una librería útil para trabajar con bono es `derivmkts`. Si no lo tenemos instalado:
+
 ```r
+install.packages("derivmkts")
+library("derivmkts")
+```
+
+En el caso que estemos usando la librería `pacman`:
+
+```{r}
 # Con librerias
 p_load("derivmkts")
+``` 
 
+```{r}
 # Duración moficada 
 duration(precio, 3, 10, 100, 1, modified = TRUE)
 
@@ -380,18 +412,41 @@ duration(precio, 3, 10, 100, 1, modified = FALSE)
 
 Cuando las tasa de interés (yield) varían en demasiados puntos base, deja de ser la duración (cualquier tipo) una buena medida de sensibilidad y se recurre a la convexidad.
 
-\vspace{8pt}
+\vspace{10pt}
 
-\begin{center}
+**Convexidad**:
+$$
+\frac{1}{P \times (1+y)^2} \sum_{t=1}^{T} \bigg[ \frac{CF_{t}}{(1 + y)^t } (t^2 + t) \bigg]
+$$
 
-Aproximación Convexidad: $\frac{MV_{-}+MV_{+}-2*MV_{0}}{MV_{0}*\Delta y^2}$ 
+**Aprox. Convexidad**: 
 
-\end{center}
+$$
+\frac{MV_{-}+MV_{+}-2*MV_{0}}{MV_{0}*\Delta y^2}
+$$ 
 
-\vspace{8pt}
+## 
 
+Convexidad:
 
-```r
+```{r}
+convexidad <- function(p,tc,t,y,precio){
+  # rep returns a vector with value = p * r and times = ttm -1 
+  pago   <- c(rep(tc*p, t - 1),p*(1 + tc))
+  pago   <- as.data.frame(pago)
+  pago$t <- as.numeric(rownames(pago))
+  pago$factor_desc <- 1 / (1 + y)^(pago$t)
+  pago$valor_prese <- pago$factor_desc*pago$pago*((pago$t)^2 + pago$t)
+  print(sum(pago$valor_prese)*(1/(precio*(1+y)^2)))
+}
+
+convexidad(100, 0.03, 10, t10yr_yield, precio.bono(p = 100, tc = 0.03, t = 10, y = t10yr_yield))
+```
+
+##
+
+Aproximación Convexidad:
+```{r}
 # Calculamos medida de convexidad
 convexidad <- (precio.arriba + precio.abajo  - 2 * precio)/(precio * (0.01)^2)
 convexidad
@@ -399,9 +454,33 @@ convexidad
 
 Convexidad con librería:
 
-```r
+```{r}
 convexity(precio, 3, 10, 100, 1)
 ```
+
+# Efecto Dolar 
+
+## Efecto Dolar 
+
+**Efecto Dolar**:
+$$
+\Delta P_{duration} + \Delta P_{convexity}  
+$$
+
+**Duration Dollar Change**:
+$$
+-D \times \Delta y \times P 
+$$
+
+**Convexity Dollar Change**:
+$$
+0.5 \times C \times (\Delta y)^2 \times P 
+$$
+
+## Apunte del curso
+
+- Apunte curso Finanzas I: [https://finance-r.netlify.com/](https://finance-r.netlify.com/)
+
 
 ##
 
