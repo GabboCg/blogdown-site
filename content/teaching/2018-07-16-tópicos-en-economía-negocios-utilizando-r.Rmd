@@ -162,14 +162,13 @@ output:
 Para un mayor detalle del curso recomiendo visitar el website creado utilizando la librería [Radix](https://r-mec357.netlify.com/).
 
 <div class="btn-group">
-
+  
 <br>
 <button class="button" onclick="myFunction()"> 
 [Radix Website](https://r-mec357.netlify.com/)
 </button>
-
+  
 </div>
-
 <br>
     
 ---
