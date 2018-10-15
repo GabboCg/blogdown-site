@@ -165,7 +165,7 @@ Para un mayor detalle del curso recomiendo visitar el website creado utilizando 
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    [Radix Website](https://rstudio.github.io/radix/)
+    [Radix Website](https://r-mec357.netlify.com/)
     </button>
     
     </div>
