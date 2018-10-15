@@ -35,9 +35,6 @@ Este apunte es una introducción a las finanzas quantitativas (*data science app
 </div>
 
 
-
-
-
 ## Ayudantías 
 
 a. Ayudantía 1: Introducción a R
