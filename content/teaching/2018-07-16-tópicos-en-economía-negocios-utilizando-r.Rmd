@@ -169,6 +169,7 @@ Para un mayor detalle del curso recomiendo visitar el website creado utilizando 
 </button>
 
 </div>
+
 <br>
     
 ---
