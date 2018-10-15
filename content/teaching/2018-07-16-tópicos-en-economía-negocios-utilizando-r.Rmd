@@ -157,6 +157,21 @@ output:
 
     <br>
     
+# Radix Website
+
+Para un mayor detalle del curso recomiendo visitar el website creado utilizando la librería [Radix](https://rstudio.github.io/radix/).
+
+    <div class="btn-group">
+    
+    <br>
+    <button class="button" onclick="myFunction()"> 
+    [Radix Website](https://rstudio.github.io/radix/])
+    </button>
+    
+    </div>
+
+    <br>
+    
 ---
 
 > *Disclaimer*: La información contenida en esta página está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a> y fue construida bajo mi rol como ayudante (*Teacher Assistant*) de la Catedra Topicos en economía y negocios utilizando R (*R for economy and business*).   
