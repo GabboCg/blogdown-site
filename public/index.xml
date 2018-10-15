@@ -27,7 +27,7 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/technical-analysis-with-plotly/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;plotly&amp;quot;, &amp;quot;quantmod&amp;quot;) get data GSPC &amp;lt;- getSymbols(&amp;quot;^GSPC&amp;quot;,src=&amp;#39;yahoo&amp;#39;,auto.assign = FALSE, from = &amp;quot;2007-01-01&amp;quot;) df &amp;lt;- data.frame(Date=index(GSPC),coredata(GSPC))  create Bollinger Bands bbands &amp;lt;- BBands(GSPC[,c(&amp;quot;GSPC.High&amp;quot;,&amp;quot;GSPC.Low&amp;quot;,&amp;quot;GSPC.Close&amp;quot;)])  join and subset data df &amp;lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &amp;gt;= &amp;quot;2015-01-01&amp;quot;)  colors column for increasing and decreasing for (i in 1:length(df[,1])) { if (df$GSPC.Close[i] &amp;gt;= df$GSPC.Open[i]) { df$direction[i] = &amp;#39;Aumento&amp;#39; } else { df$direction[i] = &amp;#39;Disminución&amp;#39; } } i &amp;lt;- list(line = list(color = &amp;#39;#17BECF&amp;#39;)) d &amp;lt;- list(line = list(color = &amp;#39;#7F7F7F&amp;#39;))  plot candlestick chart p &amp;lt;- df %&amp;gt;% plot_ly(x = ~Date, type=&amp;quot;candlestick&amp;quot;, open = ~GSPC.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;plotly&amp;quot;, &amp;quot;quantmod&amp;quot;)## package &amp;#39;hexbin&amp;#39; successfully unpacked and MD5 sums checked## package &amp;#39;crosstalk&amp;#39; successfully unpacked and MD5 sums checked## package &amp;#39;plotly&amp;#39; successfully unpacked and MD5 sums checked## ## The downloaded binary packages are in## C:\Users\Habac\AppData\Local\Temp\RtmpmcIl75\downloaded_packagesget dataGSPC &amp;lt;- getSymbols(&amp;quot;^GSPC&amp;quot;,src=&amp;#39;yahoo&amp;#39;,auto.assign = FALSE, from = &amp;quot;2007-01-01&amp;quot;)df &amp;lt;- data.frame(Date=index(GSPC),coredata(GSPC))create Bollinger Bandsbbands &amp;lt;- BBands(GSPC[,c(&amp;quot;GSPC.High&amp;quot;,&amp;quot;GSPC.Low&amp;quot;,&amp;quot;GSPC.Close&amp;quot;)])join and subset datadf &amp;lt;- subset(cbind(df, data.</description>
     </item>
     
     <item>
@@ -36,11 +36,9 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/finanzas-i/</guid>
-      <description>Material de clases Apunte: Introducción a las finanzas quantitativas Este apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos.
-
-Apunte 
-Source Code  
-  Ayudantías Ayudantía 1: Introducción a R</description>
+      <description>Material de clasesApunte: Introducción a las finanzas quantitativasEste apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos.
+ApunteSource Code
+AyudantíasAyudantía 1: Introducción a R</description>
     </item>
     
     <item>
@@ -49,10 +47,10 @@ Source Code
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/introduction-to-r/</guid>
-      <description>session 1 Session    session 2 Session 2   
- session 3 Session 3   
- session 4 Session 4   
- </description>
+      <description>session 1Sessionsession 2Session 2
+session 3Session 3
+session 4Session 4
+</description>
     </item>
     
     <item>
@@ -70,9 +68,21 @@ Source Code
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
-      <description>Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
+      <description>Why this post?Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
 The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
 &amp;mdash; Dina D. Pomeranz (@DinaPomeranz) July 4, 2018  After reading the post1, I decided to replicate the entire article using the new features of ggplot2 3.</description>
+    </item>
+    
+    <item>
+      <title>One of the New Feature of ggplot2 3.0</title>
+      <link>/posts/one-of-the-new-feature-of-ggplot2-3-0/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
+      <description> Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don&amp;rsquo;t believe me:
+preserved10871ade2e0f6e3
+After reading the post1, I decided to replicate the entire article using the new features of ggplot2 3.0
+Let&amp;rsquo;s start Data Source Reference  How you can see, the link to full article is in the post above. [return]   </description>
     </item>
     
     <item>
@@ -81,14 +91,10 @@ The unadjusted gender wage gap for full time workers has been falling significan
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Presentaciones R Markdown: un enfoque a la Investigación Reproducible
- Shorcut, YAML, Inline Formating Block level Element &amp;amp; Blockquotes R code chunks &amp;amp; inline R code Características de un Documento PDF  
-Presentación 
-Script 
-Source Code   tidyquant: llevando el análisis financiero al tidyverse
- Introducción a tidyquant Descargando Multiples Datos Retornos y retornos acumulados Análisis Técnico Librería plotly en finanzas  
-Presentación 
-Script</description>
+      <description>PresentacionesR Markdown: un enfoque a la Investigación Reproducible
+Shorcut, YAML, Inline FormatingBlock level Element &amp;amp; BlockquotesR code chunks &amp;amp; inline R codeCaracterísticas de un Documento PDFPresentaciónScriptSource Code
+tidyquant: llevando el análisis financiero al tidyverse
+Introducción a tidyquantDescargando Multiples DatosRetornos y retornos acumuladosAnálisis TécnicoLibrería plotly en finanzasPresentaciónScriptSource Code</description>
     </item>
     
     <item>
@@ -97,8 +103,8 @@ Script</description>
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/loops-using-r/</guid>
-      <description>Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.5 beta2 &amp;lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &amp;lt;- rnorm(n[j],0,su) Y &amp;lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.</description>
+      <description>IntroductionIntroductionthis post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
+if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;)set.seed(123)reps &amp;lt;- 10000betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &amp;lt;- 2beta1 &amp;lt;- 2.5beta2 &amp;lt;- 1su = 2n = c(100,1000) #tamaño muestralfor (j in 1:length(n)) {X1=rnorm(n[j],20,1)X2=runif(n[j],0,1)for (i in 1:reps) {u &amp;lt;- rnorm(n[j],0,su)Y &amp;lt;- beta0 + beta1*X1 + beta2*X2 + umodel = lm(Y~X1) #Estima OLS - omite variable X2betas[i,j] = model$coef[2]}}mean(betas[,1])## [1] 2.</description>
     </item>
     
   </channel>
