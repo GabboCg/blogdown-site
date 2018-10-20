@@ -79,82 +79,132 @@ output:
 
 1. Tarea 1 
 
-    a. [Enunciado](/pdf/Enunciado_Tarea1_R_Primavera_2018.pdf)
-    b. Pauta
+    <p>
+    <img src="http://p.migdal.pl/imgs/2016-03-15-dark-side-of-science-meme.jpg" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    R Markdown
+    [Enunciado](/pdf/Enunciado_Tarea1_R_Primavera_2018.pdf)
+    </button>
+    
+    <button class="button" onclick="myFunction()"> 
+    [R Markdown](/html/solution_homework_1.html)
     </button>
     
     </div>
-
+    
+    </p>
+    
+    <br>
+    <br>
     <br>
 
 2. Tarea 2 
 
-    a. [Enunciado](/pdf/Enunciado_Tarea2_R_Primavera_2018.pdf)
-    b. Pauta
+    <p>
+    <img src="https://media.makeameme.org/created/you-know-i-5b67d1.jpg" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    R Markdown
+    [Enunciado](/pdf/Enunciado_Tarea2_R_Primavera_2018.pdf)
+    </button>
+    
+    <button class="button" onclick="myFunction()"> 
+    [R Markdown](/html/solution_homework_2.html)
     </button>
     
     </div>
-
+    
+    </p>
+    
+    <br>
+    <br>
     <br>
 
 3. Tarea 3 
 
-    a. [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf)
-    b. Pauta
+    <p>
+    <img src="https://nextviewventures.com/wp-content/uploads/2014/07/control-content-marekting-for-startups.jpg" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    R Markdown
+    [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf)
+    </button>
+    
+    <button class="button" onclick="myFunction()"> 
+    [R Markdown](/html/solution_homework_2.html)
     </button>
     
     </div>
-
+    
+    </p>
+    
+    <br>
+    <br>
     <br>
 
 4. Tarea 4 
 
-    a. Enunciado
-    b. Pauta
+    <p>
+    <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    R Markdown
+    [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf)
+    </button>
+    
+    <button class="button" onclick="myFunction()"> 
+    [R Markdown](/html/solution_homework_2.html)
     </button>
     
     </div>
-
+    
+    </p>
+    
+    <br>
+    <br>
     <br>
 
 5. Tarea 5
 
-    a. Enunciado
-    b. Pauta
+    <p>
+    <img src="https://blog.cpanel.com/wp-content/uploads/2018/05/image2018-2-16_14-10-15.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    R Markdown
+    [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf)
+    </button>
+    
+    <button class="button" onclick="myFunction()"> 
+    [R Markdown](/html/solution_homework_2.html)
     </button>
     
     </div>
-
+    
+    </p>
+    
+    <br>
+    <br>
     <br>
     
 # Radix Website
