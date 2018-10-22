@@ -176,33 +176,55 @@ e. Ayudantía 5: Derivados, opciones & futuros
 
 a. Tarea 1: Construcción de Portafolio 
     
-    * [Enunciado](/pdf/Enunciado_v1.pdf)
-    * Pauta
+    <p>
+    <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    R Markdown
+    [Enunciado](/pdf/Enunciado_v1.pdf)
+    </button>
+    
+    <button class="button" onclick="myFunction()"> 
+    [R Markdown]()
     </button>
     
     </div>
+    
+    </p>
+    
+    <br>
+    <br>
+    <br>
     
 
 b. Tarea 2: Bonos & Derivados
 
-    * [Enunciado](/pdf/Enunciado_Tarea2_Finanzas_1_Primavera_2018.pdf)
-    * Pauta 
+    <p>
+    <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
     
     <br>
     <button class="button" onclick="myFunction()"> 
-    R Markdown
+    [Enunciado](/pdf/Enunciado_Tarea2_Finanzas_1_Primavera_2018.pdf)
+    </button>
+    
+    <button class="button" onclick="myFunction()"> 
+    [R Markdown]()
     </button>
     
     </div>
     
+    </p>
+    
+    <br>
+    <br>
     <br>
 
 ---
