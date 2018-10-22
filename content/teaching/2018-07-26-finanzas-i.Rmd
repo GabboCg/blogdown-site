@@ -177,7 +177,7 @@ e. Ayudantía 5: Derivados, opciones & futuros
 a. Tarea 1: Construcción de Portafolio 
     
     <p>
-    <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    <img src="https://www.topuniversities.com/sites/default/files/articles/lead-images/finance_2.jpg" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 20px ; border: solid black 1px; padding: 2px">
     A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
@@ -204,7 +204,7 @@ a. Tarea 1: Construcción de Portafolio
 b. Tarea 2: Bonos & Derivados
 
     <p>
-    <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    <img src="https://brokemillennial.com/wp-content/uploads/2013/12/Ron-Swanson-Money-meme-300x300-eECZFC.jpg" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 20px ; border: solid black 1px; padding: 2px">
     A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
@@ -226,6 +226,7 @@ b. Tarea 2: Bonos & Derivados
     <br>
     <br>
     <br>
+
 
 ---
 
