@@ -85,7 +85,7 @@ c. Ayudantía 3: Teoría de Portafolio
     * Librería IntroCompFinR
     * Portafolio de Mínima Varianza
     * Portafolio de Mínima Varianza sujeto a un retorno objetivo
-    * Portafolio tangente
+    * Portafolio tangente 
     * Frontera eficiente
     
     <div class="btn-group">

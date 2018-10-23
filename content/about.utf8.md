@@ -1,7 +1,7 @@
 ---
-title: About Me...(Always Updated!)  `r emo::ji("heart")`+ `r emo::ji("coffee")`
+title: About Me...(Always Updated!)  ❤️+ ☕
 output: word_document
-date: "`r Sys.Date()`"
+date: "2018-10-23"
 ---
 
 Can you hear me now?...Learning a 
