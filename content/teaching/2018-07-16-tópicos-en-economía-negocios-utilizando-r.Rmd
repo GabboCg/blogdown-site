@@ -162,7 +162,7 @@ output:
     margin-left: 20px ; border: solid black 1px; padding: 2px">
     A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
-    <div class="btn-group">
+    <div class="btn-group"> 
     
     <br>
     <button class="button" onclick="myFunction()"> 

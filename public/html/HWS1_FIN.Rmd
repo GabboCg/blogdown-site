@@ -1,0 +1,306 @@
+---
+title: "Pauta Tarea 1"
+author:  <a href="https://gcabrerag.rbind.io/"> <h3> Gabriel Cabrera </h3> </a> \newline Facultad de Economía y Negocios, Universidad de Chile, Chile
+date: "2018-10-23 (updated: `r Sys.Date()`)"
+linkcolor: "red"  
+output: 
+  html_document:
+    highlight: "kate"
+    toc: true
+    css: styles.css
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    number_sections: true
+    code_folding: "show"
+    include:
+      after_body: footer.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning = FALSE, message = FALSE)
+```
+
+---
+
+<center> <b> Instrucciones </b> </center>
+<p>
+
+
+1.	Esta tarea debe ser entregada en grupos de mínimo 2 alumnos y máximo 3 alumnos. 
+2.	Se debe enviar una carpeta comprimida (.zip) la que debe contener: script y un breve informe con sus resultados, incluyendo tablas, gráficos, etc., según corresponda.  El formato del infome puede ser word o pdf.
+3.  El asunto del email con su tarea debe ser "Tarea 1-Finanzas 1-Apellido 1-Apellido 2-Apellido 3"
+4.	La fecha de entrega es el Martes 28 de Agosto del 2018 hasta las 23:59 hrs al correo del curso:  [finance.hansen@gmail.com](finance.hansen@gmail.com). 
+
+---
+
+Usted es un analista de inversiones al cual se le ha encomendado la misión de construir un portafolio que buscará diversificación invirtiendo en distintas empresas. El monto a invertir es de US$1 millón.
+
+<p>
+
+# Selección de los datos {.tabset - .tabset-fade}
+
+Desde [*Yahoo Finance*](https://finance.yahoo.com/) obtenga los precios  de las siguientes empresas con periodicidad mensual desde Enero del 2005 hasta Julio del 2018: Amazon (AMZN), Alphabet (GOOG), Netflix (NFLX), McDonald`s (MCD) y Coca Cola (KO)
+
+```{r}
+# Cargamos librerias
+if(!require("pacman")) install.packages("pacman")
+p_load("readxl","quantmod","tidyverse","reshape2","fBasics","PerformanceAnalytics","quadprog",
+       "IntroCompFinR")
+```
+
+```{r}
+# Nuevos tickers
+tickers <- c("AMZN","GOOG","NFLX","MCD","KO")
+```
+
+```{r}
+# descargamos los tickers
+getSymbols(tickers, src = "yahoo", from = "2004-12-01", to = "2018-08-01", periodicity = "monthly")
+```
+
+```{r}
+# Precio de cierre
+list <-  lapply(tickers, function(x) Cl(get(x)))
+precio.cierre <- do.call(merge,list)
+```
+
+```{r}
+# removemos los objetos que no vamos a usar
+rm("AMZN","GOOG","NFLX","MCD","KO", list)
+```
+
+<br>
+
+# Retorno y estadística descriptiva {.tabset - .tabset-fade}
+
+Para cada acción calcule el retorno y retorno acumulado, luego:
+
+## Pregunta a {-}
+
+```{r}
+# calculamos los  retornos
+retornos <- data.frame(apply(precio.cierre, 2, function(x) Delt(x, type = "log")), 
+                      fecha = index(precio.cierre)) %>% 
+            na.omit() 
+
+# calculamos los retornos acumulados
+acumulados <- data.frame(apply(retornos[1:5], 2, function(x) cumsum(x)), 
+                              fecha = index(precio.cierre[-1]))
+
+# Cambiamos la forma de los datos
+reshape.acumulados <- melt(acumulados, id.vars = "fecha")
+```
+
+Construimos el gráfico:
+
+```{r, fig.align='center', fig.width=6.5, fig.height=4.5,  fig.pos="H", out.extra = ''}
+# graficamos los retornos acumulados
+g2 <- ggplot(reshape.acumulados) + geom_line(mapping = aes(fecha, value, color = variable))
+g2 <- g2 + ggtitle("Retornos Acumulados",
+                   subtitle="Amazon, Alphabet, Netflix, McDonald`s y Coca Cola")
+g2 <- g2 + theme_bw() + xlab("Fecha") + ylab("Retornos")
+g2 <- g2 + scale_color_manual("Tickers", 
+                              values = c("red","blue","green","orange", "cyan"))
+g2 <- g2 + theme(legend.position = "bottom")
+g2
+```
+
+
+## Pregunta b {-}
+
+Construya un grafico tipo *scatter* que muestre el *trade-off* retorno-riesgo de los seis activos.
+
+
+```{r}
+# calculo retorno esperado y desviación estandar
+mean <- apply(retornos[,1:5], 2, function(x) mean(x))
+sd <- apply(retornos[,1:5], 2, function(x) sd(x))
+cov  <- cov(retornos[1:5]) 
+```
+
+
+```{r, fig.align='center', fig.width=8.5, fig.height=4.5,  fig.pos="H"}
+# graficamos el trade-off riesgo-retorno
+g3 <- ggplot(mapping = aes(sd, mean, label = c("AMZN","GOOG","AAPL","MCD","KO")))
+g3 <- g3 + geom_point() + geom_text(hjust = 0, vjust = 0)
+g3 <- g3 + scale_y_continuous(breaks = seq(0,0.2, by = 0.01),limits = c(0,0.08))
+g3 <- g3 + scale_x_continuous(breaks = seq(0,0.2, by = 0.02),limits = c(0,0.2))
+g3 <- g3 + theme_bw() + xlab("Riesgo") + ylab("Retorno") +  ggtitle("Trade-off Riesgo-Retorno",
+                                                                  subtitle = "Cinco activos riesgosos")
+g3   
+```
+
+
+## Pregunta c {-}
+
+Compute una estadística descriptiva (media, varianza, desviación estandar, skewness y kurtosis) para el retorno de cada acción y comente.
+
+```{r}
+# Estadística descriptiva
+summary <- basicStats(retornos[1:5])[c("Mean", "Stdev", "Median", "Minimum", "Maximum", 
+                                       "Skewness","Kurtosis"),]
+```
+
+
+```{r, eval=TRUE, echo = FALSE, fig.align="center", fig.cap="Estadística Descriptiva"}
+knitr::kable(summary, caption = "Estadística Descriptiva", digits = round(3), align = "c")
+```
+
+
+## Pregunta d {-}
+
+Usando una tasa libre de riesgo mensual igual a 0.1250% (0.00125), calcule el ratio de Sharpe para cada activo. ¿Qué activo posee el mayor ratio de Sharpe? 
+
+```{r, eval = TRUE}
+# calculo ratio de sharpe
+sr <- function(rf,ra,sd){
+  
+      sharpe.ratio <- (ra - rf)/sd
+      sprintf("el ratio de sharpe es %4f",sharpe.ratio)
+
+}
+
+# contruyo un auxiliar
+auxiliar <- data.frame(rbind(mean,sd))
+
+# Tasa libre de riesgo
+rf <- 0.00125
+```
+
+```{r, eval = TRUE, echo = TRUE}
+# Calculo ratio de sharpe
+for(i in 1:ncol(auxiliar)){
+   
+    print(paste0(sr(rf,auxiliar[1,i],auxiliar[2,i])," de ",colnames(auxiliar[i])))
+  
+}
+```
+
+
+## Pregunta e {-}
+
+```{r, eval = FALSE}
+# Test de Jarque Bera
+apply(retornos[1:5], 2, function(x) jarqueberaTest(x))  
+```
+
+<br>
+
+# Teoría de portafolio {.tabset - .tabset-fade}
+
+## Pregunta a {-}
+
+Construya el portafolio de minima varianza global. Reporte los ponderadores de este portfolio, su retorno esperado y su desviación estandar.
+
+```{r}
+# portafolio de mínima varianza
+globalmin <- globalMin.portfolio(mean, cov, shorts = TRUE)
+globalmin
+```
+
+
+## Pregunta b {-}
+
+Un portafolio cuyo retorno esperado sea igual al de Amazon (permitida venta corta). (*3 puntos*)
+
+```{r}
+efficient.portfolio(mean, cov, mean[1], shorts = TRUE)
+```
+    
+2. Un portafolio cuyo retorno esperado sea igual al de Alphabet (permitida venta corta). (*3 puntos*)
+    
+```{r}
+efficient.portfolio(mean, cov, mean[2], shorts = TRUE)
+```
+
+3. Un portafolio cuyo retorno esperado sea igual al de Netflix (permitida venta corta). (*3 puntos*)
+    
+```{r}
+efficient.portfolio(mean, cov, mean[3], shorts = TRUE)
+```
+    
+4. Un portafolio cuyo retorno esperado sea igual al de McDonald`s (permitida venta corta). (*3 puntos*)
+    
+```{r}
+efficient.portfolio(mean, cov, mean[4], shorts = TRUE)
+```
+    
+5. Un portafolio cuyo retorno esperado sea igual al de Coca Cola (permitida venta corta). (*3 puntos*)
+    
+```{r}
+efficient.portfolio(mean, cov, mean[5], shorts = TRUE)
+```
+
+Reporte los ponderadores de cada portfolio, su retorno esperado y su desviación estandar.
+    
+    
+## Pregunta c {-}
+
+De los portafolio encontrados en (3.b) ¿cuáles son portafolio eficientes?¿por qué?.
+
+Basta con ver que portafolios tienen menor retorno esperado con respecto al portafolio global de mínima varianza.
+
+
+## Pregunta d {-}
+
+Construya el portafolio optimo de mínima varianza (está permitido venta corta) usando una tasa libre riesgo mensual igual a 0.1250% (0.00125). Reporte los ponderadores del portfolio, su retorno esperado y su desviación estandar.
+
+```{r}
+# Tasa libre de riesgo
+rf <- 0.00125
+
+# Portafolio tangente con venta corta
+port.tang <- tangency.portfolio(mean, cov, rf, shorts = TRUE)
+port.tang
+
+#sharpe ratio 
+sharpe.ratio <- (port.tang$er - rf)/port.tang$sd
+sharpe.ratio
+```
+
+
+## Pregunta e {-}
+
+Contruya la frontera eficiente (recuerde que está permitido venta corta), utilice los mismo paràmetros utilizados en ayudantía^[Para mayor detalle de la función `efficient.frontier` ver desde la slide 31 de la ayudantía 2].
+
+```{r}
+# frontera eficiente con venta corta 
+eff.front.short <- efficient.frontier(mean, cov, nport = 25, alpha.min = -2, alpha.max = 1.5, 
+                                      shorts = TRUE)
+eff.front.short
+```
+
+
+## Pregunta f {-}
+
+Grafique la frontera eficiente identificando el portafolio de mínima varianza, portafolio tangente y la tasa libre de riesgo.
+
+```{r, fig.align='center', fig.width=6.5, fig.height=4,  fig.pos="H"}
+g4 <- ggplot() + geom_point(mapping = aes(eff.front.short$sd, eff.front.short$er, color = "1"))
+g4 <- g4 + geom_point(mapping = aes(sd, mean, color = "2")) 
+g4 <- g4 + geom_point(mapping = aes(port.tang$sd, port.tang$er, color = "3")) 
+g4 <- g4 + geom_point(mapping = aes(globalmin$sd, globalmin$er, color = "4"))
+g4 <- g4 + geom_abline(intercept = rf, slope = sharpe.ratio)
+g4 <- g4 + scale_y_continuous(breaks = seq(-0.005,0.2, by = 0.01), limits = c(-0.005,0.1)) 
+g4 <- g4 + scale_x_continuous(breaks = seq(0,0.32, by = 0.02), limits = c(0,0.32)) 
+g4 <- g4 + scale_color_manual("", values = c("black","blue", "red", "orange"), 
+                              labels = c("Frontera", "Stocks 1", "Tang. Port","Min var."))
+g4 <- g4 + theme_bw() + xlab("Riesgo") + ylab("Retorno")
+g4 <- g4 + ggtitle("Trade-off Riesgo-Retorno", 
+                   subtitle = "Cinco activos riesgosos & minima varianza")
+g4 <- g4 + theme(legend.position = "bottom")
+g4 
+```
+
+
+## Pregunta g {-}
+
+```{r}
+# Portafolio tangente sin venta corta
+port.tangnoshort <- tangency.portfolio(mean, cov, rf, shorts = FALSE)
+port.tangnoshort
+```
+
+Repita (3.d) pero ahora la venta corta no está permitida, comente. 

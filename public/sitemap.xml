@@ -4,12 +4,7 @@
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2018-10-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/technical-analysis-with-plotly/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -38,11 +33,6 @@
   </url>
   
   <url>
-    <loc>/posts/one-of-the-new-feature-of-ggplot2-3-0/</loc>
-    <lastmod>2018-07-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</loc>
     <lastmod>2018-07-16T00:00:00+00:00</lastmod>
   </url>
@@ -54,7 +44,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

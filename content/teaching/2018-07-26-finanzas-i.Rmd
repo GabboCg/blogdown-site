@@ -168,9 +168,29 @@ e. Ayudantía 5: Derivados, opciones & futuros
 
 <iframe width="550" height="400"  src="https://www.youtube.com/embed/qlLFjBMSUlQ";" allowfullscreen="" ></iframe>
 
-<br>
+<p>
+
+* Black & Scholes
+
+<iframe width="550" height="400"  src="https://www.youtube.com/embed/b54LK6TRjws";" allowfullscreen="" ></iframe>
+
+<p>
+
+* Black & Scholes con datos reales
+
+<iframe width="550" height="400"  src="https://www.youtube.com/embed/Qz8pdhf7yyU";" allowfullscreen="" ></iframe>
+
+<p>
+
+* Árbol Binomial
+
+<iframe width="550" height="400"  src="https://www.youtube.com/embed/2LCceV1-4Yg";" allowfullscreen="" ></iframe>
+
+<p>
 
 * RStudio Cloud
+
+<br>
 
 ## Tareas 
 
@@ -189,7 +209,7 @@ a. Tarea 1: Construcción de Portafolio
     </button>
     
     <button class="button" onclick="myFunction()"> 
-    [R Markdown]()
+    [R Markdown](/html/HWS1_FIN.html)
     </button>
     
     </div>
@@ -223,6 +243,7 @@ b. Tarea 2: Bonos & Derivados
     
     </p>
     
+    <br>
     <br>
     <br>
     <br>
