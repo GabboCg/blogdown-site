@@ -92,7 +92,7 @@ output:
     </button>
     
     <button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/solution_homework_1.html)
+    [R Markdown](/html/HWS1_R_PRIM_2018.html)
     </button>
     
     </div>
@@ -118,7 +118,7 @@ output:
     </button>
     
     <button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/solution_homework_2.html)
+    [R Markdown](/html/HWS2_R_PRIM_2018.html)
     </button>
     
     </div>
@@ -144,7 +144,7 @@ output:
     </button>
     
     <button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/solution_homework_2.html)
+    [R Markdown](/html/HWS1_R_PRIM_2018.html)
     </button>
     
     </div>
@@ -170,7 +170,7 @@ output:
     </button>
     
     <button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/solution_homework_2.html)
+    [R Markdown](/html/HWS1_R_PRIM_2018.html)
     </button>
     
     </div>
@@ -196,7 +196,7 @@ output:
     </button>
     
     <button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/solution_homework_2.html)
+    [R Markdown](/html/HWS1_R_PRIM_2018.html)
     </button>
     
     </div>
