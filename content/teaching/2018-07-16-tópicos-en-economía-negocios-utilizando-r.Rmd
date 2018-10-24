@@ -75,7 +75,7 @@ output:
 5. github: donde las ideas se comparten 
 
 
-# Tareas   
+# Tareas
 
 1. Tarea 1 
 
