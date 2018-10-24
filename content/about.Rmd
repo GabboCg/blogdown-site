@@ -1,5 +1,5 @@
 ---
-title: About Me...(Always Updated!)  `r emo::ji("heart")`+ `r emo::ji("coffee")`
+title: About Me...(Always Updated!)  `r emo::ji("heart")`+ `r emo::ji("coffee")` + `r emo::ji("clock9")`
 output: word_document
 date: "`r Sys.Date()`"
 ---
