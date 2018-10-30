@@ -133,7 +133,7 @@ output:
 
     <p>
     <img src="/images/images_hw3.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
-    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    margin-left: 120px ; border: solid black 1px; padding: 2px">
     A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group">
@@ -159,7 +159,7 @@ output:
 
     <p>
     <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
-    margin-left: 20px ; border: solid black 1px; padding: 2px">
+    margin-left: 120px ; border: solid black 1px; padding: 2px">
     A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
     
     <div class="btn-group"> 
