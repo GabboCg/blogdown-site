@@ -77,12 +77,12 @@ output:
 
 # Tareas
 
-1. Tarea 1 
+1. Tarea 1 `r emo::ji("movie_camera")`
 
     <p>
     <img src="/images/images_hw1.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+    El objetivo de la Tarea 1 es introducir el uso de la librería `dplyr` y `magrittr` con su operador %>%, ambos coexisten en el `tidyverse`. La base de datos usada proviene de IMdB.
     
     <div class="btn-group">
     
@@ -103,12 +103,12 @@ output:
     <br>
     <br>
 
-2. Tarea 2 
+2. Tarea 2 `r emo::ji("chart_with_upwards_trend")`
 
     <p>
     <img src="/images/images_hw2.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+    El objetivo de la Tarea 2 es relacionar el uso  de R con las finanzas. Utilizando la librería `tidyquant`, calculamos bandas de *bollinger* y *barcharts*. Finalmente se usa la librería `WDI` para descargar datos externos a R como el *World Development Indicator*.  
     
     <div class="btn-group">
     
@@ -129,12 +129,12 @@ output:
     <br>
     <br>
 
-3. Tarea 3 
+3. Tarea 3 `r emo::ji("globe_with_meridians")`
 
     <p>
     <img src="/images/images_hw3.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+    Mediante el uso de mapas presentar y visualizar datos mundiales. A nivel nacional se entrega la libertad de seleccionar datos de la regiòn metropolitana y mapear a nivel de comuna (Santiago). Librerìas usadas: `leaflet`, `tmap` y `plotly`, no obstante la pauta esta contruida utilizando `gganimate`. 
     
     <div class="btn-group">
     
@@ -155,12 +155,12 @@ output:
     <br>
     <br>
 
-4. Tarea 4 
+4. Tarea 4 `r emo::ji("world_map")`
 
     <p>
     <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+    Una imagen vale mas que mil palabras, la frase anterior resume el uso de *Dashboard* usando la librería `flexdashboard`. La base de datos usada proviene de IMdB.
     
     <div class="btn-group"> 
     
@@ -186,7 +186,7 @@ output:
     <p>
     <img src="https://blog.cpanel.com/wp-content/uploads/2018/05/image2018-2-16_14-10-15.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 20px ; border: solid black 1px; padding: 2px">
-    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+    Próximamente...
     
     <div class="btn-group">
     
