@@ -158,7 +158,7 @@ output:
 4. Tarea 4 `r emo::ji("world_map")`
 
     <p>
-    <img src="https://activerain-store.s3.amazonaws.com/blog_entries/083/5009083/original/darth_vader.jpg?1484575560" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    <img src="/images/images_hw4.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
     Una imagen vale mas que mil palabras, la frase anterior resume el uso de *Dashboard* usando la librería `flexdashboard`. La base de datos usada proviene de IMdB.
     
@@ -184,7 +184,7 @@ output:
 5. Tarea 5
 
     <p>
-    <img src="https://blog.cpanel.com/wp-content/uploads/2018/05/image2018-2-16_14-10-15.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    <img src="/images/images_hw5.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 20px ; border: solid black 1px; padding: 2px">
     Próximamente...
     
