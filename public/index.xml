@@ -6,10 +6,20 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 16 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
+      <link>/about/</link>
+      <pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Can you hear me now?…Learning a programming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.
+Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic world.</description>
+    </item>
     
     <item>
       <title>Anscombe... a good example of why visualization is important</title>
@@ -33,16 +43,6 @@ Why this post  </description>
     </item>
     
     <item>
-      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
-      <link>/about/</link>
-      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Can you hear me now?…Learning a programming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.
-Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic world.</description>
-    </item>
-    
-    <item>
       <title>Technical Analysis With Plotly</title>
       <link>/posts/technical-analysis-with-plotly/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
@@ -57,10 +57,10 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/introduction-to-r/</guid>
-      <description>session 1Sessionsession 2Session 2
-session 3Session 3
-session 4Session 4
-</description>
+      <description> session 1 Session    session 2 Session 2   
+ session 3 Session 3   
+ session 4 Session 4   
+ </description>
     </item>
     
     <item>
@@ -69,9 +69,10 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/finanzas-i/</guid>
-      <description>Material de clasesApunte: Introducción a las finanzas quantitativasEste apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos.
-ApunteSource Code
-AyudantíasAyudantía 1: Introducción a R</description>
+      <description>Material de clases Apunte: Introducción a las finanzas quantitativas Este apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos.
+
+Apunte 
+Source Code</description>
     </item>
     
     <item>
@@ -100,10 +101,13 @@ The unadjusted gender wage gap for full time workers has been falling significan
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>PresentacionesR Markdown: un enfoque a la Investigación Reproducible
-Shorcut, YAML, Inline FormatingBlock level Element &amp;amp; BlockquotesR code chunks &amp;amp; inline R codeCaracterísticas de un Documento PDFPresentaciónScriptSource Code
-tidyquant: llevando el análisis financiero al tidyverse
-Introducción a tidyquantDescargando Multiples DatosRetornos y retornos acumuladosAnálisis TécnicoLibrería plotly en finanzasPresentaciónScriptSource Code</description>
+      <description>Presentaciones R Markdown: un enfoque a la Investigación Reproducible
+ Shorcut, YAML, Inline Formating Block level Element &amp;amp; Blockquotes R code chunks &amp;amp; inline R code Características de un Documento PDF  
+Presentación 
+Script 
+Source Code   tidyquant: llevando el análisis financiero al tidyverse
+ Introducción a tidyquant Descargando Multiples Datos Retornos y retornos acumulados Análisis Técnico Librería plotly en finanzas  
+Presentación</description>
     </item>
     
     <item>
@@ -113,7 +117,7 @@ The unadjusted gender wage gap for full time workers has been falling significan
       
       <guid>/posts/loops-using-r/</guid>
       <description>Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.5 beta2 &amp;lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &amp;lt;- rnorm(n[j],0,su) Y &amp;lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.</description>
+if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) ## Installing package into &amp;#39;/home/gabriel/R/x86_64-pc-linux-gnu-library/3.5&amp;#39; ## (as &amp;#39;lib&amp;#39; is unspecified) ## ## gridExtra installed set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.5 beta2 &amp;lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &amp;lt;- rnorm(n[j],0,su) Y &amp;lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.</description>
     </item>
     
   </channel>

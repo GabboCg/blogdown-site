@@ -18,7 +18,7 @@
       
       <guid>/posts/loops-using-r/</guid>
       <description>Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.5 beta2 &amp;lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &amp;lt;- rnorm(n[j],0,su) Y &amp;lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.</description>
+if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) ## Installing package into &amp;#39;/home/gabriel/R/x86_64-pc-linux-gnu-library/3.5&amp;#39; ## (as &amp;#39;lib&amp;#39; is unspecified) ## ## gridExtra installed set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.5 beta2 &amp;lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &amp;lt;- rnorm(n[j],0,su) Y &amp;lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.</description>
     </item>
     
   </channel>

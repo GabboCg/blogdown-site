@@ -24,7 +24,7 @@ ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
     highlightjsstyle = "github" 
     highlightjsLang = ["r", "yaml"]
     
-    themeColor = "theme-base-0f" 
+    themeColor = "theme-base-0g" 
 
 ## Social Accounts
 [params.social]
@@ -49,13 +49,14 @@ ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
-    name = "Blog"
-    identifier = "blog"
-    weight = 300
-    url = "https://www.youtube.com/watch?v=VZ71fa7tLAE&start_radio=1&list=RDVZ71fa7tLAE"
-[[menu.main]]
     name = "Teaching"
     identifier = "teaching"
-    weight = 400
+    weight = 300
     url = "/teaching/"
+[[menu.main]]
+    name = "Technical Notes"
+    identifier = "Notes"
+    weight = 400
+    url = "https://www.youtube.com/watch?v=VZ71fa7tLAE&start_radio=1&list=RDVZ71fa7tLAE"
+
 
