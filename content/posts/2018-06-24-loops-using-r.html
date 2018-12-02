@@ -24,12 +24,9 @@ output:
 <p>this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.</p>
 <pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
 <pre><code>## Loading required package: pacman</code></pre>
-<pre class="r"><code>p_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;)</code></pre>
-<pre><code>## Installing package into &#39;/home/gabriel/R/x86_64-pc-linux-gnu-library/3.5&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre><code>## 
-## gridExtra installed</code></pre>
-<pre class="r"><code>set.seed(123)
+<pre class="r"><code>p_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;)
+
+set.seed(123)
 reps &lt;-  10000
 
 betas &lt;-  matrix(NA, nrow = reps, ncol = 2)

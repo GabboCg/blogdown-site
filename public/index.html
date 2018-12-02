@@ -258,7 +258,7 @@ The unadjusted gender wage gap for full time workers has been falling significan
           Jun 6, 2018
         </span>
         Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;) ## Installing package into &#39;/home/gabriel/R/x86_64-pc-linux-gnu-library/3.5&#39; ## (as &#39;lib&#39; is unspecified) ## ## gridExtra installed set.seed(123) reps &lt;- 10000 betas &lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &lt;- 2 beta1 &lt;- 2.5 beta2 &lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &lt;- rnorm(n[j],0,su) Y &lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.
+if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;) set.seed(123) reps &lt;- 10000 betas &lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &lt;- 2 beta1 &lt;- 2.5 beta2 &lt;- 1 su = 2 n = c(100,1000) #tamaño muestral for (j in 1:length(n)) { X1=rnorm(n[j],20,1) X2=runif(n[j],0,1) for (i in 1:reps) { u &lt;- rnorm(n[j],0,su) Y &lt;- beta0 + beta1*X1 + beta2*X2 + u model = lm(Y~X1) #Estima OLS - omite variable X2 betas[i,j] = model$coef[2] } } mean(betas[,1]) ## [1] 2.
         
         <div class="read-more-link">
             <a href="/posts/loops-using-r/">Read More…</a>
