@@ -20,19 +20,17 @@ output:
 
 Este apunte es una introducción a las finanzas quantitativas (*data science applied to finance*) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos. 
 
-
-<div class="btn-group">
 <br>
-<button class="button" onclick="myFunction()">
+<div button class="button0" onclick="myFunction()">
 [Apunte](https://finance-r.netlify.com/)
 </button>
+</div>
 
-<button class="button" onclick="myFunction()">
+<div button class="button0" onclick="myFunction()">
 [*Source Code*](https://github.com/GaboCg/bookdown_finance)
 </button>
-<br>
-
 </div>
+<br>
 
 
 ## Ayudantías 
@@ -48,13 +46,15 @@ a. Ayudantía 1: Introducción a R
     <div class="btn-group">
 
     <br>
-    <button class="button" onclick="myFunction()">
+    <div button class="button" onclick="myFunction()">
     [Presentación](/pdf/presentacion.pdf)
     </button>
+    </div>
     
-    <button class="button" onclick="myFunction()">
+    <div button class="button" onclick="myFunction()">
      Script
     </button>
+    </div>
     <br>
     
     </div>
@@ -69,13 +69,15 @@ b. Ayudantía 2: Introducción a Quantmod
     <div class="btn-group">
 
     <br>
-    <button class="button" onclick="myFunction()">
+    <div button class="button" onclick="myFunction()">
     [Presentación](/pdf/presentation1.pdf)
     </button>
+    </div>
     
-    <button class="button" onclick="myFunction()">
+    <div button class="button" onclick="myFunction()">
      [Script](https://drive.google.com/uc?export=download&id=1wdAqNVHxUp4-a3TwsOVSG6TUmhGJ3GX9)
     </button>
+    </div>
     <br>
     
     </div>

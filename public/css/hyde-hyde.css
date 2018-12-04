@@ -79,7 +79,7 @@ footer {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030; }
+  color: #0000ff; } /* #303030 */
 
 .page-title,
 .post-title {
@@ -105,9 +105,9 @@ footer {
     margin-top: 0; }
   .related-posts li small {
     font-size: 75%;
-    color: #999; }
+    color: #0000ff; }
   .related-posts li a:hover {
-    color: #268bd2;
+    color: #0000ff;
     text-decoration: none; }
     .related-posts li a:hover small {
       color: inherit; }
@@ -198,7 +198,7 @@ kbd {
   white-space: nowrap; }
 
 a {
-  color: #268bd2;
+  color: #0000ff;
   text-decoration: none;
   word-wrap: break-word; }
   a.sidebar-nav-item:hover {
@@ -218,8 +218,8 @@ a {
       border-style: none;
       text-decoration: none; }
   a:hover {
-    color: #515151;
-    border-bottom: 1px dotted #bbb;
+    color: #7DF9FF;
+    border-bottom: 1px solid #7DF9FF; /* dotted */    
     text-decoration: none;
     background: transparent;
     background-color: transparent;
