@@ -213,13 +213,15 @@ a. Tarea 1: Construcción de Portafolio
     <div class="btn-group">
     
     <br>
-    <button class="button" onclick="myFunction()"> 
+    <div button class="button" onclick="myFunction()"> 
     [Enunciado](/pdf/Enunciado_v1.pdf)
     </button>
+    </div>
     
-    <button class="button" onclick="myFunction()"> 
+    <div button class="button" onclick="myFunction()"> 
     [R Markdown](/html/HWS1_FIN.html)
     </button>
+    </div>
     
     </div>
     
@@ -240,13 +242,15 @@ b. Tarea 2: Bonos & Derivados
     <div class="btn-group">
     
     <br>
-    <button class="button" onclick="myFunction()"> 
+    <div button class="button" onclick="myFunction()"> 
     [Enunciado](/pdf/Enunciado_Tarea2_Finanzas_1_Primavera_2018.pdf)
     </button>
+    </div>
     
-    <button class="button" onclick="myFunction()"> 
+    <div button class="button" onclick="myFunction()"> 
     [R Markdown]()
     </button>
+    </div>
     
     </div>
     
