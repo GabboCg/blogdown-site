@@ -1,0 +1,18 @@
+---
+title: 'Good Practices in R'
+author: 'Gabriel Cabrera '
+date: '2018-12-12'
+slug: good-practice-in-r
+categories:
+  - Rstat
+tags:
+  - R
+lastmod: '2018-12-12T23:12:34-03:00'
+layout: post
+type: post
+highlight: no
+draft: true
+---
+
+**Insert Lead paragraph here.**
+
