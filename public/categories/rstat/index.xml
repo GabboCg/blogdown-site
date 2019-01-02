@@ -6,10 +6,21 @@
     <description>Recent content in Rstat on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/rstat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>FInanzas reproducibles con R</title>
+      <link>/teaching/finanzas-reproducibles-con-r/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/finanzas-reproducibles-con-r/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
+Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.</description>
+    </item>
     
     <item>
       <title>Good Practices in R</title>
@@ -37,10 +48,8 @@ The unadjusted gender wage gap for full time workers has been falling significan
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Presentaciones R Markdown: un enfoque a la Investigación Reproducible
- Shorcut, YAML, Inline Formating Block level Element &amp;amp; Blockquotes R code chunks &amp;amp; inline R code Características de un Documento PDF  Presentación   Script   Source Code   
- tidyquant: llevando el análisis financiero al tidyverse
- Introducción a tidyquant Descargando Multiples Datos Retornos y retornos acumulados Análisis Técnico Librería plotly en finanzas  Presentación   Script   Source Code</description>
+      <description>Descripción Curso Este curso presenta una introducción a R, usando datos estructurados y no estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos a discutir se encuentran: importación y exportación de datos en diferentes formatos, extracción de datos de sitios web, visualización de datos, regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web utilizando Shiny.
+ Presentaciones Todas las presentaciones fueron construidas usando la librería Xaringan de Yihui Xie con el tema Dharma-Xaringan, creado por mí ✌️.</description>
     </item>
     
   </channel>

@@ -1,5 +1,6 @@
 ---
-title: Tópicos en Economía & Negocios Utilizando R `r emo::ji("arrow_right")` `r emo::ji("alien")` + `r emo::ji("es")`
+title: Tópicos en Economía & Negocios Utilizando R `r emo::ji("arrow_right")` 
+       `r emo::ji("alien")` + `r emo::ji("es")`
 author: 'Gabriel Cabrera '
 date: '2018-07-16'
 slug: tópicos-en-economía-negocios-utilizando-r
@@ -12,8 +13,19 @@ output:
     fig_width: 8
     css: ["/css/bootstrap.css"]
 ---
+# Descripción Curso
+
+Este curso presenta una introducción a R, usando datos estructurados y no 
+estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos 
+a discutir se encuentran: importación y exportación de datos en diferentes 
+formatos, extracción de datos de sitios web, visualización de datos, 
+regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web 
+utilizando Shiny.
 
 # Presentaciones
+
+Todas las presentaciones fueron construidas usando la librería `Xaringan`  de 
+Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")`.
 
 1. R Markdown: un enfoque a la Investigación Reproducible
 
@@ -74,12 +86,13 @@ output:
     
 3. gganimate: la historia en movimiento
 
-
 4. text mining con R: un enfoque *tidy* 
 
+5. Rccp: C++ & R para todos
 
-5. github: donde las ideas se comparten 
+6. High-Performance Computing: *Unleashed the beast* 
 
+5. Github: donde las ideas se comparten 
 
 # Tareas
 
