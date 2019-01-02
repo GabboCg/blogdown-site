@@ -24,11 +24,16 @@ utilizando Shiny.
 
 # Presentaciones
 
-Todas las presentaciones fueron construidas usando la librería `Xaringan`  de 
-Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")`.
+Todas las presentaciones fueron confeccionadas usando la librería `Xaringan`  de 
+Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post).
 
 1. R Markdown: un enfoque a la Investigación Reproducible
-
+     
+    <p>
+    <img src="/hex/rmarkdown.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
     * Shorcut, YAML, Inline Formating
     * Block level Element & Blockquotes
     * R code chunks & inline R code
@@ -54,8 +59,14 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")`.
     <br>
     
     </div>
+    </p>
     
 2. tidyquant: llevando el análisis financiero al *tidyverse*
+
+    <p>
+    <img src="/hex/tidyquant.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
 
     * Introducción a tidyquant
     * Descargando Multiples Datos
@@ -83,25 +94,196 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")`.
     <br>
     
     </div>
+     </p>
+    
     
 3. gganimate: la historia en movimiento
 
+    <p>
+    <img src="/hex/gganimate.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
+    * Introducción a tidyquant
+    * Descargando Multiples Datos
+    * Retornos y retornos acumulados
+    * Análisis Técnico 
+    * Librería plotly en finanzas
+
+    <div class="btn-group">
+    
+    <br>
+    <div button class="button" onclick="myFunction()"> 
+    Presentación
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+     Script
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+    *Source Code*
+    </button>
+    </div>
+    <br>
+    
+    </div>
+    </p>
+
 4. text mining con R: un enfoque *tidy* 
+
+    <p>
+    <img src="/hex/tidytext.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
+    * Introducción a tidyquant
+    * Descargando Multiples Datos
+    * Retornos y retornos acumulados
+    * Análisis Técnico 
+    * Librería plotly en finanzas
+
+    <div class="btn-group">
+    
+    <br>
+    <div button class="button" onclick="myFunction()"> 
+    Presentación
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+     Script
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+    *Source Code*
+    </button>
+    </div>
+    <br>
+    
+    </div>
+    </p>
 
 5. Rccp: C++ & R para todos
 
+    <p>
+    <img src="/hex/C++.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
+    * Introducción a tidyquant
+    * Descargando Multiples Datos
+    * Retornos y retornos acumulados
+    * Análisis Técnico 
+    * Librería plotly en finanzas
+
+    <div class="btn-group">
+    
+    <br>
+    <div button class="button" onclick="myFunction()"> 
+    Presentación
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+     Script
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+    *Source Code*
+    </button>
+    </div>
+    <br>
+    
+    </div>
+    </p>
+    
 6. High-Performance Computing: *Unleashed the beast* 
 
+    <p>
+    <img src="/hex/C++.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
+    * Introducción a tidyquant
+    * Descargando Multiples Datos
+    * Retornos y retornos acumulados
+    * Análisis Técnico 
+    * Librería plotly en finanzas
+
+    <div class="btn-group">
+    
+    <br>
+    <div button class="button" onclick="myFunction()"> 
+    Presentación
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+     Script
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+    *Source Code*
+    </button>
+    </div>
+    <br>
+    
+    </div>
+    </p>
+    
 5. Github: donde las ideas se comparten 
 
-# Tareas
+    <p>
+    <img src="/hex/github.svg" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
+    * Introducción a tidyquant
+    * Descargando Multiples Datos
+    * Retornos y retornos acumulados
+    * Análisis Técnico 
+    * Librería plotly en finanzas
+
+    <div class="btn-group">
+    
+    <br>
+    <div button class="button" onclick="myFunction()"> 
+    Presentación
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+     Script
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+    *Source Code*
+    </button>
+    </div>
+    <br>
+    
+    </div>
+    </p>
+    
+# Tareas (Primavera 2018)
 
 1. Tarea 1 `r emo::ji("movie_camera")`
 
     <p>
-    <img src="/images/images_hw1.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
+    <img src="/images/images_hw1.png" alt="Smiley face" style="float: right; 
+    width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    El objetivo de la Tarea 1 es introducir el uso de la librería `dplyr` y `magrittr` con su operador %>%, ambos coexisten en el `tidyverse`. La base de datos usada proviene de IMdB.
+    
+    El objetivo de la Tarea 1 es introducir el uso de la librería `dplyr` y 
+    `magrittr` con su operador %>%, ambos coexisten en el `tidyverse`. La base 
+    de datos usada proviene de IMdB.
     
     <div class="btn-group">
     
@@ -130,7 +312,11 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")`.
     <p>
     <img src="/images/images_hw2.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    El objetivo de la Tarea 2 es relacionar el uso  de R con las finanzas. Utilizando la librería `tidyquant`, calculamos bandas de *bollinger* y *barcharts*. Finalmente se usa la librería `WDI` para descargar datos externos a R como el *World Development Indicator*.  
+    
+    El objetivo de la Tarea 2 es relacionar el uso  de R con las finanzas. 
+    Utilizando la librería `tidyquant`, calculamos bandas de *bollinger* y 
+    *barcharts*. Finalmente se usa la librería `WDI` para descargar datos 
+    externos a R como el *World Development Indicator*.  
     
     <div class="btn-group">
     
@@ -158,7 +344,12 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")`.
     <p>
     <img src="/images/images_hw3.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    Mediante el uso de mapas presentar y visualizar datos mundiales. A nivel nacional se entrega la libertad de seleccionar datos de la regiòn metropolitana y mapear a nivel de comuna (Santiago). Librerìas usadas: `leaflet`, `tmap` y `plotly`, no obstante la pauta esta contruida utilizando `gganimate`. 
+    
+    Mediante el uso de mapas presentar y visualizar datos mundiales. A nivel 
+    nacional se entrega la libertad de seleccionar datos de la regiòn 
+    metropolitana y mapear a nivel de comuna (Santiago). 
+    Librerìas usadas: `leaflet`, `tmap` y `plotly`, no obstante la pauta esta 
+    contruida utilizando `gganimate`. 
     
     <div class="btn-group">
     
@@ -186,7 +377,10 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")`.
     <p>
     <img src="/images/images_hw4.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
     margin-left: 120px ; border: solid black 1px; padding: 2px">
-    Una imagen vale mas que mil palabras, la frase anterior resume el uso de *Dashboard* usando la librería `flexdashboard`. La base de datos usada proviene de IMdB.
+    
+    Una imagen vale mas que mil palabras, la frase anterior resume el uso de 
+    *Dashboard* usando la librería `flexdashboard`. La base de datos usada 
+    proviene de IMdB.
     
     <div class="btn-group"> 
     
