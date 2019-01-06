@@ -38,7 +38,10 @@ img {
   display: block;
   max-width: 100%;
   margin: 0 0 1rem;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border: 5px solid #fff;
+  background-color:#ff0;
+  }
 
 table {
   margin-bottom: 1rem;
