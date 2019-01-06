@@ -6,10 +6,19 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Css</title>
+      <link>/tags/css/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/css/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Economics</title>
@@ -23,7 +32,7 @@
     <item>
       <title>Ggplot2</title>
       <link>/tags/ggplot2/</link>
-      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/ggplot2/</guid>
       <description></description>
@@ -59,7 +68,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -77,7 +86,7 @@
     <item>
       <title>Tidyverse</title>
       <link>/tags/tidyverse/</link>
-      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/tidyverse/</guid>
       <description></description>
@@ -86,9 +95,18 @@
     <item>
       <title>Visualization</title>
       <link>/tags/visualization/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xaringan</title>
+      <link>/tags/xaringan/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/xaringan/</guid>
       <description></description>
     </item>
     
