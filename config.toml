@@ -57,6 +57,6 @@ ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
     name = "Technical Notes"
     identifier = "Notes"
     weight = 400
-    url = "https://www.youtube.com/watch?v=VZ71fa7tLAE&start_radio=1&list=RDVZ71fa7tLAE"
+    url = "https://technotes.netlify.com/"
 
 
