@@ -132,7 +132,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
 
-4. text mining con R: un enfoque *tidy* 
+4. Text mining con R: un enfoque *tidy* 
 
     <p>
     <img src="/hex/tidytext.png" alt="Smiley face" style="float: right; 
