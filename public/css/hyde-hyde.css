@@ -730,3 +730,33 @@ a.badge-tag {
 }
 
 /*# sourceMappingURL=hyde-hyde.css.map */
+
+details {
+  border-radius: 3px;
+  background: #fff;
+  margin: 1em 0;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary:after {
+  background: #ff2a00; 
+  border-radius: 3px; 
+  content: "+"; 
+  color: #fff; 
+  float: left; 
+  font-size: 1.5em; 
+  font-weight: bold; 
+  text-align:center;
+  margin: -5px 10px 0 0; 
+  padding: 5px 10px; 
+  text-align: center; 
+  width: 20px;
+}
+
+details[open] summary:after {
+  content: "-";
+  background: #ffa500;
+}

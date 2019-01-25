@@ -609,6 +609,14 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     
 </p>
 </details>
+
+
+<details><summary> Otoño 2019 </summary>
+<p>
+
+
+</p>
+</details>
     
 # Radix Website
 
