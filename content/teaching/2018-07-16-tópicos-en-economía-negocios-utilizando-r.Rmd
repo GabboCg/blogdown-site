@@ -34,29 +34,19 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     width:210px; height:240px; margin-bottom: 0px 0px;
     margin-left: 20px ; border: solid black 0px; padding: 2px">
     
-    * Shorcut, YAML, Inline Formating
-    * Block level Element & Blockquotes
-    * R code chunks & inline R code
-    * Características de un Documento PDF
-    
+    * Core tidyverse
+        - ggplot2
+        - dplyr/tidyr
+        - readr/tibble
+        - purr/forcats
+  
     <div class="btn-group">
     
     <br>
     <div button class="button" onclick="myFunction()"> 
-    [Presentación](/xaringan/xaringan_rmarkdown.html)
+    [Radix Post](/xaringan/xaringan_rmarkdown.html)
     </button>
     </div>
-    
-    <div button class="button" onclick="myFunction()"> 
-     Script
-    </button>
-    </div>
-
-    <div button class="button" onclick="myFunction()"> 
-    [*Source Code*](https://github.com/GaboCg/rmarkdown_introduction)
-    </button>
-    </div>
-    <br>
     
     </div>
     </p>
@@ -205,7 +195,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
 
     <p>
     <img src="/hex/rtweet.png" alt="Smiley face" style="float: right; 
-    width:210px; height:240px; margin-bottom: 0px 0px;
+    width:220px; height:260px; margin-bottom: 0px 0px;
     margin-left: 20px ; border: solid black 0px; padding: 2px">
     
     * Introducción a tidyquant
