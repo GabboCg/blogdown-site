@@ -27,7 +27,41 @@ utilizando Shiny.
 Todas las presentaciones fueron confeccionadas usando la librería `Xaringan`  de 
 Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post).
 
-1. R Markdown: un enfoque a la Investigación Reproducible
+1. Tidyverse: *I want to believe*
+
+    <p>
+    <img src="/hex/tidyverse.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
+    * Shorcut, YAML, Inline Formating
+    * Block level Element & Blockquotes
+    * R code chunks & inline R code
+    * Características de un Documento PDF
+    
+    <div class="btn-group">
+    
+    <br>
+    <div button class="button" onclick="myFunction()"> 
+    [Presentación](/xaringan/xaringan_rmarkdown.html)
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+     Script
+    </button>
+    </div>
+
+    <div button class="button" onclick="myFunction()"> 
+    [*Source Code*](https://github.com/GaboCg/rmarkdown_introduction)
+    </button>
+    </div>
+    <br>
+    
+    </div>
+    </p>
+
+2. R Markdown: un enfoque a la Investigación Reproducible
      
     <p>
     <img src="/hex/rmarkdown.png" alt="Smiley face" style="float: right; 
@@ -61,7 +95,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
     
-2. tidyquant: llevando el análisis financiero al *tidyverse*
+3. tidyquant: llevando el análisis financiero al *tidyverse*
 
     <p>
     <img src="/hex/tidyquant.png" alt="Smiley face" style="float: right; 
@@ -97,7 +131,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
      </p>
     
     
-3. gganimate: la historia en movimiento
+4. gganimate: la historia en movimiento
 
     <p>
     <img src="/hex/gganimate.png" alt="Smiley face" style="float: right; 
@@ -132,7 +166,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
 
-4. Text mining con R: un enfoque *tidy* 
+5. Text mining con R: un enfoque *tidy* 
 
     <p>
     <img src="/hex/tidytext.png" alt="Smiley face" style="float: right; 
@@ -167,7 +201,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
     
-5. Rtweet: ¿Cuantos caracteres son suficientes? 
+6. Rtweet: ¿Cuantos caracteres son suficientes? 
 
     <p>
     <img src="/hex/rtweet.png" alt="Smiley face" style="float: right; 
@@ -202,7 +236,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
 
-6. Broom
+7. Broom
 
     <p>
     <img src="/hex/broom.png" alt="Smiley face" style="float: right; 
@@ -238,7 +272,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </p>
 
 
-7. Rccp: C++ & R para todos
+8. Rccp: C++ & R para todos
 
     <p>
     <img src="/hex/C++.png" alt="Smiley face" style="float: right; 
@@ -273,7 +307,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
     
-8. High-Performance Computing: *Unleashed the beast* 
+9. High-Performance Computing: *Unleashed the beast* 
 
     <p>
     <img src="/hex/devtools.png" alt="Smiley face" style="float: right; 
@@ -308,7 +342,42 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
     
-9. RStudio Cloud: A donde vas R va contigp 
+10.  Shiny: Construyendo aplicaciones web con R 
+
+    <p>
+    <img src="/hex/shiny.png" alt="Smiley face" style="float: right; 
+    width:210px; height:240px; margin-bottom: 0px 0px;
+    margin-left: 20px ; border: solid black 0px; padding: 2px">
+    
+    * Introducción a tidyquant
+    * Descargando Multiples Datos
+    * Retornos y retornos acumulados
+    * Análisis Técnico 
+    * Librería plotly en finanzas
+
+    <div class="btn-group">
+    
+    <br>
+    <div button class="button" onclick="myFunction()"> 
+    Presentación
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+     Script
+    </button>
+    </div>
+    
+    <div button class="button" onclick="myFunction()"> 
+    *Source Code*
+    </button>
+    </div>
+    <br>
+    
+    </div>
+    </p>
+    
+11. RStudio Cloud: A donde vas R va contigp 
 
     <p>
     <img src="/hex/rstudio.png" alt="Smiley face" style="float: right; 
@@ -343,7 +412,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     </p>
     
-10. Github: donde las ideas se comparten 
+12. Github: donde las ideas se comparten 
 
     <p>
     <img src="/hex/github.svg" alt="Smiley face" style="float: right; 
