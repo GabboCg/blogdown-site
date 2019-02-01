@@ -471,7 +471,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     
     
     <div button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/HWS1_R_PRIM_2018.html)
+    [R Markdown](/html/homeworks/HW1/HWS1.html)
     </button>
     </div>
     
@@ -503,7 +503,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     
     <div button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/HWS2_R_PRIM_2018.html)
+    [R Markdown](/html/homeworks/HW2/HWS2.html)
     </button>
     </div>
     
@@ -536,7 +536,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     
     <div button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/HWS1_R_PRIM_2018.html)
+    [R Markdown](/html/homeworks/HW3/HWS3.html)
     </button>
     </div>
     
@@ -567,7 +567,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     
     <div button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/HWS1_R_PRIM_2018.html)
+    [R Markdown](/html/homeworks/HW4/HWS4.html)
     </button>
     </div>
     
@@ -595,7 +595,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     </div>
     
     <div button class="button" onclick="myFunction()"> 
-    [R Markdown](/html/HWS1_R_PRIM_2018.html)
+    [R Markdown](/html/homeworks/HW1/HWS1.html)
     </button>
     </div>
     
