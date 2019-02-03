@@ -185,7 +185,11 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
         <span class="item__date">
           Feb 2, 2019
         </span>
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;) imdb_tbl &lt;- read.csv(&quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&quot;) imdb_tbl_1 &lt;- imdb_tbl %&gt;% group_by(titleId) %&gt;% mutate(number_season = n()) %&gt;% filter(row_number(titleId) == 1) %&gt;% select(titleId, title, number_season) %&gt;% arrange(desc(number_season)) %&gt;% ungroup() %&gt;% group_by(number_season) %&gt;% mutate(n = n()) %&gt;% filter(row_number() == 1) %&gt;% ungroup() %&gt;% mutate(percent = n/sum(n), season = paste0(&quot;S&quot;, number_season)) %&gt;% arrange(desc(percent)) %&gt;% filter(n &gt;= 15) g &lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &quot;black&quot;, stat = &quot;identity&quot;, position = &quot;identity&quot;, fill = &quot;orange&quot;) + geom_hline(yintercept = 0, size = 1, colour=&quot;#333333&quot;) + bbc_style() + scale_y_continuous(labels = scales::percent) + theme(axis.
         
+        <div class="read-more-link">
+            <a href="/posts/how-bbc-visualize-data/">Read More…</a>
+        </div>
         
         </div>
         
