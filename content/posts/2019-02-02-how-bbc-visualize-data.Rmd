@@ -1,0 +1,30 @@
+---
+title: How BBC visualize data?
+author: 'Gabriel Cabrera '
+date: '2019-02-02'
+slug: how-bbc-visualize-data
+categories:
+  - Rstat
+tags:
+  - ggplot2
+  - tidyverse
+lastmod: '2019-02-02T22:54:34-03:00'
+layout: post
+type: post
+highlight: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+if(!require("pacman")) install.packages("pacman")
+p_load("tidyverse", "bbplot")
+```
+```{r}
+read.delim(file = "/static/datasets/IMDb_tv_ratings", delim = ",")
+```
+
+
+

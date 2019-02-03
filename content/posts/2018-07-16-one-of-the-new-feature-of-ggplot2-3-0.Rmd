@@ -1,5 +1,5 @@
 ---
-title: One of the New Feature of ggplot2 3.0
+title: One of the New Feature of ggplot2 3.0 
 author: 'Gabriel Cabrera '
 date: '2018-07-16'
 slug: one-of-the-new-feature-of-ggplot2-3-0

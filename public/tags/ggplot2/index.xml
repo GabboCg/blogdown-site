@@ -6,10 +6,19 @@
     <description>Recent content in Ggplot2 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How BBC visualize data?</title>
+      <link>/posts/how-bbc-visualize-data/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/how-bbc-visualize-data/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Data Vis: Teoría &amp; Practica </title>
