@@ -25,10 +25,10 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Road to oscars 2019"/>
-<meta name="twitter:description" content="if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div."/>
+<meta name="twitter:description" content="if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;) oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;) matrix_value &lt;- matrix(0, nrow = 36, ncol = 4) colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;) for(i in 1:36){ seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot; selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;) for(j in 1:2){ matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character() } matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div."/>
 
 <meta property="og:title" content="Road to oscars 2019" />
-<meta property="og:description" content="if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div." />
+<meta property="og:description" content="if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;) oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;) matrix_value &lt;- matrix(0, nrow = 36, ncol = 4) colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;) for(i in 1:36){ seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot; selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;) for(j in 1:2){ matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character() } matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/road-to-oscars-2019/" /><meta property="article:published_time" content="2019-02-04T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-02-04T16:39:01-03:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
@@ -192,7 +192,7 @@
     
     
     <br/>
-    <i class="fas fa-clock"></i> 3 min read
+    <i class="fas fa-clock"></i> 2 min read
 </div>
 
 
@@ -259,35 +259,6 @@ colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;i
                      labels = c(&quot;Lower&quot;,&quot;50&quot;, &quot;60&quot;, &quot;70&quot;, &quot;80&quot;, &quot;90&quot;, &quot;Higher&quot;)) + 
   labs(title = &quot;Como los críticos y la audencia votan&quot;,
        subtitle =&quot;Diferencia entre el puntaje promedio de los críticos y la audencia. \nPelículas nominadas a los Oscars 2019&quot;)</code></pre>
-<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database</code></pre>
 <p><img src="/posts/2019-02-04-road-to-oscars-2019_files/figure-html/unnamed-chunk-7-1.png" width="1536" style="display: block; margin: auto;" /></p>
 
   </div>
