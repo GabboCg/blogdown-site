@@ -6,10 +6,19 @@
     <description>Recent content in Rstat on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/rstat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Road to oscars 2019</title>
+      <link>/posts/road-to-oscars-2019/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/road-to-oscars-2019/</guid>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; h3 &amp;gt; &amp;quot;,selector[j])) %&amp;gt;% html_text() %&amp;gt;% as.character()}matrix_value[i,3] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; div.ipl-rating-widget &amp;gt; div.</description>
+    </item>
     
     <item>
       <title>How BBC visualize data?</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/road-to-oscars-2019/</loc>
+    <lastmod>2019-02-04T16:39:01-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/how-bbc-visualize-data/</loc>
     <lastmod>2019-02-02T22:54:34-03:00</lastmod>
   </url>
@@ -84,7 +89,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-02T22:54:34-03:00</lastmod>
+    <lastmod>2019-02-04T16:39:01-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -96,6 +101,12 @@
   <url>
     <loc>/tags/css/</loc>
     <lastmod>2019-01-05T23:33:21-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/dataviz/</loc>
+    <lastmod>2019-02-04T16:39:01-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -119,7 +130,7 @@
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2019-02-02T22:54:34-03:00</lastmod>
+    <lastmod>2019-02-04T16:39:01-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -143,7 +154,7 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-02-02T22:54:34-03:00</lastmod>
+    <lastmod>2019-02-04T16:39:01-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -167,7 +178,7 @@
   
   <url>
     <loc>/categories/rstat/</loc>
-    <lastmod>2019-02-02T22:54:34-03:00</lastmod>
+    <lastmod>2019-02-04T16:39:01-03:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+
+    <link rel="stylesheet" href="/css/github-gist.css" rel="stylesheet" id="theme-stylesheet">
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.49.2" />
+
+    
+    
+    
+
+<title>Road to oscars 2019 • </title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Road to oscars 2019"/>
+<meta name="twitter:description" content="if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div."/>
+
+<meta property="og:title" content="Road to oscars 2019" />
+<meta property="og:description" content="if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/road-to-oscars-2019/" /><meta property="article:published_time" content="2019-02-04T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-02-04T16:39:01-03:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
+
+
+    
+
+
+
+
+<link rel="stylesheet" href="/css/hyde-hyde.css">
+<link rel="stylesheet" href="/css/print.min.css" media="print">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/dharmalogo.png">
+    
+
+</head>
+
+
+    <body class="theme-base-0g ">
+        
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="/"></a>
+      </span>
+      
+      
+      
+      <div class="author-image">
+        <img src="/img/glitch.gif" alt="Author Image" class="img--circle img--headshot element--center"> 
+      </div>
+      
+      <p class="site__description">
+         Welcome to my little corner of the world 
+      </p>
+    </div>
+    <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/teaching/">
+						<span>Teaching</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="https://technotes.netlify.com/">
+						<span>Technical Notes</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+    <p>
+      <section class="social">
+	
+	<a href="https://twitter.com/GaboC_g"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	&nbsp;<a href="https://facebook.com/gabriel.cabrera.90"><i class="fab fa-facebook-f"></i></a>
+	
+	
+	&nbsp;<a href="https://github.com/GaboCg"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	&nbsp;<a href="mailto:gcabrerag@fen.uchile.cl"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+    </p>
+    <p class="copyright">
+      &copy; 2019 Gabriel Cabrera.
+      <a href="https://creativecommons.org/licenses/by-sa/4.0">Some Rights Reserved</a>.
+      <br/>Built with
+      <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+      
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1>Road to oscars 2019</h1>
+     
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Feb 2, 2019
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/dataviz">DATAVIZ</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/rstat">RSTAT</a>
+              
+          
+      
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/ggplot2">ggplot2</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 3 min read
+</div>
+
+
+  </header>
+  <div class="post">
+    <pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)
+p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)</code></pre>
+<pre class="r"><code>oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)</code></pre>
+<pre class="r"><code>matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)
+
+colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)</code></pre>
+<pre class="r"><code>for(i in 1:36){
+  
+  seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;
+  selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)
+
+  for(j in 1:2){
+    
+    matrix_value[i,j] &lt;- oscar_movies %&gt;% 
+    html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% 
+    html_text() %&gt;% 
+    as.character()
+     
+  }
+  
+  matrix_value[i,3] &lt;- oscar_movies %&gt;% 
+    html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div.ipl-rating-star.small &gt; span.ipl-rating-star__rating&quot;)) %&gt;% 
+    html_text() %&gt;% 
+    as.numeric()
+
+  matrix_value[i,4] &lt;- oscar_movies %&gt;% 
+    html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.inline-block.ratings-metascore &gt; span&quot;)) %&gt;% 
+    html_text() %&gt;% 
+    as.numeric()  
+}</code></pre>
+<pre class="r"><code>oscar_df &lt;-  as.data.frame(matrix_value) %&gt;% 
+  mutate(movie_name = as.character(movie_name),
+         date = as.character(date),
+         imdb_score = as.numeric(as.character(imdb_score))*10,
+         metacritic_score = as.numeric(as.character(metacritic_score)))</code></pre>
+<pre class="r"><code>dumbell_df &lt;- oscar_df %&gt;% 
+  mutate(gap = metacritic_score - imdb_score,
+         movie_name = replace(movie_name, movie_name == &quot;Han Solo: Una Historia de Star Wars&quot;, &quot;Han Solo&quot;),
+         movie_name = replace(movie_name, movie_name == &quot;Ready Player One: Comienza el Juego&quot;, &quot;Ready Player One&quot;),
+         movie_name = replace(movie_name, movie_name == &quot;Bohemian Rhapsody, La historia de Freddie Mercury&quot;, &quot;Bohemian Rhapsody&quot;)) %&gt;% 
+  arrange(desc(gap))</code></pre>
+<pre class="r"><code>ggplot(dumbell_df, aes(x = imdb_score, xend = metacritic_score,
+                       y = reorder(movie_name, gap), group = movie_name)) +
+  geom_dumbbell(colour = &quot;#dddddd&quot;,
+                size = 3,
+                colour_x = &quot;#FAAB18&quot;,
+                colour_xend = &quot;#1380A1&quot;) +
+  geom_label(aes(x=80, y= &quot;Hale County This Morning, This Evening&quot;, label=&quot;Critic rating&quot;),
+                    color=&quot;#1380A1&quot;, hjust=0, size=4, nudge_x=5.5, fontface = &quot;bold&quot;, 
+             fill = &quot;white&quot;, label.size = NA) + 
+  geom_label(aes(x=68, y= &quot;Hale County This Morning, This Evening&quot;, label=&quot;Audience rating&quot;),
+                    color=&quot;#FAAB18&quot;, hjust=0, size=4, nudge_x=-9, fontface = &quot;bold&quot;, 
+             fill = &quot;white&quot;, label.size = NA) +
+  bbc_style() + 
+  theme(plot.title=element_text(hjust = 0),
+        plot.subtitle=element_text(hjust = 0)) + 
+  scale_x_continuous(limits=c(40, 100),
+                     breaks = seq(40, 100, by = 10),
+                     labels = c(&quot;Lower&quot;,&quot;50&quot;, &quot;60&quot;, &quot;70&quot;, &quot;80&quot;, &quot;90&quot;, &quot;Higher&quot;)) + 
+  labs(title = &quot;Como los críticos y la audencia votan&quot;,
+       subtitle =&quot;Diferencia entre el puntaje promedio de los críticos y la audencia. \nPelículas nominadas a los Oscars 2019&quot;)</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database</code></pre>
+<p><img src="/posts/2019-02-04-road-to-oscars-2019_files/figure-html/unnamed-chunk-7-1.png" width="1536" style="display: block; margin: auto;" /></p>
+
+  </div>
+  
+
+<div class="post--navigation post--navigation-single">
+    
+    <a href="/posts/how-bbc-visualize-data/" class="post--navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">How BBC visualize data?</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'gcabrerag-rbind-io';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-124514267-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+  integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+  crossorigin="anonymous">
+</script>
+
+
+        
+
+
+
+    
+
+
+
+    </body>
+</html>

@@ -27,7 +27,7 @@
 <meta property="og:description" content="Welcome to my little corner of the world" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2019-02-02T00:00:00&#43;00:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
+<meta property="og:updated_time" content="2019-02-04T00:00:00&#43;00:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
 
 
     
@@ -178,6 +178,21 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
         
      
     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/posts/road-to-oscars-2019/">Road to oscars 2019</a>
+        </span>
+        <span class="item__date">
+          Feb 2, 2019
+        </span>
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div.
+        
+        <div class="read-more-link">
+            <a href="/posts/road-to-oscars-2019/">Read More…</a>
+        </div>
+        
+        </div>
+        
       <div class="post-list__item">
         <span class="item__title--big">
           <a href="/posts/how-bbc-visualize-data/">How BBC visualize data?</a>

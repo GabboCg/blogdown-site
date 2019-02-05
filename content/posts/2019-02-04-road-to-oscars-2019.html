@@ -1,0 +1,109 @@
+---
+title: Road to oscars 2019
+author: 'Gabriel Cabrera '
+date: '2019-02-04'
+slug: road-to-oscars-2019
+categories:
+  - Rstat
+  - DataViz
+tags:
+  - ggplot2
+lastmod: '2019-02-04T16:39:01-03:00'
+layout: post
+type: post
+highlight: no
+---
+
+
+
+<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)
+p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)</code></pre>
+<pre class="r"><code>oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)</code></pre>
+<pre class="r"><code>matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)
+
+colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)</code></pre>
+<pre class="r"><code>for(i in 1:36){
+  
+  seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;
+  selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)
+
+  for(j in 1:2){
+    
+    matrix_value[i,j] &lt;- oscar_movies %&gt;% 
+    html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% 
+    html_text() %&gt;% 
+    as.character()
+     
+  }
+  
+  matrix_value[i,3] &lt;- oscar_movies %&gt;% 
+    html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div.ipl-rating-star.small &gt; span.ipl-rating-star__rating&quot;)) %&gt;% 
+    html_text() %&gt;% 
+    as.numeric()
+
+  matrix_value[i,4] &lt;- oscar_movies %&gt;% 
+    html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.inline-block.ratings-metascore &gt; span&quot;)) %&gt;% 
+    html_text() %&gt;% 
+    as.numeric()  
+}</code></pre>
+<pre class="r"><code>oscar_df &lt;-  as.data.frame(matrix_value) %&gt;% 
+  mutate(movie_name = as.character(movie_name),
+         date = as.character(date),
+         imdb_score = as.numeric(as.character(imdb_score))*10,
+         metacritic_score = as.numeric(as.character(metacritic_score)))</code></pre>
+<pre class="r"><code>dumbell_df &lt;- oscar_df %&gt;% 
+  mutate(gap = metacritic_score - imdb_score,
+         movie_name = replace(movie_name, movie_name == &quot;Han Solo: Una Historia de Star Wars&quot;, &quot;Han Solo&quot;),
+         movie_name = replace(movie_name, movie_name == &quot;Ready Player One: Comienza el Juego&quot;, &quot;Ready Player One&quot;),
+         movie_name = replace(movie_name, movie_name == &quot;Bohemian Rhapsody, La historia de Freddie Mercury&quot;, &quot;Bohemian Rhapsody&quot;)) %&gt;% 
+  arrange(desc(gap))</code></pre>
+<pre class="r"><code>ggplot(dumbell_df, aes(x = imdb_score, xend = metacritic_score,
+                       y = reorder(movie_name, gap), group = movie_name)) +
+  geom_dumbbell(colour = &quot;#dddddd&quot;,
+                size = 3,
+                colour_x = &quot;#FAAB18&quot;,
+                colour_xend = &quot;#1380A1&quot;) +
+  geom_label(aes(x=80, y= &quot;Hale County This Morning, This Evening&quot;, label=&quot;Critic rating&quot;),
+                    color=&quot;#1380A1&quot;, hjust=0, size=4, nudge_x=5.5, fontface = &quot;bold&quot;, 
+             fill = &quot;white&quot;, label.size = NA) + 
+  geom_label(aes(x=68, y= &quot;Hale County This Morning, This Evening&quot;, label=&quot;Audience rating&quot;),
+                    color=&quot;#FAAB18&quot;, hjust=0, size=4, nudge_x=-9, fontface = &quot;bold&quot;, 
+             fill = &quot;white&quot;, label.size = NA) +
+  bbc_style() + 
+  theme(plot.title=element_text(hjust = 0),
+        plot.subtitle=element_text(hjust = 0)) + 
+  scale_x_continuous(limits=c(40, 100),
+                     breaks = seq(40, 100, by = 10),
+                     labels = c(&quot;Lower&quot;,&quot;50&quot;, &quot;60&quot;, &quot;70&quot;, &quot;80&quot;, &quot;90&quot;, &quot;Higher&quot;)) + 
+  labs(title = &quot;Como los críticos y la audencia votan&quot;,
+       subtitle =&quot;Diferencia entre el puntaje promedio de los críticos y la audencia. \nPelículas nominadas a los Oscars 2019&quot;)</code></pre>
+<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database
+
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## font family not found in Windows font database</code></pre>
+<p><img src="/posts/2019-02-04-road-to-oscars-2019_files/figure-html/unnamed-chunk-7-1.png" width="1536" style="display: block; margin: auto;" /></p>
