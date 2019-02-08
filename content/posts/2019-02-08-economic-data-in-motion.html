@@ -1,0 +1,51 @@
+---
+title: Economic data in motion
+author: 'Gabriel Cabrera '
+date: '2019-02-08'
+slug: economic-data-in-motion
+categories:
+  - DataViz
+  - Rstat
+tags:
+  - ggplot2
+  - tidyquant
+  - R
+lastmod: '2019-02-08T19:28:22-03:00'
+layout: post
+type: post
+highlight: yes
+draft: true 
+---
+
+
+
+<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
+<pre><code>## Loading required package: pacman</code></pre>
+<pre class="r"><code>p_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;)</code></pre>
+<pre class="r"><code>tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;,
+             &quot;LRHUTTTTDEM156S&quot;,
+             &quot;LRHUTTTTUSM156S&quot;,
+             &quot;LRHUTTTTJPM156S&quot;)</code></pre>
+<pre class="r"><code>countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;)
+unemployment_lst &lt;- list()</code></pre>
+<pre class="r"><code>for(i in seq_along(tickers)){
+  
+  unemployment_lst[[i]] &lt;- tq_get(tickers[i],
+    get = &quot;economic.data&quot;, 
+    from = &quot;2000-01-01&quot;,
+    to = &quot;2018-11-01&quot;) %&gt;% 
+    mutate(symbol = countries_name[i])
+
+}</code></pre>
+<pre class="r"><code>unemployment_tbl &lt;- do.call(rbind, unemployment_lst) </code></pre>
+<pre class="r"><code>p &lt;- unemployment_tbl %&gt;% 
+  ggplot(aes(x = date, y = price, fill = symbol)) +
+  geom_area(stat=&quot;identity&quot;) + 
+  labs(title = &quot;Harmonized Unemployment Rate: Total: All Persons&quot;,
+    subtitle = &quot;France, Germany, Japan and United States&quot;,
+    y = &quot;Unemployment&quot;, x = &quot;Year&quot;) + 
+  scale_fill_discrete(name = &quot; &quot;) + 
+  theme_tq() + 
+  facet_wrap(~symbol, ncol = 2) </code></pre>
+<pre class="r"><code>p + transition_reveal(date) + shadow_mark()</code></pre>
+<p><img src="/posts/2019-02-08-economic-data-in-motion_files/figure-html/unnamed-chunk-7-1.gif" /><!-- --></p>

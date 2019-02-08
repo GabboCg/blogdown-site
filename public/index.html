@@ -27,7 +27,7 @@
 <meta property="og:description" content="Welcome to my little corner of the world" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2019-02-04T00:00:00&#43;00:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
+<meta property="og:updated_time" content="2019-02-08T00:00:00&#43;00:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
 
 
     
@@ -178,6 +178,17 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
         
      
     
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/posts/economic-data-in-motion/">Economic data in motion</a><sup> <i class="fas fa-pen-square fa-xs"></i></sup>
+        </span>
+        <span class="item__date">
+          Feb 2, 2019
+        </span>
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;) tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;, &quot;LRHUTTTTDEM156S&quot;, &quot;LRHUTTTTUSM156S&quot;, &quot;LRHUTTTTJPM156S&quot;) countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;) unemployment_lst &lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &lt;- tq_get(tickers[i], get = &quot;economic.data&quot;, from = &quot;2000-01-01&quot;, to = &quot;2018-11-01&quot;) %&gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &lt;- do.call(rbind, unemployment_lst)  p &lt;- unemployment_tbl %&gt;% ggplot(aes(x = date, y = price, fill = symbol)) + geom_area(stat=&quot;identity&quot;) + labs(title = &quot;Harmonized Unemployment Rate: Total: All Persons&quot;, subtitle = &quot;France, Germany, Japan and United States&quot;, y = &quot;Unemployment&quot;, x = &quot;Year&quot;) + scale_fill_discrete(name = &quot; &quot;) + theme_tq() + facet_wrap(~symbol, ncol = 2)  p + transition_reveal(date) + shadow_mark() 
+        
+        </div>
+        
       <div class="post-list__item">
         <span class="item__title--big">
           <a href="/posts/road-to-oscars-2019/">Road to oscars 2019</a>

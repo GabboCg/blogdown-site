@@ -1,0 +1,68 @@
+---
+title: Economic data in motion
+author: 'Gabriel Cabrera '
+date: '2019-02-08'
+slug: economic-data-in-motion
+categories:
+  - DataViz
+  - Rstat
+tags:
+  - ggplot2
+  - tidyquant
+  - R
+lastmod: '2019-02-08T19:28:22-03:00'
+layout: post
+type: post
+highlight: yes
+draft: true 
+---
+
+```{r}
+if(!require("pacman")) install.packages("pacman")
+p_load("tidyverse", "tidyquant", "gganimate", "bbplot")
+```
+
+```{r}
+tickers <- c("LRHUTTTTFRM156S",
+             "LRHUTTTTDEM156S",
+             "LRHUTTTTUSM156S",
+             "LRHUTTTTJPM156S")
+```
+
+```{r}
+countries_name <- c("France", "Germany", "United States", "Japan")
+unemployment_lst <- list()
+```
+
+```{r}
+for(i in seq_along(tickers)){
+  
+  unemployment_lst[[i]] <- tq_get(tickers[i],
+    get = "economic.data", 
+    from = "2000-01-01",
+    to = "2018-11-01") %>% 
+    mutate(symbol = countries_name[i])
+
+}
+```
+
+```{r}
+unemployment_tbl <- do.call(rbind, unemployment_lst) 
+```
+
+```{r}
+p <- unemployment_tbl %>% 
+  ggplot(aes(x = date, y = price, fill = symbol)) +
+  geom_area(stat="identity") + 
+  labs(title = "Harmonized Unemployment Rate: Total: All Persons",
+    subtitle = "France, Germany, Japan and United States",
+    y = "Unemployment", x = "Year") + 
+  scale_fill_discrete(name = " ") + 
+  theme_tq() + 
+  facet_wrap(~symbol, ncol = 2) 
+```
+
+```{r}
+p + transition_reveal(date) + shadow_mark()
+```
+
