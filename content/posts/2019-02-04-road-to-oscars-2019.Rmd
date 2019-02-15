@@ -80,7 +80,7 @@ ggplot(dumbell_df, aes(x = imdb_score, xend = metacritic_score,
                        y = reorder(movie_name, gap), group = movie_name)) +
   geom_dumbbell(colour = "#dddddd",
                 size = 3,
-                colour_x = "#FAAB18",
+                colour_x = "#FAAB18", 
                 colour_xend = "#1380A1") +
   geom_label(aes(x=80, y= "Hale County This Morning, This Evening", label="Critic rating"),
                     color="#1380A1", hjust=0, size=4, nudge_x=5.5, fontface = "bold", 
