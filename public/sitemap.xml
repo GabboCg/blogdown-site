@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/replicating-rapach-strauss-and-zhou-2013-estimations/</loc>
+    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/replicating-goyal-and-welch-2008-graphics/</loc>
     <lastmod>2019-02-17T17:47:24-03:00</lastmod>
   </url>
@@ -104,7 +109,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-17T17:47:24-03:00</lastmod>
+    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,7 +132,7 @@
   
   <url>
     <loc>/categories/econometrics/</loc>
-    <lastmod>2018-06-24T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -139,7 +144,7 @@
   
   <url>
     <loc>/categories/finance/</loc>
-    <lastmod>2019-02-17T17:47:24-03:00</lastmod>
+    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -169,7 +174,7 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-02-17T17:47:24-03:00</lastmod>
+    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -187,13 +192,13 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-02-17T17:47:24-03:00</lastmod>
+    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/rstat/</loc>
-    <lastmod>2019-02-17T17:47:24-03:00</lastmod>
+    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
     <priority>0</priority>
   </url>
   
