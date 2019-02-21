@@ -1,6 +1,6 @@
 ---
 title: Replicating goyal and welch (2008) estimations
-author: 'Gabriel Cabrera '
+author: 'Gabriel Cabrera'
 date: '2019-02-17'
 slug: replicating-goyal-and-welch-2008-estimations
 categories:
