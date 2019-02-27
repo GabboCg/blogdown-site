@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/getting-started-with-parallelism/</loc>
+    <lastmod>2019-02-23T23:32:18-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/teaching/replicate-research-studies-for-knowledge-development/</loc>
+    <lastmod>2019-02-23T23:54:27-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/teaching/the-zen-diaries-of-high-performance-computing/</loc>
+    <lastmod>2019-02-23T23:44:38-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/replicating-rapach-strauss-and-zhou-2013-estimations/</loc>
     <lastmod>2019-02-18T23:53:53-03:00</lastmod>
   </url>
@@ -119,7 +134,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
+    <lastmod>2019-02-23T23:32:18-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -142,7 +157,7 @@
   
   <url>
     <loc>/categories/econometrics/</loc>
-    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
+    <lastmod>2019-02-23T23:54:27-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -154,13 +169,19 @@
   
   <url>
     <loc>/categories/finance/</loc>
-    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
+    <lastmod>2019-02-23T23:54:27-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2019-02-08T19:28:22-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/hpc/</loc>
+    <lastmod>2019-02-23T23:32:18-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -184,7 +205,7 @@
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
+    <lastmod>2019-02-23T23:32:18-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -202,13 +223,13 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
+    <lastmod>2019-02-23T23:32:18-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/rstat/</loc>
-    <lastmod>2019-02-18T23:53:53-03:00</lastmod>
+    <lastmod>2019-02-23T23:44:38-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -220,7 +241,7 @@
   
   <url>
     <loc>/teaching/</loc>
-    <lastmod>2019-01-02T08:22:16-03:00</lastmod>
+    <lastmod>2019-02-23T23:54:27-03:00</lastmod>
     <priority>0</priority>
   </url>
   

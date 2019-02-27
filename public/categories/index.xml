@@ -22,7 +22,7 @@
     <item>
       <title>Econometrics</title>
       <link>/categories/econometrics/</link>
-      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/econometrics/</guid>
       <description></description>
@@ -31,9 +31,18 @@
     <item>
       <title>Finance</title>
       <link>/categories/finance/</link>
-      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/finance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hpc</title>
+      <link>/categories/hpc/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/hpc/</guid>
       <description></description>
     </item>
     
@@ -58,7 +67,7 @@
     <item>
       <title>Rstat</title>
       <link>/categories/rstat/</link>
-      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/rstat/</guid>
       <description></description>
