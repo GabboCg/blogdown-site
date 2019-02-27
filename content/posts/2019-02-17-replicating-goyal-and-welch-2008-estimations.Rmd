@@ -5,7 +5,7 @@ date: '2019-02-17'
 slug: replicating-goyal-and-welch-2008-estimations
 categories:
   - Rstat
-  - Finance
+  - Finance 
 tags:
   - R
   - economics
