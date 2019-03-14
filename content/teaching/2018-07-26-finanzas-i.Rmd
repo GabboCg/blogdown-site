@@ -116,7 +116,7 @@ d. Ayudantía 4: Valuación de Bonos
     * Precio de un bono
     * Funciones y loops 
     * Trabajando con yields reales 
-    * Duración y Convexidad 
+    * Duración y Convexidad  
     * Efector dolar
     
     <div class="btn-group">
