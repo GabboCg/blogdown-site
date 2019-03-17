@@ -334,109 +334,109 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     
 10. Shiny: Construyendo aplicaciones web con R
 
-    <p>
-    <img src="/hex/shiny.png" alt="Smiley face" style="float: right; 
-    width:210px; height:240px; margin-bottom: 0px 0px;
-    margin-left: 20px ; border: solid black 0px; padding: 2px">
-    
-    * Introducción a tidyquant
-    * Descargando Multiples Datos
-    * Retornos y retornos acumulados
-    * Análisis Técnico 
-    * Librería plotly en finanzas
-
-    <div class="btn-group">
-    
-    <br>
-    <div button class="button" onclick="myFunction()"> 
-    Presentación
-    </button>
-    </div>
-    
-    <div button class="button" onclick="myFunction()"> 
-     Script
-    </button>
-    </div>
-    
-    <div button class="button" onclick="myFunction()"> 
-    *Source Code*
-    </button>
-    </div>
-    <br>
-    
-    </div>
-    </p>
-    
+     <p>
+     <img src="/hex/shiny.png" alt="Smiley face" style="float: right; 
+     width:210px; height:240px; margin-bottom: 0px 0px;
+     margin-left: 20px ; border: solid black 0px; padding: 2px">
+     
+     * Introducción a tidyquant
+     * Descargando Multiples Datos
+     * Retornos y retornos acumulados
+     * Análisis Técnico 
+     * Librería plotly en finanzas
+ 
+     <div class="btn-group">
+     
+     <br>
+     <div button class="button" onclick="myFunction()"> 
+     Presentación
+     </button>
+     </div>
+     
+     <div button class="button" onclick="myFunction()"> 
+      Script
+     </button>
+     </div>
+     
+     <div button class="button" onclick="myFunction()"> 
+     *Source Code*
+     </button>
+     </div>
+     <br>
+     
+     </div>
+     </p>
+     
 11. RStudio Cloud: A donde vas R va contigp 
 
-    <p>
-    <img src="/hex/rstudio.png" alt="Smiley face" style="float: right; 
-    width:210px; height:210px; margin-bottom: 0px 0px;
-    margin-left: 20px ; border: solid black 0px; padding: 2px">
-    
-    * Introducción a tidyquant
-    * Descargando Multiples Datos
-    * Retornos y retornos acumulados
-    * Análisis Técnico 
-    * Librería plotly en finanzas
-
-    <div class="btn-group">
-    
-    <br>
-    <div button class="button" onclick="myFunction()"> 
-    Presentación
-    </button>
-    </div>
-    
-    <div button class="button" onclick="myFunction()"> 
-     Script
-    </button>
-    </div>
-    
-    <div button class="button" onclick="myFunction()"> 
-    *Source Code*
-    </button>
-    </div>
-    <br>
-    
-    </div>
-    </p>
+     <p>
+     <img src="/hex/rstudio.png" alt="Smiley face" style="float: right; 
+     width:210px; height:210px; margin-bottom: 0px 0px;
+     margin-left: 20px ; border: solid black 0px; padding: 2px">
+     
+     * Introducción a tidyquant
+     * Descargando Multiples Datos
+     * Retornos y retornos acumulados
+     * Análisis Técnico 
+     * Librería plotly en finanzas
+ 
+     <div class="btn-group">
+     
+     <br>
+     <div button class="button" onclick="myFunction()"> 
+     Presentación
+     </button>
+     </div>
+     
+     <div button class="button" onclick="myFunction()"> 
+      Script
+     </button>
+     </div>
+     
+     <div button class="button" onclick="myFunction()"> 
+     *Source Code*
+     </button>
+     </div>
+     <br>
+     
+     </div>
+     </p>
     
 12. Github: donde las ideas se comparten 
 
-    <p>
-    <img src="/hex/github.svg" alt="Smiley face" style="float: right; 
-    width:210px; height:240px; margin-bottom: 0px 0px;
-    margin-left: 20px ; border: solid black 0px; padding: 2px">
-    
-    * Introducción a tidyquant
-    * Descargando Multiples Datos
-    * Retornos y retornos acumulados
-    * Análisis Técnico 
-    * Librería plotly en finanzas
-
-    <div class="btn-group">
-    
-    <br>
-    <div button class="button" onclick="myFunction()"> 
-    Presentación
-    </button>
-    </div>
-    
-    <div button class="button" onclick="myFunction()"> 
-     Script
-    </button>
-    </div>
-    
-    <div button class="button" onclick="myFunction()"> 
-    *Source Code*
-    </button>
-    </div>
-    <br>
-    
-    </div>
-    </p>
-    
+     <p>
+     <img src="/hex/github.svg" alt="Smiley face" style="float: right; 
+     width:210px; height:240px; margin-bottom: 0px 0px;
+     margin-left: 20px ; border: solid black 0px; padding: 2px">
+     
+     * Introducción a tidyquant
+     * Descargando Multiples Datos
+     * Retornos y retornos acumulados
+     * Análisis Técnico 
+     * Librería plotly en finanzas
+ 
+     <div class="btn-group">
+     
+     <br>
+     <div button class="button" onclick="myFunction()"> 
+     Presentación
+     </button>
+     </div>
+     
+     <div button class="button" onclick="myFunction()"> 
+      Script
+     </button>
+     </div>
+     
+     <div button class="button" onclick="myFunction()"> 
+     *Source Code*
+     </button>
+     </div>
+     <br>
+     
+     </div>
+     </p>
+     
 
 # Tareas
 
