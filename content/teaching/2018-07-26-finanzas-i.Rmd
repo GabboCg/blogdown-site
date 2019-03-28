@@ -161,45 +161,6 @@ e. Ayudantía 5: Derivados, opciones & futuros
 
 ## Tutoriales
 
-* Introducción a quantmod
-
-<iframe width="550" height="400" src="https://www.youtube.com/embed/TwBKLTq3mfY"></iframe>
-
-<p>
-
-* Retorno y Retorno Acumulado
-
-<iframe width="550" height="400"  src="https://www.youtube.com/embed/-3RvuhtfNGU"></iframe>
-
-<p>
-
-* Graficar y Estadística Descriptiva
-
-<iframe width="550" height="400"  src="https://www.youtube.com/embed/qlLFjBMSUlQ"></iframe>
-
-<p>
-
-* Black & Scholes
-
-<iframe width="550" height="400"  src="https://www.youtube.com/embed/b54LK6TRjws"></iframe>
-
-<p>
-
-* Black & Scholes con datos reales
-
-<iframe width="550" height="400"  src="https://www.youtube.com/embed/Qz8pdhf7yyU"></iframe>
-
-<p>
-
-* Árbol Binomial
-
-<iframe width="550" height="400"  src="https://www.youtube.com/embed/2LCceV1-4Yg"></iframe>
-
-<p>
-
-* RStudio Cloud
-
-<br>
 
 ## Tareas 
 

@@ -12,7 +12,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.49.2" />
 
     
 
@@ -27,7 +27,6 @@
 <meta property="og:description" content="Welcome to my little corner of the world" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-
 <meta property="og:updated_time" content="2019-03-01T00:00:00&#43;00:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
 
 
@@ -203,7 +202,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Feb 2, 2019
         </span>
-         if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;) tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;, &quot;LRHUTTTTDEM156S&quot;, &quot;LRHUTTTTUSM156S&quot;, &quot;LRHUTTTTJPM156S&quot;) countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;) unemployment_lst &lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &lt;- tq_get(tickers[i], get = &quot;economic.data&quot;, from = &quot;2000-01-01&quot;, to = &quot;2018-11-01&quot;) %&gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &lt;- do.call(rbind, unemployment_lst)  p &lt;- unemployment_tbl %&gt;% ggplot(aes(x = date, y = price, fill = symbol)) + geom_area(stat=&quot;identity&quot;) + labs(title = &quot;Harmonized Unemployment Rate: Total: All Persons&quot;, subtitle = &quot;France, Germany, Japan and United States&quot;, y = &quot;Unemployment&quot;, x = &quot;Year&quot;) + scale_fill_discrete(name = &quot; &quot;) + theme_tq() + facet_wrap(~symbol, ncol = 2)  p + transition_reveal(date) + shadow_mark() 
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;) tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;, &quot;LRHUTTTTDEM156S&quot;, &quot;LRHUTTTTUSM156S&quot;, &quot;LRHUTTTTJPM156S&quot;) countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;) unemployment_lst &lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &lt;- tq_get(tickers[i], get = &quot;economic.data&quot;, from = &quot;2000-01-01&quot;, to = &quot;2018-11-01&quot;) %&gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &lt;- do.call(rbind, unemployment_lst)  p &lt;- unemployment_tbl %&gt;% ggplot(aes(x = date, y = price, fill = symbol)) + geom_area(stat=&quot;identity&quot;) + labs(title = &quot;Harmonized Unemployment Rate: Total: All Persons&quot;, subtitle = &quot;France, Germany, Japan and United States&quot;, y = &quot;Unemployment&quot;, x = &quot;Year&quot;) + scale_fill_discrete(name = &quot; &quot;) + theme_tq() + facet_wrap(~symbol, ncol = 2)  p + transition_reveal(date) + shadow_mark() 
         
         </div>
         
@@ -214,7 +213,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Feb 2, 2019
         </span>
-        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div.
         
         <div class="read-more-link">
             <a href="/posts/road-to-oscars-2019/">Read More…</a>
@@ -289,7 +288,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Nov 11, 2018
         </span>
-        Insert Lead paragraph here.
+        Insert Lead paragraph here.
 Why this post
         
         </div>
@@ -423,7 +422,7 @@ Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Jul 7, 2018
         </span>
-         session 1 Session    session 2 Session 2   
+        session 1 Session    session 2 Session 2   
  session 3 Session 3   
  session 4 Session 4   
  
