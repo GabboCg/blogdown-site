@@ -47,6 +47,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     [Radix Post](/xaringan/xaringan_rmarkdown.html)
     </button>
     </div>
+    <br>
     
     </div>
     </p>
@@ -367,7 +368,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
      </div>
      </p>
      
-11. RStudio Cloud: A donde vas R va contigp 
+11. RStudio Cloud: A donde vas R va contigo 
 
      <p>
      <img src="/hex/rstudio.png" alt="Smiley face" style="float: right; 
@@ -707,7 +708,7 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
     <br>
     <br>
 
-5. Tarea 5
+5. Tarea 5 `r fontawesome::fa("github")`
 
     <p>
     <img src="/images/images_hw5.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px;
@@ -745,19 +746,17 @@ Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post
 
 </p>
 </details>
-    
+
+<br>
+
 # Radix Website
 
 Para un mayor detalle del curso recomiendo visitar el website creado utilizando la librería [Radix](https://r-mec357.netlify.com/).
 
-<div class="btn-group">
-  
+- `r fontawesome::fa("desktop", fill = "forestgreen")` [Radix Website](https://r-mec357.netlify.com/)  
+
+
 <br>
-<button class="button" onclick="myFunction()"> 
-[Radix Website](https://r-mec357.netlify.com/)
-</button>
-  
-</div>
 <br>
 
 ---

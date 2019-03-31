@@ -1,6 +1,6 @@
 .button0 {
     background-color: white; /* Green */
-    border: 2px solid #ff2a00;
+    border: 1px solid #ff2a00;
     color: orange;
     padding: 2px 32px;
     text-align: center;
@@ -17,12 +17,13 @@
 .button0:hover {
     background-color: #ffedcc;
     color: orange;
-}
+} 
+
 .button {
     background-color: white; /* Green */
-    border: 2px solid #ff2a00;
+    border: 1px solid #ff2a00;
     color: orange;
-    padding: 16px 32px;
+    padding: 8px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -37,4 +38,16 @@
 .button:hover {
     background-color: #ffedcc;
     color: orange;
+}
+
+table,
+th,
+td
+ {
+    /*border: 1px solid black;*/
+    padding: 3px;
+}
+th {
+    font-weight: bold;
+    text-align: center;
 }
