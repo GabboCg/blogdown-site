@@ -58,5 +58,10 @@ ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
     identifier = "Notes"
     weight = 400
     url = "https://technotes.netlify.com/"
+[[menu.main]]
+    name = "Tidytuesday (?)"
+    identifier = "Tidy"
+    weight = 400
+    url = "https://gabocg.github.io/"
 
 
