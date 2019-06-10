@@ -49,24 +49,28 @@ ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
-    name = "Shiny"
-    identifier = "shiny"
-    weight = 300
-    url = "/teaching/"
-[[menu.main]]
     name = "Teaching"
     identifier = "teaching"
     weight = 400
     url = "/teaching/"
 [[menu.main]]
-    name = "Technical Notes"
-    identifier = "Notes"
+    name = "Shiny Apps"
+    identifier = "shiny"
     weight = 500
-    url = "https://technotes.netlify.com/"
+    url = "http://142.93.81.123/shiny/"
+[[menu.main]]
+    name = "Rstudio Server"
+    identifier = "rstudio"
+    weight = 600
+    url = "http://142.93.81.123/rstudio/"
 [[menu.main]]
     name = "Tidytuesday (?)"
     identifier = "Tidy"
-    weight = 600
+    weight = 700
     url = "https://gabocg.github.io/"
-    
+[[menu.main]]
+    name = "Technical Notes"
+    identifier = "Notes"
+    weight = 800
+    url = "https://technotes.netlify.com/"
 
