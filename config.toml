@@ -57,12 +57,12 @@ ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
     name = "Shiny Apps"
     identifier = "shiny"
     weight = 500
-    url = "http://142.93.81.123/shiny/"
+    url = "http://shiny4fun.com/shiny/"
 [[menu.main]]
     name = "Rstudio Server"
     identifier = "rstudio"
     weight = 600
-    url = "http://142.93.81.123/rstudio/"
+    url = "http://shiny4fun.com/rstudio/"
 [[menu.main]]
     name = "Tidytuesday (?)"
     identifier = "Tidy"
