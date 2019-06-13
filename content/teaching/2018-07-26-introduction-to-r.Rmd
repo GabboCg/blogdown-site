@@ -1,5 +1,5 @@
 ---
-title: Data Science with R `r emo::ji("arrow_right")` `r emo::ji("computer")` + `r emo::ji("us")`
+title: An introduction to R `r emo::ji("arrow_right")` `r emo::ji("computer")` + `r emo::ji("us")`
 author: 'Gabriel Cabrera '
 date: '2018-07-26'
 slug: introduction-to-r
@@ -13,7 +13,7 @@ output:
     css: ["/css/bootstrap.css"]
 ---
 
-# session 1 
+# Class 1
 
 <div class="btn-group">
 
@@ -24,7 +24,7 @@ output:
 </div
 <br>
 
-# session 2
+# Class 2
 
 <div class="btn-group">
     
@@ -35,7 +35,7 @@ output:
 </div>
 <br>
 
-# session 3
+# Class 3
 
 <div class="btn-group">
     
@@ -46,7 +46,7 @@ output:
 </div>
 <br>
 
-# session 4
+# Class 4
 
 <div class="btn-group">
     
