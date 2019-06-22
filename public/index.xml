@@ -86,7 +86,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/economic-data-in-motion/</guid>
-      <description> if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;) tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;, &amp;quot;LRHUTTTTDEM156S&amp;quot;, &amp;quot;LRHUTTTTUSM156S&amp;quot;, &amp;quot;LRHUTTTTJPM156S&amp;quot;) countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;) unemployment_lst &amp;lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i], get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2000-01-01&amp;quot;, to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &amp;lt;- do.call(rbind, unemployment_lst)  p &amp;lt;- unemployment_tbl %&amp;gt;% ggplot(aes(x = date, y = price, fill = symbol)) + geom_area(stat=&amp;quot;identity&amp;quot;) + labs(title = &amp;quot;Harmonized Unemployment Rate: Total: All Persons&amp;quot;, subtitle = &amp;quot;France, Germany, Japan and United States&amp;quot;, y = &amp;quot;Unemployment&amp;quot;, x = &amp;quot;Year&amp;quot;) + scale_fill_discrete(name = &amp;quot; &amp;quot;) + theme_tq() + facet_wrap(~symbol, ncol = 2)  p + transition_reveal(date) + shadow_mark() </description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;) tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;, &amp;quot;LRHUTTTTDEM156S&amp;quot;, &amp;quot;LRHUTTTTUSM156S&amp;quot;, &amp;quot;LRHUTTTTJPM156S&amp;quot;) countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;) unemployment_lst &amp;lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i], get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2000-01-01&amp;quot;, to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &amp;lt;- do.call(rbind, unemployment_lst)  p &amp;lt;- unemployment_tbl %&amp;gt;% ggplot(aes(x = date, y = price, fill = symbol)) + geom_area(stat=&amp;quot;identity&amp;quot;) + labs(title = &amp;quot;Harmonized Unemployment Rate: Total: All Persons&amp;quot;, subtitle = &amp;quot;France, Germany, Japan and United States&amp;quot;, y = &amp;quot;Unemployment&amp;quot;, x = &amp;quot;Year&amp;quot;) + scale_fill_discrete(name = &amp;quot; &amp;quot;) + theme_tq() + facet_wrap(~symbol, ncol = 2)  p + transition_reveal(date) + shadow_mark() </description>
     </item>
     
     <item>
@@ -95,7 +95,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/road-to-oscars-2019/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; h3 &amp;gt; &amp;quot;,selector[j])) %&amp;gt;% html_text() %&amp;gt;% as.character()}matrix_value[i,3] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; div.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; h3 &amp;gt; &amp;quot;,selector[j])) %&amp;gt;% html_text() %&amp;gt;% as.character()}matrix_value[i,3] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; div.ipl-rating-widget &amp;gt; div.</description>
     </item>
     
     <item>
@@ -166,7 +166,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/r-python-reticulate/</guid>
-      <description>Insert Lead paragraph here.
+      <description>Insert Lead paragraph here.
 Why this post</description>
     </item>
     
@@ -185,7 +185,7 @@ Why this post</description>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/introduction-to-r/</guid>
-      <description>Class 1SessionClass 2Session 2
+      <description>Class 1SessionClass 2Session 2
 Class 3Session 3
 Class 4Session 4
 </description>

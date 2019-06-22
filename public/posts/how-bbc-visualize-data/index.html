@@ -14,7 +14,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.49.2" />
 
     
     
@@ -30,8 +30,7 @@
 <meta property="og:title" content="How BBC visualize data?" />
 <meta property="og:description" content="if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacmanp_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;)## Installing package into &#39;C:/Users/Habac/Documents/R/win-library/3.5&#39;## (as &#39;lib&#39; is unspecified)## Warning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5:## no fue posible abrir la URL &#39;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5/PACKAGES&#39;## package &#39;wesanderson&#39; successfully unpacked and MD5 sums checked## ## The downloaded binary packages are in## C:\Users\Habac\AppData\Local\Temp\RtmpaG8SHD\downloaded_packages## ## wesanderson installedimdb_tbl &lt;- read.csv(&quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&quot;)imdb_tbl_1 &lt;- imdb_tbl %&gt;% group_by(titleId) %&gt;% mutate(number_season = n()) %&gt;% filter(row_number(titleId) == 1) %&gt;% select(titleId, title, number_season) %&gt;% arrange(desc(number_season)) %&gt;% ungroup() %&gt;% group_by(number_season) %&gt;% mutate(n = n()) %&gt;% filter(row_number() == 1) %&gt;% ungroup() %&gt;% mutate(percent = n/sum(n), season = paste0(&quot;S&quot;, number_season)) %&gt;% arrange(desc(percent)) %&gt;% filter(n &gt;= 15)g &lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) &#43; geom_bar(colour = &quot;black&quot;, stat = &quot;identity&quot;,position = &quot;identity&quot;,fill = &quot;orange&quot;) &#43; geom_hline(yintercept = 0, size = 1, colour=&quot;#333333&quot;) &#43;bbc_style() &#43;scale_y_continuous(labels = scales::percent) &#43;theme(axis." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/how-bbc-visualize-data/" />
-<meta property="article:published_time" content="2019-02-02T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/posts/how-bbc-visualize-data/" /><meta property="article:published_time" content="2019-02-02T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-02-02T22:54:34-03:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
 
 
@@ -223,10 +222,7 @@
 
   </header>
   <div class="post">
-    
-
-
-<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
+    <pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
 <pre><code>## Loading required package: pacman</code></pre>
 <pre class="r"><code>p_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/Habac/Documents/R/win-library/3.5&#39;
