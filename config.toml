@@ -11,6 +11,7 @@ googleAnalytics = "UA-124514267-1"
 
 ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$","_files$", "_cache$"]
 
+summarylength = 50
 ## Site Settings 
 [params]
     author = "Gabriel Cabrera"

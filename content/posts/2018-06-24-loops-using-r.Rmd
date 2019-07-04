@@ -1,5 +1,5 @@
 ---
-title: Loops using R
+title: "Functional programming for mortals "
 author: 'Gabriel Cabrera '
 date: '2018-06-24'
 slug: loops-using-r

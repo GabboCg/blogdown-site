@@ -18,8 +18,7 @@
       
       <guid>/teaching/the-zen-diaries-of-high-performance-computing/</guid>
       <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.</description>
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
     </item>
     
     <item>
@@ -28,7 +27,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/economic-data-in-motion/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;) tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;, &amp;quot;LRHUTTTTDEM156S&amp;quot;, &amp;quot;LRHUTTTTUSM156S&amp;quot;, &amp;quot;LRHUTTTTJPM156S&amp;quot;) countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;) unemployment_lst &amp;lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i], get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2000-01-01&amp;quot;, to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &amp;lt;- do.call(rbind, unemployment_lst)  p &amp;lt;- unemployment_tbl %&amp;gt;% ggplot(aes(x = date, y = price, fill = symbol)) + geom_area(stat=&amp;quot;identity&amp;quot;) + labs(title = &amp;quot;Harmonized Unemployment Rate: Total: All Persons&amp;quot;, subtitle = &amp;quot;France, Germany, Japan and United States&amp;quot;, y = &amp;quot;Unemployment&amp;quot;, x = &amp;quot;Year&amp;quot;) + scale_fill_discrete(name = &amp;quot; &amp;quot;) + theme_tq() + facet_wrap(~symbol, ncol = 2)  p + transition_reveal(date) + shadow_mark() </description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;) tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;, &amp;quot;LRHUTTTTDEM156S&amp;quot;, &amp;quot;LRHUTTTTUSM156S&amp;quot;, &amp;quot;LRHUTTTTJPM156S&amp;quot;) countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;) unemployment_lst &amp;lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i], get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2000-01-01&amp;quot;, to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &amp;lt;- do.</description>
     </item>
     
     <item>
@@ -37,7 +36,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/road-to-oscars-2019/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; h3 &amp;gt; &amp;quot;,selector[j])) %&amp;gt;% html_text() %&amp;gt;% as.character()}matrix_value[i,3] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.lister-item-content &amp;gt; div.ipl-rating-widget &amp;gt; div.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.</description>
     </item>
     
     <item>
@@ -46,7 +45,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/how-bbc-visualize-data/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;)## Installing package into &amp;#39;C:/Users/Habac/Documents/R/win-library/3.5&amp;#39;## (as &amp;#39;lib&amp;#39; is unspecified)## Warning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5:## no fue posible abrir la URL &amp;#39;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5/PACKAGES&amp;#39;## package &amp;#39;wesanderson&amp;#39; successfully unpacked and MD5 sums checked## ## The downloaded binary packages are in## C:\Users\Habac\AppData\Local\Temp\RtmpaG8SHD\downloaded_packages## ## wesanderson installedimdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;)imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15)g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,position = &amp;quot;identity&amp;quot;,fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) +bbc_style() +scale_y_continuous(labels = scales::percent) +theme(axis.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;)## Installing package into &amp;#39;C:/Users/Habac/Documents/R/win-library/3.5&amp;#39;## (as &amp;#39;lib&amp;#39; is unspecified)## Warning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5:## no fue posible abrir la URL &amp;#39;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5/PACKAGES&amp;#39;## package &amp;#39;wesanderson&amp;#39; successfully unpacked and MD5 sums checked## ## The downloaded binary packages are in## C:\Users\Habac\AppData\Local\Temp\RtmpaG8SHD\downloaded_packages## ## wesanderson installedimdb_tbl &amp;lt;- read.</description>
     </item>
     
     <item>
@@ -56,8 +55,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       
       <guid>/posts/make-your-own-kind-of-music/</guid>
       <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.</description>
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
     </item>
     
     <item>
@@ -67,8 +65,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       
       <guid>/teaching/data-vis-teor%C3%ADa-practica/</guid>
       <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.</description>
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
     </item>
     
     <item>
@@ -78,8 +75,7 @@ Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
       
       <guid>/teaching/finanzas-reproducibles-con-r/</guid>
       <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.</description>
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
     </item>
     
     <item>
@@ -92,24 +88,23 @@ Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
     </item>
     
     <item>
-      <title>One of the New Feature of ggplot2 3.0</title>
-      <link>/posts/one-of-the-new-feature-of-ggplot2-3-0/</link>
-      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
-      <description>Why this post?Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
-The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
-&amp;mdash; Dina D. Pomeranz (@DinaPomeranz) July 4, 2018  After reading the post1, I decided to replicate the entire article using the new features of ggplot2 3.</description>
-    </item>
-    
-    <item>
       <title>Tópicos en Economía &amp; Negocios Utilizando R ➡️ 👽 &#43; 🇪🇸</title>
       <link>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Descripción Curso Este curso presenta una introducción a R, usando datos estructurados y no estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos a discutir se encuentran: importación y exportación de datos en diferentes formatos, extracción de datos de sitios web, visualización de datos, regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web utilizando Shiny.
- Presentaciones &amp;amp; Tutoriales Todas las presentaciones fueron confeccionadas usando la librería Xaringan de Yihui Xie con el tema Dharma-Xaringan, creado por mí ✌️ (ver post).</description>
+      <description>Descripción Curso Este curso presenta una introducción a R, usando datos estructurados y no estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos a discutir se encuentran: importación y exportación de datos en diferentes formatos, extracción de datos de sitios web, visualización de datos, regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web utilizando Shiny.</description>
+    </item>
+    
+    <item>
+      <title>ggplot2 in a nutshell</title>
+      <link>/posts/one-of-the-new-feature-of-ggplot2-3-0/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
+      <description>Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
+The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
+&amp;mdash; Dina D.</description>
     </item>
     
   </channel>

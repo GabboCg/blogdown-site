@@ -12,7 +12,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.49.2" />
+<meta name="generator" content="Hugo 0.55.6" />
 
     
 
@@ -27,6 +27,7 @@
 <meta property="og:description" content="Welcome to my little corner of the world" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
+
 <meta property="og:updated_time" content="2019-05-28T00:00:00&#43;00:00"/><meta property="og:site_name" content="Gabo&#39;s World" />
 
 
@@ -192,7 +193,6 @@
           Mar 3, 2019
         </span>
         Can you hear me now?…Learning a programming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.
-Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic world.
         
         <div class="read-more-link">
             <a href="/about/">Read More…</a>
@@ -211,7 +211,6 @@ Hi! My name is Gabriel Cabrera and this is my little corner in this chaotic worl
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/posts/robust-standard-errors-in-r/">Read More…</a>
@@ -228,7 +227,6 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/posts/install-r-in-linux-with-openblas/">Read More…</a>
@@ -245,7 +243,6 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/posts/getting-started-with-parallelism/">Read More…</a>
@@ -260,7 +257,11 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Feb 2, 2019
         </span>
-        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;) tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;, &quot;LRHUTTTTDEM156S&quot;, &quot;LRHUTTTTUSM156S&quot;, &quot;LRHUTTTTJPM156S&quot;) countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;) unemployment_lst &lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &lt;- tq_get(tickers[i], get = &quot;economic.data&quot;, from = &quot;2000-01-01&quot;, to = &quot;2018-11-01&quot;) %&gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &lt;- do.call(rbind, unemployment_lst)  p &lt;- unemployment_tbl %&gt;% ggplot(aes(x = date, y = price, fill = symbol)) + geom_area(stat=&quot;identity&quot;) + labs(title = &quot;Harmonized Unemployment Rate: Total: All Persons&quot;, subtitle = &quot;France, Germany, Japan and United States&quot;, y = &quot;Unemployment&quot;, x = &quot;Year&quot;) + scale_fill_discrete(name = &quot; &quot;) + theme_tq() + facet_wrap(~symbol, ncol = 2)  p + transition_reveal(date) + shadow_mark() 
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;) tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;, &quot;LRHUTTTTDEM156S&quot;, &quot;LRHUTTTTUSM156S&quot;, &quot;LRHUTTTTJPM156S&quot;) countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;) unemployment_lst &lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &lt;- tq_get(tickers[i], get = &quot;economic.data&quot;, from = &quot;2000-01-01&quot;, to = &quot;2018-11-01&quot;) %&gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &lt;- do.
+        
+        <div class="read-more-link">
+            <a href="/posts/economic-data-in-motion/">Read More…</a>
+        </div>
         
         </div>
         
@@ -271,7 +272,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Feb 2, 2019
         </span>
-        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; h3 &gt; &quot;,selector[j])) %&gt;% html_text() %&gt;% as.character()}matrix_value[i,3] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.lister-item-content &gt; div.ipl-rating-widget &gt; div.
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.
         
         <div class="read-more-link">
             <a href="/posts/road-to-oscars-2019/">Read More…</a>
@@ -286,7 +287,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Feb 2, 2019
         </span>
-        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacmanp_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;)## Installing package into &#39;C:/Users/Habac/Documents/R/win-library/3.5&#39;## (as &#39;lib&#39; is unspecified)## Warning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5:## no fue posible abrir la URL &#39;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5/PACKAGES&#39;## package &#39;wesanderson&#39; successfully unpacked and MD5 sums checked## ## The downloaded binary packages are in## C:\Users\Habac\AppData\Local\Temp\RtmpaG8SHD\downloaded_packages## ## wesanderson installedimdb_tbl &lt;- read.csv(&quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&quot;)imdb_tbl_1 &lt;- imdb_tbl %&gt;% group_by(titleId) %&gt;% mutate(number_season = n()) %&gt;% filter(row_number(titleId) == 1) %&gt;% select(titleId, title, number_season) %&gt;% arrange(desc(number_season)) %&gt;% ungroup() %&gt;% group_by(number_season) %&gt;% mutate(n = n()) %&gt;% filter(row_number() == 1) %&gt;% ungroup() %&gt;% mutate(percent = n/sum(n), season = paste0(&quot;S&quot;, number_season)) %&gt;% arrange(desc(percent)) %&gt;% filter(n &gt;= 15)g &lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &quot;black&quot;, stat = &quot;identity&quot;,position = &quot;identity&quot;,fill = &quot;orange&quot;) + geom_hline(yintercept = 0, size = 1, colour=&quot;#333333&quot;) +bbc_style() +scale_y_continuous(labels = scales::percent) +theme(axis.
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacmanp_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;)## Installing package into &#39;C:/Users/Habac/Documents/R/win-library/3.5&#39;## (as &#39;lib&#39; is unspecified)## Warning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5:## no fue posible abrir la URL &#39;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5/PACKAGES&#39;## package &#39;wesanderson&#39; successfully unpacked and MD5 sums checked## ## The downloaded binary packages are in## C:\Users\Habac\AppData\Local\Temp\RtmpaG8SHD\downloaded_packages## ## wesanderson installedimdb_tbl &lt;- read.
         
         <div class="read-more-link">
             <a href="/posts/how-bbc-visualize-data/">Read More…</a>
@@ -303,7 +304,6 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/posts/make-your-own-kind-of-music/">Read More…</a>
@@ -331,7 +331,6 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/posts/anscombe-a-good-example-of-why-visualization-is-important/">Read More…</a>
@@ -346,7 +345,7 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Nov 11, 2018
         </span>
-        Insert Lead paragraph here.
+        Insert Lead paragraph here.
 Why this post
         
         </div>
@@ -358,7 +357,7 @@ Why this post
         <span class="item__date">
           Aug 8, 2018
         </span>
-        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;plotly&quot;, &quot;quantmod&quot;)get dataGSPC &lt;- getSymbols(&quot;^GSPC&quot;,src=&#39;yahoo&#39;,auto.assign = FALSE, from = &quot;2007-01-01&quot;)df &lt;- data.frame(Date=index(GSPC),coredata(GSPC))create Bollinger Bandsbbands &lt;- BBands(GSPC[,c(&quot;GSPC.High&quot;,&quot;GSPC.Low&quot;,&quot;GSPC.Close&quot;)])join and subset datadf &lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &gt;= &quot;2015-01-01&quot;)colors column for increasing and decreasingfor (i in 1:length(df[,1])) {if (df$GSPC.Close[i] &gt;= df$GSPC.Open[i]) {df$direction[i] = &#39;Aumento&#39;} else {df$direction[i] = &#39;Disminución&#39;}}i &lt;- list(line = list(color = &#39;#17BECF&#39;))d &lt;- list(line = list(color = &#39;#7F7F7F&#39;))plot candlestick chartp &lt;- df %&gt;%plot_ly(x = ~Date, type=&quot;candlestick&quot;,open = ~GSPC.
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;plotly&quot;, &quot;quantmod&quot;)get dataGSPC &lt;- getSymbols(&quot;^GSPC&quot;,src=&#39;yahoo&#39;,auto.assign = FALSE, from = &quot;2007-01-01&quot;)df &lt;- data.frame(Date=index(GSPC),coredata(GSPC))create Bollinger Bandsbbands &lt;- BBands(GSPC[,c(&quot;GSPC.High&quot;,&quot;GSPC.Low&quot;,&quot;GSPC.Close&quot;)])join and subset datadf &lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &gt;= &quot;2015-01-01&quot;)colors column for increasing and decreasingfor (i in 1:length(df[,1])) {if (df$GSPC.
         
         <div class="read-more-link">
             <a href="/posts/technical-analysis-with-plotly/">Read More…</a>
@@ -368,14 +367,14 @@ Why this post
         
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/posts/one-of-the-new-feature-of-ggplot2-3-0/">One of the New Feature of ggplot2 3.0</a>
+          <a href="/posts/one-of-the-new-feature-of-ggplot2-3-0/">ggplot2 in a nutshell</a>
         </span>
         <span class="item__date">
           Jul 7, 2018
         </span>
-        Why this post?Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
+        Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
 The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
-&mdash; Dina D. Pomeranz (@DinaPomeranz) July 4, 2018  After reading the post1, I decided to replicate the entire article using the new features of ggplot2 3.
+&mdash; Dina D.
         
         <div class="read-more-link">
             <a href="/posts/one-of-the-new-feature-of-ggplot2-3-0/">Read More…</a>
@@ -385,13 +384,13 @@ The unadjusted gender wage gap for full time workers has been falling significan
         
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/posts/loops-using-r/">Loops using R</a>
+          <a href="/posts/loops-using-r/">Functional programming for mortals </a>
         </span>
         <span class="item__date">
           Jun 6, 2018
         </span>
-        IntroductionIntroductionthis post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacmanp_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;)set.seed(123)reps &lt;- 10000betas &lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &lt;- 2beta1 &lt;- 2.5beta2 &lt;- 1su = 2n = c(100,1000) #tamaño muestralfor (j in 1:length(n)) {X1=rnorm(n[j],20,1)X2=runif(n[j],0,1)for (i in 1:reps) {u &lt;- rnorm(n[j],0,su)Y &lt;- beta0 + beta1*X1 + beta2*X2 + umodel = lm(Y~X1) #Estima OLS - omite variable X2betas[i,j] = model$coef[2]}}mean(betas[,1])## [1] 2.
+        Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
+if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;) ## Loading required package: pacman p_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;) set.seed(123) reps &lt;- 10000 betas &lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &lt;- 2 beta1 &lt;- 2.
         
         <div class="read-more-link">
             <a href="/posts/loops-using-r/">Read More…</a>
@@ -413,8 +412,6 @@ if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading
  Monthly U.S. equity premium out-of-sample forecasting results based on individual economic variables with unrestricted and Predictive regression forecasts with Campbell and Thompson (2008).
  Download R code.xlsx  View post
   International Stock-Return Predictability (Rapach, Strauss and Zhou, 2013)
- Download data.xlsx
- Benchmark predictive regression model estimation from 1980:02 to 2010:12. The countries are Australia, Canada, France, Germany, Italy, Japan, Netherlands, Sweden, Switzerland, United Kingdom and United States.
         
         <div class="read-more-link">
             <a href="/teaching/replicate-research-studies-for-knowledge-development/">Read More…</a>
@@ -431,7 +428,6 @@ if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/teaching/the-zen-diaries-of-high-performance-computing/">Read More…</a>
@@ -448,7 +444,6 @@ Heading 2Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/teaching/data-vis-teor%C3%ADa-practica/">Read More…</a>
@@ -465,7 +460,6 @@ Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         </span>
         Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
         
         <div class="read-more-link">
             <a href="/teaching/finanzas-reproducibles-con-r/">Read More…</a>
@@ -480,7 +474,7 @@ Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Jul 7, 2018
         </span>
-        Class 1SessionClass 2Session 2
+        Class 1SessionClass 2Session 2
 Class 3Session 3
 Class 4Session 4
 
@@ -494,9 +488,7 @@ Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
         <span class="item__date">
           Jul 7, 2018
         </span>
-        Material de clases Apunte: Introducción a las finanzas quantitativas Este apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos.
-  Descargar Apunte
-  Ver Repositorio
+        Material de clases Apunte: Introducción a las finanzas quantitativas Este apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande.
         
         <div class="read-more-link">
             <a href="/teaching/finanzas-i/">Read More…</a>
@@ -512,7 +504,6 @@ Heading 2 Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum 
           Jul 7, 2018
         </span>
         Descripción Curso Este curso presenta una introducción a R, usando datos estructurados y no estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos a discutir se encuentran: importación y exportación de datos en diferentes formatos, extracción de datos de sitios web, visualización de datos, regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web utilizando Shiny.
- Presentaciones &amp; Tutoriales Todas las presentaciones fueron confeccionadas usando la librería Xaringan de Yihui Xie con el tema Dharma-Xaringan, creado por mí ✌️ (ver post).
         
         <div class="read-more-link">
             <a href="/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/">Read More…</a>
