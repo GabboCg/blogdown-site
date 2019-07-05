@@ -200,7 +200,8 @@ kbd {
   white-space: nowrap; }
 
 a {
-  color: #0000ff;
+  color: #fff; /*title color */
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
   text-decoration: none;
   word-wrap: break-word; }
   a.sidebar-nav-item:hover {
@@ -220,7 +221,7 @@ a {
       border-style: none;
       text-decoration: none; }
   a:hover {
-    color: #0046B7; /* #7DF9FF */ 
+    color: #FFAE42; /* #7DF9FF */ 
     /*border-bottom: 0px solid #7DF9FF; *//* dotted */    
     text-decoration: none;
     background: transparent;
@@ -247,9 +248,9 @@ a {
     color: #f9f9f9;
     border: none; }
     .sidebar a:hover {
-      color: #0046B7;} /*#268bd2;*/ 
+      color: #FFAE42;} /*#268bd2;*/ 
     .sidebar a:focus {
-      color: #0046B7;} /*#268bd2;*/
+      color: #FFAE42;} /*#268bd2;*/
   .sidebar .sidebar-about {
     text-align: center; }
   .sidebar .author-image {
