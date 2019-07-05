@@ -18,16 +18,16 @@ highlight: no
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 if(!require("pacman")) install.packages("pacman")
 p_load("tidyverse", "bbplot", "readxl", "viridis", "wesanderson")
 ```
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 imdb_tbl <- read.csv("https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv")
 ```
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 imdb_tbl_1 <- imdb_tbl %>% 
   group_by(titleId) %>% 
   mutate(number_season = n()) %>% 

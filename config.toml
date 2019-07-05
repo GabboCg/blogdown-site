@@ -25,7 +25,7 @@ summarylength = 50
     highlightjsstyle = "github" 
     highlightjsLang = ["r", "yaml"]
     
-    themeColor = "theme-base-0g" 
+    themeColor = "theme-base-0h" 
 
 ## Social Accounts
 [params.social]

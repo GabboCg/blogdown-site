@@ -6,10 +6,19 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
+      <link>/about/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Can you hear me now?…Learning a programming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
+    </item>
     
     <item>
       <title>Robust Standard Errors in R</title>
@@ -29,15 +38,6 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <guid>/posts/install-r-in-linux-with-openblas/</guid>
       <description>Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
-      <link>/about/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Can you hear me now?…Learning a programming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
     </item>
     
     <item>
@@ -97,7 +97,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/how-bbc-visualize-data/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;)## Installing package into &amp;#39;C:/Users/Habac/Documents/R/win-library/3.5&amp;#39;## (as &amp;#39;lib&amp;#39; is unspecified)## Warning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5:## no fue posible abrir la URL &amp;#39;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5/PACKAGES&amp;#39;## package &amp;#39;wesanderson&amp;#39; successfully unpacked and MD5 sums checked## ## The downloaded binary packages are in## C:\Users\Habac\AppData\Local\Temp\RtmpaG8SHD\downloaded_packages## ## wesanderson installedimdb_tbl &amp;lt;- read.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;) imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;) imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15) g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;, position = &amp;quot;identity&amp;quot;, fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) + bbc_style() + scale_y_continuous(labels = scales::percent) + theme(axis.</description>
     </item>
     
     <item>
@@ -155,8 +155,8 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/r-python-reticulate/</guid>
-      <description>Insert Lead paragraph here.
-Why this post</description>
+      <description> Insert Lead paragraph here.
+Why this post  </description>
     </item>
     
     <item>
@@ -165,7 +165,7 @@ Why this post</description>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/technical-analysis-with-plotly/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;plotly&amp;quot;, &amp;quot;quantmod&amp;quot;)get dataGSPC &amp;lt;- getSymbols(&amp;quot;^GSPC&amp;quot;,src=&amp;#39;yahoo&amp;#39;,auto.assign = FALSE, from = &amp;quot;2007-01-01&amp;quot;)df &amp;lt;- data.frame(Date=index(GSPC),coredata(GSPC))create Bollinger Bandsbbands &amp;lt;- BBands(GSPC[,c(&amp;quot;GSPC.High&amp;quot;,&amp;quot;GSPC.Low&amp;quot;,&amp;quot;GSPC.Close&amp;quot;)])join and subset datadf &amp;lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &amp;gt;= &amp;quot;2015-01-01&amp;quot;)colors column for increasing and decreasingfor (i in 1:length(df[,1])) {if (df$GSPC.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;plotly&amp;quot;, &amp;quot;quantmod&amp;quot;) get data GSPC &amp;lt;- getSymbols(&amp;quot;^GSPC&amp;quot;,src=&amp;#39;yahoo&amp;#39;,auto.assign = FALSE, from = &amp;quot;2007-01-01&amp;quot;) df &amp;lt;- data.frame(Date=index(GSPC),coredata(GSPC))  create Bollinger Bands bbands &amp;lt;- BBands(GSPC[,c(&amp;quot;GSPC.High&amp;quot;,&amp;quot;GSPC.Low&amp;quot;,&amp;quot;GSPC.Close&amp;quot;)])  join and subset data df &amp;lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &amp;gt;= &amp;quot;2015-01-01&amp;quot;)  colors column for increasing and decreasing for (i in 1:length(df[,1])) { if (df$GSPC.</description>
     </item>
     
     <item>

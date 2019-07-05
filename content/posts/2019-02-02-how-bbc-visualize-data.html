@@ -16,19 +16,8 @@ highlight: no
 
 
 
-<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
-<pre><code>## Loading required package: pacman</code></pre>
-<pre class="r"><code>p_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/Habac/Documents/R/win-library/3.5&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre><code>## Warning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5:
-##   no fue posible abrir la URL &#39;http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/3.5/PACKAGES&#39;</code></pre>
-<pre><code>## package &#39;wesanderson&#39; successfully unpacked and MD5 sums checked
-## 
-## The downloaded binary packages are in
-##  C:\Users\Habac\AppData\Local\Temp\RtmpaG8SHD\downloaded_packages</code></pre>
-<pre><code>## 
-## wesanderson installed</code></pre>
+<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)
+p_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;)</code></pre>
 <pre class="r"><code>imdb_tbl &lt;- read.csv(&quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&quot;)</code></pre>
 <pre class="r"><code>imdb_tbl_1 &lt;- imdb_tbl %&gt;% 
   group_by(titleId) %&gt;% 
@@ -56,32 +45,6 @@ highlight: no
   labs(title = &quot;Tv&#39;s Shows&quot;,
        subtitle = &quot;Porcentajes de programas televisivos por temporadas&quot;)
 g</code></pre>
-<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database</code></pre>
 <p><img src="/posts/2019-02-02-how-bbc-visualize-data_files/figure-html/unnamed-chunk-4-1.png" width="1152" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>imdb_x_files_tbl &lt;- imdb_tbl %&gt;% 
   filter(title == &quot;The X-Files&quot;) %&gt;% 
@@ -116,36 +79,4 @@ imdb_x_files_tbl %&gt;%
         axis.ticks.length =  unit(0.26, &quot;cm&quot;)) + 
   labs(title = &quot;Average Reating of The X-Files&quot;,
        subtitle = &quot;From season one to season ten&quot;)</code></pre>
-<pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database
-
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## font family not found in Windows font database</code></pre>
 <p><img src="/posts/2019-02-02-how-bbc-visualize-data_files/figure-html/unnamed-chunk-5-1.png" width="1152" style="display: block; margin: auto;" /></p>
