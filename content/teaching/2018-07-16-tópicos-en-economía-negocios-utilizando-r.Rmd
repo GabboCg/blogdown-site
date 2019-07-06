@@ -1,5 +1,5 @@
 ---
-title: Tópicos en Economía & Negocios Utilizando R `r emo::ji("arrow_right")` 
+title: R for business and economics `r emo::ji("arrow_right")` 
        `r emo::ji("alien")` + `r emo::ji("es")`
 author: 'Gabriel Cabrera '
 date: '2018-07-16'
