@@ -14,7 +14,7 @@ output:
     css: ["/css/bootstrap.css"]
 ---
 # Descripción Curso
-
+ 
 Este curso presenta una introducción a R, usando datos estructurados y no 
 estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos 
 a discutir se encuentran: importación y exportación de datos en diferentes 
