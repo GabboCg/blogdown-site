@@ -1,10 +1,10 @@
 ---
-title: An introduction to R `r emo::ji("arrow_right")` `r emo::ji("computer")` + `r emo::ji("us")`
+title: 'R for those who want to rock in the free world `r emo::ji("arrow_right")` `r emo::ji("computer")` + `r emo::ji("us")`' 
 author: 'Gabriel Cabrera '
 date: '2018-07-26'
 slug: introduction-to-r
 categories:
-  - Programming
+  - R
 tags: []
 output:
   blogdown::html_page:
@@ -13,7 +13,24 @@ output:
     css: ["/css/bootstrap.css"]
 ---
 
-# Class 1
+<blockquote>
+  <p>It’s ok to lose to opponent. It’s never okay to lose to fear..</p>
+  <footer align="right">— Nariyoshi Miyagi, <cite> Karate Kid (1984) </cite> </footer>
+</blockquote>
+
+# Prologue: The rules of the game
+
+
+<blockquote>
+  <p>**Marty**: Hey, Doc, you better back up, we don't have enough road to get up to 88.</p>
+  <p>**Doc Brown**: Roads? Where we're going, we don't need... roads.</p> 
+  <footer align="right">— Back to the future Parte II (1989) </footer>
+</blockquote>
+
+
+# Class 1: R and R Studio 
+
+# Class 2: 
 
 <div class="btn-group">
 

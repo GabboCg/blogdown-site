@@ -69,7 +69,9 @@ tbody tr:nth-child(odd) th {
   margin-right: auto; }
 
 footer {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem; 
+  text-align: right
+}
 
 .page,
 .post {
@@ -797,5 +799,7 @@ details[open] summary:after {
   content: "-";
   background: #ffa500;
 }
+
+
 
 
