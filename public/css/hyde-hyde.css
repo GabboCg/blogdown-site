@@ -250,9 +250,9 @@ a {
     color: #f9f9f9;
     border: none; }
     .sidebar a:hover {
-      color: #FFAE42;} /*#268bd2;*/ 
+      color: orange;} /*#268bd2;*/ 
     .sidebar a:focus {
-      color: #FFAE42;} /*#268bd2;*/
+      color: orange;} /*#268bd2;*/
   .sidebar .sidebar-about {
     text-align: center; }
   .sidebar .author-image {
