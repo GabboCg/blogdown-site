@@ -1,7 +1,7 @@
 .button0 {
     background-color: white; /* Green */
-    border: 1px solid #ff2a00;
-    color: orange;
+    border: 1px solid orange;
+    color: red;
     padding: 2px 32px;
     text-align: center;
     text-decoration: none;
@@ -16,12 +16,12 @@
 
 .button0:hover {
     background-color: #ffedcc;
-    color: orange;
+    color: #ffffff;
 } 
 
 .button {
     background-color: white; /* Green */
-    border: 1px solid #ff2a00;
+    border: 1px solid orange;
     color: orange;
     padding: 8px 32px;
     text-align: center;
@@ -32,11 +32,24 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+    border-radius: 1em;
 }
 
 .button:hover {
-    background-color: #ffedcc;
-    color: orange;
+    background-color: orange;
+    color: #ffffff;
+}
+
+.button:visited {
+    color: #ffffff;
+}
+
+.button:link {
+    color: #ffffff;
+}
+
+.button a:hover {
+    color: #ffffff;
 }
 
 td {

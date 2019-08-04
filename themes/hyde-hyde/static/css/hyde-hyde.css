@@ -224,7 +224,7 @@ a {
       text-decoration: none; }
   a:hover {
     color: #ff980f; /* #7DF9FF */ 
-    /*border-bottom: 0px solid #7DF9FF; *//* dotted */    
+    /*border-bottom: 0px solid #7DF9FF; *//* dotted */ 
     text-decoration: none;
     background: transparent;
     background-color: transparent;
@@ -368,7 +368,7 @@ a {
     justify-content: center;
     padding: 15px;
     color: #515151; /*#c2255c */ 
-    border: 2px solid #33691E;
+    border: 2px solid orange;
     line-height: 1.25;
     text-transform: uppercase; }
     .post--navigation a:hover {
@@ -479,10 +479,13 @@ body .gist td {
 .badge-category,
 a.badge-category {
   color: #fff !important; /* #fff */
-  background-color: #33691E;} /* #0088cc */
+  background-color: #33691E; /* #0088cc */
+  -moz-animation:backgroundtransition 100s infinite; /* Firefox */
+  -webkit-animation:backgroundtransition 100s infinite; /* Safari and Chrome */
+} 
 
 a.badge-category:hover, a.badge-category:focus {
-  color: #33691E !important; /* #0088cc */
+  color: #ffffff !important; /* #33691E #0088cc tag color */
   background: transparent;
   background-color: transparent;
   text-decoration: none;
@@ -491,11 +494,14 @@ a.badge-category:hover, a.badge-category:focus {
 .badge-tag,
 a.badge-tag {
   color: #fff !important;
-  background-color: #33691E; } /*#7766cc*/
+  background-color: #33691E; /*#7766cc*/
+  -moz-animation:backgroundtransition 100s infinite; /* Firefox */
+  -webkit-animation:backgroundtransition 100s infinite; /* Safari and Chrome */
+} 
   .badge-tag:hover, .badge-tag:focus,
   a.badge-tag:hover,
   a.badge-tag:focus {
-    color: #33691E !important; /* */
+    color: #ffffff !important; /* #33691E */
     background: transparent;
     background-color: transparent;
     text-decoration: none;
@@ -625,7 +631,7 @@ a.badge-tag {
   .content {
     margin-left: 20rem;
     margin-right: 2rem;
-    max-width: 64rem; } /* para expandir la escirtura */
+    max-width: 64rem; } /* para expandir la escritura */
   .layout-reverse .content {
     margin-left: 4rem;
     margin-right: 22rem; }
@@ -767,7 +773,6 @@ a.badge-tag {
    100% {background: #B71C1C;} /* red */
 }
 
-
 /*# sourceMappingURL=hyde-hyde.css.map */
 
 details {
@@ -785,6 +790,8 @@ summary:after {
   border-radius: 3px; 
   content: "+"; 
   color: #fff; 
+  -moz-animation:backgroundtransition 100s infinite; /* Firefox */
+  -webkit-animation:backgroundtransition 100s infinite; /* Safari and Chrome */
   float: left; 
   font-size: 1.5em; 
   font-weight: bold; 
@@ -799,7 +806,3 @@ details[open] summary:after {
   content: "-";
   background: #ffa500;
 }
-
-
-
-
