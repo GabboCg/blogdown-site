@@ -4,7 +4,29 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2019-08-12T14:15:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/teaching/business-intelligence-para-las-finanzas/</loc>
+    <lastmod>2019-08-12T14:15:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/teaching/business-intelligence-para-las-finanzas/</loc>
+    <lastmod>2019-08-12T14:14:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-08-12T14:14:19-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/teaching/</loc>
+    <lastmod>2019-08-12T14:15:37-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -84,12 +106,6 @@
   <url>
     <loc>/categories/rstat/</loc>
     <lastmod>2019-02-23T23:44:38-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/teaching/</loc>
-    <lastmod>2019-02-23T23:54:27-03:00</lastmod>
     <priority>0</priority>
   </url>
   

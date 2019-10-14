@@ -30,7 +30,7 @@ output:
 
 # Class 1: R and R Studio 
 
-# Class 2: 
+# Class 2:  
 
 <div class="btn-group">
 
