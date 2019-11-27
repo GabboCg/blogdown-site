@@ -1,5 +1,5 @@
 ---
-title: Business Intelligence para las Finanzas
+title: Business Intelligence for finance
 author: ''
 date: '2019-08-12'
 slug: business-intelligence-para-las-finanzas
@@ -11,14 +11,60 @@ type: post
 highlight: no
 ---
 
-**Insert Lead paragraph here.**
+```{r, echo=FALSE, eval=TRUE}
+library(fontawesome)
+```
 
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis. 
+# Apunte
 
-## Heading 2
+* `r fa("desktop", fill = "purple")` [Ver Posts](https://technotes.netlify.com/python/_site/)
 
-Sollicitudin ornare odio blandit aenean enim lacus accumsan elementum vestibulum porta mauris lorem, ullamcorper class fermentum sem hendrerit ante augue penatibus scelerisque felis leo proin,ad nascetur venenatis sodales dignissim viverra suspendisse turpis convallis condimentum sapien.
+# Slides
 
-### Heading 3
+# Ayudantías 
 
-At quisque litora ullamcorper maecenas ultricies ut dignissim luctus curabitur, cras congue eget primis aliquam fringilla nulla dictum posuere, vestibulum sit magnis nisl praesent eros ipsum nunc. Ligula lacus ipsum orci aenean integer pharetra habitasse interdum, porttitor etiam hac feugiat placerat morbi posuere turpis leo, quam at amet gravida commodo fringilla erat.
+| Nº  | Descripción                      |Enunciado                                                   |Python Script                       |R Script                              |
+|:---:|:---                              |:---:                                                       |:---:                               |:---:                                 |
+|1    |Introducción a Jupyter Notebook   |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A1.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|2    |Introducción a Numpy              |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A1.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|3    |Introducción a Pandas             |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A2.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|4    |Concatenar & Merge                |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A2.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|5    |Descargar Datos Financieros       |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A2.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|6    |Complejidad Computacional         |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A3.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|7    |Gradiente Descendiente            |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A4.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|8    |Regresión Lineal                  |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A4.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|9    |Regresión Logística               |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A4.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|10   |Regresión Polinomial              |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A5.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|11   |Modelos Regularizado              |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A5.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|12   |Modelos Multinomial               |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A6.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|13   |Support Vector Machines           |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A6.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|14   |Redes Neuronales Artificiales     |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A7.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|15   |Entropía & Ganancia de Información|[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A8.pdf)|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|16   |Árboles de Decisión               |[`r fa("file-pdf", fill = "red")`]()                        |[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|17   |Random Forest                     |[`r fa("file-pdf", fill = "red")`]()                        |[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+|18   |Introducción a Deep Learning      |[`r fa("file-pdf", fill = "red")`]()                        |[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+ 
+# Tareas 
+
+* Primavera 2019
+
+    | Nº  | Descripción                      |Enunciado                           |Python Script                       |R Script
+    |:---:|:---                              |:---:                               |:---:                               |:---:                                 |  
+    |1    |Introducción tidyquant            |[`r fa("file-pdf", fill = "red")`]()|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+    |2    |Retorno y Retorno Acumulado       |[`r fa("file-pdf", fill = "red")`]()|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+    
+# Midterm Exam 
+
+* Primavera 2019
+
+    | Nº  | Descripción                      |Enunciado                           |Python Script                       |R Script
+    |:---:|:---                              |:---:                               |:---:                               |:---:                                 |  
+    |1    |Introducción tidyquant            |[`r fa("file-pdf", fill = "red")`]()|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
+
+# Final Exam  
+
+* Primavera 2019
+
+    | Nº  | Descripción                      |Enunciado                           |Python Script                       |R Script
+    |:---:|:---                              |:---:                               |:---:                               |:---:                                 |  
+    |1    |Introducción tidyquant            |[`r fa("file-pdf", fill = "red")`]()|[`r fa("python", fill = "green")`]()|[`r fa("r-project", fill = "blue")`]()|
