@@ -4,54 +4,24 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/posts/the-yield-curve-s-track-record-is-impresive/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/ggplot2/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/tidyquant/</loc>
-    <lastmod>2019-11-26T23:05:00-03:00</lastmod>
+    <lastmod>2019-08-12T14:15:37-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/teaching/business-intelligence-para-las-finanzas/</loc>
     <lastmod>2019-08-12T14:15:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/teaching/business-intelligence-para-las-finanzas/</loc>
+    <lastmod>2019-08-12T14:14:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-08-12T14:14:19-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -66,7 +36,19 @@
   </url>
   
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2019-05-28T23:30:03-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/econometrics/</loc>
+    <lastmod>2019-05-28T23:30:03-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
     <lastmod>2019-05-28T23:30:03-04:00</lastmod>
     <priority>0</priority>
   </url>
@@ -80,6 +62,12 @@
   <url>
     <loc>/posts/robust-standard-errors-in-r/</loc>
     <lastmod>2019-05-28T23:30:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-05-28T23:30:03-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -135,6 +123,18 @@
   <url>
     <loc>/posts/economic-data-in-motion/</loc>
     <lastmod>2019-02-08T19:28:22-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2019-02-08T19:28:22-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tidyquant/</loc>
+    <lastmod>2019-02-08T19:28:22-03:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -210,6 +210,12 @@
   <url>
     <loc>/teaching/finanzas-i/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
