@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on </title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The yield curve&#39;s track record is impresive</title>
+      <link>/posts/the-yield-curve-s-track-record-is-impresive/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/the-yield-curve-s-track-record-is-impresive/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
+    </item>
+    
+    <item>
+      <title>R for those who want to rock in the free world ➡️ 💻 &#43; 🇺🇸</title>
+      <link>/teaching/introduction-to-r/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/introduction-to-r/</guid>
+      <description>It’s ok to lose to opponent. It’s never okay to lose to fear..— Nariyoshi Miyagi,  Karate Kid (1984) Prologue: The rules of the gameMarty: Hey, Doc, you better back up, we don’t have enough road to get up to 88.</description>
+    </item>
+    
+  </channel>
+</rss>
