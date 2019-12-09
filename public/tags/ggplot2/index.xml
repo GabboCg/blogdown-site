@@ -6,10 +6,20 @@
     <description>Recent content in ggplot2 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Value at Risk: ¿How VaR is plotted? (Ep. 3)</title>
+      <link>/posts/value-at-risk-how-var-is-plotted-ep-3/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/value-at-risk-how-var-is-plotted-ep-3/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
+    </item>
     
     <item>
       <title>The yield curve&#39;s track record is impresive</title>
@@ -45,7 +55,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/how-bbc-visualize-data/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;) imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;) imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15) g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;, position = &amp;quot;identity&amp;quot;, fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) + bbc_style() + scale_y_continuous(labels = scales::percent) + theme(axis.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;)imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;)imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15)g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,position = &amp;quot;identity&amp;quot;,fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) +bbc_style() +scale_y_continuous(labels = scales::percent) +theme(axis.</description>
     </item>
     
     <item>
@@ -64,7 +74,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
-      <description>Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
+      <description>Why this post?Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
 The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
 &amp;mdash; Dina D.</description>
     </item>

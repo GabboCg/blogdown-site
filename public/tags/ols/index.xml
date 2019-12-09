@@ -17,8 +17,8 @@
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/loops-using-r/</guid>
-      <description>Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.</description>
+      <description>IntroductionIntroductionthis post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
+if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;)set.seed(123)reps &amp;lt;- 10000betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &amp;lt;- 2beta1 &amp;lt;- 2.</description>
     </item>
     
   </channel>

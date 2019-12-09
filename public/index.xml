@@ -6,10 +6,48 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
+      <link>/about/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Can you hear me now?…Learning aprogramming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
+    </item>
+    
+    <item>
+      <title>Value at Risk: Parametric and Historical (Ep. 2)</title>
+      <link>/posts/value-at-risk-parametric-and-historical-ep-2/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/value-at-risk-parametric-and-historical-ep-2/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
+    </item>
+    
+    <item>
+      <title>Value at Risk: ¿How VaR is plotted? (Ep. 3)</title>
+      <link>/posts/value-at-risk-how-var-is-plotted-ep-3/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/value-at-risk-how-var-is-plotted-ep-3/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
+    </item>
+    
+    <item>
+      <title>Value at Risk: ¿What is VaR? (Ep. 1)</title>
+      <link>/posts/value-at-risk-what-is-var-ep-1/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/value-at-risk-what-is-var-ep-1/</guid>
+      <description>A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis \(\alpha\).</description>
+    </item>
     
     <item>
       <title>The yield curve&#39;s track record is impresive</title>
@@ -28,24 +66,6 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       
       <guid>/teaching/business-intelligence-para-las-finanzas/</guid>
       <description>ApunteVer PostsSlidesAyudantíasNºDescripciónEnunciadoPython ScriptR Script1Introducción a Jupyter Notebook2Introducción a Numpy3Introducción a Pandas4Concatenar &amp;amp; Merge5Descargar Datos Financieros6Complejidad Computacional7Gradiente Descendiente8Regresión Lineal9Regresión Logística10Regresión Polinomial11Modelos Regularizado12Modelos Multinomial13Support Vector Machines14Redes Neuronales Artificiales15Entropía &amp;amp; Ganancia de Información16Árboles de Decisión17Random Forest18Introducción a Deep LearningTareasPrimavera 2019</description>
-    </item>
-    
-    <item>
-      <title>Business Intelligence for finance</title>
-      <link>/teaching/business-intelligence-para-las-finanzas/</link>
-      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/business-intelligence-para-las-finanzas/</guid>
-      <description>ApunteVer PostsSlidesAyudantíasNºDescripciónEnunciadoPython ScriptR Script1Introducción a Jupyter Notebook2Introducción a Numpy3Introducción a Pandas4Concatenar &amp;amp; Merge5Descargar Datos Financieros6Complejidad Computacional7Gradiente Descendiente8Regresión Lineal9Regresión Logística10Regresión Polinomial11Modelos Regularizado12Modelos Multinomial13Support Vector Machines14Redes Neuronales Artificiales15Entropía &amp;amp; Ganancia de Información16Árboles de Decisión17Random Forest18Introducción a Deep LearningTareasPrimavera 2019</description>
-    </item>
-    
-    <item>
-      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
-      <link>/about/</link>
-      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Can you hear me now?…Learning a programming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
     </item>
     
     <item>
@@ -125,7 +145,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/how-bbc-visualize-data/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;) imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;) imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15) g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;, position = &amp;quot;identity&amp;quot;, fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) + bbc_style() + scale_y_continuous(labels = scales::percent) + theme(axis.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;)imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;)imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15)g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,position = &amp;quot;identity&amp;quot;,fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) +bbc_style() +scale_y_continuous(labels = scales::percent) +theme(axis.</description>
     </item>
     
     <item>
@@ -183,7 +203,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/technical-analysis-with-plotly/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;plotly&amp;quot;, &amp;quot;quantmod&amp;quot;) get data GSPC &amp;lt;- getSymbols(&amp;quot;^GSPC&amp;quot;,src=&amp;#39;yahoo&amp;#39;,auto.assign = FALSE, from = &amp;quot;2007-01-01&amp;quot;) df &amp;lt;- data.frame(Date=index(GSPC),coredata(GSPC))  create Bollinger Bands bbands &amp;lt;- BBands(GSPC[,c(&amp;quot;GSPC.High&amp;quot;,&amp;quot;GSPC.Low&amp;quot;,&amp;quot;GSPC.Close&amp;quot;)])  join and subset data df &amp;lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &amp;gt;= &amp;quot;2015-01-01&amp;quot;)  colors column for increasing and decreasing for (i in 1:length(df[,1])) { if (df$GSPC.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;plotly&amp;quot;, &amp;quot;quantmod&amp;quot;)get dataGSPC &amp;lt;- getSymbols(&amp;quot;^GSPC&amp;quot;,src=&amp;#39;yahoo&amp;#39;,auto.assign = FALSE, from = &amp;quot;2007-01-01&amp;quot;)df &amp;lt;- data.frame(Date=index(GSPC),coredata(GSPC))create Bollinger Bandsbbands &amp;lt;- BBands(GSPC[,c(&amp;quot;GSPC.High&amp;quot;,&amp;quot;GSPC.Low&amp;quot;,&amp;quot;GSPC.Close&amp;quot;)])join and subset datadf &amp;lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &amp;gt;= &amp;quot;2015-01-01&amp;quot;)colors column for increasing and decreasingfor (i in 1:length(df[,1])) {if (df$GSPC.</description>
     </item>
     
     <item>
@@ -219,7 +239,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
-      <description>Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
+      <description>Why this post?Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
 The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
 &amp;mdash; Dina D.</description>
     </item>
@@ -230,8 +250,8 @@ The unadjusted gender wage gap for full time workers has been falling significan
       <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/posts/loops-using-r/</guid>
-      <description>Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.</description>
+      <description>IntroductionIntroductionthis post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
+if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;)set.seed(123)reps &amp;lt;- 10000betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &amp;lt;- 2beta1 &amp;lt;- 2.</description>
     </item>
     
   </channel>

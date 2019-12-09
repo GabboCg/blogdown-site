@@ -14,4 +14,9 @@
   {{ partial "page-single/post-navigation.html" . }}
   {{ partial "page-single/post-related.html" . }}
   {{ partial "page-single/post-comment.html" . }}
+  
+  <!-- Katex -->
+  {{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+  {{ end }}
 </article>

@@ -1,229 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title></title>
-    <link>/</link>
-    <description>Recent content on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 26 Nov 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>The yield curve&#39;s track record is impresive</title>
-      <link>/posts/the-yield-curve-s-track-record-is-impresive/</link>
-      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/the-yield-curve-s-track-record-is-impresive/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Business Intelligence for finance</title>
-      <link>/teaching/business-intelligence-para-las-finanzas/</link>
-      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/business-intelligence-para-las-finanzas/</guid>
-      <description>ApunteVer PostsSlidesAyudantíasNºDescripciónEnunciadoPython ScriptR Script1Introducción a Jupyter Notebook2Introducción a Numpy3Introducción a Pandas4Concatenar &amp;amp; Merge5Descargar Datos Financieros6Complejidad Computacional7Gradiente Descendiente8Regresión Lineal9Regresión Logística10Regresión Polinomial11Modelos Regularizado12Modelos Multinomial13Support Vector Machines14Redes Neuronales Artificiales15Entropía &amp;amp; Ganancia de Información16Árboles de Decisión17Random Forest18Introducción a Deep LearningTareasPrimavera 2019</description>
-    </item>
-    
-    <item>
-      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
-      <link>/about/</link>
-      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Can you hear me now?…Learning a programming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
-    </item>
-    
-    <item>
-      <title>Robust Standard Errors in R</title>
-      <link>/posts/robust-standard-errors-in-r/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/robust-standard-errors-in-r/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Install R in Linux with OpenBLAS</title>
-      <link>/posts/install-r-in-linux-with-openblas/</link>
-      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/install-r-in-linux-with-openblas/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Getting started with parallelism </title>
-      <link>/posts/getting-started-with-parallelism/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/getting-started-with-parallelism/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Replicate research studies for knowledge development</title>
-      <link>/teaching/replicate-research-studies-for-knowledge-development/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/replicate-research-studies-for-knowledge-development/</guid>
-      <description>Forecasting stock returns Forecasting stock returns (Rapach and Zhou, 2013)
- Download data.xlsx
- Monthly U.S. equity premium out-of-sample forecasting results based on individual economic variables with unrestricted and Predictive regression forecasts with Campbell and Thompson (2008).
- Download R code.xlsx  View post
-  International Stock-Return Predictability (Rapach, Strauss and Zhou, 2013)</description>
-    </item>
-    
-    <item>
-      <title>The zen diaries of high performance computing</title>
-      <link>/teaching/the-zen-diaries-of-high-performance-computing/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/the-zen-diaries-of-high-performance-computing/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Economic data in motion</title>
-      <link>/posts/economic-data-in-motion/</link>
-      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/economic-data-in-motion/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;) tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;, &amp;quot;LRHUTTTTDEM156S&amp;quot;, &amp;quot;LRHUTTTTUSM156S&amp;quot;, &amp;quot;LRHUTTTTJPM156S&amp;quot;) countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;) unemployment_lst &amp;lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i], get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2000-01-01&amp;quot;, to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &amp;lt;- do.</description>
-    </item>
-    
-    <item>
-      <title>Road to oscars 2019</title>
-      <link>/posts/road-to-oscars-2019/</link>
-      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/road-to-oscars-2019/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.</description>
-    </item>
-    
-    <item>
-      <title>How BBC visualize data?</title>
-      <link>/posts/how-bbc-visualize-data/</link>
-      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/how-bbc-visualize-data/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;) imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;) imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15) g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;, position = &amp;quot;identity&amp;quot;, fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) + bbc_style() + scale_y_continuous(labels = scales::percent) + theme(axis.</description>
-    </item>
-    
-    <item>
-      <title>Make your own kind of music</title>
-      <link>/posts/make-your-own-kind-of-music/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/make-your-own-kind-of-music/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Data Vis: Teoría &amp; Practica </title>
-      <link>/teaching/data-vis-teor%C3%ADa-practica/</link>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/data-vis-teor%C3%ADa-practica/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>FInanzas reproducibles con R</title>
-      <link>/teaching/finanzas-reproducibles-con-r/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/finanzas-reproducibles-con-r/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Good Practices in R</title>
-      <link>/posts/good-practice-in-r/</link>
-      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/good-practice-in-r/</guid>
-      <description>Insert Lead paragraph here.</description>
-    </item>
-    
-    <item>
-      <title>Anscombe: a good example of why visualization is important</title>
-      <link>/posts/anscombe-a-good-example-of-why-visualization-is-important/</link>
-      <pubDate>Fri, 16 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/anscombe-a-good-example-of-why-visualization-is-important/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>Technical Analysis With Plotly</title>
-      <link>/posts/technical-analysis-with-plotly/</link>
-      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/technical-analysis-with-plotly/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) p_load(&amp;quot;plotly&amp;quot;, &amp;quot;quantmod&amp;quot;) get data GSPC &amp;lt;- getSymbols(&amp;quot;^GSPC&amp;quot;,src=&amp;#39;yahoo&amp;#39;,auto.assign = FALSE, from = &amp;quot;2007-01-01&amp;quot;) df &amp;lt;- data.frame(Date=index(GSPC),coredata(GSPC))  create Bollinger Bands bbands &amp;lt;- BBands(GSPC[,c(&amp;quot;GSPC.High&amp;quot;,&amp;quot;GSPC.Low&amp;quot;,&amp;quot;GSPC.Close&amp;quot;)])  join and subset data df &amp;lt;- subset(cbind(df, data.frame(bbands[,1:3])), Date &amp;gt;= &amp;quot;2015-01-01&amp;quot;)  colors column for increasing and decreasing for (i in 1:length(df[,1])) { if (df$GSPC.</description>
-    </item>
-    
-    <item>
-      <title>Finanzas I ➡️  📈 &#43; 🇪🇸</title>
-      <link>/teaching/finanzas-i/</link>
-      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/finanzas-i/</guid>
-      <description>Material de clases Apunte: Introducción a las finanzas quantitativas Este apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande.</description>
-    </item>
-    
-    <item>
-      <title>R for those who want to rock in the free world ➡️ 💻 &#43; 🇺🇸</title>
-      <link>/teaching/introduction-to-r/</link>
-      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/introduction-to-r/</guid>
-      <description>It’s ok to lose to opponent. It’s never okay to lose to fear..— Nariyoshi Miyagi,  Karate Kid (1984) Prologue: The rules of the gameMarty: Hey, Doc, you better back up, we don’t have enough road to get up to 88.</description>
-    </item>
-    
-    <item>
-      <title>R for business and economics ➡️ 👽 &#43; 🇪🇸</title>
-      <link>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</link>
-      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Descripción CursoEste curso presenta una introducción a R, usando datos estructurados y noestructurados, relacionados a economía, finanzas y marketing. Entre los tópicosa discutir se encuentran: importación y exportación de datos en diferentesformatos, extracción de datos de sitios web, visualización de datos,regresión lineal, simulación de Monte Carlo y construcción de aplicaciones webutilizando Shiny.</description>
-    </item>
-    
-    <item>
-      <title>ggplot2 in a nutshell</title>
-      <link>/posts/one-of-the-new-feature-of-ggplot2-3-0/</link>
-      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/one-of-the-new-feature-of-ggplot2-3-0/</guid>
-      <description>Why this post? Some time ago Dina Pomeranz posted on twitter a brief article about how the gender gaps has been falling in most countries, if you don’t believe me:
-The unadjusted gender wage gap for full time workers has been falling significantly in most countries: https://t.co/k7olIo40ZA pic.twitter.com/uknetWXajw
-&amp;mdash; Dina D.</description>
-    </item>
-    
-    <item>
-      <title>Functional programming for mortals </title>
-      <link>/posts/loops-using-r/</link>
-      <pubDate>Sun, 24 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/loops-using-r/</guid>
-      <description>Introduction   Introduction this post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;) set.seed(123) reps &amp;lt;- 10000 betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2) beta0 &amp;lt;- 2 beta1 &amp;lt;- 2.</description>
-    </item>
-    
-  </channel>
-</rss>

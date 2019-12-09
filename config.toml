@@ -26,7 +26,11 @@ summarylength = 50
     highlightjsLang = ["r", "yaml"]
     
     themeColor = "theme-base-0h" 
-
+    
+    postNavigation = false
+    
+    math = true 
+    
 ## Social Accounts
 [params.social]
     github = "GaboCg"
