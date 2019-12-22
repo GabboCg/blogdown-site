@@ -30,7 +30,7 @@ Pr( -R_{PF} > VaR) &= p
 \end{aligned}
 $$
 
- 
+  
 $$
 \begin{aligned}
 Pr(R_{PF,t+1} < -VaR^{p}_{t+1}) &= p \quad \Leftrightarrow  \\
