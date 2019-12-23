@@ -56,8 +56,13 @@ summarylength = 50
 [[menu.main]]
     name = "Teaching"
     identifier = "teaching"
-    weight = 400
+    weight = 300
     url = "/teaching/"
+[[menu.main]]    
+    name = "Packages"
+    identifier = "package"
+    weight = 400
+    url = "/pkgdown/"
 [[menu.main]]
     name = "Shiny Apps"
     identifier = "shiny"
