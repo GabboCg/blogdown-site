@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Packages on </title>
-    <link>/packages/</link>
+    <link>/package/</link>
     <description>Recent content in Packages on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 23 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/packages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/package/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R Packages</title>
-      <link>/packages/r-packages/</link>
+      <link>/package/r-packages/</link>
       <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/packages/r-packages/</guid>
+      <guid>/package/r-packages/</guid>
       <description> fintorwork: Financial Predictors Framework  </description>
     </item>
     

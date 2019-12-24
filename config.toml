@@ -62,7 +62,7 @@ summarylength = 50
     name = "Packages"
     identifier = "package"
     weight = 400
-    url = "/pkgdown/"
+    url = "/packages/"
 [[menu.main]]
     name = "Shiny Apps"
     identifier = "shiny"
