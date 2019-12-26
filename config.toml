@@ -4,7 +4,7 @@ languageCode = "en"
 
 theme = "hyde-hyde"
 
-## Hugo Built-in Features
+## Hugo Built-in Features 
 disqusShortname = "gcabrerag-rbind-io"
 googleAnalytics = "UA-124514267-1"
 # enableRobotsTXT = true
