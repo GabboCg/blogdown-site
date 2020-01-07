@@ -1,0 +1,12 @@
+---
+title: Introduction to econometrics
+author: 'Gabriel Cabrera '
+date: '2020-01-07'
+slug: introduction-to-econometrics
+categories: []
+tags: []
+lastmod: '2020-01-07T11:33:00-03:00'
+layout: post
+type: post
+highlight: no
+---
