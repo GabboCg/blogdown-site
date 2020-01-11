@@ -11,6 +11,18 @@ type: post
 highlight: no
 ---
 
+```{r, echo=FALSE, eval=TRUE}
+library(fontawesome)
+```
+
 ## Universidad de Chile
+
+| Nº  | Descripción|Enunciado                                                   |R Script                              |
+|:---:|:---        |:---:                                                       |:---:                                 |
+|1    |Ayudantía 1 |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A1.pdf)|[`r fa("r-project", fill = "blue")`]()|
+|2    |Ayudantía 2 |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A1.pdf)|[`r fa("r-project", fill = "blue")`]()|
+|3    |Ayudantía 3 |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A1.pdf)|[`r fa("r-project", fill = "blue")`]()|
+|4    |Ayudantía 4 |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A1.pdf)|[`r fa("r-project", fill = "blue")`]()|
+|5    |Ayudantía 5 |[`r fa("file-pdf", fill = "red")`](/pdf/bi_4_finance/A1.pdf)|[`r fa("r-project", fill = "blue")`]()|
 
 ## Universidad Diego Portales 
