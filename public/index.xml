@@ -95,7 +95,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/teaching/business-intelligence-para-las-finanzas/</guid>
-      <description>ApunteVer PostsSlidesAyudantíasNºDescripciónEnunciadoPython ScriptR Script1Introducción a Jupyter Notebook2Introducción a Numpy3Introducción a Pandas4Concatenar &amp;amp; Merge5Descargar Datos Financieros6Complejidad Computacional7Gradiente Descendiente8Regresión Lineal9Regresión Logística10Regresión Polinomial11Modelos Regularizado12Modelos Multinomial13Support Vector Machines14Redes Neuronales Artificiales15Entropía &amp;amp; Ganancia de Información16Árboles de Decisión17Random Forest18Introducción a Deep LearningTareasPrimavera 2019</description>
+      <description>Apunte   Ver Posts   Slides  Ayudantías   Nº Descripción Enunciado Python Script R Script    1 Introducción a Jupyter Notebook     2 Introducción a Numpy     3 Introducción a Pandas     4 Concatenar &amp;amp; Merge     5 Descargar Datos Financieros     6 Complejidad Computacional     7 Gradiente Descendiente     8 Regresión Lineal     9 Regresión Logística     10 Regresión Polinomial     11 Modelos Regularizado     12 Modelos Multinomial     13 Support Vector Machines     14 Redes Neuronales Artificiales     15 Entropía &amp;amp; Ganancia de Información     16 Árboles de Decisión     17 Random Forest     18 Introducción a Deep Learning        Tareas  Primavera 2019</description>
     </item>
     
     <item>
@@ -237,7 +237,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     </item>
     
     <item>
-      <title>Finanzas I ➡️  📈 &#43; 🇪🇸</title>
+      <title>Finance I</title>
       <link>/teaching/finanzas-i/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
@@ -255,12 +255,12 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     </item>
     
     <item>
-      <title>R for business and economics ➡️ 👽 &#43; 🇪🇸</title>
+      <title>R for business and economics</title>
       <link>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Descripción CursoEste curso presenta una introducción a R, usando datos estructurados y noestructurados, relacionados a economía, finanzas y marketing. Entre los tópicosa discutir se encuentran: importación y exportación de datos en diferentesformatos, extracción de datos de sitios web, visualización de datos,regresión lineal, simulación de Monte Carlo y construcción de aplicaciones webutilizando Shiny.</description>
+      <description>Descripción Curso Este curso presenta una introducción a R, usando datos estructurados y no estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos a discutir se encuentran: importación y exportación de datos en diferentes formatos, extracción de datos de sitios web, visualización de datos, regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web utilizando Shiny.</description>
     </item>
     
     <item>

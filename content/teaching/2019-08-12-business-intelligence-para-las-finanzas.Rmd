@@ -1,6 +1,5 @@
 ---
 title: Business Intelligence for finance
-author: ''
 date: '2019-08-12'
 slug: business-intelligence-para-las-finanzas
 categories: []

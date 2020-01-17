@@ -1,5 +1,5 @@
 ---
-title:  Finanzas I `r emo::ji("arrow_right")`  `r emo::ji("chart_with_upwards_trend")` + `r emo::ji("es")`
+title:  Finance I 
 author: 'Gabriel Cabrera '
 date: '2018-07-26'
 slug: finanzas-i
