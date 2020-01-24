@@ -1,12 +1,10 @@
 ---
-title:  Finance I 
+title:  Data Science Applied to Finance
 author: 'Gabriel Cabrera '
 date: '2018-07-26'
 slug: finanzas-i
-categories:
-  - Finance
-tags:
-  - R
+categories: []
+tags: []
 output:
   blogdown::html_page:
     toc: false
@@ -30,15 +28,21 @@ Este apunte es una introducción a las finanzas quantitativas (*data science app
 
 <br>
 
+## Notas de clases
+
+* Teoría de Portafolios
+
+<br>
+
 ## Ayudantías 
 
 <p>
 
-|Nº   |Descripción                  | Presentacion                                                    |R Script                                                       |Datos|
-|:---:|:---                         |:---:                                                            |:---:                                                          |:---:|
-|1    |Introducción a R             | [`r fa("file-powerpoint", fill = "red")`](/pdf/presentacion.pdf)| [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
-|2    |Introducción a Quantmod      | [`r fa("file-powerpoint", fill = "red")`](/pdf/presentation1.pdf)| [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
-|3    |Teoría de Portafolio         | [`r fa("file-powerpoint", fill = "red")`](/pdf/presentation2.pdf)| [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
+|Nº   |Descripción                  | Presentacion                                                         |R Script                                                       |Datos|
+|:---:|:---                         |:---:                                                                 |:---:                                                          |:---:|
+|1    |Introducción a R             | [`r fa("file-powerpoint", fill = "red")`](/pdf/presentacion.pdf)     | [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
+|2    |Introducción a Quantmod      | [`r fa("file-powerpoint", fill = "red")`](/pdf/presentation1.pdf)    | [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
+|3    |Teoría de Portafolio         | [`r fa("file-powerpoint", fill = "red")`](/pdf/presentation2.pdf)    | [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
 |4    |Valuación de Bonos           | [`r fa("file-powerpoint", fill = "red")`](/pdf/Bond_presentation.pdf)| [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
 |5    |Derivados, opciones & futuros| [`r fa("file-powerpoint", fill = "red")`](/pdf/Options_Derivatives_and_Futures.pdf)| [`r fa("r-project", fill = "steelblue")`](/html/HWS1_FIN.html)| |
 

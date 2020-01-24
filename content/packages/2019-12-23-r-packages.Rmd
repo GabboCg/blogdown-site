@@ -11,4 +11,21 @@ type: post
 highlight: no
 ---
 
+
+## Personal R Packages
+
 1. fintorwork: Financial Predictors Framework
+
+2. allocation:
+
+3. byakugan:
+
+4. organizeR:
+
+5. hokage (火影) :
+
+    a. genin (下忍)
+    
+    b. chūnin (中忍)
+    
+    c. jōnin (上忍)

@@ -1,0 +1,14 @@
+---
+title: 'fintorwork: Financial Predictor Framework' 
+author: 'Gabriel Cabrera'
+date: '2020-01-23'
+slug: fintorwork
+categories: []
+tags: []
+lastmod: '2020-01-23T23:38:13-03:00'
+layout: post
+type: post
+highlight: no
+---
+
+## Summary

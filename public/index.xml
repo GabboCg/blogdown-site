@@ -6,10 +6,58 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>allocation: Certainty Equivalent Returns &amp; Sharpe Ratio Testings</title>
+      <link>/packages/allocation/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/packages/allocation/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
+    </item>
+    
+    <item>
+      <title>byakugan (白眼): Dōjutsu for Manipulate Xaringan&#39;s css</title>
+      <link>/packages/byakugan/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/packages/byakugan/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
+    </item>
+    
+    <item>
+      <title>fintorwork: Financial Predictor Framework</title>
+      <link>/packages/fintorwork/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/packages/fintorwork/</guid>
+      <description>Summary</description>
+    </item>
+    
+    <item>
+      <title>hokage (火影): Teaching Assistant Templates</title>
+      <link>/packages/hokage/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/packages/hokage/</guid>
+      <description>genin (下忍)chūnin (中忍)jōnin (上忍)</description>
+    </item>
+    
+    <item>
+      <title>organizeR: R Projects Organizer</title>
+      <link>/packages/organizer/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/packages/organizer/</guid>
+      <description>Insert Lead paragraph here.
+A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
+    </item>
     
     <item>
       <title>Furious Five: Random Assignment (Ep. 1)</title>
@@ -36,7 +84,15 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/packages/r-packages/</guid>
-      <description> fintorwork: Financial Predictors Framework  </description>
+      <description>Personal R Packagesfintorwork: Financial Predictors Framework
+allocation:
+byakugan:
+organizeR:
+hokage (火影) :
+genin (下忍)
+chūnin (中忍)
+jōnin (上忍)
+</description>
     </item>
     
     <item>
@@ -237,12 +293,12 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     </item>
     
     <item>
-      <title>Finance I</title>
+      <title>Data Science Applied to Finance</title>
       <link>/teaching/finanzas-i/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/finanzas-i/</guid>
-      <description>Material de clases Apunte: Introducción a las finanzas quantitativas Este apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande.</description>
+      <description>Material de clasesApunte: Introducción a las finanzas quantitativasEste apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande.</description>
     </item>
     
     <item>

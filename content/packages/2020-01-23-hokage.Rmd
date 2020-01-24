@@ -1,0 +1,18 @@
+---
+title: 'hokage (火影): Teaching Assistant Templates'
+author: 'Gabriel Cabrera'
+date: '2020-01-23'
+slug: hokage
+categories: []
+tags: []
+lastmod: '2020-01-23T23:39:36-03:00'
+layout: post
+type: post
+highlight: no
+---
+
+## genin (下忍)
+
+## chūnin (中忍)
+    
+## jōnin (上忍)
