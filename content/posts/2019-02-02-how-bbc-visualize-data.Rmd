@@ -28,69 +28,92 @@ imdb_tbl <- read.csv("https://raw.githubusercontent.com/TheEconomist/graphic-det
 ```
 
 ```{r, message=FALSE, warning=FALSE}
-imdb_tbl_1 <- imdb_tbl %>% 
-  group_by(titleId) %>% 
-  mutate(number_season = n()) %>% 
-  filter(row_number(titleId) == 1) %>% 
-  select(titleId, title, number_season) %>% 
-  arrange(desc(number_season)) %>% 
-  ungroup() %>% 
-  group_by(number_season) %>% 
-  mutate(n = n()) %>% 
-  filter(row_number() == 1) %>% 
-  ungroup() %>% 
-  mutate(percent = n/sum(n), season = paste0("S", number_season)) %>% 
-  arrange(desc(percent)) %>% 
+imdb_tbl_1 <- imdb_tbl %>%
+  group_by(titleId) %>%
+  mutate(number_season = n()) %>%
+  filter(row_number(titleId) == 1) %>%
+  select(titleId, title, number_season) %>%
+  arrange(desc(number_season)) %>%
+  ungroup() %>%
+  group_by(number_season) %>%
+  mutate(n = n()) %>%
+  filter(row_number() == 1) %>%
+  ungroup() %>%
+  mutate(percent = n / sum(n),
+         season = paste0("S", number_season)) %>%
+  arrange(desc(percent)) %>%
   filter(n >= 15)
 ```
 
 ```{r, fig.align='center', fig.height= 6, fig.width= 12}
-g <- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + 
-  geom_bar(colour = "black", stat = "identity",
-           position = "identity",
-           fill = "orange") + 
-  geom_hline(yintercept = 0, size = 1, colour="#333333") +
+g <- ggplot(imdb_tbl_1, aes(x = season, y = percent)) +
+  geom_bar(
+    colour = "black",
+    stat = "identity",
+    position = "identity",
+    fill = "orange"
+  ) +
+  geom_hline(yintercept = 0,
+             size = 1,
+             colour = "#333333") +
   bbc_style() +
   scale_y_continuous(labels = scales::percent) +
-  theme(axis.ticks.x = element_line(colour = "#333333"), 
-        axis.ticks.length =  unit(0.26, "cm")) +
+  theme(
+    axis.ticks.x = element_line(colour = "#333333"),
+    axis.ticks.length =  unit(0.26, "cm")
+  ) +
   labs(title = "Tv's Shows",
        subtitle = "Porcentajes de programas televisivos por temporadas")
 g
 ```
 
 ```{r, fig.align='center', fig.height= 6, fig.width= 12}
-imdb_x_files_tbl <- imdb_tbl %>% 
-  filter(title == "The X-Files") %>% 
-  select(title, seasonNumber, av_rating) %>% 
+imdb_x_files_tbl <- imdb_tbl %>%
+  filter(title == "The X-Files") %>%
+  select(title, seasonNumber, av_rating) %>%
   mutate(season = paste0("S", seasonNumber)) %>%
   arrange(seasonNumber) 
 
-imdb_x_files_tbl$season <- factor(imdb_x_files_tbl$season, 
-  levels = imdb_x_files_tbl$season[order(imdb_x_files_tbl$seasonNumber)])
+imdb_x_files_tbl$season <- factor(imdb_x_files_tbl$season,
+                                  levels = imdb_x_files_tbl$season[order(imdb_x_files_tbl$seasonNumber)])
 
-imdb_x_files_tbl %>% 
-  ggplot(aes(x = season, y = av_rating)) +  geom_bar(colour = "black",
-                                                     stat = "identity",
-                                                     position = "identity",
-                                                     fill = "orange") + 
-  bbc_style() + geom_hline(yintercept = 0, size = 1, colour="#333333") +
-  geom_label(aes(x = 9, y = 6.5, label = "Mulder leaves\nthe X-Files"), 
-             hjust = 0, 
-             vjust = 0.5, 
-             lineheight = 0.8,
-             colour = "#555555", 
-             fill = "white", 
-             label.size = NA, 
-             family = "Helvetica", 
-             size = 6) +
-  geom_curve(aes(x = 9, y = 6.5, xend = 8, yend = 7.9099), 
-                             colour = "#555555", 
-                             size=0.5, 
-                             curvature = -0.2,
-                             arrow = arrow(length = unit(0.03, "npc"))) + 
-  theme(axis.ticks.x = element_line(colour = "#333333"), 
-        axis.ticks.length =  unit(0.26, "cm")) + 
+imdb_x_files_tbl %>%
+  ggplot(aes(x = season, y = av_rating)) +  geom_bar(
+    colour = "black",
+    stat = "identity",
+    position = "identity", 
+    fill = "orange" 
+  ) +
+  bbc_style() + geom_hline(yintercept = 0,
+                           size = 1,
+                           colour = "#333333") +
+  geom_label(
+    aes(x = 9, y = 6.5, label = "Mulder leaves\nthe X-Files"),
+    hjust = 0,
+    vjust = 0.5,
+    lineheight = 0.8,
+    colour = "#555555",
+    fill = "white",
+    label.size = NA,
+    family = "Helvetica",
+    size = 6
+  ) +
+  geom_curve(
+    aes(
+      x = 9,
+      y = 6.5,
+      xend = 8,
+      yend = 7.9099
+    ),
+    colour = "#555555",
+    size = 0.5,
+    curvature = -0.2,
+    arrow = arrow(length = unit(0.03, "npc"))
+  ) +
+  theme(
+    axis.ticks.x = element_line(colour = "#333333"),
+    axis.ticks.length =  unit(0.26, "cm")
+  ) +
   labs(title = "Average Reating of The X-Files",
        subtitle = "From season one to season ten")
 ```

@@ -6,10 +6,19 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
+      <link>/about/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Can you hear me now?…Learning aprogramming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
+    </item>
     
     <item>
       <title>allocation: Certainty Equivalent Returns &amp; Sharpe Ratio Testings</title>
@@ -93,15 +102,6 @@ genin (下忍)
 chūnin (中忍)
 jōnin (上忍)
 </description>
-    </item>
-    
-    <item>
-      <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
-      <link>/about/</link>
-      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Can you hear me now?…Learning aprogramming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
     </item>
     
     <item>
@@ -213,7 +213,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/economic-data-in-motion/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;) ## Loading required package: pacman p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;) tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;, &amp;quot;LRHUTTTTDEM156S&amp;quot;, &amp;quot;LRHUTTTTUSM156S&amp;quot;, &amp;quot;LRHUTTTTJPM156S&amp;quot;) countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;) unemployment_lst &amp;lt;- list() for(i in seq_along(tickers)){ unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i], get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2000-01-01&amp;quot;, to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;% mutate(symbol = countries_name[i]) } unemployment_tbl &amp;lt;- do.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;)tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;,&amp;quot;LRHUTTTTDEM156S&amp;quot;,&amp;quot;LRHUTTTTUSM156S&amp;quot;,&amp;quot;LRHUTTTTJPM156S&amp;quot;)countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;)unemployment_lst &amp;lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i],get = &amp;quot;economic.data&amp;quot;,from = &amp;quot;2000-01-01&amp;quot;,to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;%mutate(symbol = countries_name[i])}unemployment_tbl &amp;lt;- do.</description>
     </item>
     
     <item>
@@ -231,7 +231,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/how-bbc-visualize-data/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;)imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;)imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;% group_by(titleId) %&amp;gt;% mutate(number_season = n()) %&amp;gt;% filter(row_number(titleId) == 1) %&amp;gt;% select(titleId, title, number_season) %&amp;gt;% arrange(desc(number_season)) %&amp;gt;% ungroup() %&amp;gt;% group_by(number_season) %&amp;gt;% mutate(n = n()) %&amp;gt;% filter(row_number() == 1) %&amp;gt;% ungroup() %&amp;gt;% mutate(percent = n/sum(n), season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;% arrange(desc(percent)) %&amp;gt;% filter(n &amp;gt;= 15)g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + geom_bar(colour = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,position = &amp;quot;identity&amp;quot;,fill = &amp;quot;orange&amp;quot;) + geom_hline(yintercept = 0, size = 1, colour=&amp;quot;#333333&amp;quot;) +bbc_style() +scale_y_continuous(labels = scales::percent) +theme(axis.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;viridis&amp;quot;, &amp;quot;wesanderson&amp;quot;)imdb_tbl &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&amp;quot;)imdb_tbl_1 &amp;lt;- imdb_tbl %&amp;gt;%group_by(titleId) %&amp;gt;%mutate(number_season = n()) %&amp;gt;%filter(row_number(titleId) == 1) %&amp;gt;%select(titleId, title, number_season) %&amp;gt;%arrange(desc(number_season)) %&amp;gt;%ungroup() %&amp;gt;%group_by(number_season) %&amp;gt;%mutate(n = n()) %&amp;gt;%filter(row_number() == 1) %&amp;gt;%ungroup() %&amp;gt;%mutate(percent = n / sum(n),season = paste0(&amp;quot;S&amp;quot;, number_season)) %&amp;gt;%arrange(desc(percent)) %&amp;gt;%filter(n &amp;gt;= 15)g &amp;lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) +geom_bar(colour = &amp;quot;black&amp;quot;,stat = &amp;quot;identity&amp;quot;,position = &amp;quot;identity&amp;quot;,fill = &amp;quot;orange&amp;quot;) +geom_hline(yintercept = 0,size = 1,colour = &amp;quot;#333333&amp;quot;) +bbc_style() +scale_y_continuous(labels = scales::percent) +theme(axis.</description>
     </item>
     
     <item>
@@ -307,7 +307,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/introduction-to-r/</guid>
-      <description>It’s ok to lose to opponent. It’s never okay to lose to fear.. — Nariyoshi Miyagi,  Karate Kid (1984)    Prologue: The rules of the game   Marty: Hey, Doc, you better back up, we don’t have enough road to get up to 88.</description>
+      <description>It’s ok to lose to opponent. It’s never okay to lose to fear..— Nariyoshi Miyagi,  Karate Kid (1984) Prologue: The rules of the gameMarty: Hey, Doc, you better back up, we don’t have enough road to get up to 88.</description>
     </item>
     
     <item>
@@ -316,7 +316,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Descripción Curso Este curso presenta una introducción a R, usando datos estructurados y no estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos a discutir se encuentran: importación y exportación de datos en diferentes formatos, extracción de datos de sitios web, visualización de datos, regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web utilizando Shiny.</description>
+      <description>Descripción CursoEste curso presenta una introducción a R, usando datos estructurados y noestructurados, relacionados a economía, finanzas y marketing. Entre los tópicosa discutir se encuentran: importación y exportación de datos en diferentesformatos, extracción de datos de sitios web, visualización de datos,regresión lineal, simulación de Monte Carlo y construcción de aplicaciones webutilizando Shiny.</description>
     </item>
     
     <item>

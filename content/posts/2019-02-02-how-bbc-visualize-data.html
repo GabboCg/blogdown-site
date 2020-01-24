@@ -19,29 +19,37 @@ highlight: no
 <pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)
 p_load(&quot;tidyverse&quot;, &quot;bbplot&quot;, &quot;readxl&quot;, &quot;viridis&quot;, &quot;wesanderson&quot;)</code></pre>
 <pre class="r"><code>imdb_tbl &lt;- read.csv(&quot;https://raw.githubusercontent.com/TheEconomist/graphic-detail-data/master/data/2018-11-24_tv-ratings/IMDb_Economist_tv_ratings.csv&quot;)</code></pre>
-<pre class="r"><code>imdb_tbl_1 &lt;- imdb_tbl %&gt;% 
-  group_by(titleId) %&gt;% 
-  mutate(number_season = n()) %&gt;% 
-  filter(row_number(titleId) == 1) %&gt;% 
-  select(titleId, title, number_season) %&gt;% 
-  arrange(desc(number_season)) %&gt;% 
-  ungroup() %&gt;% 
-  group_by(number_season) %&gt;% 
-  mutate(n = n()) %&gt;% 
-  filter(row_number() == 1) %&gt;% 
-  ungroup() %&gt;% 
-  mutate(percent = n/sum(n), season = paste0(&quot;S&quot;, number_season)) %&gt;% 
-  arrange(desc(percent)) %&gt;% 
+<pre class="r"><code>imdb_tbl_1 &lt;- imdb_tbl %&gt;%
+  group_by(titleId) %&gt;%
+  mutate(number_season = n()) %&gt;%
+  filter(row_number(titleId) == 1) %&gt;%
+  select(titleId, title, number_season) %&gt;%
+  arrange(desc(number_season)) %&gt;%
+  ungroup() %&gt;%
+  group_by(number_season) %&gt;%
+  mutate(n = n()) %&gt;%
+  filter(row_number() == 1) %&gt;%
+  ungroup() %&gt;%
+  mutate(percent = n / sum(n),
+         season = paste0(&quot;S&quot;, number_season)) %&gt;%
+  arrange(desc(percent)) %&gt;%
   filter(n &gt;= 15)</code></pre>
-<pre class="r"><code>g &lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) + 
-  geom_bar(colour = &quot;black&quot;, stat = &quot;identity&quot;,
-           position = &quot;identity&quot;,
-           fill = &quot;orange&quot;) + 
-  geom_hline(yintercept = 0, size = 1, colour=&quot;#333333&quot;) +
+<pre class="r"><code>g &lt;- ggplot(imdb_tbl_1, aes(x = season, y = percent)) +
+  geom_bar(
+    colour = &quot;black&quot;,
+    stat = &quot;identity&quot;,
+    position = &quot;identity&quot;,
+    fill = &quot;orange&quot;
+  ) +
+  geom_hline(yintercept = 0,
+             size = 1,
+             colour = &quot;#333333&quot;) +
   bbc_style() +
   scale_y_continuous(labels = scales::percent) +
-  theme(axis.ticks.x = element_line(colour = &quot;#333333&quot;), 
-        axis.ticks.length =  unit(0.26, &quot;cm&quot;)) +
+  theme(
+    axis.ticks.x = element_line(colour = &quot;#333333&quot;),
+    axis.ticks.length =  unit(0.26, &quot;cm&quot;)
+  ) +
   labs(title = &quot;Tv&#39;s Shows&quot;,
        subtitle = &quot;Porcentajes de programas televisivos por temporadas&quot;)
 g</code></pre>
@@ -80,37 +88,52 @@ g</code></pre>
 ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
 ## font family not found in Windows font database</code></pre>
 <p><img src="/posts/2019-02-02-how-bbc-visualize-data_files/figure-html/unnamed-chunk-4-1.png" width="1152" style="display: block; margin: auto;" /></p>
-<pre class="r"><code>imdb_x_files_tbl &lt;- imdb_tbl %&gt;% 
-  filter(title == &quot;The X-Files&quot;) %&gt;% 
-  select(title, seasonNumber, av_rating) %&gt;% 
+<pre class="r"><code>imdb_x_files_tbl &lt;- imdb_tbl %&gt;%
+  filter(title == &quot;The X-Files&quot;) %&gt;%
+  select(title, seasonNumber, av_rating) %&gt;%
   mutate(season = paste0(&quot;S&quot;, seasonNumber)) %&gt;%
   arrange(seasonNumber) 
 
-imdb_x_files_tbl$season &lt;- factor(imdb_x_files_tbl$season, 
-  levels = imdb_x_files_tbl$season[order(imdb_x_files_tbl$seasonNumber)])
+imdb_x_files_tbl$season &lt;- factor(imdb_x_files_tbl$season,
+                                  levels = imdb_x_files_tbl$season[order(imdb_x_files_tbl$seasonNumber)])
 
-imdb_x_files_tbl %&gt;% 
-  ggplot(aes(x = season, y = av_rating)) +  geom_bar(colour = &quot;black&quot;,
-                                                     stat = &quot;identity&quot;,
-                                                     position = &quot;identity&quot;,
-                                                     fill = &quot;orange&quot;) + 
-  bbc_style() + geom_hline(yintercept = 0, size = 1, colour=&quot;#333333&quot;) +
-  geom_label(aes(x = 9, y = 6.5, label = &quot;Mulder leaves\nthe X-Files&quot;), 
-             hjust = 0, 
-             vjust = 0.5, 
-             lineheight = 0.8,
-             colour = &quot;#555555&quot;, 
-             fill = &quot;white&quot;, 
-             label.size = NA, 
-             family = &quot;Helvetica&quot;, 
-             size = 6) +
-  geom_curve(aes(x = 9, y = 6.5, xend = 8, yend = 7.9099), 
-                             colour = &quot;#555555&quot;, 
-                             size=0.5, 
-                             curvature = -0.2,
-                             arrow = arrow(length = unit(0.03, &quot;npc&quot;))) + 
-  theme(axis.ticks.x = element_line(colour = &quot;#333333&quot;), 
-        axis.ticks.length =  unit(0.26, &quot;cm&quot;)) + 
+imdb_x_files_tbl %&gt;%
+  ggplot(aes(x = season, y = av_rating)) +  geom_bar(
+    colour = &quot;black&quot;,
+    stat = &quot;identity&quot;,
+    position = &quot;identity&quot;, 
+    fill = &quot;orange&quot; 
+  ) +
+  bbc_style() + geom_hline(yintercept = 0,
+                           size = 1,
+                           colour = &quot;#333333&quot;) +
+  geom_label(
+    aes(x = 9, y = 6.5, label = &quot;Mulder leaves\nthe X-Files&quot;),
+    hjust = 0,
+    vjust = 0.5,
+    lineheight = 0.8,
+    colour = &quot;#555555&quot;,
+    fill = &quot;white&quot;,
+    label.size = NA,
+    family = &quot;Helvetica&quot;,
+    size = 6
+  ) +
+  geom_curve(
+    aes(
+      x = 9,
+      y = 6.5,
+      xend = 8,
+      yend = 7.9099
+    ),
+    colour = &quot;#555555&quot;,
+    size = 0.5,
+    curvature = -0.2,
+    arrow = arrow(length = unit(0.03, &quot;npc&quot;))
+  ) +
+  theme(
+    axis.ticks.x = element_line(colour = &quot;#333333&quot;),
+    axis.ticks.length =  unit(0.26, &quot;cm&quot;)
+  ) +
   labs(title = &quot;Average Reating of The X-Files&quot;,
        subtitle = &quot;From season one to season ten&quot;)</code></pre>
 <pre><code>## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :

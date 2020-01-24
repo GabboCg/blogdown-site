@@ -28,24 +28,26 @@ draft: true
              &quot;LRHUTTTTJPM156S&quot;)</code></pre>
 <pre class="r"><code>countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;)
 unemployment_lst &lt;- list()</code></pre>
-<pre class="r"><code>for(i in seq_along(tickers)){
-  
+<pre class="r"><code>for(i in seq_along(tickers)) {
   unemployment_lst[[i]] &lt;- tq_get(tickers[i],
-    get = &quot;economic.data&quot;, 
-    from = &quot;2000-01-01&quot;,
-    to = &quot;2018-11-01&quot;) %&gt;% 
+                                  get = &quot;economic.data&quot;,
+                                  from = &quot;2000-01-01&quot;,
+                                  to = &quot;2018-11-01&quot;) %&gt;%
     mutate(symbol = countries_name[i])
-
+  
 }</code></pre>
 <pre class="r"><code>unemployment_tbl &lt;- do.call(rbind, unemployment_lst) </code></pre>
-<pre class="r"><code>p &lt;- unemployment_tbl %&gt;% 
+<pre class="r"><code>p &lt;- unemployment_tbl %&gt;%
   ggplot(aes(x = date, y = price, fill = symbol)) +
-  geom_area(stat=&quot;identity&quot;) + 
-  labs(title = &quot;Harmonized Unemployment Rate: Total: All Persons&quot;,
+  geom_area(stat = &quot;identity&quot;) +
+  labs(
+    title = &quot;Harmonized Unemployment Rate: Total: All Persons&quot;,
     subtitle = &quot;France, Germany, Japan and United States&quot;,
-    y = &quot;Unemployment&quot;, x = &quot;Year&quot;) + 
-  scale_fill_discrete(name = &quot; &quot;) + 
-  theme_tq() + 
-  facet_wrap(~symbol, ncol = 2) </code></pre>
+    y = &quot;Unemployment&quot;,
+    x = &quot;Year&quot;
+  ) +
+  scale_fill_discrete(name = &quot; &quot;) +
+  theme_tq() +
+  facet_wrap( ~ symbol, ncol = 2) </code></pre>
 <pre class="r"><code>p + transition_reveal(date) + shadow_mark()</code></pre>
 <p><img src="/posts/2019-02-08-economic-data-in-motion_files/figure-html/unnamed-chunk-7-1.gif" /><!-- --></p>

@@ -35,14 +35,13 @@ unemployment_lst <- list()
 ```
 
 ```{r}
-for(i in seq_along(tickers)){
-  
+for(i in seq_along(tickers)) {
   unemployment_lst[[i]] <- tq_get(tickers[i],
-    get = "economic.data", 
-    from = "2000-01-01",
-    to = "2018-11-01") %>% 
+                                  get = "economic.data",
+                                  from = "2000-01-01",
+                                  to = "2018-11-01") %>%
     mutate(symbol = countries_name[i])
-
+  
 }
 ```
 
@@ -51,15 +50,18 @@ unemployment_tbl <- do.call(rbind, unemployment_lst)
 ```
 
 ```{r}
-p <- unemployment_tbl %>% 
+p <- unemployment_tbl %>%
   ggplot(aes(x = date, y = price, fill = symbol)) +
-  geom_area(stat="identity") + 
-  labs(title = "Harmonized Unemployment Rate: Total: All Persons",
+  geom_area(stat = "identity") +
+  labs(
+    title = "Harmonized Unemployment Rate: Total: All Persons",
     subtitle = "France, Germany, Japan and United States",
-    y = "Unemployment", x = "Year") + 
-  scale_fill_discrete(name = " ") + 
-  theme_tq() + 
-  facet_wrap(~symbol, ncol = 2) 
+    y = "Unemployment",
+    x = "Year"
+  ) +
+  scale_fill_discrete(name = " ") +
+  theme_tq() +
+  facet_wrap( ~ symbol, ncol = 2) 
 ```
 
 ```{r}
