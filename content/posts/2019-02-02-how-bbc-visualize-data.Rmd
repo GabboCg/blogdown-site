@@ -69,7 +69,7 @@ g
 
 ```{r, fig.align='center', fig.height= 6, fig.width= 12}
 imdb_x_files_tbl <- imdb_tbl %>%
-  filter(title == "The X-Files") %>%
+  filter(title == "The X-Files") %>% 
   select(title, seasonNumber, av_rating) %>%
   mutate(season = paste0("S", seasonNumber)) %>%
   arrange(seasonNumber) 
