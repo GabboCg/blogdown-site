@@ -65,7 +65,7 @@ g <- ggplot(imdb_tbl_1, aes(x = season, y = percent)) +
   labs(title = "Tv's Shows",
        subtitle = "Porcentajes de programas televisivos por temporadas")
 g
-```
+``` 
 
 ```{r, fig.align='center', fig.height= 6, fig.width= 12}
 imdb_x_files_tbl <- imdb_tbl %>%
