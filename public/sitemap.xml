@@ -4,13 +4,24 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-23T23:39:36-03:00</lastmod>
+    <lastmod>2020-02-12T18:19:04-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/about/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/teaching/data-management-applications/</loc>
+    <lastmod>2020-02-12T18:19:04-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/teaching/</loc>
+    <lastmod>2020-02-12T18:19:04-03:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -58,12 +69,6 @@
   <url>
     <loc>/teaching/introduction-to-econometrics/</loc>
     <lastmod>2020-01-07T11:33:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/teaching/</loc>
-    <lastmod>2020-01-07T11:33:00-03:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -249,11 +254,6 @@
   </url>
   
   <url>
-    <loc>/teaching/finanzas-reproducibles-con-r/</loc>
-    <lastmod>2019-01-01T22:27:11-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/good-practice-in-r/</loc>
     <lastmod>2018-12-12T23:12:34-03:00</lastmod>
   </url>
@@ -269,7 +269,7 @@
   </url>
   
   <url>
-    <loc>/teaching/finanzas-i/</loc>
+    <loc>/teaching/data-science-applied-to-finance/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -279,7 +279,7 @@
   </url>
   
   <url>
-    <loc>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</loc>
+    <loc>/teaching/r-for-business-and-economics/</loc>
     <lastmod>2018-07-16T00:00:00+00:00</lastmod>
   </url>
   

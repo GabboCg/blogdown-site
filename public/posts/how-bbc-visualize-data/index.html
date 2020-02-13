@@ -305,7 +305,7 @@ g</code></pre>
 ## font family not found in Windows font database</code></pre>
 <p><img src="/posts/2019-02-02-how-bbc-visualize-data_files/figure-html/unnamed-chunk-4-1.png" width="1152" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>imdb_x_files_tbl &lt;- imdb_tbl %&gt;%
-  filter(title == &quot;The X-Files&quot;) %&gt;%
+  filter(title == &quot;The X-Files&quot;) %&gt;% 
   select(title, seasonNumber, av_rating) %&gt;%
   mutate(season = paste0(&quot;S&quot;, seasonNumber)) %&gt;%
   arrange(seasonNumber) 

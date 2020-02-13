@@ -72,3 +72,17 @@ table {
     /* border-bottom: 2px solid black;
     border-top: 2px solid black; */
 }
+
+table {
+   margin: auto; 
+   border-top: 1px solid #ffffff; 
+   border-bottom: 1px solid #ffffff; 
+}
+
+table thead th {border-bottom: 1px solid #eee; }
+
+th, td  {padding: 5px; 
+         border: 1px solid #ffffff;
+}
+
+tr:nth-child(even) {background: #eee; }

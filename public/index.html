@@ -28,7 +28,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
 
-<meta property="og:updated_time" content="2020-01-24T00:00:00+00:00" /><meta property="og:site_name" content="Gabo&#39;s World" />
+<meta property="og:updated_time" content="2020-02-12T00:00:00+00:00" /><meta property="og:site_name" content="Gabo&#39;s World" />
 
 
     
@@ -196,7 +196,7 @@
           <a href="/about/">About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</a>
         </span>
         <span class="item__date">
-          Jan 1, 2020
+          Feb 2, 2020
         </span>
         Can you hear me now?…Learning aprogramming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.
         
@@ -435,7 +435,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
         <span class="item__date">
           Feb 2, 2019
         </span>
-        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacmanp_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;)tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;,&quot;LRHUTTTTDEM156S&quot;,&quot;LRHUTTTTUSM156S&quot;,&quot;LRHUTTTTJPM156S&quot;)countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;)unemployment_lst &lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &lt;- tq_get(tickers[i],get = &quot;economic.data&quot;,from = &quot;2000-01-01&quot;,to = &quot;2018-11-01&quot;) %&gt;%mutate(symbol = countries_name[i])}unemployment_tbl &lt;- do.
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacman## Warning: package &#39;pacman&#39; was built under R version 3.6.2p_load(&quot;tidyverse&quot;, &quot;tidyquant&quot;, &quot;gganimate&quot;, &quot;bbplot&quot;)tickers &lt;- c(&quot;LRHUTTTTFRM156S&quot;,&quot;LRHUTTTTDEM156S&quot;,&quot;LRHUTTTTUSM156S&quot;,&quot;LRHUTTTTJPM156S&quot;)countries_name &lt;- c(&quot;France&quot;, &quot;Germany&quot;, &quot;United States&quot;, &quot;Japan&quot;)unemployment_lst &lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &lt;- tq_get(tickers[i],get = &quot;economic.data&quot;,from = &quot;2000-01-01&quot;,to = &quot;2018-11-01&quot;) %&gt;%mutate(symbol = countries_name[i])}unemployment_tbl &lt;- do.
         
         <div class="read-more-link">
             <a href="/posts/economic-data-in-motion/">Read More…</a>
@@ -450,7 +450,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
         <span class="item__date">
           Feb 2, 2019
         </span>
-        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.lister-item-year.text-muted.unbold&quot;)for(j in 1:2){matrix_value[i,j] &lt;- oscar_movies %&gt;% html_nodes(paste0(seudo_link,&quot;(&quot;,i,&quot;) &quot;,&quot;&gt; div.
+        if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Warning: package &#39;pacman&#39; was built under R version 3.6.2p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &lt;- c(&quot;movie_name&quot;, &quot;date&quot;, &quot;imdb_score&quot;, &quot;metacritic_score&quot;)for(i in 1:36){seudo_link &lt;- &quot;#main &gt; div &gt; div.lister.list.detail.sub-list &gt; div.lister-list &gt; div:nth-child&quot;selector &lt;- c(&quot;a&quot;, &quot;span.
         
         <div class="read-more-link">
             <a href="/posts/road-to-oscars-2019/">Read More…</a>
@@ -556,7 +556,7 @@ The unadjusted gender wage gap for full time workers has been falling significan
           Jun 6, 2018
         </span>
         IntroductionIntroductionthis post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacmanp_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;)set.seed(123)reps &lt;- 10000betas &lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &lt;- 2beta1 &lt;- 2.
+if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading required package: pacman## Warning: package &#39;pacman&#39; was built under R version 3.6.2p_load(&quot;tidyverse&quot;,&quot;gridExtra&quot;)set.seed(123)reps &lt;- 10000betas &lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &lt;- 2beta1 &lt;- 2.
         
         <div class="read-more-link">
             <a href="/posts/loops-using-r/">Read More…</a>
@@ -568,7 +568,18 @@ if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading
     
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/teaching/introduction-to-econometrics/">Introduction to econometrics</a>
+          <a href="/teaching/data-management-applications/">Data Management Applications</a><sup> <i class="fas fa-pen-square fa-xs"></i></sup>
+        </span>
+        <span class="item__date">
+          Feb 2, 2020
+        </span>
+        Descripción CursoPresentaciones
+        
+        </div>
+        
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/teaching/introduction-to-econometrics/">Introduction to econometrics</a><sup> <i class="fas fa-pen-square fa-xs"></i></sup>
         </span>
         <span class="item__date">
           Jan 1, 2020
@@ -579,12 +590,12 @@ if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)## Loading
         
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/teaching/business-intelligence-para-las-finanzas/">Business Intelligence for finance</a>
+          <a href="/teaching/business-intelligence-para-las-finanzas/">Business Intelligence for Finance</a>
         </span>
         <span class="item__date">
           Aug 8, 2019
         </span>
-        Apunte   Ver Posts   Slides  Ayudantías   Nº Descripción Enunciado Python Script R Script    1 Introducción a Jupyter Notebook     2 Introducción a Numpy     3 Introducción a Pandas     4 Concatenar &amp; Merge     5 Descargar Datos Financieros     6 Complejidad Computacional     7 Gradiente Descendiente     8 Regresión Lineal     9 Regresión Logística     10 Regresión Polinomial     11 Modelos Regularizado     12 Modelos Multinomial     13 Support Vector Machines     14 Redes Neuronales Artificiales     15 Entropía &amp; Ganancia de Información     16 Árboles de Decisión     17 Random Forest     18 Introducción a Deep Learning        Tareas  Primavera 2019
+        Descripción CursoSe entenderá BI como la agrupación de grandes cantidades de datos y su análisis en orden de encontrarpatrones interesantes que puedan ayudar a la toma de decisiones de negocios y financieras. BIconsidera una amplia gama de tecnologías que permiten a los usuarios el recolectar, almacenar,acceder y analizar datos de manera de mejorar el proceso de administración de información centradoen el cliente.
         
         <div class="read-more-link">
             <a href="/teaching/business-intelligence-para-las-finanzas/">Read More…</a>
@@ -629,7 +640,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
         
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/teaching/data-vis-teor%C3%ADa-practica/">Data Vis: Teoría &amp; Practica </a><sup> <i class="fas fa-pen-square fa-xs"></i></sup>
+          <a href="/teaching/data-vis-teor%C3%ADa-practica/">Data Vis: Theory &amp; Practice</a><sup> <i class="fas fa-pen-square fa-xs"></i></sup>
         </span>
         <span class="item__date">
           Jan 1, 2019
@@ -645,23 +656,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
         
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/teaching/finanzas-reproducibles-con-r/">FInanzas reproducibles con R</a><sup> <i class="fas fa-pen-square fa-xs"></i></sup>
-        </span>
-        <span class="item__date">
-          Jan 1, 2019
-        </span>
-        Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.
-        
-        <div class="read-more-link">
-            <a href="/teaching/finanzas-reproducibles-con-r/">Read More…</a>
-        </div>
-        
-        </div>
-        
-      <div class="post-list__item">
-        <span class="item__title--big">
-          <a href="/teaching/finanzas-i/">Data Science Applied to Finance</a>
+          <a href="/teaching/data-science-applied-to-finance/">Data Science Applied to Finance</a>
         </span>
         <span class="item__date">
           Jul 7, 2018
@@ -669,14 +664,14 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
         Material de clasesApunte: Introducción a las finanzas quantitativasEste apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande.
         
         <div class="read-more-link">
-            <a href="/teaching/finanzas-i/">Read More…</a>
+            <a href="/teaching/data-science-applied-to-finance/">Read More…</a>
         </div>
         
         </div>
         
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/teaching/introduction-to-r/">R for those who want to rock in the free world ➡️ 💻 &#43; 🇺🇸</a>
+          <a href="/teaching/introduction-to-r/">Introduction to Data Science with R</a>
         </span>
         <span class="item__date">
           Jul 7, 2018
@@ -691,7 +686,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
         
       <div class="post-list__item">
         <span class="item__title--big">
-          <a href="/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/">R for business and economics</a>
+          <a href="/teaching/r-for-business-and-economics/">R for Business &amp; Economics</a>
         </span>
         <span class="item__date">
           Jul 7, 2018
@@ -699,7 +694,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
         Descripción CursoEste curso presenta una introducción a R, usando datos estructurados y noestructurados, relacionados a economía, finanzas y marketing. Entre los tópicosa discutir se encuentran: importación y exportación de datos en diferentesformatos, extracción de datos de sitios web, visualización de datos,regresión lineal, simulación de Monte Carlo y construcción de aplicaciones webutilizando Shiny.
         
         <div class="read-more-link">
-            <a href="/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/">Read More…</a>
+            <a href="/teaching/r-for-business-and-economics/">Read More…</a>
         </div>
         
         </div>

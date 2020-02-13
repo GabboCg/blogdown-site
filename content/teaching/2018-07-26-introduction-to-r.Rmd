@@ -1,5 +1,5 @@
 ---
-title: 'R for those who want to rock in the free world `r emo::ji("arrow_right")` `r emo::ji("computer")` + `r emo::ji("us")`' 
+title: 'Introduction to Data Science with R' 
 author: 'Gabriel Cabrera '
 date: '2018-07-26'
 slug: introduction-to-r

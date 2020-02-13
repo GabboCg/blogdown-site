@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,19 @@
     <item>
       <title>About Me...(Always Updated!)  ❤️&#43; ☕ &#43; 🕘</title>
       <link>/about/</link>
-      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
       <description>Can you hear me now?…Learning aprogramming language is interesting and fun at the same time, even more if you like to work with data. Unfortunately, it tends to fall into the erroneous idea that programming is only for those with a background in computing science and/or engineering, nevertheless, I think that programming is a multidisciplinary skill, where the only limitations are your own ideas.</description>
+    </item>
+    
+    <item>
+      <title>Data Management Applications</title>
+      <link>/teaching/data-management-applications/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/data-management-applications/</guid>
+      <description>Descripción CursoPresentaciones</description>
     </item>
     
     <item>
@@ -146,12 +155,12 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     </item>
     
     <item>
-      <title>Business Intelligence for finance</title>
+      <title>Business Intelligence for Finance</title>
       <link>/teaching/business-intelligence-para-las-finanzas/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/teaching/business-intelligence-para-las-finanzas/</guid>
-      <description>Apunte   Ver Posts   Slides  Ayudantías   Nº Descripción Enunciado Python Script R Script    1 Introducción a Jupyter Notebook     2 Introducción a Numpy     3 Introducción a Pandas     4 Concatenar &amp;amp; Merge     5 Descargar Datos Financieros     6 Complejidad Computacional     7 Gradiente Descendiente     8 Regresión Lineal     9 Regresión Logística     10 Regresión Polinomial     11 Modelos Regularizado     12 Modelos Multinomial     13 Support Vector Machines     14 Redes Neuronales Artificiales     15 Entropía &amp;amp; Ganancia de Información     16 Árboles de Decisión     17 Random Forest     18 Introducción a Deep Learning        Tareas  Primavera 2019</description>
+      <description>Descripción CursoSe entenderá BI como la agrupación de grandes cantidades de datos y su análisis en orden de encontrarpatrones interesantes que puedan ayudar a la toma de decisiones de negocios y financieras. BIconsidera una amplia gama de tecnologías que permiten a los usuarios el recolectar, almacenar,acceder y analizar datos de manera de mejorar el proceso de administración de información centradoen el cliente.</description>
     </item>
     
     <item>
@@ -213,7 +222,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/economic-data-in-motion/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;)tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;,&amp;quot;LRHUTTTTDEM156S&amp;quot;,&amp;quot;LRHUTTTTUSM156S&amp;quot;,&amp;quot;LRHUTTTTJPM156S&amp;quot;)countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;)unemployment_lst &amp;lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i],get = &amp;quot;economic.data&amp;quot;,from = &amp;quot;2000-01-01&amp;quot;,to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;%mutate(symbol = countries_name[i])}unemployment_tbl &amp;lt;- do.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacman## Warning: package &amp;#39;pacman&amp;#39; was built under R version 3.6.2p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;)tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;,&amp;quot;LRHUTTTTDEM156S&amp;quot;,&amp;quot;LRHUTTTTUSM156S&amp;quot;,&amp;quot;LRHUTTTTJPM156S&amp;quot;)countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;)unemployment_lst &amp;lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i],get = &amp;quot;economic.data&amp;quot;,from = &amp;quot;2000-01-01&amp;quot;,to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;%mutate(symbol = countries_name[i])}unemployment_tbl &amp;lt;- do.</description>
     </item>
     
     <item>
@@ -222,7 +231,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/road-to-oscars-2019/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Warning: package &amp;#39;pacman&amp;#39; was built under R version 3.6.2p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.</description>
     </item>
     
     <item>
@@ -245,21 +254,11 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     </item>
     
     <item>
-      <title>Data Vis: Teoría &amp; Practica </title>
+      <title>Data Vis: Theory &amp; Practice</title>
       <link>/teaching/data-vis-teor%C3%ADa-practica/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/teaching/data-vis-teor%C3%ADa-practica/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>FInanzas reproducibles con R</title>
-      <link>/teaching/finanzas-reproducibles-con-r/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/finanzas-reproducibles-con-r/</guid>
       <description>Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
     </item>
@@ -294,15 +293,15 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     
     <item>
       <title>Data Science Applied to Finance</title>
-      <link>/teaching/finanzas-i/</link>
+      <link>/teaching/data-science-applied-to-finance/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/teaching/finanzas-i/</guid>
+      <guid>/teaching/data-science-applied-to-finance/</guid>
       <description>Material de clasesApunte: Introducción a las finanzas quantitativasEste apunte es una introducción a las finanzas quantitativas (data science applied to finance) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande.</description>
     </item>
     
     <item>
-      <title>R for those who want to rock in the free world ➡️ 💻 &#43; 🇺🇸</title>
+      <title>Introduction to Data Science with R</title>
       <link>/teaching/introduction-to-r/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
@@ -311,11 +310,11 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     </item>
     
     <item>
-      <title>R for business and economics</title>
-      <link>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</link>
+      <title>R for Business &amp; Economics</title>
+      <link>/teaching/r-for-business-and-economics/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
+      <guid>/teaching/r-for-business-and-economics/</guid>
       <description>Descripción CursoEste curso presenta una introducción a R, usando datos estructurados y noestructurados, relacionados a economía, finanzas y marketing. Entre los tópicosa discutir se encuentran: importación y exportación de datos en diferentesformatos, extracción de datos de sitios web, visualización de datos,regresión lineal, simulación de Monte Carlo y construcción de aplicaciones webutilizando Shiny.</description>
     </item>
     
@@ -337,7 +336,7 @@ The unadjusted gender wage gap for full time workers has been falling significan
       
       <guid>/posts/loops-using-r/</guid>
       <description>IntroductionIntroductionthis post has the intentionality to present briefly one of the property that exist in a ordinary square regression.
-if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;)set.seed(123)reps &amp;lt;- 10000betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &amp;lt;- 2beta1 &amp;lt;- 2.</description>
+if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacman## Warning: package &amp;#39;pacman&amp;#39; was built under R version 3.6.2p_load(&amp;quot;tidyverse&amp;quot;,&amp;quot;gridExtra&amp;quot;)set.seed(123)reps &amp;lt;- 10000betas &amp;lt;- matrix(NA, nrow = reps, ncol = 2)beta0 &amp;lt;- 2beta1 &amp;lt;- 2.</description>
     </item>
     
   </channel>

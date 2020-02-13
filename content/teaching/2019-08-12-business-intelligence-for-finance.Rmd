@@ -1,0 +1,181 @@
+---
+title: Business Intelligence for Finance
+date: '2019-08-12'
+slug: business-intelligence-para-las-finanzas
+categories: []
+tags: []
+lastmod: '2019-08-12T14:15:37-04:00'
+layout: post
+type: post
+highlight: no
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: ["/css/bootstrap.css"]
+---
+
+```{r, echo=FALSE, eval=TRUE}
+library(fontawesome)
+```
+
+## Descripción Curso
+ 
+Se entenderá BI como la agrupación de grandes cantidades de datos y su análisis en orden de encontrar
+patrones interesantes que puedan ayudar a la toma de decisiones de negocios y financieras. BI
+considera una amplia gama de tecnologías que permiten a los usuarios el recolectar, almacenar,
+acceder y analizar datos de manera de mejorar el proceso de administración de información centrado
+en el cliente. BI consiste de tres componentes tecnológicos integrados: Data Warehousing, Data Mining
+y Reporte Analítico. El curso investigará principalmente el componente Data Mining.
+
+## Apunte
+
+* `r fa("desktop", fill = "purple")` [Ver Posts](https://technotes.netlify.com/python/_site/)
+
+## Ayudantías: Enunciado & Respuesta 
+
+</br>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library("googlesheets4")
+library("tidyverse")
+library("gt")
+ 
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+ 
+homework <- read_sheet(sheet_google, sheet = "ta_enfin761") 
+  
+homework %>%
+    rename(`Descripción` = Descripcion) %>% 
+    mutate(`Descripción` = case_when(
+        `Descripción` == "Introduccion a Jupyter Notebook" ~ "Introducción a Jupyter Notebook",
+        `Descripción` == "Introduccion a Numpy" ~ "Introducción a Numpy",
+        `Descripción` == "Introduccion a Pandas" ~ "Introducción a Pandas",
+        `Descripción` == "Concatenar & Merge" ~ "Concatenar & Merge",
+        `Descripción` == "Descargar Datos Financieros" ~ "Descargar Datos Financieros",
+        `Descripción` == "Complejidad Computacional" ~ "Complejidad Computacional",
+        `Descripción` == "Gradiente Descendiente" ~ "Gradiente Descendiente",
+        `Descripción` == "Regresion Lineal" ~ "Regresión Lineal",
+        `Descripción` == "Regresion Logistica" ~ "Regresión Logística",
+        `Descripción` == "Regresion Polinomial" ~ "Regresión Polinomial",
+        `Descripción` == "Modelos Regularizado" ~ "Modelos Regularizado",
+        `Descripción` == "Modelos Multinomial" ~ "Modelos Multinomial",
+        `Descripción` == "Support Vector Machines" ~ "Support Vector Machines",
+        `Descripción` == "Redes Neuronales Artificiales" ~ "Redes Neuronales Artificiales",
+        `Descripción` == "Entropia & Ganancia de Informacion" ~ "Entropía & Ganancia de Información",
+        `Descripción` == "Arboles de Decision" ~ "Árboles de Decisión",
+        `Descripción` == "Random Forest" ~ "Random Forest",
+        `Descripción` == "Introduccion a Deep Learning" ~ "Introducción a Deep Learning"
+    )) %>% 
+    gt(rowname_col = "N") %>%
+    cols_align(
+        align = "left", 
+        columns = vars(`Descripción`)
+    ) %>% 
+    cols_align(
+        align = "center",
+        columns = vars(Enunciado, `Jupyter Notebook`, `Google Colab`, `Python Script`)
+    ) %>%
+    fmt(
+        columns = vars(Enunciado),
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-pdf" style="color:red" ></i> </a> </center>') 
+    ) %>%
+    fmt(
+        columns = vars(`Jupyter Notebook`), 
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-python" style="color:green" ></i> </a> </center>') 
+    ) %>%
+    fmt(
+        columns = vars(`Google Colab`),
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-google-drive" style="color:blue" ></i> </a> </center>') 
+    ) %>%
+    fmt(
+        columns = vars(`Python Script`),
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-book" style="color:gold" ></i> </a> </center>') 
+    ) %>%
+    tab_spanner( 
+        label = "Python Code",
+        columns = vars(`Jupyter Notebook`, `Google Colab`, `Python Script`) 
+    ) %>% 
+    fmt(
+        columns = vars(Status),
+        fns = function(x) ifelse(x == "yes",
+                                 glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                                 glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+    ) %>% 
+    tab_footnote(
+        footnote = md("Los enunciados están renderizados utilizando la plantilla `genin` del paquete personal `hokage`."),
+        locations = cells_column_labels(columns = vars(Enunciado))
+    ) %>% 
+    tab_header(title = md("**Business Intelligence para las Finanzas**"),
+               subtitle = glue::glue("Enunciado & Respuesta Primavera 2019")) 
+```
+
+</br>
+
+## Evaluaciones: Enunciado & Respuesta 
+
+</br>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+ 
+evaluation <- read_sheet(sheet_google, sheet = "eval_enfin761") 
+  
+evaluation %>%
+    mutate(group = paste0(period, " ", year)) %>%
+    rename(`Descripción` = Descripcion) %>% 
+    select(-period, -year) %>%
+    gt(rowname_col = "N", groupname_col = "group") %>% 
+    cols_align(
+        align = "left", 
+        columns = vars(`Descripción`)
+    ) %>% 
+    cols_align(
+        align = "center",
+        columns = vars(Enunciado, `Jupyter Notebook`, `Google Colab`, `Python Script`)
+    ) %>%
+    fmt(
+        columns = vars(Enunciado),
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-pdf" style="color:red" ></i> </a> </center>') 
+    ) %>%
+    fmt(
+        columns = vars(`Jupyter Notebook`), 
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-python" style="color:green" ></i> </a> </center>') 
+    ) %>%
+    fmt(
+        columns = vars(`Google Colab`),
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-google-drive" style="color:blue" ></i> </a> </center>') 
+    ) %>%
+    fmt(
+        columns = vars(`Python Script`),
+        fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-book" style="color:gold" ></i> </a> </center>') 
+    ) %>%
+    tab_spanner( 
+        label = "Python Code",
+        columns = vars(`Jupyter Notebook`, `Google Colab`, `Python Script`) 
+    ) %>% 
+    tab_footnote(
+        footnote = md("Los enunciados están renderizados utilizando la plantilla `genin` del paquete personal `hokage`."),
+        locations = cells_column_labels(columns = vars(Enunciado))
+    ) %>% 
+    fmt(
+        columns = vars(Status),
+        fns = function(x) ifelse(x == "yes",
+                                 glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                                 glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+    ) %>%
+    tab_header(
+        title = md("**Business Intelligence para las Finanzas**"),
+        subtitle = glue::glue("Evaluaciones Primavera 2019")
+    ) 
+```
+
+</br>
+
+---
+
+> *Disclaimer*: La información contenida en esta página está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a> y fue construida bajo mi rol como ayudante (*Teacher Assistant*) de la Catedra Business Intelligence para las Finanzas (*Business Intelligence for Finance*).
+<br>
+<img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/> 

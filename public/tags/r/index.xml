@@ -101,25 +101,15 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/economic-data-in-motion/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;)tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;,&amp;quot;LRHUTTTTDEM156S&amp;quot;,&amp;quot;LRHUTTTTUSM156S&amp;quot;,&amp;quot;LRHUTTTTJPM156S&amp;quot;)countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;)unemployment_lst &amp;lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i],get = &amp;quot;economic.data&amp;quot;,from = &amp;quot;2000-01-01&amp;quot;,to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;%mutate(symbol = countries_name[i])}unemployment_tbl &amp;lt;- do.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacman## Warning: package &amp;#39;pacman&amp;#39; was built under R version 3.6.2p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;)tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;,&amp;quot;LRHUTTTTDEM156S&amp;quot;,&amp;quot;LRHUTTTTUSM156S&amp;quot;,&amp;quot;LRHUTTTTJPM156S&amp;quot;)countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;)unemployment_lst &amp;lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i],get = &amp;quot;economic.data&amp;quot;,from = &amp;quot;2000-01-01&amp;quot;,to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;%mutate(symbol = countries_name[i])}unemployment_tbl &amp;lt;- do.</description>
     </item>
     
     <item>
-      <title>Data Vis: Teoría &amp; Practica </title>
+      <title>Data Vis: Theory &amp; Practice</title>
       <link>/teaching/data-vis-teor%C3%ADa-practica/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/teaching/data-vis-teor%C3%ADa-practica/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>FInanzas reproducibles con R</title>
-      <link>/teaching/finanzas-reproducibles-con-r/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/finanzas-reproducibles-con-r/</guid>
       <description>Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
     </item>

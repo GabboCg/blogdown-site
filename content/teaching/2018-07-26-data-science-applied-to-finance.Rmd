@@ -1,0 +1,212 @@
+---
+title:  Data Science Applied to Finance
+author: 'Gabriel Cabrera '
+date: '2018-07-26'
+slug: data-science-applied-to-finance
+categories: []
+tags: []
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: ["/css/bootstrap.css"]
+---
+
+```{r, echo=FALSE, eval=TRUE}
+library(fontawesome)
+```
+
+
+# Material de clases
+
+## Apunte: Introducción a las finanzas quantitativas
+
+Este apunte es una introducción a las finanzas quantitativas (*data science applied to finance*) usando el lenguaje R. Si bien fue construido a partir de las ayudantías practicas para el curso de Finanzas I, como autor espero que sea algo más grande. Está en construcción, por ende, cualquier sugerencia y/o comentarios son bienvenidos. 
+
+- `r fa("download", fill = "#ee5863")` [Descargar Apunte](https://finance-r.netlify.com/)  
+- `r fa("desktop", fill = "forestgreen")` [Ver Repositorio](https://github.com/GaboCg/bookdown_finance)
+
+<br>
+
+## Notas de clases
+
+* Teoría de Portafolios
+
+<br>
+
+## Presentaciones 
+
+<br>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library("googlesheets4")
+library("tidyverse")
+library("gt")
+ 
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+
+ta <- read_sheet(sheet_google, sheet = "ta_enfin415") 
+ 
+ta %>%
+  rename(`Descripción` = Descripcion,
+         `Presentación` = Presentacion
+         ) %>% 
+  mutate(`Descripción` = case_when( 
+    `Descripción` == "Introduccion a R" ~ "Introducción a R",
+    `Descripción` == "Introduccion a Quantmod" ~ "Introducción a Quantmod",
+    `Descripción` == "Teoria de Portafolio" ~ "Teoría de Portafolio",
+    `Descripción` == "Valuacion de Bonos" ~ "Valuación de Bonos",
+    `Descripción` == "Derivados, opciones & futuros" ~ "Derivados, opciones & futuros"
+  )) %>% 
+  gt(rowname_col = "N") %>%
+  cols_align(
+    align = "left",
+    columns = vars(`Descripción`)
+  ) %>% 
+  cols_align(
+    align = "center",
+    columns = vars(`Presentación`, Material, `R Project`)
+  ) %>% 
+  fmt(
+    columns = vars(`Presentación`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-pdf" style="color:red" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(Material),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-archive" style="color:gold" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(`R Project`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-r-project" style="color:blue" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(Status),
+    fns = function(x) ifelse(x == "yes",
+                             glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                             glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+  ) %>%  
+  tab_footnote(
+    footnote = md("Todas las presentaciones fueron confeccionadas usando el paquete `Xaringan` de Yihui Xie"),
+    locations = cells_column_labels(columns = vars(`Presentación`))
+  ) %>% 
+  tab_header(title = md("**Finanzas I**"),
+             subtitle = md("Material & Respuesta Primavera 2018 - Otoño 2019")) 
+```
+
+<br>
+
+## Tutoriales `r fa("youtube", fill = "red")` 
+
+<br>
+
+<!-- <iframe width="550" height="400" src="https://www.youtube.com/embed/TwBKLTq3mfY"></iframe> -->
+
+<!-- <p> -->
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+
+ta <- read_sheet(sheet_google, sheet = "video_enfin415") 
+ 
+ta %>%
+  rename(`Descripción` = Descripcion) %>% 
+  mutate(`Descripción` = case_when( 
+    `Descripción` == "Introduccion tidyquant" ~ "Introducción tidyquant",
+    `Descripción` == "Retorno y Retorno Acumulado" ~ "Retorno y Retorno Acumulado",
+    `Descripción` == "Graficar y Estadistica Descriptiva" ~ "Graficar y Estadística Descriptiva",
+    `Descripción` == "Black & Scholes" ~ "Black & Scholes",
+    `Descripción` == "Black & Scholes con datos reales" ~ "Black & Scholes con datos reales",
+    `Descripción` == "Arbol Binomial" ~ "Árbol Binomial"
+  )) %>% 
+  gt(rowname_col = "N") %>%
+  cols_align(
+    align = "left",
+    columns = vars(`Descripción`)
+  ) %>% 
+  cols_align(
+    align = "center",
+    columns = vars(Enlace)
+  ) %>% 
+  fmt(
+    columns = vars(Enlace),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-video" style="color:green" ></i> </a> </center>') 
+  ) %>% 
+  fmt(
+    columns = vars(Status),
+    fns = function(x) ifelse(x == "yes",
+                             glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                             glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+  ) %>%  
+  tab_header(title = md("**Finanzas I**"),
+             subtitle = glue::glue("Material Audio Visual")) 
+```
+
+<br>
+ 
+## Tareas: Enunciado & Respuesta 
+
+<br>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+
+evaluation <- read_sheet(sheet_google, sheet = "eval_enfin415") 
+ 
+evaluation %>%
+  mutate(period = case_when(
+    period == "autumn" ~ "Otoño",
+    period == "spring" ~ "Primavera"),
+    group = paste0(period, " ", year)) %>%
+  rename(`Descripción` = Descripcion) %>% 
+  select(-period, -year) %>%
+  gt(rowname_col = "N", groupname_col = "group") %>%
+  cols_align(
+    align = "left", 
+    columns = vars(`Descripción`)
+  ) %>% 
+  fmt(
+    columns = vars(Enunciado),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-pdf" style="color:red" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(`R Notebook`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-code" style="color:orange" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(`R Project`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-r-project" style="color:blue" ></i> </a> </center>') 
+  ) %>%
+   tab_spanner( 
+    label = "R Code",
+    columns = vars(`R Notebook`, `R Project`) 
+  ) %>%
+  fmt(
+    columns = vars(Status),
+    fns = function(x) ifelse(x == "yes",
+                             glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                             glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+  ) %>% 
+  tab_footnote(
+    footnote = md("Los enunciados están renderizados utilizando la plantilla `genin` del paquete personal `hokage`."),
+    locations = cells_column_labels(columns = vars(Enunciado))
+  ) %>% 
+    tab_footnote(
+    footnote = md("Los proyectos están organizado utilizando el paquete personal `organizer`."),
+    locations = cells_column_labels(columns = vars(`R Project`))
+  ) %>% 
+  tab_header(title = md("**Finanzas I**"),
+             subtitle = md("Material & Respuesta Primavera 2018 - Otoño 2019")) 
+```
+
+
+<br>
+
+---
+
+> *Disclaimer*: La información contenida en esta página está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a> y fue construida bajo mi rol como ayudante (*Teacher Assistant*) de la Catedra Finanzas I.   
+<br>
+<img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/> 
+

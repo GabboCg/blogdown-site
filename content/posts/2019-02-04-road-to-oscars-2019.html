@@ -16,8 +16,9 @@ highlight: no
 
 
 
-<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)
-p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)</code></pre>
+<pre class="r"><code>if(!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)</code></pre>
+<pre><code>## Warning: package &#39;pacman&#39; was built under R version 3.6.2</code></pre>
+<pre class="r"><code>p_load(&quot;tidyverse&quot;, &quot;rvest&quot;, &quot;bbplot&quot;, &quot;ggalt&quot;)</code></pre>
 <pre class="r"><code>oscar_movies &lt;- read_html(&quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;mode=detail&amp;page=1&amp;ref_=ttls_vm_dtl&amp;sort=list_order,asc&quot;)</code></pre>
 <pre class="r"><code>matrix_value &lt;- matrix(0, nrow = 36, ncol = 4)
 

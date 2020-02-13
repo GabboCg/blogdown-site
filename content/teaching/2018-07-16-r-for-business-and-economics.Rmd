@@ -1,0 +1,885 @@
+---
+title: R for Business & Economics 
+author: 'Gabriel Cabrera '
+date: '2018-07-16'
+slug: r-for-business-and-economics
+categories: []
+tags: []
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: ["/css/bootstrap.css"]
+---
+
+## Descripción Curso
+ 
+Este curso presenta una introducción a R, usando datos estructurados y no 
+estructurados, relacionados a economía, finanzas y marketing. Entre los tópicos 
+a discutir se encuentran: importación y exportación de datos en diferentes 
+formatos, extracción de datos de sitios web, visualización de datos, 
+regresión lineal, simulación de Monte Carlo y construcción de aplicaciones web 
+utilizando Shiny.
+
+<center>
+
+```{r echo=FALSE}
+blogdown::shortcode('tweet', '1225592440230481920')
+```
+
+</center>
+
+## Presentaciones & Tutoriales
+
+<!-- Todas las presentaciones fueron confeccionadas usando la librería `Xaringan`  de  -->
+<!-- Yihui Xie con el tema Dharma-Xaringan, creado por mí `r emo::ji("v")` (ver post). -->
+
+</br>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library("googlesheets4")
+library("tidyverse")
+library("gt")
+ 
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+
+ta <- read_sheet(sheet_google, sheet = "ta_enmec357") 
+ 
+ta %>%
+  rename(`Descripción` = Descripcion,
+         `Presentación` = Presentacion,
+         `Solución` = Solucion) %>% 
+  gt(rowname_col = "N") %>%
+  cols_align(
+    align = "left",
+    columns = vars(Fecha)
+  ) %>% 
+  cols_align(
+    align = "center",
+    columns = vars(`Presentación`, Material, `Solución`)
+  ) %>% 
+  fmt(
+    columns = vars(`Presentación`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-pdf" style="color:red" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(Material),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-archive" style="color:gold" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(`Solución`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-r-project" style="color:blue" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(Status),
+    fns = function(x) ifelse(x == "yes",
+                             glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                             glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+  ) %>%  
+  tab_footnote(
+    footnote = md("Todas las presentaciones fueron confeccionadas usando el paquete `Xaringan` de Yihui Xie"),
+    locations = cells_column_labels(columns = vars(`Presentación`))
+  ) %>% 
+  tab_header(title = md("**Tópicos en economía & negocios utilizando R**"),
+             subtitle = glue::glue("Material & Respuesta 2018 - 2019")) 
+```
+
+</br>
+
+<!-- 1. Tidyverse: *I want to believe* -->
+
+<!--     <p> -->
+<!--     <img src="/hex/tidyverse.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Core tidyverse -->
+<!--         - ggplot2 -->
+<!--         - dplyr/tidyr -->
+<!--         - readr/tibble -->
+<!--         - purr/forcats -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Radix Post](/xaringan/xaringan_rmarkdown.html) -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+<!-- 2. R Markdown: un enfoque a la Investigación Reproducible -->
+
+<!--     <p> -->
+<!--     <img src="/hex/rmarkdown.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Shorcut, YAML, Inline Formating -->
+<!--     * Block level Element & Blockquotes -->
+<!--     * R code chunks & inline R code -->
+<!--     * Características de un Documento PDF -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Presentación](/xaringan/xaringan_rmarkdown.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [*Source Code*](https://github.com/GaboCg/rmarkdown_introduction) -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+<!-- 3. tidyquant: llevando el análisis financiero al *tidyverse* -->
+
+<!--     <p> -->
+<!--     <img src="/hex/tidyquant.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Introducción a tidyquant -->
+<!--     * Descargando Multiples Datos -->
+<!--     * Retornos y retornos acumulados -->
+<!--     * Análisis Técnico  -->
+<!--     * Librería plotly en finanzas -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Presentación](/pdf/introduction_to_tidyquant.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [*Source Code*](https://github.com/GaboCg/introduction_to_tidyquant) -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--      </p> -->
+
+
+<!-- 4. gganimate: la historia en movimiento -->
+
+<!--     <p> -->
+<!--     <img src="/hex/gganimate.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Introducción a tidyquant -->
+<!--     * Descargando Multiples Datos -->
+<!--     * Retornos y retornos acumulados -->
+<!--     * Análisis Técnico  -->
+<!--     * Librería plotly en finanzas -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     Presentación -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     *Source Code* -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+<!-- 5. Text mining con R: un enfoque *tidy*  -->
+
+<!--     <p> -->
+<!--     <img src="/hex/tidytext.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Introducción a tidyquant -->
+<!--     * Descargando Multiples Datos -->
+<!--     * Retornos y retornos acumulados -->
+<!--     * Análisis Técnico  -->
+<!--     * Librería plotly en finanzas -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     Presentación -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     *Source Code* -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+<!-- 6. Rtweet: ¿Cuantos caracteres son suficientes?  -->
+
+<!--     <p> -->
+<!--     <img src="/hex/rtweet.png" alt="Smiley face" style="float: right;  -->
+<!--     width:220px; height:260px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Introducción a tidyquant -->
+<!--     * Descargando Multiples Datos -->
+<!--     * Retornos y retornos acumulados -->
+<!--     * Análisis Técnico  -->
+<!--     * Librería plotly en finanzas -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     Presentación -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     *Source Code* -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+<!-- 7. Broom -->
+
+<!--     <p> -->
+<!--     <img src="/hex/broom.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Introducción a tidyquant -->
+<!--     * Descargando Multiples Datos -->
+<!--     * Retornos y retornos acumulados -->
+<!--     * Análisis Técnico  -->
+<!--     * Librería plotly en finanzas -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     Presentación -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     *Source Code* -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+
+<!-- 8. Rccp: C++ & R para todos -->
+
+<!--     <p> -->
+<!--     <img src="/hex/C++.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Introducción a tidyquant -->
+<!--     * Descargando Multiples Datos -->
+<!--     * Retornos y retornos acumulados -->
+<!--     * Análisis Técnico  -->
+<!--     * Librería plotly en finanzas -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     Presentación -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     *Source Code* -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+<!-- 9. High-Performance Computing: *Unleashed the beast*  -->
+
+<!--     <p> -->
+<!--     <img src="/hex/devtools.png" alt="Smiley face" style="float: right;  -->
+<!--     width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--     margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--     * Introducción a tidyquant -->
+<!--     * Descargando Multiples Datos -->
+<!--     * Retornos y retornos acumulados -->
+<!--     * Análisis Técnico  -->
+<!--     * Librería plotly en finanzas -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     Presentación -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--      Script -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     *Source Code* -->
+<!--     </button> -->
+<!--     </div> -->
+<!--     <br> -->
+
+<!--     </div> -->
+<!--     </p> -->
+
+<!-- 10. Shiny: Construyendo aplicaciones web con R -->
+
+<!--      <p> -->
+<!--      <img src="/hex/shiny.png" alt="Smiley face" style="float: right;  -->
+<!--      width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--      margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--      * Introducción a tidyquant -->
+<!--      * Descargando Multiples Datos -->
+<!--      * Retornos y retornos acumulados -->
+<!--      * Análisis Técnico  -->
+<!--      * Librería plotly en finanzas -->
+
+<!--      <div class="btn-group"> -->
+
+<!--      <br> -->
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--      Presentación -->
+<!--      </button> -->
+<!--      </div> -->
+
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--       Script -->
+<!--      </button> -->
+<!--      </div> -->
+
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--      *Source Code* -->
+<!--      </button> -->
+<!--      </div> -->
+<!--      <br> -->
+
+<!--      </div> -->
+<!--      </p> -->
+
+<!-- 11. RStudio Cloud: A donde vas R va contigo  -->
+
+<!--      <p> -->
+<!--      <img src="/hex/rstudio.png" alt="Smiley face" style="float: right;  -->
+<!--      width:210px; height:210px; margin-bottom: 0px 0px; -->
+<!--      margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--      * Introducción a tidyquant -->
+<!--      * Descargando Multiples Datos -->
+<!--      * Retornos y retornos acumulados -->
+<!--      * Análisis Técnico  -->
+<!--      * Librería plotly en finanzas -->
+
+<!--      <div class="btn-group"> -->
+
+<!--      <br> -->
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--      Presentación -->
+<!--      </button> -->
+<!--      </div> -->
+
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--       Script -->
+<!--      </button> -->
+<!--      </div> -->
+
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--      *Source Code* -->
+<!--      </button> -->
+<!--      </div> -->
+<!--      <br> -->
+
+<!--      </div> -->
+<!--      </p> -->
+
+<!-- 12. Github: donde las ideas se comparten  -->
+
+<!--      <p> -->
+<!--      <img src="/hex/github.svg" alt="Smiley face" style="float: right;  -->
+<!--      width:210px; height:240px; margin-bottom: 0px 0px; -->
+<!--      margin-left: 20px ; border: solid black 0px; padding: 2px"> -->
+
+<!--      * Introducción a tidyquant -->
+<!--      * Descargando Multiples Datos -->
+<!--      * Retornos y retornos acumulados -->
+<!--      * Análisis Técnico  -->
+<!--      * Librería plotly en finanzas -->
+
+<!--      <div class="btn-group"> -->
+
+<!--      <br> -->
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--      Presentación -->
+<!--      </button> -->
+<!--      </div> -->
+
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--       Script -->
+<!--      </button> -->
+<!--      </div> -->
+
+<!--      <div button class="button" onclick="myFunction()">  -->
+<!--      *Source Code* -->
+<!--      </button> -->
+<!--      </div> -->
+<!--      <br> -->
+
+<!--      </div> -->
+<!--      </p> -->
+
+## Tareas: Enunciado & Respuesta 
+
+</br>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library("googlesheets4")
+library("tidyverse")
+library("gt")
+ 
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+
+homework <- read_sheet(sheet_google, sheet = "hw_enmec357") 
+ 
+homework %>%
+  mutate(period = case_when(
+    period == "autumn" ~ "Otoño",
+    period == "spring" ~ "Primavera"),
+    group = paste0(period, " ", year)) %>%
+  rename(`Descripción` = Descripcion) %>% 
+  select(-period, -year) %>%
+  gt(rowname_col = "N", groupname_col = "group") %>%
+  cols_align(
+    align = "left", 
+    columns = vars(`Descripción`)
+  ) %>% 
+  fmt(
+    columns = vars(Enunciado),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-pdf" style="color:red" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(`R Notebook`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fas fa-file-code" style="color:orange" ></i> </a> </center>') 
+  ) %>%
+  fmt(
+    columns = vars(`R Project`),
+    fns = function(x) glue::glue('<center> <a href= "{x}"> <i class="fab fa-r-project" style="color:blue" ></i> </a> </center>') 
+  ) %>%
+   tab_spanner( 
+    label = "R Code",
+    columns = vars(`R Notebook`, `R Project`) 
+  ) %>%
+  fmt(
+    columns = vars(Status),
+    fns = function(x) ifelse(x == "yes",
+                             glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                             glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+  ) %>% 
+  tab_footnote(
+    footnote = md("Los enunciados están renderizados utilizando la plantilla `genin` del paquete personal `hokage`."),
+    locations = cells_column_labels(columns = vars(Enunciado))
+  ) %>% 
+    tab_footnote(
+    footnote = md("Los proyectos están organizado utilizando el paquete personal `organizer`."),
+    locations = cells_column_labels(columns = vars(`R Project`))
+  ) %>% 
+  tab_header(title = md("**Tópicos en economía & negocios utilizando R**"),
+             subtitle = glue::glue("Enunciado & Respuesta 2018 - 2019")) 
+```
+
+</br>
+
+<!-- <details><summary> Otoño 2018 </summary> -->
+<!-- <p> -->
+
+<!-- 1. Tarea 1 `r emo::ji("movie_camera")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw1.png" alt="Smiley face" style="float: right;  -->
+<!--     width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     El objetivo de la Tarea 1 es introducir el uso de la librería `dplyr` y  -->
+<!--     `magrittr` con su operador %>%, ambos coexisten en el `tidyverse`. La base  -->
+<!--     de datos usada proviene de IMdB. -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea1_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW1/HWS1.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- 2. Tarea 2 `r emo::ji("chart_with_upwards_trend")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw2.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     El objetivo de la Tarea 2 es relacionar el uso  de R con las finanzas.  -->
+<!--     Utilizando la librería `tidyquant`, calculamos bandas de *bollinger* y  -->
+<!--     *barcharts*. Finalmente se usa la librería `WDI` para descargar datos  -->
+<!--     externos a R como el *World Development Indicator*.   -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea2_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW2/HWS2.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- 3. Tarea 3 `r emo::ji("globe_with_meridians")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw3.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     Mediante el uso de mapas presentar y visualizar datos mundiales. A nivel  -->
+<!--     nacional se entrega la libertad de seleccionar datos de la regiòn  -->
+<!--     metropolitana y mapear a nivel de comuna (Santiago).  -->
+<!--     Librerìas usadas: `leaflet`, `tmap` y `plotly`, no obstante la pauta esta  -->
+<!--     contruida utilizando `gganimate`.  -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW3/HWS3.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- 4. Tarea 4 `r emo::ji("world_map")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw4.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     Una imagen vale mas que mil palabras, la frase anterior resume el uso de  -->
+<!--     *Dashboard* usando la librería `flexdashboard`. La base de datos usada  -->
+<!--     proviene de IMdB. -->
+
+<!--     <div class="btn-group">  -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW4/HWS4.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- </p> -->
+<!-- </details> -->
+
+<!-- <details><summary> Primavera 2018 </summary> -->
+<!-- <p> -->
+
+<!-- 1. Tarea 1 `r emo::ji("movie_camera")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw1.png" alt="Smiley face" style="float: right;  -->
+<!--     width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     El objetivo de la Tarea 1 es introducir el uso de la librería `dplyr` y  -->
+<!--     `magrittr` con su operador %>%, ambos coexisten en el `tidyverse`. La base  -->
+<!--     de datos usada proviene de IMdB. -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea1_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW1/HWS1.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- 2. Tarea 2 `r emo::ji("chart_with_upwards_trend")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw2.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     El objetivo de la Tarea 2 es relacionar el uso  de R con las finanzas.  -->
+<!--     Utilizando la librería `tidyquant`, calculamos bandas de *bollinger* y  -->
+<!--     *barcharts*. Finalmente se usa la librería `WDI` para descargar datos  -->
+<!--     externos a R como el *World Development Indicator*.   -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea2_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW2/HWS2.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- 3. Tarea 3 `r emo::ji("globe_with_meridians")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw3.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     Mediante el uso de mapas presentar y visualizar datos mundiales. A nivel  -->
+<!--     nacional se entrega la libertad de seleccionar datos de la regiòn  -->
+<!--     metropolitana y mapear a nivel de comuna (Santiago).  -->
+<!--     Librerìas usadas: `leaflet`, `tmap` y `plotly`, no obstante la pauta esta  -->
+<!--     contruida utilizando `gganimate`.  -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW3/HWS3.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- 4. Tarea 4 `r emo::ji("world_map")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw4.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 120px ; border: solid black 1px; padding: 2px"> -->
+
+<!--     Una imagen vale mas que mil palabras, la frase anterior resume el uso de  -->
+<!--     *Dashboard* usando la librería `flexdashboard`. La base de datos usada  -->
+<!--     proviene de IMdB. -->
+
+<!--     <div class="btn-group">  -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW4/HWS4.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- 5. Tarea 5 `r fontawesome::fa("github")` -->
+
+<!--     <p> -->
+<!--     <img src="/images/images_hw5.png" alt="Smiley face" style="float: right; width:380px; height:280px; margin-bottom: 0px 10px; -->
+<!--     margin-left: 20px ; border: solid black 1px; padding: 2px"> -->
+<!--     Próximamente... -->
+
+<!--     <div class="btn-group"> -->
+
+<!--     <br> -->
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [Enunciado](/pdf/Enunciado_Tarea3_R_Primavera_2018.pdf) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     <div button class="button" onclick="myFunction()">  -->
+<!--     [R Markdown](/html/homeworks/HW1/HWS1.html) -->
+<!--     </button> -->
+<!--     </div> -->
+
+<!--     </div> -->
+
+<!--     </p> -->
+
+<!--     <br> -->
+<!--     <br> -->
+<!--     <br> -->
+
+<!-- </p> -->
+<!-- </details> -->
+
+
+<!-- <details><summary> Otoño 2019 </summary> -->
+<!-- <p> -->
+
+
+<!-- </p> -->
+<!-- </details> -->
+
+<!-- <br> -->
+
+<!-- # Radix Website -->
+
+<!-- Para un mayor detalle del curso recomiendo visitar el website creado utilizando la librería [Radix](https://r-mec357.netlify.com/). -->
+
+<!-- - `r fontawesome::fa("desktop", fill = "forestgreen")` [Radix Website](https://r-mec357.netlify.com/)   -->
+
+
+<!-- <br> -->
+<!-- <br> -->
+
+---
+
+> *Disclaimer*: La información contenida en esta página está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a> y fue construida bajo mi rol como ayudante (*Teacher Assistant*) de la Catedra Topicos en economía y negocios utilizando R (*R for Economy & Business*).   
+<br>
+<img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/> 

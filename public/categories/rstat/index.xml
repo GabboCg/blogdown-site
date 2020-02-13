@@ -27,7 +27,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/economic-data-in-motion/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacmanp_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;)tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;,&amp;quot;LRHUTTTTDEM156S&amp;quot;,&amp;quot;LRHUTTTTUSM156S&amp;quot;,&amp;quot;LRHUTTTTJPM156S&amp;quot;)countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;)unemployment_lst &amp;lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i],get = &amp;quot;economic.data&amp;quot;,from = &amp;quot;2000-01-01&amp;quot;,to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;%mutate(symbol = countries_name[i])}unemployment_tbl &amp;lt;- do.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Loading required package: pacman## Warning: package &amp;#39;pacman&amp;#39; was built under R version 3.6.2p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;tidyquant&amp;quot;, &amp;quot;gganimate&amp;quot;, &amp;quot;bbplot&amp;quot;)tickers &amp;lt;- c(&amp;quot;LRHUTTTTFRM156S&amp;quot;,&amp;quot;LRHUTTTTDEM156S&amp;quot;,&amp;quot;LRHUTTTTUSM156S&amp;quot;,&amp;quot;LRHUTTTTJPM156S&amp;quot;)countries_name &amp;lt;- c(&amp;quot;France&amp;quot;, &amp;quot;Germany&amp;quot;, &amp;quot;United States&amp;quot;, &amp;quot;Japan&amp;quot;)unemployment_lst &amp;lt;- list()for(i in seq_along(tickers)) {unemployment_lst[[i]] &amp;lt;- tq_get(tickers[i],get = &amp;quot;economic.data&amp;quot;,from = &amp;quot;2000-01-01&amp;quot;,to = &amp;quot;2018-11-01&amp;quot;) %&amp;gt;%mutate(symbol = countries_name[i])}unemployment_tbl &amp;lt;- do.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/road-to-oscars-2019/</guid>
-      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.lister-item-year.text-muted.unbold&amp;quot;)for(j in 1:2){matrix_value[i,j] &amp;lt;- oscar_movies %&amp;gt;% html_nodes(paste0(seudo_link,&amp;quot;(&amp;quot;,i,&amp;quot;) &amp;quot;,&amp;quot;&amp;gt; div.</description>
+      <description>if(!require(&amp;quot;pacman&amp;quot;)) install.packages(&amp;quot;pacman&amp;quot;)## Warning: package &amp;#39;pacman&amp;#39; was built under R version 3.6.2p_load(&amp;quot;tidyverse&amp;quot;, &amp;quot;rvest&amp;quot;, &amp;quot;bbplot&amp;quot;, &amp;quot;ggalt&amp;quot;)oscar_movies &amp;lt;- read_html(&amp;quot;https://www.imdb.com/list/ls023438886/?st_dt=&amp;amp;mode=detail&amp;amp;page=1&amp;amp;ref_=ttls_vm_dtl&amp;amp;sort=list_order,asc&amp;quot;)matrix_value &amp;lt;- matrix(0, nrow = 36, ncol = 4)colnames(matrix_value) &amp;lt;- c(&amp;quot;movie_name&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;imdb_score&amp;quot;, &amp;quot;metacritic_score&amp;quot;)for(i in 1:36){seudo_link &amp;lt;- &amp;quot;#main &amp;gt; div &amp;gt; div.lister.list.detail.sub-list &amp;gt; div.lister-list &amp;gt; div:nth-child&amp;quot;selector &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;span.</description>
     </item>
     
     <item>
@@ -59,21 +59,11 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
     </item>
     
     <item>
-      <title>Data Vis: Teoría &amp; Practica </title>
+      <title>Data Vis: Theory &amp; Practice</title>
       <link>/teaching/data-vis-teor%C3%ADa-practica/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/teaching/data-vis-teor%C3%ADa-practica/</guid>
-      <description>Insert Lead paragraph here.
-A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
-    </item>
-    
-    <item>
-      <title>FInanzas reproducibles con R</title>
-      <link>/teaching/finanzas-reproducibles-con-r/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/finanzas-reproducibles-con-r/</guid>
       <description>Insert Lead paragraph here.
 A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae viverra porta non sem, himenaeos senectus vivamus potenti cubilia sollicitudin. Curae cursus inceptos tincidunt magna mi nibh ad enim etiam, molestie eu quis primis hendrerit taciti phasellus. Feugiat ultricies dictumst iaculis potenti odio laoreet urna at, ultrices curae leo accumsan proin sem lobortis.</description>
     </item>
@@ -85,15 +75,6 @@ A augue nunc lacus auctor efficitur tempor placerat, dictum volutpat mi vitae vi
       
       <guid>/posts/good-practice-in-r/</guid>
       <description>Insert Lead paragraph here.</description>
-    </item>
-    
-    <item>
-      <title>R for business and economics</title>
-      <link>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</link>
-      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/teaching/t%C3%B3picos-en-econom%C3%ADa-negocios-utilizando-r/</guid>
-      <description>Descripción CursoEste curso presenta una introducción a R, usando datos estructurados y noestructurados, relacionados a economía, finanzas y marketing. Entre los tópicosa discutir se encuentran: importación y exportación de datos en diferentesformatos, extracción de datos de sitios web, visualización de datos,regresión lineal, simulación de Monte Carlo y construcción de aplicaciones webutilizando Shiny.</description>
     </item>
     
     <item>
