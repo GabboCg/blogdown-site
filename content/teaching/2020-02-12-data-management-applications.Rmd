@@ -10,8 +10,109 @@ layout: post
 type: post
 highlight: yes
 draft: yes
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: ["/css/bootstrap.css"]
 ---
+
+```{r, echo=FALSE, eval=TRUE}
+library(fontawesome)
+```
+
+## Información del Curso
+
+1. Cátedra^[Entre paréntesis la segunda sección.]
+    
+    * &nbsp; `r fa("landmark", fill = "steelblue")` P-101 (P-101)
+    * &nbsp; `r fa("calendar-alt", fill = "steelblue")` Lun, Mie 09:30 - 10:50 (Mar, Jue 11:00 - 12:20)
+
+2. Ayudantía 
+    
+    * &nbsp; `r fa("landmark", fill = "steelblue")` H-101 (P-101)
+    * &nbsp; `r fa("calendar-alt", fill = "steelblue")` Jue 08:00 - 09:20 (Vie 12:30 - 13:50)
 
 ## Descripción Curso
 
-## Presentaciones
+## Syllabus
+
+**Nota:** Sólo se considera la parte relacionada a la introducción a Python. 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library("googlesheets4")
+library("tidyverse")
+library("gt")
+ 
+sheet_google <- "https://docs.google.com/spreadsheets/d/1o25yURPTf9PJE9DDAPPS9FQRtsu2dGM6CYk-4dOOSas/edit#gid=0"
+sheets_deauth()
+ 
+syllabus <- read_sheet(sheet_google, sheet = "material_engin100") 
+  
+syllabus %>%
+    rename(`Cátedra` = Catedra) %>% 
+    mutate(`Cátedra`  = case_when(
+        `Cátedra`  == "Introduccion a Colab" ~ "Introducción a Colab",
+        `Cátedra`  == "Introduccion a Jupyter Notebook" ~ "Introducción a Jupyter Notebook",
+        `Cátedra`  == "Bienvenido a la Ciencia de Datos" ~ "Bienvenido a la Ciencia de Datos",
+        `Cátedra`  == "Hola Python!" ~ "Hola Python!",
+        `Cátedra`  == "Estructura de Datos" ~ "Estructura de Datos",
+        `Cátedra`  == "Pandas" ~ "Pandas",
+        `Cátedra`  == "Numpy" ~ "Numpy"
+    )) %>% 
+    gt(rowname_col = "N") %>%
+    cols_align(
+        align = "left", 
+        columns = vars(Fecha)
+    ) %>% 
+    cols_align(
+        align = "left", 
+        columns = vars(`Cátedra`)
+    ) %>% 
+    cols_align(
+        align = "center",
+        columns = vars(Slides, Lecturas, Lab, Status)
+    ) %>%
+    fmt(
+        columns = vars(Slides),
+        fns = function(x) ifelse(x == "no",
+                                 glue::glue('<center> <i class="fas fa-laptop" style="color:grey" ></i> </center>'),
+                                 glue::glue('<center> <a href= "{x}"> <i class="fas fa-laptop" style="color:steelblue" ></i> </a> </center>')) 
+    ) %>%
+    fmt( 
+        columns = vars(Lecturas), 
+        fns = function(x) ifelse(x == "no",
+                                 glue::glue('<center> <i class="fas fa-book" style="color:grey" ></i> </center>'),
+                                 glue::glue('<center> <a href= "{x}"> <i class="fas fa-book" style="color:steelblue" ></i> </a> </center>'))
+    ) %>% 
+    fmt(
+        columns = vars(Lab),
+        fns = function(x) ifelse(x == "no",
+                                 glue::glue('<center> <i class="fas fa-code" style="color:grey" ></i> </center>'),
+                                 glue::glue('<center> <a href= "{x}"> <i class="fas fa-code" style="color:steelblue" ></i> </a> </center>'))
+    ) %>%
+    fmt(
+        columns = vars(Status),
+        fns = function(x) ifelse(x == "yes",
+                                 glue::glue('<center> <i class="fas fa-check" style="color:green" ></i> </center>'),
+                                 glue::glue('<center> <i class="fas fa-times" style="color:red" ></i> </center>'))  
+    ) %>% 
+    tab_footnote(
+        footnote = md("Las Slides son un complemento al curso y se recomiendan para profundizar conceptos."),
+        locations = cells_column_labels(columns = vars(`Cátedra`))
+    ) %>% 
+    tab_footnote(
+        footnote = md("Los laboratorios se encuentran en la Docencia Web."),
+        locations = cells_column_labels(columns = vars(Lab))
+    ) %>% 
+    tab_header(title = md("**Aplicaciones de Manejo de Datos**"),
+               subtitle = md("*Syllabus*")) 
+```
+
+</br>
+
+---
+
+> *Disclaimer*: La información contenida en esta página está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"></a> y fue construida bajo mi rol como Profesor de la cátedra Aplicaciones de Manejo de Datos.   
+<br>
+<img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/> 
